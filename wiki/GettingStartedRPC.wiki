@@ -21,13 +21,16 @@ package com.google.gwt.sample.stockwatcher.client;
 
 import com.google.gwt.user.client.rpc.RemoteService;
 
+@RemoteServiceRelativePath("stockPrices")
 public interface StockPriceService extends RemoteService {
  
   StockPrice[] getPrices(String[] symbols);
 }
 }}}
 
-Pretty straightforward, really.  Of course, since this is just an interface, it doesn't actually _do_ anything.  For that, we'll need to write the _service implementation_ class.
+Pretty straightforward, really.  The only interesting bit is the `@RemoteServiceRelativePath` annotation.  This associates our service with a default path relative to the module base URL.
+
+Since !StockPriceService is just an interface, it doesn't actually _do_ anything.  For that, we'll need to write the _service implementation_ class.
 
 ==The service implementation==
 
@@ -104,7 +107,7 @@ If you're stumped, remember that this code is now running on the server.  That m
 
 ===Testing the implementation===
 
-Just as [DevGuideHostedMode hosted mode] makes it easy to test and debug your client-side code, it can do the same for your Java server-side code.  The embedded [http://tomcat.apache.org/ Tomcat] server can host the servlets that contain your service implementation.  All you have to do is add a `<servlet>` element to your [DevGuideModuleXml module's XML file] pointing to the implementation class.  You'll also have to provide a `path` attribute to map the service to a URL.  The URL should be in the form of an absolute directory path (e.g., `/spellcheck` or `/common/login`) and will be used by the client-side code to connect to the service.
+Just as [DevGuideHostedMode hosted mode] makes it easy to test and debug your client-side code, it can do the same for your Java server-side code.  The embedded [http://tomcat.apache.org/ Tomcat] server can host the servlets that contain your service implementation.  All you have to do is add a `<servlet>` element to your [DevGuideModuleXml module's XML file] pointing to the implementation class.  You'll also have to provide a `path` attribute to map the service to a URL.  The URL should be in the form of an absolute directory path (e.g., `/spellcheck` or `/common/login`).  If you specified a default service path with a `@RemoteServiceRelativePath` annotation on the service interface (as we did with !StockPriceService), you'll want to make sure the `path` attribute matches the annotation value.
 
 Let's add a `<servlet>` tag to the `StockWatcher.gwt.xml` module file:
 
@@ -188,16 +191,7 @@ Call [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/googl
 StockPriceServiceAsync stockPriceSvc = GWT.create(StockPriceService.class);
 }}}
 
-====2. Specify the service URL====
-
-Point the proxy to our service by calling  [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/ServiceDefTarget.html#setServiceEntryPoint(java.lang.String) setServiceEntryPoint(String)].  Note that we're using the same path to the service that we specified in the module XML file, except here we don't need the initial forward slash (/):
-
-{{{
-ServiceDefTarget endpoint = (ServiceDefTarget)stockPriceSvc;
-endpoint.setServiceEntryPoint(GWT.getModuleBaseURL() + "stockPrices");
-}}}
-
-====3. Set up the callback====
+====2. Set up the callback====
 
 Create a new instance of an [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/AsyncCallback.html AsyncCallback] object.
 
@@ -217,9 +211,7 @@ AsyncCallback<StockPrice[]> callback = new AsyncCallback<StockPrice[]>() {
 };
 }}}
 
-_Note: If you're using a version of GWT older than 1.5, your versions of [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create(Class)] and [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/AsyncCallback.html AsyncCallback] will not contain generic type parameters.  Therefore, you'll need to manually cast the return values and parameters from `Object` to the correct type._
-
-====4. Make the call====
+====3. Make the call====
 
 All that's left now is to actually make the call:
 
@@ -252,8 +244,6 @@ private void refreshWatchList() {
   // lazy initialization of service proxy
   if (stockPriceSvc == null) {
     stockPriceSvc = GWT.create(StockPriceService.class);
-    ServiceDefTarget endpoint = (ServiceDefTarget)stockPriceSvc;
-    endpoint.setServiceEntryPoint(GWT.getModuleBaseURL() + "stockPrices");
   }
   
   AsyncCallback<StockPrice[]> callback = new AsyncCallback<StockPrice[]>() {
