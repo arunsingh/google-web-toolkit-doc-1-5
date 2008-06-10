@@ -19,36 +19,36 @@ Consider the following HTML page that loads a GWT module:
 }}}
 
 The following principles are needed to understand the sequence of operations that will occur in this page:
-  * <script> tags always block evaluation of the page until the script is fetched and evaluated.
-  * <img> tags do *not* block page evaluation.
+  * `<script>` tags always block evaluation of the page until the script is fetched and evaluated.
+  * `<img>` tags do *not* block page evaluation.
   * Most browsers will allow a maximum of two simultaneous connections for fetching resources.
-  * The body.onload() event will only fire once *all* external resources are fetched, including images and frames.
-  * The GWT selection script (i.e. .nocache.js) will be fetched and evaluated like a normal script tag, but the compiled script will be fetched *asynchronously*.
-  * Once the GWT selection script has started, its onModuleLoad() can be called at any point after the outer document is done parsing.
+  * The `body.onload()` event will only fire once *all* external resources are fetched, including images and frames.
+  * The GWT selection script (i.e. `.nocache.js`) will be fetched and evaluated like a normal script tag, but the compiled script will be fetched *asynchronously*.
+  * Once the GWT selection script has started, its `onModuleLoad()` can be called at any point after the outer document is done parsing.
 
 Applying these principles to the above example, we obtain the following sequence:
   # The HTML document is fetched and parsing begins.
-  # Begin fetching bigImageZero.jpg.
-  # Begin fetching externalScriptZero.js.
-  # bigImageZero.jpg completes (let's assume). Parsing is blocked until externalScriptZero.js is done fetching and evaluating.
-  # externalScriptZero.js completes.
-  # Begin fetching bigImageOne.jpg and reallyBigImageTwo.jpg simultaneously.
-  # bigImageOne.jpg completes (let's assume again). com.example.app.App.nocache.js begins fetching and evaluating.
-  # ...nocache.js completes, and the compiled script (...cache.js) begins fetching (this is non-blocking).
-  # ...cache.js completes. onModuleLoad() is not called yet, as we're still waiting on externalScriptOne.js to complete before the document is considered 'ready'.
-  # externalScriptOne.js completes. The document is ready, so onModuleLoad() fires.
-  # reallyBigImageTwo.jpg completes.
-  # body.onload() fires, in this case showing an alert() box.
+  # Begin fetching `bigImageZero.jpg`.
+  # Begin fetching `externalScriptZero.js`.
+  # `bigImageZero.jpg` completes (let's assume). Parsing is blocked until `externalScriptZero.js` is done fetching and evaluating.
+  # `externalScriptZero.js` completes.
+  # Begin fetching `bigImageOne.jpg` and `reallyBigImageTwo.jpg` simultaneously.
+  # `bigImageOne.jpg` completes (let's assume again). `com.example.app.App.nocache.js` begins fetching and evaluating.
+  # ...nocache.js completes, and the compiled script (...`cache.js`) begins fetching (this is non-blocking).
+  # ...cache.js completes. `onModuleLoad()` is not called yet, as we're still waiting on `externalScriptOne.js` to complete before the document is considered 'ready'.
+  # `externalScriptOne.js` completes. The document is ready, so onModuleLoad() fires.
+  # `reallyBigImageTwo.jpg` completes.
+  # `body.onload()` fires, in this case showing an alert() box.
 
-This is a bit complex, but the point is to show exactly when various resources are fetched, and when onModuleLoad() will
+This is a bit complex, but the point is to show exactly when various resources are fetched, and when `onModuleLoad()` will
 be called. The most important things to remember are that
   * You want to put the GWT selection script as early as possible within the body, so that it begins fetching the compiled script before other scripts (because it won't block any other script requests).
   * If you are going to be fetching external images and scripts, you want to manage your two connections carefully.
-  * <img> tags are not guaranteed to be done loading when onModuleLoad() is called.
-  * <script> tags *are* guaranteed to be done loading when onModuleLoad() is called.
+  * `<img>` tags are not guaranteed to be done loading when `onModuleLoad()` is called.
+  * `<script>` tags *are* guaranteed to be done loading when `onModuleLoad()` is called.
 
-== A Note on Multiple GWT Modules and EntryPoints ==
+== A Note on Multiple GWT Modules and !EntryPoints ==
 
-If you have multiple EntryPoints (the interface that defines onModuleLoad()) within a module, they will all be called in sequence as soon as that module (and the outer document) is ready.
+If you have multiple !EntryPoints (the interface that defines `onModuleLoad()`) within a module, they will all be called in sequence as soon as that module (and the outer document) is ready.
 
-If you are loading multiple GWT modules within the same page, each module's EntryPoints will be called as soon as both that module and the outer document is ready. Two modules' EntryPoints are not guaranteed to be fired at the same time.
+If you are loading multiple GWT modules within the same page, each module's !EntryPoints will be called as soon as both that module and the outer document is ready. Two modules' !EntryPoints are not guaranteed to be fired at the same time.
