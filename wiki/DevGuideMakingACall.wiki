@@ -5,7 +5,6 @@
 The process of making an RPC from the client always involves the same steps: 
 
   # Instantiate the service interface using [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create()].
-  # Specify a service entry point URL for the service proxy using [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/ServiceDefTarget.html ServiceDefTarget].
   # Create an asynchronous callback object to be notified when the RPC has completed.
   # Make the call.
 
@@ -36,18 +35,13 @@ public void menuCommandEmptyInbox() {
   // service interface proper, you cast the result to the asynchronous
   // version of the interface. The cast is always safe because the 
   // generated proxy implements the asynchronous interface automatically.
+  // The RemoteServiceRelativePath annotation automatically calls 
+  // setServiceEntryPoint()
   //
+  @RemoteServiceRelativePath("email")
   MyEmailServiceAsync emailService = (MyEmailServiceAsync) GWT.create(MyEmailService.class);
 
-  // (2) Specify the URL at which our service implementation is running.
-  // Note that the target URL must reside on the same domain and port from
-  // which the host page was served.
-  //
-  ServiceDefTarget endpoint = (ServiceDefTarget) emailService;
-  String moduleRelativeURL = GWT.getModuleBaseURL() + "email";
-  endpoint.setServiceEntryPoint(moduleRelativeURL);
-
-  // (3) Create an asynchronous callback to handle the result.
+  // (2) Create an asynchronous callback to handle the result.
   //
   AsyncCallback callback = new AsyncCallback() {
     public void onSuccess(Object result) {
@@ -59,7 +53,7 @@ public void menuCommandEmptyInbox() {
     }
   };
 
-  // (4) Make the call. Control flow will continue immediately and later
+  // (3) Make the call. Control flow will continue immediately and later
   // 'callback' will be invoked when the RPC completes.
   //
   emailService.emptyMyInbox(fUsername, fPassword, callback);
@@ -109,5 +103,3 @@ It is safe to cache the instantiated service proxy to avoid creating it for subs
   * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/ServiceDefTarget.html ServiceDefTarget]
 
   * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create(Class)]
-
-
