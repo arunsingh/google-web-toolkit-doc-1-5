@@ -1,0 +1,27 @@
+#summary Use the !JavaScriptObject overlay technique to bring in JavaScript objects from the wild and domesticate them in your GWT codebase.
+
+=!JavaScriptObject Overlay Technique (JSO overlay)=
+
+Previous to GWT 1.5, one of the only ways to interact with external JavaScript was to define [DevGuideJavaScriptNativeInterface JavaScript Native Interface (JSNI)] methods, which in itself is a powerful way to easily work in native JavaScript code when necessary.
+
+In GWT 1.5, we've introduced a new way to inter-operate with external !JavaScript that allows you to overlay a!JavaScriptObject subclass over an existing !JavaScript object. This has the advantage of letting you domesticate !JavaScript objects from the wild and allowing you to interact with them through a strongly-typed, compiler-optimizable Java object in your GWT code.
+
+You can imagine that this technique opens a wide variety of new things you can do in mixing and matching your GWT code with external JavaScript objects. A few key benefits we'd like to highlight are:
+
+* Inter-operating with external JavaScript libraries by overlaying JSO objects on top of library objects you're interested in using.
+
+* Working with JSON data through an opaque !JavaScriptObject subtype.
+
+
+==Specifics==
+[DevGuideJavaScriptObjectOverlayingJavaScriptObject Overlaying a !JavaScript Object using the JSO Overlay Technique]
+Create a JavaScriptObject to overlay onto arbitrary JavaScript objects.
+
+[DevGuideJavaScriptObjectOverlayingJSON Overlaying JSON data using the JSO Overlay Technique]
+Create a JavaScriptObject to overlay and access JSON data.
+
+[DevGuideJavaScriptObjectOverlayInheritance Use Inheritance among JSO subclasses]
+Promote reuse in your code base by introducing inheritance among your JSO subclasses.
+
+[DevGuideJavaScriptObjectOverlaySecurityImplications Using the JSO Overlay Securely]
+Design and use your JSO subclasses with security in mind.
