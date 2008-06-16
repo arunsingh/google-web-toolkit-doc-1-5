@@ -14,7 +14,7 @@ You can imagine that this technique opens a wide variety of new things you can d
 
 
 ==Specifics==
-[DevGuideJavaScriptObjectOverlayingJavaScriptObject Overlaying a !JavaScript Object using the JSO Overlay Technique]
+[DevGuideJavaScriptObjectOverlayingJavaScriptObject Overlaying a JavaScript Object using the JSO Overlay Technique]
 Create a !JavaScriptObject to overlay onto arbitrary !JavaScript objects.
 
 [DevGuideJavaScriptObjectOverlayingJSON Overlaying JSON data using the JSO Overlay Technique]
