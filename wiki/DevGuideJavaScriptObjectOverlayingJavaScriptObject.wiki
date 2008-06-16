@@ -1,1 +1,1 @@
-#summary Foo
+#summary Create a JavaScriptObject to overlay onto arbitrary JavaScript objects.
