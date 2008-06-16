@@ -186,6 +186,7 @@
       * [FAQ_UIImagePreload What can I do to make animations appear more smooth and borders load more quickly?]
       * [FAQ_UIOnePxBackgroundInIE  Why do I see poor performance when using a one pixel background image?]
       * [FAQ_UIUseOneListener As the application grows, event listeners seem to fire more slowly.]
+      * [FAQ_UIElementOnlySetOnce Why do I get the assertion, "Element may only be set once?"]
     * [FAQ_WidgetProgramming Widget Programming]
       * [FAQ_WidgetEventBubbling How can I efficiently handle events from many interior Widgets?]
     * [FAQ_Troubleshooting Troubleshooting]
