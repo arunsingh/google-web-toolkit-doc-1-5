@@ -1,1 +1,1 @@
-#summary Overlaying JSON data using the JSO Overlay Technique
+#summary Create a JavaScriptObject to overlay and access JSON data
