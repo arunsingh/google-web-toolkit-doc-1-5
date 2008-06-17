@@ -1,1 +1,1 @@
-#summary Using inheritance among JSO subclasses
+#summary Promote reuse in your code base by introducing inheritance among your JSO subclasses
