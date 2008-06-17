@@ -1,1 +1,1 @@
-#summary Using the JSO Overlay Securely
+#summary Design and use your JSO subclasses with security in mind
