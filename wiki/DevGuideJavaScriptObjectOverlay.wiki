@@ -25,5 +25,5 @@ Create a !JavaScriptObject to overlay and access JSON data.
 [DevGuideJavaScriptObjectOverlayInheritance Use Inheritance among JSO subclasses]
 Promote reuse in your code base by introducing inheritance among your JSO subclasses.
 
-[DevGuideJavaScriptObjectOverlaySecurityImplications Using the JSO Overlay Securely]
+[DevGuideJavaScriptObjectOverlaySecurityImplications Using the JSO Overlay Technique Securely]
 Design and use your JSO subclasses with security in mind.
