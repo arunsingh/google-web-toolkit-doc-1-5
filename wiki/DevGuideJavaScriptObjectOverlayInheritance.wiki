@@ -1,1 +1,1 @@
-#summary Use Inheritance among JSO subclasses
+#summary Using inheritance among JSO subclasses
