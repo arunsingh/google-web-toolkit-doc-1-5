@@ -102,7 +102,7 @@ public class JSNIExample {
 
 Sometimes you need to access a method or constructor defined in GWT from outside !JavaScript code.  This code might be hand-written and included in another java script file, or it could be a part of a third party library.  In this case, the GWT compiler will not get a chance to build an interface between your !JavaScript code and the GWT generated !JavaScript directly.
 
-A way to make this kind of relationship work is to assign the method via JSNI to an external, globally visible JavaScript name that can be referenced by your hand-crafted !JavaScript code.
+A way to make this kind of relationship work is to assign the method via JSNI to an external, globally visible !JavaScript name that can be referenced by your hand-crafted !JavaScript code.
 
 {{{
 package mypackage;
