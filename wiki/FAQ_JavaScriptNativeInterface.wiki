@@ -8,4 +8,4 @@
 
   * [FAQ_BridgeMethodNotWorkingOnclick Why doesn't the bridge call to my JSNI method work in <some_obj>.onclick?]
 
-  * [FAQ_PassGWTMethodAsCallbackFunction How do I pass a Java method as a callback funciton?]
+  * [FAQ_PassGWTMethodAsCallbackFunction How do I pass a Java method as a callback function?]
