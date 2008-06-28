@@ -7,3 +7,5 @@
   * [FAQ_EvalJSNIMethod Help! I'm having problems with eval() in my JSNI method!]
 
   * [FAQ_BridgeMethodNotWorkingOnclick Why doesn't the bridge call to my JSNI method work in <some_obj>.onclick?]
+
+  * [FAQ_PassGWTMethodAsCallbackFunction How do I pass a Java method as a callback funciton?]
