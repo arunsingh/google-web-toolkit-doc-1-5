@@ -169,6 +169,7 @@
       * [FAQ_CallGWTMethodFromHandwrittenJS How do I call Java methods from handwritten JavaScript or third party libraries?]
       * [FAQ_EvalJSNIMethod Help! I'm having problems with eval() in my JSNI method!]
       * [FAQ_BridgeMethodNotWorkingOnclick Why doesn't the bridge call to my JSNI method work in <some_obj>.onclick?]
+      * [FAQ_PassGWTMethodAsCallbackFunction How do I pass a Java method as a callback function?]
     * [FAQ_Libraries Using GWT Libraries]
       * [FAQ_DOMNonW3CAPI Why does the DOM object expose a non-W3C API?]
       * [FAQ_ImageBundleImagesNotShowingUp Why aren't my ImageBundle images showing in IE?]
