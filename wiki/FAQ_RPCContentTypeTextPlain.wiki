@@ -1,6 +1,6 @@
 #summary RPC Error: javax.servlet.ServletException: Content-Type must be 'text/plain' with 'charset=utf-8' (or unspecified charset)
 
-==RPC Error: javax.servlet.ServletException: Content-Type must be 'text/plain' with 'charset=utf-8' (or unspecified charset)==
+=RPC Error: javax.servlet.!ServletException: Content-Type must be text/plain=
 
 When upgrading from GWT 1.4 to GWT 1.5 you may see a stack trace similar to the following:
 
