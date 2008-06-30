@@ -70,3 +70,6 @@ How to add locales and specify the `locale` client property during deployment.
 
 [DevGuidePropertiesFiles Localized Properties Files]
 How to create localized properties files for use with [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants] or [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Messages.html Messages] 
+
+[DevGuideI18NAnnotations Annotations for use with Internationalization]
+New to GWT 1.5 is the use of annotations to allow more sophisticated internationalization. support, such as plurals and descriptions.
