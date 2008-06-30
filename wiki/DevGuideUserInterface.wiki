@@ -37,3 +37,6 @@ Classes that allow you to schedule activity to occur in the future.
 
 [DevGuideDateAndNumberFormat Date and Number Formatting]
 Formatting Dates and Numbers including support for internationalization.
+
+[DevGuideLinker Using the GWT Linker]
+The GWT Linker provides two built-in linker modules, and can be extended by users.
