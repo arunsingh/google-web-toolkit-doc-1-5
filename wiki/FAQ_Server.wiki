@@ -11,3 +11,5 @@
   * [FAQ_JSONFeedsFromOtherDomain How can I dynamically fetch JSON feeds from other web domains?]
   
   * [FAQ_HostedModeRPCsResourceNotFound Why do I get a "Resource not found" error when executing an RPC in hosted mode?]
+
+  * [FAQ_RPCContentTypeTextPlain javax.servlet.ServletException: Content-Type must be 'text/plain' with 'charset=utf-8' (or unspecified charset) ]
