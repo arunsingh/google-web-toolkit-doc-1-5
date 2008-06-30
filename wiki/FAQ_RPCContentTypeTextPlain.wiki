@@ -6,21 +6,12 @@ When upgrading from GWT 1.4 to GWT 1.5 you may see a stack trace similar to the 
 
 {{{
 $PP_OFF
-javax.servlet.ServletException: Content-Type must be 'text/plain' with
-'charset=utf-8' (or unspecified charset)
-        at
-com.google.gwt.user.server.rpc.RemoteServiceServlet.readPayloadAsUtf8(RemoteServiceServlet.java:
-119)
-        at
-com.google.gwt.user.server.rpc.RemoteServiceServlet.doPost(RemoteServiceServlet.java:
-178)
-        at javax.servlet.http.HttpServlet.service(HttpServlet.java:
-738)
-        at javax.servlet.http.HttpServlet.service(HttpServlet.java:
-831)
-        at
-org.apache.catalina.core.ApplicationFilterChain.servletService(ApplicationFilterChain.java:
-411)
+javax.servlet.ServletException: Content-Type must be 'text/plain' with 'charset=utf-8' (or unspecified charset)
+        at com.google.gwt.user.server.rpc.RemoteServiceServlet.readPayloadAsUtf8(RemoteServiceServlet.java: 119)
+        at com.google.gwt.user.server.rpc.RemoteServiceServlet.doPost(RemoteServiceServlet.java: 178)
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java: 738)
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java: 831)
+        ...
 }}}
 
 The likely reason for this problem is that the RPC content type was switched from `text/plain` in GWT 1.4 to `text/x-gwt-rpc` in GWT 1.5.  If your server is complaining that the content type is not `text/plain` then your server is still using a GWT 1.4
