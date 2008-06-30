@@ -86,9 +86,6 @@
         * [DevGuideRPCDeployment Example Deployment with Tomcat]
       * [DevGuideHttp HTTP Calls]
         * [DevGuideHttpRequests Making HTTP requests]
-
-
-
         * [DevGuideJSON Working with JSON]
         * [DevGuideXML Working with XML]
     * [DevGuideJUnitIntegration Unit Testing]
@@ -156,6 +153,7 @@
       * [FAQ_JSONFeedsFromOtherDomain How can I dynamically fetch JSON feeds from other web domains?]
       * [FAQ_JSONJSOIntoGWTJSONObject How can I coerce a JSON JavaScriptObject into a GWT JSONObject?]
       * [FAQ_HostedModeRPCsResourceNotFound  Why do I get a "Resource not found" error when executing an RPC in hosted mode?]
+      * [FAQ_RPCContentTypeTextPlain RPC Error: javax.servlet.ServletException: Content-Type must be 'text/plain' with 'charset=utf-8' (or unspecified charset)]
     * [FAQ_JSCompiler Java-to-JavaScript Compiler]
       * [FAQ_JavaScriptGibberish Why is my GWT-generated JavaScript gibberish?]
       * [FAQ_ProjectScriptBuildServlet Why don't the project scripts build my Servlets?]
