@@ -1,4 +1,4 @@
-#summary JavaScriptOverlays
+#summary JavaScript Overlays
 
 _TBD_
 
