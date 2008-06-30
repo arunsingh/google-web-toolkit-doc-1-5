@@ -1,0 +1,5 @@
+#summary The GWT Linker
+
+_TBD_
+
+See [http://code.google.com/p/google-web-toolkit/wiki/LinkerDesign Linker Design Documentation].
