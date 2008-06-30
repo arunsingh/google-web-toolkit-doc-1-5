@@ -107,6 +107,7 @@
         * [DevGuideJavaFromJavaScript Accessing Java Methods and Fields from JavaScript]
         * [DevGuideMarshaling Sharing objects between Java source and JavaScript]
         * [DevGuideJsniExceptions Exceptions and JSNI]
+      * [DevGuideJSOverlays JavaScript Overlays]
     * [DevGuideDeferredBinding Deferred Binding]
       * [DevGuideDeferredBindingConcepts Deferred Binding Benefits]
       * [DevGuideDeferredBindingUsing Defining Deferred Binding Rules]
