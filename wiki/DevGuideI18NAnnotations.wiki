@@ -1,0 +1,5 @@
+#summary Annotations for Internationalization
+
+_TBD_
+
+See [http://code.google.com/p/google-web-toolkit/wiki/I18nAnnotations I18N Annotations Design Doc]
