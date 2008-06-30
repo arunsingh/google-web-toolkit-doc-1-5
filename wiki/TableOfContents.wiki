@@ -70,6 +70,7 @@
       * [DevGuideHistory Controlling Browser History]
       * [DevGuideDeferredCommand Programming Delayed Logic]
       * [DevGuideDateAndNumberFormat Date and Number Formatting]
+      * [DevGuideLinker Using the GWT Linker]
     * [DevGuideHostedMode Debugging in Hosted Mode]
     * [DevGuideRunningInWebMode Running In Web Mode]
     * [DevGuideWebMode Deployment in Web Mode]
