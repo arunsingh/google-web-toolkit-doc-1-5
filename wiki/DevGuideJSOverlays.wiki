@@ -1,0 +1,5 @@
+#summary JavaScriptOverlays
+
+_TBD_
+
+See [http://code.google.com/p/google-web-toolkit/wiki/OverlayTypes JavaScript Overlays Design Document].
