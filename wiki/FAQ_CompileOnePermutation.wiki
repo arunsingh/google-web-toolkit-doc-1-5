@@ -28,13 +28,13 @@ Next, the host HTML file:
 
 {{{
 <html>
-	<head>
-		<meta name='gwt:module' content='com.google.gwt.sample.hello.HelloFirefox'>
-		<title>Hello</title>
-	</head>
-	<body bgcolor="white"> 
-		<script language="javascript" src="gwt.js"></script>
-	</body>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Hello</title>
+  </head>
+  <body bgcolor="white"> 
+    <script type="text/javascript" language="javascript" src="com.google.gwt.sample.hello.HelloFirefox.nocache.js"></script>
+  </body>
 </html>
 
 }}}
