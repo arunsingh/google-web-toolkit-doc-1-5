@@ -41,7 +41,7 @@ Next, the host HTML file:
 
 You can do the same thing for `locale` or any other client property. The subsystem  that generates all those permutations is completely extensible, so this technique is a general one. 
 
-To avoid keeping many nearly duplicate module files, the [http://code.google.com/docreader/#p(google-web-toolkit-doc-1-5)s(google-web-toolkit-doc-1-5)t(DevGuideModuleXml) <rename-to>] tag to create a working copy of the GWT application that is specific to the single-browser single-locale development mode. You can keep two module XML files in parallel, one for solid development to be tested on all browsers, and another working copy with most permutations suppressed for draft code.
+To avoid keeping many nearly duplicate module files, the _[http://code.google.com/docreader/#p(google-web-toolkit-doc-1-5)s(google-web-toolkit-doc-1-5)t(DevGuideModuleXml) rename-to]_ attribute on the `<module>` tag to create a working copy of the GWT application that is specific to the single-browser single-locale development mode. You can keep two module XML files in parallel, one for solid development to be tested on all browsers, and another working copy with most permutations suppressed for draft code.
 
 Hopefully this example also starts to show that the idea of a module isn't as 
 trivial as it might seem at first. Modules play an important role letting you 
