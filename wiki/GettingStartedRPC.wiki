@@ -20,6 +20,7 @@ The first building block of a service is its interface.  In GWT, an RPC service 
 package com.google.gwt.sample.stockwatcher.client;
 
 import com.google.gwt.user.client.rpc.RemoteService;
+import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
 @RemoteServiceRelativePath("stockPrices")
 public interface StockPriceService extends RemoteService {
@@ -228,7 +229,6 @@ The first order of business is to add a new `import` statements to pull in the n
 {{{
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.rpc.ServiceDefTarget;
 }}}
 
 Next, create a new instance field to hold the service proxy reference:
@@ -257,7 +257,7 @@ private void refreshWatchList() {
   };
   
   // make the call to the stock price service
-  stockPriceSvc.getPrices((String[])stocks.toArray(new String[0]), callback);
+  stockPriceSvc.getPrices(stocks.toArray(new String[0]), callback);
 }
 }}}
 
