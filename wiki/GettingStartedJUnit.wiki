@@ -80,7 +80,7 @@ public void testStockPriceCtor() {
   String symbol = "XYZ";
   double price = 70.0;
   double change = 2.0;
-  double changePercent = change / price;
+  double changePercent = 100.0 * change / price;
   
   StockPrice sp = new StockPrice(symbol, price, change);
   assertNotNull(sp);
