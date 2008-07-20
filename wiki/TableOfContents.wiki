@@ -183,6 +183,7 @@
       * [FAQ_LanguageDifferenceBtwnWebHostedMode What are the language differences between web mode and hosted mode?]
     * [FAQ_UserInterfaceProgramming User Interface Programming]
       * [FAQ_UIVerticalFillApp How to create an app that fills the page vertically when the browser window resizes?]
+      * [FAQ_UISetHeightPercentage Why doesn't setting a widget's height as a percentage work?]
       * [FAQ_UILargeTablePerformance How do I display a big list of items in a table with good performance?]
       * [FAQ_UILayoutDebug I'm having trouble with my layout.  How do I tell where my panels are?]
       * [FAQ_UIImagePreload What can I do to make animations appear more smooth and borders load more quickly?]
