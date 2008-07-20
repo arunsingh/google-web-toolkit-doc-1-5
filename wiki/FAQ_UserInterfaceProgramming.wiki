@@ -5,7 +5,7 @@ Tips and tricks for User Interface programming
 
 * [FAQ_UIVerticalFillApp How do I create an app that fills the page vertically when the browser window resizes?]
 
-* [FAQ_UISetHeightPercentage Why doesn't setting height as a percentage work?]
+* [FAQ_UISetHeightPercentage Why doesn't setting a widget's height as a percentage work?]
 
 * [FAQ_UILargeTablePerformance How do I display a big list of items in a table with good performance?]
 
