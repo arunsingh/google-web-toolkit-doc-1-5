@@ -4,7 +4,7 @@
 
 Like all AJAX tools, GWT's HTTP client and RPC libraries are restricted to only accessing data from the same site where your application was loaded, due to the [FAQ_SOP browser Same Origin Policy]. If you are using JSON, you can work around this limitation using a <SCRIPT> tag. To accomplish this, though, you must resort to using DOM manipulation methods to inject the  tag into your host page dynamically.
 
-First, you need an external JSON service which can invoke user defined callback functions with the JSON data as argument. An example of such a service is GData's "alt=json-in-script&callback=myCallback" support. Then, you can generate a [DevGuideJavaFromJavaScript bridge method], which will be used to invoke a GWT JSON callback handler.
+First, you need an external JSON service which can invoke user defined callback functions with the JSON data as argument. An example of such a service is [http://code.google.com/apis/gdata/json.html GData's "alt=json-in-script&callback=myCallback" support]. Then, you can generate a [DevGuideJavaFromJavaScript bridge method], which will be used to invoke a GWT JSON callback handler.
 
 Here is an example:
 
@@ -17,10 +17,9 @@ public class MyJSONUtility
       public void handleJSON(JavaScriptObject obj);
    }
 
-   private static native void makeJSONRequest(String url, JSONHandler handler) /*-{
-       $wnd.jsonCallback = function(jsonObj)
-       {
-         handler.@mypackage.MyJSONUtility.dispatchJSON(Lcom/google/gwt/core/client/JavaScriptObject;)(jsonObj, handler);
+   public static native void makeJSONRequest(String url, JSONHandler handler) /*-{
+       $wnd.jsonCallback = function(jsonObj) {
+         @mypackage.MyJSONUtility::dispatchJSON(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/sample/client/JsonTestApp$JSONHandler;)(jsonObj, handler);
        }
       
        // create SCRIPT tag, and set SRC attribute equal to JSON feed URL + callback function name
