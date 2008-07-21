@@ -3,7 +3,7 @@
 = Why doesn't setting a widget's height as a percentage work? =
 
 In some cases, `Widget.setHeight(String)` or `Widget.setSize(String,String)` method does 
-not seem to work with sizes expressed as percentages.  The GWT widgets do not do any calculatinos with these values - these methods set the widget'' CSS width and height properties and depend on the container widget's behavior.  
+not seem to work with sizes expressed as percentages.  The GWT widgets do not do any calculations with these values - these methods set the widget'' CSS width and height properties and depend on the container widget's behavior.  
 
   1 Try changing your enclosing widget to a different type.  !VerticalPanel is implemented with a `<table>` element and might behave differently from !AbsolutePanel which is implemented with a `<div>` element.
   1 If you have a `<DOCTYPE...>` declaration HTML host page setting the app into Standards mode, you might try removing the `<DOCTYPE ...>` declaration or changing it to put the browser rendering engine into quirks mode.    Basically, in standards mode, if you set the height and width of a `<div>` (or any other element) that is in a table `<td>` cell using percentages, it is ignored.  For example, the styles in the div below will be ignored in standards mode:
