@@ -42,7 +42,7 @@ You can then implement the JSONHandler interface as you choose, and call
 
 {{{
    MyJSONUtility.makeJSONRequest(
-       "http://www.google.com/base/feeds/feed?bq=query&alt=json-in-script&callback=", 
+       "http://www.google.com/calendar/feeds/developer-calendar@google.com/public/full?alt=json-in-script&callback=",
        myHandlerInstance);
 }}}
 
