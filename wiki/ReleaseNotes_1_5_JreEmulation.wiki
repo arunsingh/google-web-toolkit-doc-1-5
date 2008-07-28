@@ -10,8 +10,9 @@
   * Enum
   * !EnumSet
   * !EnumMap
-  * !PriorityQueue
   * !LinkedHashMap
+  * !LinkedList
+  * !PriorityQueue
   * !TreeMap
   * !TreeSet
 
