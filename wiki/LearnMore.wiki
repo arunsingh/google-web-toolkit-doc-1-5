@@ -1,8 +1,6 @@
 #summary Google Web Toolkit overview of features.
 
-=Google Web Toolkit=
-[http://gwt-test-project-1.googlecode.com/files/gwtLogo.png]
-
+[http://gwt-test-project-1.googlecode.com/files/gwtLogo.png] =Google Web Toolkit=
 ===Performance for Users, Productivity for Developers===
 Writing web apps today is a tedious and error-prone process. Developers can spend 90% of their time working around browser quirks. In addition, building, reusing, and maintaining large !JavaScript code bases and AJAX components can be difficult and fragile. 
 
@@ -38,6 +36,7 @@ Create reusable [DevGuideUserInterface Widgets] by compositing other Widgets, th
 
 ===Productive Coding and Tools===
 Because GWT uses Java, you can use all of your favorite Java development tools ([http://www.eclipse.org/ Eclipse], [http://www.jetbrains.com/idea/ IntelliJ], [http://www.ej-technologies.com/products/jprofiler/overview.html JProfiler], [http://www.junit.org/ JUnit]) for your web browser AJAX development. This allows a web developer to harness the productivity gains of automated Java refactoring and code prompting/completion.
+
 
 Static type checking in the Java language enables developers to catch a class of !JavaScript bugs (typos, type mismatches) when writing code rather than at runtime, boosting productivity while reducing errors. No more user discovered accidental var assignments.
 
