@@ -4,10 +4,9 @@
 [http://gwt-test-project-1.googlecode.com/files/gwtLogo.png]
 
 ===Performance for Users, Productivity for Developers===
-Writing web apps today is a tedious and error-prone process. Developers can spend 90% of their time working around browser quirks, and !JavaScript's lack of modularity makes sharing, testing, and reusing AJAX components difficult and fragile. 
+Writing web apps today is a tedious and error-prone process. Developers can spend 90% of their time working around browser quirks. In addition, building, reusing, and maintaining large !JavaScript code bases and AJAX components can be difficult and fragile. 
 
-Google Web Toolkit's mission is to radically improve the web experience for users by enabling developers to use existing Java tools to build no-compromise AJAX for any modern browser. Simply put, its about highly performant !JavaScript applications for users, while at the same time enabling developers to quickly build and maintain large, complex applications. 
-
+Google Web Toolkit improves the user experience while easing the developer burden by allowing developers to quickly build and maintain complex yet highly performant !JavaScript front-end applications in the Java programming language. 
 
 ===Java to !JavaScript===
 With Google Web Toolkit, you write your AJAX front-end in Java, test and iterate in the same "tweak/view" cycle you're used to using GWT's Hosted Mode Browser, then compile that source code into plain !JavaScript which can be deployed to any website or server.  
@@ -72,7 +71,6 @@ blah blah [http://code.google.com/p/gwt-google-apis/ Learn more]
 
 ===Completely Open Source===
 All of the code for GWT is available under the Apache 2.0 license. If you are interested in contributing, please visit [http://code.google.com/webtoolkit/makinggwtbetter.html Making GWT Better]. [http://code.google.com/p/google-web-toolkit/ Learn more.]
-
 
 
 
