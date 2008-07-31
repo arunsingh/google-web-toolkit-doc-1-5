@@ -8,8 +8,9 @@ Writing web apps today is a tedious and error-prone process. Developers can spen
 
 Google Web Toolkit (GWT) improves the user experience while easing the developer burden by allowing developers to quickly build and maintain complex yet highly performant !JavaScript front-end applications in the Java programming language. Here's how it works:
 
-===Java to !JavaScript===
-With Google Web Toolkit, you write your AJAX front-end in Java, test and iterate in the same "tweak/view" cycle you're used to using GWT's Hosted Mode Browser, then compile that source code into plain !JavaScript which can be deployed to any website or server.  
+===How Google Web Toolkit Works===
+With Google Web Toolkit, you write your AJAX front-end in Java, test and iterate in the same "tweak/view" cycle you're accustomed to with GWT's Hosted Mode Browser, then compile that source code into plain !JavaScript which can be deployed to any website or server.  
+
 
 
 ===Real debugging in GWT Hosted Mode===
