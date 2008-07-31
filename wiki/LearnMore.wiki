@@ -4,24 +4,24 @@
 
 Writing web apps today is a tedious and error-prone process. Developers can spend 90% of their time working around browser quirks. In addition, building, reusing, and maintaining large !JavaScript code bases and AJAX components can be difficult and fragile. Google Web Toolkit (GWT) eases this burden by allowing developers to quickly build and maintain complex yet highly performant !JavaScript front-end applications in the Java programming language. 
 
-===How Google Web Toolkit Works===
+===How Google Web Toolkit works===
 With Google Web Toolkit, you write your AJAX front-end in the Java programming language using your favorite Java tools along the way. During development, use GWT's Hosted Mode browser to test and iterate in the same "tweak/view" cycle you're accustomed to, accept that now you'll be able to easily step through and debug your web application. However, using GWT for your front-end doesn't mean you have to use Java for the backend. GWT provides various means of communicating with a backend server, including JSON. When you are ready to deploy, compile your Java source code to plain !JavaScript using the GWT compiler, then deploy to any website or server. You can build one widget for an existing web page or an entire application in GWT.
 
 [http://gwt-test-project-1.googlecode.com/files/GWTDiagram.png]
 
 
-===Compiler Optimized !JavaScript===
+===Compiler optimized !JavaScript===
 The GWT compiler performs static analysis across your entire GWT codebase, optimizing the final !JavaScript to load and execute faster than most hand-written !JavaScript. For instance, the compiler may determine that a function's method body can be inlined, reducing both !JavaScript code that would otherwise be downloaded to the browser as well as execution time when the program is run. This cross-compilation allows you to develop your application with maintainable abstractions and modularity without performance penalization.  [http://more Learn more.]
 
 
-=== Cross Browser Support for free === 
+=== Cross browser support for free === 
 Your GWT applications automatically support IE, Firefox, Mozilla, Safari, and Opera with no browser detection or special-casing within your code. You write the same code once, GWT transforms it into the most performant !JavaScript for the user's particular browser. [DevGuideCrossBrowserSupport Learn more.]
 
 
 ===Real debugging in GWT Hosted Mode===
 In production, your code is compiled to !JavaScript, but at development time it runs in the Java virtual machine. That means when your code performs an action like handling a mouse event, you get full-featured Java debugging, with exceptions and the advanced debugging features of IDEs like [http://www.eclipse.org/ Eclipse]. [DevGuideHostedMode Learn more.]
 
-===Per-Browser, Per-Locale, Per-Whatever optimized code===
+===Per-browser, per-locale, per-whatever optimized code===
 Deferred binding is a feature of the GWT compiler that works by generating many versions of code at compile time, only one of which needs to be loaded by a particular client during bootstrapping at runtime. Each version is generated on a per browser basis, along with any other axis that your application defines or uses. For example, if you were to internationalize your application using GWT's [DevGuideInternationalization Internationalization module], the GWT compiler would generate versions of your application per browser environment, such as "Firefox in English", "Firefox in French", "Internet Explorer in English", etc... As a result, the deployed !JavaScript code is compact and quicker to download than if you coded if/then statements into your hand-written JavaScript, containing only the code and resources it needs for a particular browser environment. [DevGuideDeferredBinding Learn more.]
 
 
@@ -30,7 +30,7 @@ Create reusable [DevGuideUserInterface Widgets] by compositing other Widgets, th
 
 
 
-===Productive Coding and Tools===
+===Productive coding and tools===
 Because GWT uses Java, you can use all of your favorite Java development tools ([http://www.eclipse.org/ Eclipse], [http://www.jetbrains.com/idea/ IntelliJ], [http://www.ej-technologies.com/products/jprofiler/overview.html JProfiler], [http://www.junit.org/ JUnit]) for your AJAX development. This allows a web developer to harness the productivity gains of automated Java refactoring and code prompting/completion. In addition, static type checking in the Java language enables developers to catch a class of !JavaScript bugs (typos, type mismatches) when writing code rather than at runtime, boosting productivity while reducing errors. No more user discovered accidental var assignments. Finally, you can take advantage of Java-based OO designs patterns and abstractions that are easy to understand and maintain without your user incurring any runtime performance costs thanks to the compiler optimizations. 
 
 
@@ -58,5 +58,5 @@ Easily create efficient internationalized applications and libraries using GWT's
 All of the code for GWT is available under the Apache 2.0 license. If you are interested in contributing, please visit [http://code.google.com/webtoolkit/makinggwtbetter.html Making GWT Better]. [http://code.google.com/p/google-web-toolkit/ Learn more]
 
 
-===Next Steps===
+===Next steps===
 Ready to get started? For a step-by-step installation guide and tutorial, please see the [GettingStarted Getting Started Guide]. 
