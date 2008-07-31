@@ -22,7 +22,7 @@ Your GWT applications automatically support IE, Firefox, Mozilla, Safari, and Op
 In production, your code is compiled to !JavaScript, but at development time it runs in the Java virtual machine. That means when your code performs an action like handling a mouse event, you get full-featured Java debugging, with exceptions and the advanced debugging features of IDEs like [http://www.eclipse.org/ Eclipse]. [DevGuideHostedMode Learn more.]
 
 ===Per-browser, per-locale, per-whatever optimized code===
-Deferred binding is a feature of the GWT compiler that works by generating many versions of code at compile time, only one of which needs to be loaded by a particular client during bootstrapping at runtime. Each version is generated on a per browser basis, along with any other axis that your application defines or uses. For example, if you were to internationalize your application using GWT's [DevGuideInternationalization Internationalization module], the GWT compiler would generate versions of your application per browser environment, such as "Firefox in English", "Firefox in French", "Internet Explorer in English", etc... As a result, the deployed !JavaScript code is compact and quicker to download than if you coded if/then statements into your hand-written JavaScript, containing only the code and resources it needs for a particular browser environment. [DevGuideDeferredBinding Learn more.]
+Deferred binding is a feature of the GWT compiler that works by generating many versions of code at compile time, only one of which needs to be loaded by a particular client during bootstrapping at runtime. Each version is generated on a per browser basis, along with any other axis that your application defines or uses. For example, if you were to internationalize your application using GWT's [DevGuideInternationalization Internationalization module], the GWT compiler would generate versions of your application per browser environment, such as "Firefox in English", "Firefox in French", "Internet Explorer in English", etc... As a result, the deployed !JavaScript code is compact and quicker to download than if you coded if/then statements into your hand-written !JavaScript, containing only the code and resources it needs for a particular browser environment. [DevGuideDeferredBinding Learn more.]
 
 
 ===Dynamic, reusable UI components===
@@ -38,8 +38,8 @@ Because GWT uses Java, you can use all of your favorite Java development tools (
 To communicate from your web application to your web server, you just need to define serializable Java classes for your request and response. In production, GWT automatically serializes the request and deserializes the response from the server. GWT's RPC mechanism can even handle polymorphic class hierarchies, and you can throw exceptions across the wire. GWT also supports other transfer protocols, such as JSON. [DevGuideRemoteProcedureCalls Learn more.]
 
 
-===Interoperability and fine-grained control===
-If GWT's class library doesn't meet your needs, you can mix handwritten !JavaScript in your Java source code using our [DevGuideJavaScriptNativeInterface !JavaScript Native Interface (JSNI)]. GWT 1.5 now contains JavaScript Overlay Types, which allow you to 'overlay' a Java class directly over a JavaScriptObject and access it as a Java object from within your code. [DevGuideJavaScriptNativeInterface Learn more]
+===Interoperability with native JavaScript and other libraries===
+If GWT's class library doesn't meet your needs, you can mix handwritten !JavaScript in your Java source code using our [DevGuideJavaScriptNativeInterface JavaScript Native Interface (JSNI)]. GWT 1.5 now contains JavaScript Overlay Types, which allow you to 'overlay' a Java class directly over a JavaScriptObject and access it as a Java object from within your code. [DevGuideJavaScriptNativeInterface Learn more]
 
 
 === Browser history management===
