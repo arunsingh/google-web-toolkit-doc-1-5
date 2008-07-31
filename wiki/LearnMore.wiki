@@ -1,9 +1,7 @@
 #summary Google Web Toolkit overview of features.
 
- 
-=Google Web Toolkit= 
-[http://gwt-test-project-1.googlecode.com/files/gwtLogo.png]
-===Performance for Users, Productivity for Developers===
+[http://google-web-toolkit-doc-1-5.googlecode.com/files/GWTbanner.png]
+
 Writing web apps today is a tedious and error-prone process. Developers can spend 90% of their time working around browser quirks. In addition, building, reusing, and maintaining large !JavaScript code bases and AJAX components can be difficult and fragile. 
 
 Google Web Toolkit (GWT) eases this burden by allowing developers to quickly build and maintain complex yet highly performant !JavaScript front-end applications in the Java programming language. Here's how it works:
