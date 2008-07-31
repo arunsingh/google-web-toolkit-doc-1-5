@@ -9,7 +9,7 @@ Google Web Toolkit (GWT) eases this burden by allowing developers to quickly bui
 ===How Google Web Toolkit Works===
 With Google Web Toolkit, you write your AJAX front-end in the Java programming language using your favorite Java tools along the way. During development, use GWT's Hosted Mode browser to test and iterate in the same "tweak/view" cycle you're accustomed to, accept that now you'll be able to easily step through and debug your web application. However, using GWT for your front-end doesn't mean you have to use Java for the backend. GWT provides various means of communicating with a backend server, including JSON. When you are ready to deploy, compile your Java source code to plain !JavaScript using the GWT compiler, then deploy to any website or server. You can build one widget for an existing web page or an entire application in GWT.
 
-[http://google-web-toolkit-doc-1-5.googlecode.com/files/diagram.png]
+[http://gwt-test-project-1.googlecode.com/files/GWTDiagram]
 
 ===Real debugging in GWT Hosted Mode===
 In production, your code is compiled to !JavaScript, but at development time it runs in the Java virtual machine. That means when your code performs an action like handling a mouse event, you get full-featured Java debugging, with exceptions and the advanced debugging features of IDEs like [http://www.eclipse.org/ Eclipse]. [DevGuideHostedMode Learn more.]
