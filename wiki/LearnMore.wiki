@@ -11,22 +11,22 @@ With Google Web Toolkit, you write your AJAX front-end in the Java programming l
 
 
 ===Compiler optimized !JavaScript===
-The GWT compiler performs static analysis across your entire GWT codebase, optimizing the final !JavaScript to load and execute faster than most hand-written !JavaScript. For instance, the compiler may determine that a function's method body can be inlined, reducing both !JavaScript code that would otherwise be downloaded to the browser as well as execution time when the program is run. This cross-compilation allows you to develop your application with maintainable abstractions and modularity without performance penalization.  [DevGuideJavaToJavaScriptCompiler Learn more.]
+The GWT compiler performs static analysis across your entire GWT codebase, optimizing the final !JavaScript to load and execute faster than most hand-written !JavaScript. For instance, the compiler may determine that a function's method body can be inlined, reducing both !JavaScript code that would otherwise be downloaded to the browser as well as execution time when the program is run. This cross-compilation allows you to develop your application with maintainable abstractions and modularity without performance penalization.  [DevGuideJavaToJavaScriptCompiler Learn more]
 
 
 === Cross browser support for free === 
-Your GWT applications automatically support IE, Firefox, Mozilla, Safari, and Opera with no browser detection or special-casing within your code. You write the same code once, GWT transforms it into the most performant !JavaScript for the user's particular browser. [DevGuideCrossBrowserSupport Learn more.]
+Your GWT applications automatically support IE, Firefox, Mozilla, Safari, and Opera with no browser detection or special-casing within your code. You write the same code once, GWT transforms it into the most performant !JavaScript for the user's particular browser. [DevGuideCrossBrowserSupport Learn more]
 
 
 ===Real debugging in GWT Hosted Mode===
-In production, your code is compiled to !JavaScript, but at development time it runs in the Java virtual machine. That means when your code performs an action like handling a mouse event, you get full-featured Java debugging, with exceptions and the advanced debugging features of IDEs like [http://www.eclipse.org/ Eclipse]. [DevGuideHostedMode Learn more.]
+In production, your code is compiled to !JavaScript, but at development time it runs in the Java virtual machine. That means when your code performs an action like handling a mouse event, you get full-featured Java debugging, with exceptions and the advanced debugging features of IDEs like [http://www.eclipse.org/ Eclipse]. [DevGuideHostedMode Learn more]
 
 ===Per-browser, per-locale, per-whatever optimized code===
-Deferred binding is a feature of the GWT compiler that works by generating many versions of code at compile time, only one of which needs to be loaded by a particular client during bootstrapping at runtime. Each version is generated on a per browser basis, along with any other axis that your application defines or uses. For example, if you were to internationalize your application using GWT's [DevGuideInternationalization Internationalization module], the GWT compiler would generate versions of your application per browser environment, such as "Firefox in English", "Firefox in French", "Internet Explorer in English", etc... As a result, the deployed !JavaScript code is compact and quicker to download than if you coded if/then statements into your hand-written !JavaScript, containing only the code and resources it needs for a particular browser environment. [DevGuideDeferredBinding Learn more.]
+Deferred binding is a feature of the GWT compiler that works by generating many versions of code at compile time, only one of which needs to be loaded by a particular client during bootstrapping at runtime. Each version is generated on a per browser basis, along with any other axis that your application defines or uses. For example, if you were to internationalize your application using GWT's [DevGuideInternationalization Internationalization module], the GWT compiler would generate versions of your application per browser environment, such as "Firefox in English", "Firefox in French", "Internet Explorer in English", etc... As a result, the deployed !JavaScript code is compact and quicker to download than if you coded if/then statements into your hand-written !JavaScript, containing only the code and resources it needs for a particular browser environment. [DevGuideDeferredBinding Learn more]
 
 
 ===Dynamic, reusable UI components===
-Create reusable [DevGuideUserInterface Widgets] by compositing other Widgets, then easily lay them out automatically in [DevGuideUserInterface Panels]. Want to reuse your Widget in another project? Simple package it up for others to use in a JAR file. [DevGuideUserInterface Learn more.]
+Create reusable [DevGuideUserInterface Widgets] by compositing other Widgets, then easily lay them out automatically in [DevGuideUserInterface Panels]. Want to reuse your Widget in another project? Simple package it up for others to use in a JAR file. [DevGuideUserInterface Learn more]
 
 
 
@@ -35,7 +35,7 @@ Because GWT uses Java, you can use all of your favorite Java development tools (
 
 
 ===Really simple RPC=== 
-To communicate from your web application to your web server, you just need to define serializable Java classes for your request and response. In production, GWT automatically serializes the request and deserializes the response from the server. GWT's RPC mechanism can even handle polymorphic class hierarchies, and you can throw exceptions across the wire. GWT also supports other transfer protocols, such as JSON. [DevGuideRemoteProcedureCalls Learn more.]
+To communicate from your web application to your web server, you just need to define serializable Java classes for your request and response. In production, GWT automatically serializes the request and deserializes the response from the server. GWT's RPC mechanism can even handle polymorphic class hierarchies, and you can throw exceptions across the wire. GWT also supports other transfer protocols, such as JSON. [DevGuideRemoteProcedureCalls Learn more]
 
 
 ===Interoperability with native JavaScript and other libraries===
