@@ -26,8 +26,7 @@ Deferred binding is a feature of the GWT compiler that works by generating many 
 
 
 ===Dynamic, reusable UI components===
-Create reusable [DevGuideUserInterface Widgets] by compositing other Widgets, then easily lay them out automatically in [DevGuideUserInterface Panels]. Want to reuse your Widget in another project? Simple package it up for others to use in a JAR file. [DevGuideUserInterface Learn more]
-
+Create reusable [DevGuideUserInterface Widgets] by compositing other Widgets, then easily lay them out automatically in [DevGuideUserInterface Panels]. The [SampleShowcase GWT Showcase] application provides an overview of the various UI features in GWT. Want to reuse your Widget in another project? Simple package it up for others to use in a JAR file. [DevGuideUserInterface Learn more]
 
 
 ===Productive coding and tools===
@@ -39,7 +38,7 @@ To communicate from your web application to your web server, you just need to de
 
 
 ===Interoperability with native !JavaScript and other libraries===
-If GWT's class library doesn't meet your needs, you can mix handwritten !JavaScript in your Java source code using our [DevGuideJavaScriptNativeInterface JavaScript Native Interface (JSNI)]. GWT 1.5 now contains !JavaScript Overlay Types, which allow you to 'overlay' a Java class directly over a !JavaScriptObject and access it as a Java object from within your code. [DevGuideJavaScriptNativeInterface Learn more]
+If GWT's class library doesn't meet your needs, you can mix handwritten !JavaScript in your Java source code using our [DevGuideJavaScriptNativeInterface JavaScript Native Interface (JSNI)]. With GWT 1.5, it is now possible to subclass the GWT !JavaScriptObject (JSO) class to create Java "class overlays" onto arbitrary !JavaScript objects. Thus, you can get the benefits of modeling JS objects as proper Java types (e.g. code completion, refactoring, inlining) without any additional memory or speed overhead. This capability makes it possible to use JSON structures optimally. [DevGuideJavaScriptNativeInterface Learn more]
 
 
 === Browser history management===
@@ -51,7 +50,7 @@ GWT's direct integration with [http://junit.org/ JUnit] lets you unit test both 
 
 
 ===Internationalization===
-Easily create efficient internationalized applications and libraries using GWT's powerful Deferred Binding techniques. [DevGuideInternationalization Learn more]
+Easily create efficient internationalized applications and libraries using GWT's powerful Deferred Binding techniques. In addition, as of 1.5 the standard GWT widgets support bidirectionality (see the showcase example). [DevGuideInternationalization Learn more]
 
 
 ===Completely Open Source===
