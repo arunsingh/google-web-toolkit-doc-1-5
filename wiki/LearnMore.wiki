@@ -38,8 +38,8 @@ Because GWT uses Java, you can use all of your favorite Java development tools (
 To communicate from your web application to your web server, you just need to define serializable Java classes for your request and response. In production, GWT automatically serializes the request and deserializes the response from the server. GWT's RPC mechanism can even handle polymorphic class hierarchies, and you can throw exceptions across the wire. GWT also supports other transfer protocols, such as JSON. [DevGuideRemoteProcedureCalls Learn more]
 
 
-===Interoperability with native JavaScript and other libraries===
-If GWT's class library doesn't meet your needs, you can mix handwritten !JavaScript in your Java source code using our [DevGuideJavaScriptNativeInterface JavaScript Native Interface (JSNI)]. GWT 1.5 now contains JavaScript Overlay Types, which allow you to 'overlay' a Java class directly over a JavaScriptObject and access it as a Java object from within your code. [DevGuideJavaScriptNativeInterface Learn more]
+===Interoperability with native !JavaScript and other libraries===
+If GWT's class library doesn't meet your needs, you can mix handwritten !JavaScript in your Java source code using our [DevGuideJavaScriptNativeInterface JavaScript Native Interface (JSNI)]. GWT 1.5 now contains !JavaScript Overlay Types, which allow you to 'overlay' a Java class directly over a !JavaScriptObject and access it as a Java object from within your code. [DevGuideJavaScriptNativeInterface Learn more]
 
 
 === Browser history management===
