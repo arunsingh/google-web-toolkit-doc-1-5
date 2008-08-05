@@ -1,4 +1,4 @@
-#summary How to prepare for and tearing down after JUnit test cases.
+#summary How to prepare for before and tear down after JUnit test cases.
 
 = Setting up and tearing down JUnit test cases that use GWT code =
 
