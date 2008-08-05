@@ -108,7 +108,7 @@ By default, new GWT applications use the standard theme, but you can select any 
 <inherits name="com.google.gwt.user.theme.dark.Dark"/>
 }}}
 
-GWT visual themes also come in RTL (right-to-left) versions if you are designing a website for a language that is writting right-to-left, such as arabic. You can include the RTL version by adding RTL to the end of the module name:
+GWT visual themes also come in RTL (right-to-left) versions if you are designing a website for a language that is written right-to-left, such as Arabic. You can include the RTL version by adding RTL to the end of the module name:
 {{{
 <inherits name="com.google.gwt.user.theme.dark.DarkRTL"/>
 }}}
@@ -127,6 +127,3 @@ Finally, copy the contents of the file `public/gwt/standard/standard.css` style 
 ==Documentation==
 
 It is standard practice to document the relevant CSS style names for each widget class as part of its documentation comment. For a simple example, see [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Button.html Button]. For a more complex example, see [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/MenuBar.html MenuBar]. 
-
- _Tip: Currently there is not a single default or "recommended" GWT stylesheet. A common practice is to take the one from the Showcase or other sample projects as a starter. 
- _
