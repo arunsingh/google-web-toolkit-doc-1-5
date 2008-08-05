@@ -12,7 +12,7 @@ Widgets define your applications input and output with the user.  Examples of wi
    http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/Button.png
  * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/TextBox.html TextBox] The application can display text and the user can type in the text box.
    http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/TextBox.png
- * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Tree.html Tree] A collapsable hierarcy of widgets.
+ * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Tree.html Tree] A collapsible hierarchy of widgets.
    http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/Tree.png
  * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/RichTextArea.html RichTextArea ] A text editor that allows R
    http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/RichTextArea.png
@@ -32,7 +32,7 @@ Panels contain widgets and other panels.  They are used to define the [DevGuideU
 
  * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/DockPanel.html DockPanel] Arranges widgets and subpanels using directional alignment.
    http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/DockPanel.png
- * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HorizontalPanel.html HorizontalPanel] Arranges widgets and subpanels horzontally.
+ * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HorizontalPanel.html HorizontalPanel] Arranges widgets and subpanels horizontally.
    http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/HorizontalPanel.png
  * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/TabPanel.html TabPanel] Arranges subpanels and widgets under tabs.
    http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/TabPanel.png
