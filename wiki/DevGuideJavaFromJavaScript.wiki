@@ -113,7 +113,7 @@ public MyUtilityClass
                                           int term) { ... }
     public static native void exportStaticMethod() /*-{
        $wnd.computeLoanInterest =
-          @mypackage.MyUtilityClass::computeLoanInterest(IFI)(amt, intRate, term);
+          @mypackage.MyUtilityClass::computeLoanInterest(IFI);
     }-*/;
 }
 }}}
