@@ -297,7 +297,7 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
   TreeSet(), TreeSet(Collection), TreeSet(Comparator), TreeSet(SortedSet), add(E), clear(), comparator(), contains(Object), first(), headSet(E), iterator(), last(), remove(Object), size(), subSet(E, E), tailSet(E)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html Vector]
-  Vector(), Vector(Collection), Vector(int), Vector(int, int), add(E), add(int, E), addAll(Collection), addAll(int, Collection), addElement(E), capacity(), clear(), clone(), contains(Object), containsAll(Collection), copyInto(Object[]), elementAt(int), elements(), ensureCapacity(int), firstElement(), get(int), indexOf(Object), indexOf(Object, int), insertElementAt(E, int), isEmpty(), iterator(), lastElement(), lastIndexOf(Object), lastIndexOf(Object, int), remove(int), removeAll(Collection), removeAllElements(), removeElement(Object), removeElementAt(int), set(int, E), setElementAt(E, int), setSize(int), size(), subList(int, int), toArray(), toArray(T[]), toString(), trimToSize()
+  Vector(), Vector(Collection), Vector(int), Vector(int, int), add(E), add(int, E), addAll(Collection), addAll(int, Collection), addElement(E), capacity(), clear(), clone(), contains(Object), containsAll(Collection), copyInto(Object[]), elementAt(int), elements(), ensureCapacity(int), firstElement(), get(int), indexOf(Object), indexOf(Object, int), insertElementAt(E, int), isEmpty(), iterator(), lastElement(), lastIndexOf(Object), lastIndexOf(Object, int), remove(int), removeAll(Collection), removeAllElements(), removeElement(Object), removeElementAt(int), set(int, E), setElementAt(E, int), setSize(int), size(), toArray(), toArray(T[]), toString(), trimToSize()
 
 ==Package java.io==
 
