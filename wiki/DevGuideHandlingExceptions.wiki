@@ -4,7 +4,7 @@
 
 Making RPCs opens up the possibility of a variety of errors. Networks fail, servers crash, and problems occur while processing a server call. GWT lets you handle these conditions in terms of Java exceptions. RPC-related exceptions fall into two categories: checked exceptions and unchecked exceptions.
 
-Keep in mind that any custome exceptions that you want to define, like any other piece of client-side code, must only be composed of types supported by [RefJreEmulation GWT's emulated JRE library].
+Keep in mind that any custom exceptions that you want to define, like any other piece of client-side code, must only be composed of types supported by [RefJreEmulation GWT's emulated JRE library].
 
 ==Checked Exceptions==
 
