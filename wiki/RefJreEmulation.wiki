@@ -174,7 +174,7 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
   add(E), addAll(Collection), clear(), contains(Object), containsAll(Collection), isEmpty(), iterator(), remove(Object), removeAll(Collection), retainAll(Collection), size(), toArray(), toArray(T[]), toString()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/AbstractList.html AbstractList]
-  add(E), add(int, E), addAll(int, Collection), clear(), equals(Object), get(int), hashCode(), indexOf(Object), iterator(), lastIndexOf(Object), listIterator(), listIterator(int), remove(int), set(int, E), subList(int, int)
+  add(E), add(int, E), addAll(int, Collection), clear(), equals(Object), get(int), hashCode(), indexOf(Object), iterator(), lastIndexOf(Object), listIterator(), listIterator(int), remove(int), set(int, E)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/AbstractMap.html AbstractMap]
   clear(), containsKey(Object), containsValue(Object), entrySet(), equals(Object), get(Object), hashCode(), isEmpty(), keySet(), put(K, V), putAll(Map), remove(Object), size(), toString(), values()
@@ -249,7 +249,7 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
   LinkedList(), LinkedList(Collection), add(E), addFirst(E), addLast(E), clear(), element(), getFirst(), getLast(), listIterator(int), offer(E), peek(), poll(), remove(), removeFirst(), removeLast(), size()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html List]
-  add(E), add(int, E), addAll(Collection), addAll(int, Collection), clear(), contains(Object), containsAll(Collection), equals(Object), get(int), hashCode(), indexOf(Object), isEmpty(), iterator(), lastIndexOf(Object), listIterator(), listIterator(int), remove(int), remove(Object), removeAll(Collection), retainAll(Collection), set(int, E), size(), subList(int, int), toArray(), toArray(T[])
+  add(E), add(int, E), addAll(Collection), addAll(int, Collection), clear(), contains(Object), containsAll(Collection), equals(Object), get(int), hashCode(), indexOf(Object), isEmpty(), iterator(), lastIndexOf(Object), listIterator(), listIterator(int), remove(int), remove(Object), removeAll(Collection), retainAll(Collection), set(int, E), size(), toArray(), toArray(T[])
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/ListIterator.html ListIterator]
   add(E), hasNext(), hasPrevious(), next(), nextIndex(), previous(), previousIndex(), remove(), set(E)
