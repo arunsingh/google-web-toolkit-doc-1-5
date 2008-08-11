@@ -69,7 +69,7 @@ The `<servlet>` element applies only to GWT's embedded server server-side debugg
 
  * *<extend-property name="_client-property-name_" values="_comma-separated-values_"/>* : Extends the set of values for an existing client property. Any number of values may be added in this manner, and client property values accumulate through inherited modules. You will likely only find this useful for [DevGuideSpecifyingLocale specifying locales in internationalization].
 
-===Dividing code into Mulitple Modules===
+===Dividing code into Multiple Modules===
 
 Creating a second module doesn't necessarily mean that that module must define an entry point. Typically, you create a new module when you want to package up a library of GWT code that you want to reuse in other GWT projects. An example of this is the Google API Library for Google Web Toolkit ([http://code.google.com/p/gwt-google-apis/ GALGWT]), specifically the Gears for GWT API binding. If you download the library and take a look at the `gwt-google-apis/com/google/gwt/gears` you'll find the `Gears.gwt.xml` file for the module which doesn't define an entry point. However, any GWT project that would like to use Gears for GWT will have to inherit the Gears.gwt.xml module. For example, a module named "Foo" might want to use GALGWT, so in `Foo.gwt.xml` an `<inherits>` entry would be needed:
 
