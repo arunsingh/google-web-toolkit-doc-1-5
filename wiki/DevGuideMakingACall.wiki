@@ -23,7 +23,7 @@ Its corresponding asynchronous interface will look like this:
 {{{
 public interface MyEmailServiceAsync {
   void emptyMyInbox(String username, String password,
-      AsyncCallback callback);
+      AsyncCallback<Void> callback);
 }
 }}}
 
@@ -44,7 +44,7 @@ public void menuCommandEmptyInbox() {
   // (2) Create an asynchronous callback to handle the result.
   //
   AsyncCallback callback = new AsyncCallback() {
-    public void onSuccess(Object result) {
+    public void onSuccess(Void result) {
       // do some UI stuff to show success
     }
 
@@ -81,15 +81,14 @@ It is safe to cache the instantiated service proxy to avoid creating it for subs
        * was initalized when the module started up.
        */
       void sendEmail (String message) {
-          myEmailService.sendEmail(message, new AsyncCallback() {
+          myEmailService.sendEmail(message, new AsyncCallback<String>() {
 
             public void onFailure(Throwable caught) {
               Window.alert("RPC to sendEmail() failed.");
             }
 
-            public void onSuccess(Object result) {
-              String resultString = (String)result;
-              label.setText(resultString);
+            public void onSuccess(String result) {
+              label.setText(result);
             }
           });
       }
