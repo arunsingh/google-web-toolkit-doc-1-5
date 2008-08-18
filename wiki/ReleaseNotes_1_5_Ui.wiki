@@ -42,7 +42,7 @@ Specifics:
   * Modified `MenuBar` so that it accepts an `ImageBundle` as input to its constructor for its images. The default `ImageBundle` is `MenuImages` in LTR layout, and `MenuImagesRTL` in RTL layout.
 
 === Accessibility support ===
-GWT 1.5 adds `com.google.gwt.user.client.ui.Accessibility` for setting [http://developer.mozilla.org/en/docs/Accessible_DHTML ARIA] roles/states. GWT standard widgets now support ARIA roles/states, including `CustomButton`, `Tree`, `TreeItem`, `MenuBar`, `MenuItem`, `TabBar`, `TabPanel`. Note that ARIA support will only work in !FireFox 3+, or !FireFox2 with [http://firevox.clcworld.net/ FireVox].
+GWT 1.5 adds `com.google.gwt.user.client.ui.Accessibility` for setting [http://developer.mozilla.org/en/docs/Accessible_DHTML ARIA] roles/states. GWT standard widgets now support ARIA roles/states, including `CustomButton`, `Tree`, `TreeItem`, `MenuBar`, `MenuItem`, `TabBar`, `TabPanel`. ARIA support has been tested with Firefox 3 and Window-Eyes. There is some support for [http://firevox.clcworld.net/ FireVox], but results may vary; we plan to improve FireVox support in the future.
 
 Specifics:
   * Tab indexes are properly set for all widgets that derive from `FocusWidget`.
