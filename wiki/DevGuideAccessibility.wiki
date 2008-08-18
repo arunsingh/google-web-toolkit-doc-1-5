@@ -38,18 +38,5 @@ Once ARIA roles and states are added to the DOM of a GWT widget, Firefox will ra
 
 Keyboard accessibility is also a key requirement when access-enabling GWT widgets. Screenreaders will speak the element that has keyboard focus, so keyboard accessibility can be accomplished by moving focus to different elements in response to keyboard commands.
 
-
-== Which GWT widgets were affected? ==
-
-Keyboard accessibility and ARIA properties were added to a variety of GWT widgets, including trees, menus, tab panels, and more. We were able to get accessibility support for some GWT widgets for free. The base element for the GWT Checkbox, Listbox, and RadioButton widgets are their equivalent native HTML controls. Screen readers know how to interpret and react to changes in these native controls, so no ARIA roles or states needed to be added to these controls. In fact, adding unecessary roles and states could have a detrimental effect if a particular screen reader does not recognize the role/state. In such a case, the screen reader would not provide any information when the control was selected, because it would not treat the control as a native HTML control, and it would not have a recognizable ARIA role/state to use for interpretation.
-
-Other widgets, such as the GWT Menu and !TabBar widgets originally lacked any support for keyboard navigation, which is essential when building accessible web applications.
-
-Keyboard accessibility in particular is a problem for GWT applications. Because screen readers traditionally speak the elements on a page that have focus, keyboard navigation requires setting focus on different elements in response to keyboard commands. But different browsers have different rules about which elements can get keyboard focus. GWT by design is browser-agnostic, a feature which allows web developers to design their applications without worrying about incompatibilities between browsers. But this makes it keyboard accessibility complicated because a cross-browser solution for setting focus may not exist.
-Testing
-
-The access-enabled GWT widgets were tested using a variety of different methods. There are basically three steps in the transition between the DOM and the screen reader.
-
-    * The DOM. Because the ARIA properties are being added directly to the DOM, an easy way to make sure that the properties are in the right location is to use a tool like the Firefox add-on Firebug that allows you to inspect the DOM of a widget.
-    * Events. It is important to make sure that Firefox is raising the appropriate events in response to the added ARIA properties, changes in focus, and changes in the widget itself. A Microsoft tool called the Accessible Event Watcher, or AccEvent, allows developers to check which events are being raised.
-    * The screen reader. Using a screen reader to test the accessibility of GWT widgets is essential. Some screen readers may not be listening for all of the events raised by Firefox, or they might expect the ARIA properties to be added to the DOM in certain locations. The most widely used screen readers with some support for ARIA are JAWS and Window-Eyes. !FireVox, a text-to-speech add-on for Firefox, also includes support for ARIA.
+== The state of GWT accessibility support ==
+Many GWT widgets now have keyboard accessibility and ARIA properties. These include !CustomButton, Tree, !TreeItem, !MenuBar, !MenuItem, !TabBar, and !TabPanel. Also, all widgets that inherit from !FocusWidget now have a tabindex by default, allowing for better keyboard navigation.
