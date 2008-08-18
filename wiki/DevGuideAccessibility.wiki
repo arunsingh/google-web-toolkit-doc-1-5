@@ -3,8 +3,6 @@
 = Adding Accessibility Support to GWT Widgets =
 
 == Screen Readers ==
-*What is a screen reader?*
-
 A screen reader is an assistive application that interprets what is displayed on the screen for a blind or visually impaired user. Screen readers can interact with the user in a variety of ways, including speaking out loud or even producing a braille output.
 Who uses screen readers?
 
@@ -14,7 +12,6 @@ How do screen readers work?
 Screen readers listen for a standard set of events that are raised by platform-specific APIs. For example, when an alert window pops up on your screen, Microsoft Windows would expose this event using the Microsoft Active Accessibility API, while a Linux machine would use the Linux Access Toolkit. A screen reader will then communicate this change to the user.
 
 == GWT + Screen Readers ==
-
 Screen readers are listening for specific events to be raised by the browser. Dynamic applications, however, are very often written in ways that the browser has difficulty interpreting correctly. A GWT developer writing the tree widget, for example, might use a list element that has been altered to behave like a tree control. But a screen reader would present the control as a list - an incorrect description that renders the tree unusable. Screen readers will also treat HTML span or div elements as regular static text elements, regardless of the presence of JavaScript event handlers for user interaction.
 ARIA and GWT
 
@@ -55,4 +52,4 @@ The access-enabled GWT widgets were tested using a variety of different methods.
 
     * The DOM. Because the ARIA properties are being added directly to the DOM, an easy way to make sure that the properties are in the right location is to use a tool like the Firefox add-on Firebug that allows you to inspect the DOM of a widget.
     * Events. It is important to make sure that Firefox is raising the appropriate events in response to the added ARIA properties, changes in focus, and changes in the widget itself. A Microsoft tool called the Accessible Event Watcher, or AccEvent, allows developers to check which events are being raised.
-    * The screen reader. Using a screen reader to test the accessibility of GWT widgets is essential. Some screen readers may not be listening for all of the events raised by Firefox, or they might expect the ARIA properties to be added to the DOM in certain locations. The most widely used screen readers with some support for ARIA are JAWS and Window-Eyes. Firevox, a text-to-speech add-on for Firefox, also includes support for ARIA.
+    * The screen reader. Using a screen reader to test the accessibility of GWT widgets is essential. Some screen readers may not be listening for all of the events raised by Firefox, or they might expect the ARIA properties to be added to the DOM in certain locations. The most widely used screen readers with some support for ARIA are JAWS and Window-Eyes. !FireVox, a text-to-speech add-on for Firefox, also includes support for ARIA.
