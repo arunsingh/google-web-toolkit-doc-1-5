@@ -7,7 +7,7 @@ A screen reader is an assistive application that interprets what is displayed on
 
 ===Who uses screen readers?===
 
-Many people find it helpful to be able to interact with their computers in multiple ways. Though Google does not keep statistics on how many of our users are using screen readers, as the population ages, more people will require assistive technology. It is important to make sure that Google products are accessible for everybody.
+Many people find it helpful to be able to interact with their computers in multiple ways. Though Google does not keep statistics on how many of our users are using screen readers, as the population ages, more people will require assistive technology. It is important to make that our applications are accessible for everybody.
 
 === How do screen readers work? ===
 
