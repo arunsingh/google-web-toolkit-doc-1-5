@@ -56,7 +56,7 @@ interface MyServiceAsync {
 }
 }}}
 
-The nature of asynchronous method calls requires the caller to pass in a callback object that can be notified when an asynchronous call completes, since by definition the caller cannot be blocked until the call completes. For the same reason, asynchronous methods do not have return types; they generally return void.  Should you wish to have more control over the state of a pending request, return [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/Header.html Request] instead. After an asynchronous call is made, all communication back to the caller is via the passed-in callback object. 
+The nature of asynchronous method calls requires the caller to pass in a callback object that can be notified when an asynchronous call completes, since by definition the caller cannot be blocked until the call completes. For the same reason, asynchronous methods do not have return types; they generally return void.  Should you wish to have more control over the state of a pending request, return [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/Request.html Request] instead. After an asynchronous call is made, all communication back to the caller is via the passed-in callback object. 
 
 ==Naming Standards==
 
