@@ -1,0 +1,252 @@
+#summary One-sentence summary of this page.
+
+= Adding Accessibility Support to GWT Widgets: A Guide for Widget Developers =
+
+This document describes how to add accessibility support to your GWT application and widgets. A variety of different techniques are discussed; there is not yet a standard and generally-applicable approach for making Ajax applications accessible.
+
+== Class com.google.gwt.user.client.ui.Accessibility ==
+
+The Accessibility class implements the needed setter and getter methods for manipulating DOM properties defined by the ARIA specifications. Currently, the methods implemented by that module are no-ops in all browser environments except Firefox.
+
+This class also defines some constants for the ARIA role and state names which are currently being used by GWT widgets.
+
+== Adding DOM Property role ==
+
+The ARIA property role is an indication of the widget type, and therefore also predicts the way the widget should behave. A role is static and should not change during the lifetime of a widget. Widget authors should:
+
+    * Pick the right role for the widget from the list of supported ARIA roles.
+    * Set this property at construction time.
+
+Here is an example taken from the CustomButton widget implemented in com.google.gwt.user.client.ui. Adding the button role indicates to an assistive technology that the widget will behave like a button.
+
+{{{
+  protected CustomButton() {
+    ...
+    // Add a11y role "button". Accessibility.ROLE_BUTTON is the String constant
+    // "button"
+    Accessibility.setRole(getElement(), "role", Accessibility.ROLE_BUTTON);
+    ...
+  }
+}}}
+
+Note that some of the role names have already been defined as constants in the Accessibility class.
+
+== Adding DOM Property state ==
+
+An ARIA state is an additional attribute that reflects the current state of a widget - for example, whether a checkbox is checked or unchecked. A state should be initialized at the time a widget is constructed and updated during user interaction. Notice the following differences from property role:
+
+    * A widget can have numerous state properties, whereas a widget can only ever have one role property.
+    * State properties are dynamic and change during the widget's lifetime. A role once set does not change.
+
+Note that some of the state names have already been defined as constants in the Accessibility class.
+
+=== Initializing State Properties ===
+
+Once a specific ARIA role has been associated with a widget, it is important to check which states are associated with that role. For example, the button role has two state properties:
+
+aria-disabled
+    Indicates that the widget is present, but is not allowed for user actions.
+aria-pressed
+    Used for buttons that are toggleable to indicate their current pressed state.
+
+The aria-pressed state is not currently being used in the CustomButton widget, because this state is not supported by most screen readers as yet. However, the code in the example below is the code that we would write when the aria-pressed state is better supported.
+
+In the CustomButton widget, the aria-pressed ARIA state is initialized as follows:
+
+{{{
+  protected CustomButton() {
+    ...
+    // Add a11y state "aria-pressed"
+    Accessibility.setState(getElement(), "aria-pressed", "false");
+  }
+}}}
+
+=== Updating State Properties During User Interaction ===
+
+The CustomButton widget has support for multiple button faces, giving the user more stylistic control. Furthermore, unlike the Button widget, a CustomButton can be toggleable - one implementation of which is the widget ToggleButton. Event handlers attached to the underlying DOM element update the button faces when the button is pressed. At the same time, the Accessibility.setState(Element, String, String) method can be used to manipulate the DOM and update the value of the ARIA state aria-pressed:
+
+{{{
+  void toggleDown() {
+    ...
+    // Update a11y state "aria-pressed"
+    Accessibility.setState(getElement(), "aria-pressed", isDown() ? "true" : "false");
+  }
+}}}
+
+It is important to make sure that all event handlers that change the state of the widget also change the ARIA state.
+
+== Adding Keyboard Accessibility ==
+
+Keyboard accessibility is a key requirement when access-enabling GWT widgets. When developing a new widget, ensure that it is keyboard accessible from the outset, because adding keyboard accessibility later can be difficult. Screenreaders will speak the element that has keyboard focus, so keyboard accessibility can be accomplished by moving focus to different elements in response to keyboard commands. By default, the only elements in the HTML DOM that can receive keyboard focus are anchor and form fields. However, setting the DOM property tabIndex (note that this corresponds to HTML attribute tabindex) to 0 will place such elements in the default tab sequence and thereby enable them to receive keyboard focus. Setting the tabIndex = -1, while removing the element from the tab sequence, still allows the element to receive keyboard focus programmatically.
+
+In GWT, any widget that extends the FocusWidget abstract class will be keyboard focusable by default. The FocusWidget abstract class includes a setFocus(boolean) method that can be used to programmatically set the focus or remove focus on the widget. FocusWidget also includes a setTabIndex(int) method that allows the user to set the DOM property tabIndex for the widget.
+
+Keep in mind that if you decide to extend FocusWidget to create a new Widget, the extension of FocusWidget does not guarantee autmoatic focusability. The base element of the the FocusWidget (which users must pass in by calling the superclass constructor) must be a naturally focusable HTML element. In the case where the new widget does not have an obviously focusable component (such as an auto-complete widget with a text field, for example), a focusable element can be created via the FocusPanel.impl.createFocusable() static method. Look at CustomButton's implementation for an example of this.
+
+For widgets that don't extend the FocusWidget abstract class, it may be more difficult to ensure keyboard accessibility. Different browsers set focus in different ways, and support for setting keyboard focus on arbitrary elements is not consistent across browsers. In this regard, keyboard navigable widgets - menus, trees, and tab panels - can be complicated to develop. The FocusPanel, which is a panel that makes its contents focusable, can be used to enclose elements that need to receive keyboard focus; though again, setting focus in this manner does not work consistently across all browsers.
+
+For an example of using property tabIndex, see the MenuBar widget. The root menu is the only menu that should be in the tab sequence; any sub-menus should not be part of the sequence. To achieve this, the tabIndex is set to 0 in the MenuBar's constructor. Whenever another MenuBar is added as a sub-menu to a MenuItem, its tabindex is reset to -1.
+
+== Indicating Selection Changes to Screen Readers for Items That Are Not Naturally Focusable ==
+
+Some widgets, such as GWT's Tree and MenuBar widgets, consist of a container with a set of items. Typically, the container has a naturally focusable DOM element, but the items themselves do not. The focusable element receieves all keyboard input, and causes visual changes in the items themselves to indicate a change in item selection. For example, GWT's Tree widget contains GWT TreeItems, and both of these elements are made up of divs. However, the Tree also has a naturally focusable hidden element, which is the element that recieves all of the keyboard events. Whenever the user hits the arrow keys, this element recieves the event, and then causes the appropriate TreeItem to be highlighted.
+
+While this technique holds up for sighted users, it plays havoc with screen readers. Since the TreeItems themselves never get natural focus when selected, there is no way for the screen reader to know that the item selection has changed. One possible way to remedy this would be to have each TreeItem be naturally focusable. Unfortuantely, TreeItems themselves can contain more than just text - they can actually contain other widgets, which themselves can be naturally focusable. There would be some complexity in getting the focus delegation to work properly. One important thing to note is that if one went this route, it would definitely not be a good idea to hook up keyboard event listeners for each item in the tree. This would become unweildy for Trees with many items. Instead, one should rely on the natural event bubbling of key events, and have an element at the root of the Tree widget be responsible for receiving events.
+
+Another way to remedy the situation is to use the ARIA aria-activedescendant state. This state is set on an element that is naturally focusable, and its value is the HTML id of the currently-selected item. Whenever the item changes, the aria-activedescendant value is updated to the id of the newly-selected item. The screen reader notices the change in the value, and proceeds to read the element corresponding to the id. Below is an example of how this technique is used on the GWT Tree and TreeItem widgets. First, the appropriate roles are set on the Tree's root element and its focusable element:
+
+{{{
+  // Called from Tree(...) constructor
+  private void init(TreeImages images, boolean useLeafImages) {
+    
+    ...
+    
+    // Root element of Tree is a div
+    setElement(DOM.createDiv());
+
+    ...
+    
+    // Create naturally-focusable element
+    focusable = FocusPanel.impl.createFocusable();
+
+    ...
+    
+    // Hide element and append it to root div
+    DOM.setIntStyleAttribute(focusable, "zIndex", -1);
+    DOM.appendChild(getElement(), focusable);
+
+    // Listen for key events on the root element
+    sinkEvents(Event.MOUSEEVENTS | Event.ONCLICK | Event.KEYEVENTS);
+    
+    ...
+    
+    // Add a11y role "tree" to root element
+    Accessibility.setRole(getElement(), Accessibility.ROLE_TREE);
+    
+    // Add a11y role "treeitem" to focusable element. This is necessary for some screen 
+    // readers to interpret the aria-activedescendant state of this element.     
+    Accessibility.setRole(focusable, Accessibility.ROLE_TREEITEM);       
+ }
+}}}
+
+Whenever an item selection changes, the value of the aria-activedescendant state is set on the focusable element, and the ARIA states of the currently-selected item are set:
+
+{{{
+  // Called after a new item has been selected
+  private void updateAriaAttributes() {
+
+    // Get the element which contains the text (or widget) content within
+    // the currently-selected TreeItem
+    Element curSelectionContentElem = curSelection.getContentElem();
+
+    ...
+    
+    // Set the 'aria-level' state. To do this, we need to compute the level of
+    // the currently selected item.    
+    Accessibility.setState(curSelectionContentElem, Accessibility.STATE_LEVEL,
+        String.valueOf(curSelectionLevel + 1));
+
+    // Set other ARIA states
+    ...
+    
+    // Update the 'aria-activedescendant' state for the focusable element to
+    // match the id of the currently selected item.
+    
+    Accessibility.setState(focusable, Accessibility.STATE_ACTIVEDESCENDANT,
+        DOM.getElementAttribute(curSelectionContentElem, "id"));
+  }
+}}}
+
+Though it is not shown in this code snippet, when TreeItems are created, their inner content element (a child div of the root TreeItem div) is assigned a unique DOM id, and a role of treeitem. We do not set these attributes on the root TreeItem div because it contains a child image, and this causes screen readers to have trouble interpreting the div as a treeitem.
+
+=== Caveats with this Approach ===
+
+The obvious problem with this approach is that unique DOM ids need to be assigned to all of the possible items that could be selected. While this is easy enough to implement, it seems that it is ugly to have to assign DOM ids to each item.
+
+The more subtle problem has to do with the original intention of the aria-activedescendant state. Originally, the vanilla use-case for this state was the implementation of a listbox with divs. Whenever the aria-activedescendant value of the parent div (which was the one with natural focus) would change, the screen reader would read out the text of the div with the corresponding id. It would completely ignore any roles or states set on the selected div. This is normally fine for a listbox, as it is a simple widget, and the text of the selected item is enough for the user to understand which item is selected. However, with a widget such as a Tree, the text of the selected item is not enough for the user to understand which item is selected. For example, which level of the tree is the selected item on?
+
+Some screen readers have started to do more than just read the text of the selected item. They will interpret the item just as they would any other element that received keyboard focus. However, not all screen readers do this. Hopefully, all screen readers will decide to implement the aria-activedescendant state by fully interpreting the active element.
+
+== Associating Meaningful Labels ==
+
+A web page will often include human-readable descriptive elements - such as Label or HTML widgets - that explain the purpose of a particular widget. Yet, the association between a widget and its description may not be obvious to a browser or a screen reader. ARIA defines the aria-labelledby state which can be used to explicitly associate a widget with one or more descriptive elements.
+
+In order to associate a label with a widget, ensure that descriptive elements all have an id. GWT widgets can use the DOM.setElementProperty(Element, String, String) method to set the id property of a descriptive element to a particular value, which should be unique within the page. The assigned id value can later be used in a call to the Accessibility.setState(Element, String, String method to set the aria-labelledby state of a widget to refer to the id values of any descriptive elements. This associates those descriptive elements with the widget.
+
+It is important that the widget be keyboard accessible, which results in the following end-user behavior:
+
+    * Users can hit tab to move focus to the widget.
+    * Upon the widget receiving focus, Firefox uses the association - created by the property labelledby - between the widget receiving focus and the descriptive element to raise an appropriate accessibility event.
+    * As a consequence, a screenreader user hears the description of the widget that just received focus.
+
+== Automatically Speaking Highlighted Content == 
+
+AJAX components often highlight an item of interest without moving keyboard focus to that item. This creates a good end-user experience when creating components such as autocomplete widgets; the user can continue to type and obtain further refinements to the available set of choices. Because screenreaders traditionally attempt to speak the item that has keyboard focus, screenreaders will not read highlighted items. The ARIA properties corresponding to live regions provide a means to retain the usability of widgets such as autocomplete while providing a usable experience for visually impaired users.
+
+=== How It Works ===
+
+The solution is based on the insight that in such cases, the adaptive technology needs help from the interaction component as to what is to be presented to the user. The ARIA role region is used to declare regions that hold such live content, i.e., content that updates dynamically without having keyboard focus. The ARIA state property live on such regions specify the priority of such updates; think of this as a politeness setting. Here is a code example that should provide the general idea of how to implement this technique for an auto-complete widget:
+
+=== Initialize Live Region ===
+
+The ARIA property role = 'region' is added when instantiating the relevant DOM nodes in the AutoCompleteWidget constructor:
+
+{{{
+  public AutoCompleteWidget() {
+    ...
+    // Create a hidden div where we store the current item text for a
+    // screen reader to speak
+    ariaElement = DOM.createDiv();
+    DOM.setStyleAttribute(ariaElement, "display", "none");
+    Accessibility.setRole(ariaElement, "role", "region");
+    Accessibility.setState(ariaElement, "aria-live", "rude");
+    DOM.appendChild(getElement(), ariaElement);
+  }
+}}}
+
+Here, we have created a hidden div that holds the content to be spoken. We've declared it to have role = 'region' and live = 'rude'; the latter setting specifies that updates to this content have the highest priority. Next, we set up the needed associations so that the set of suggestions returned as the user types into the AutoCompleteWidget's text box are rendered to the user via the hidden div:
+
+{{{
+    // This method is called via a keyboard event handler
+    private void showSuggestions(Collection suggestions) {
+      if (suggestions.size() > 0) {
+    
+        // Popupulate the visible suggestion pop-up widget with the new selections
+        // and show them
+        ....
+    
+        // Generate the hidden div content based on the suggestions
+    
+        String hiddenDivText = "Suggestions ";
+
+        for (Suggestion curSuggestion : suggestions) {
+          hiddenDivText += " " + curSuggestion.getDisplayString();
+        }
+    
+        DOM.setInnerText(ariaElement, hiddenDivText);
+      }
+    }
+}}}
+
+=== Problems with this Approach ===
+
+The major downside of this technique is how free-form it is. The developer has complete control over the text that is spoken by the screen reader. While this seems like a good thing for the developer, it actually is not a good thing for users of screen readers. Taking this example, different developers of AutoComplete widgets may decide on different text that the screen reader should read. For example, another screen reader might prefix each suggestion with the "Suggestion x", where x is the index of the suggestion in the list. This leads to an inconsistent experience accross different applications for the same sort of widget. If both developers were able to make use of ARIA roles and states, then a more consistent experience would be delivered, as there is a specification indicating how screen readers should interpret the different ARIA roles and states.
+
+A more direct problem with this approach is internationalization. Most developers would realize that the list of suggestions would need to be translated into different languages, because this list is directly displayed on the screen. However, the word 'Suggestions', which is the first word on the live region, could easily be missed, since it is never visually displayed to the user. These sorts of descriptive terms must also be translated.
+
+== General Advice For Widget Developers ==
+
+First and formemost, use native HTML controls whenever possible. Native HTML controls are well understood by screen readers. They do not require ARIA roles and states, which has two main benefits:
+
+    * ARIA is not supported accross all major browsers as yet. However, screen reader and browser developers have already done the work to make HTML controls accessible.
+    * Re-implementing a native HTML control using divs (for example) can have performance implications. For example, suppose that a developer were to re-implement a listbox using divs. One of the ARIA states that applies to the listitem role is aria-posinset. This value indicates the position of the item within its parent container. So, this would correspond to the item's index in the listbox. The problem is that every time an item is added or removed from the listbox, one would have to iterate through all of the items in the list and adjust the aria-posinset value for each item. Though there are some optimizations that can be done, none of them compare to the speed at which a native HTML select element operates. All of the re-computation of indexes is done in native code, as opposed to performing the iteration in JavaScript and jumping back and forth over the DOM-JS bridge to update attributes.
+
+If native HTML controls cannot be used and a custom widget has to be built, keep in mind that it is much easier to develop an accessible widget from the beginning than to go back and add accessibility support to a pre-existing widget. While adding ARIA roles and states is relatively easy to accomplish, ensuring that the appropriate elements receive keyboard focus during user interaction can be more complicated.
+
+It is also important to make sure that widgets that are inheriting from other widgets end up with the appropriate ARIA roles and states. The widget you are inheriting from might already be specifying a certain ARIA role, and while the Accessibility.setRole(Element, String, String) method will overwrite a previous ARIA role in the same element, a complicated DOM configuration may result in different ARIA roles being placed in different elements.
+
+In order to make sure that a new widget is accessible, testing is absolutely necessary. There are three basic steps in the translation between the DOM and the screen reader:
+
+    * The DOM: because the ARIA properties are being added directly to the DOM, an easy way to make sure that the properties are in the right location is to use a tool like the Firefox add-on Firebug that allows you to inspect the DOM of a widget.
+    * Events: it is important to make sure that Firefox is raising the appropriate events in response to the added ARIA properties, changes in focus, and changes in the widget itself. A Microsoft tool called the Accessible Event Watcher, or AccEvent, can allow you to check which events are being raised.
+    * The screen reader: using a screen reader to test the accessibility of GWT widgets is essential. Some screen readers may not be listening for all of the events raised by Firefox, or they might expect the ARIA properties to be added to the DOM in certain locations. The most widely used screen readers with some support for ARIA are JAWS and Window-Eyes. FireVox, a free text-to-speech add-on for Firefox, also includes support for ARIA.
