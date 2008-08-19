@@ -1,6 +1,6 @@
 #summary Description of GWT's support for ARIA
 
-= Adding Accessibility Support to GWT Widgets =
+= Accessibility Support for GWT =
 
 == Screen Readers ==
 A screen reader is an assistive application that interprets what is displayed on the screen for a blind or visually impaired user. Screen readers can interact with the user in a variety of ways, including speaking out loud or even producing a braille output.
@@ -40,3 +40,6 @@ Keyboard accessibility is also a key requirement when access-enabling GWT widget
 
 == The state of GWT accessibility support ==
 Many GWT widgets now have keyboard accessibility and ARIA properties. These include !CustomButton, Tree, !TreeItem, !MenuBar, !MenuItem, !TabBar, and !TabPanel. Also, all widgets that inherit from !FocusWidget now have a tabindex by default, allowing for better keyboard navigation.
+
+== Making your GWT application accessible ==
+The next document, [Using GWT Accessibility Features DevGuideAccessibilityHOWTO], explains how to make your application and widgets work with screen readers.
