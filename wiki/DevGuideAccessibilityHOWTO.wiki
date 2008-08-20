@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary HOWTO add accessibility support to your widgets and applications
 
 = Adding Accessibility Support to GWT Widgets: A Guide for Widget Developers =
 
@@ -81,7 +81,7 @@ Keyboard accessibility is a key requirement when access-enabling GWT widgets. Wh
 
 In GWT, any widget that extends the FocusWidget abstract class will be keyboard focusable by default. The FocusWidget abstract class includes a setFocus(boolean) method that can be used to programmatically set the focus or remove focus on the widget. FocusWidget also includes a setTabIndex(int) method that allows the user to set the DOM property tabIndex for the widget.
 
-Keep in mind that if you decide to extend FocusWidget to create a new Widget, the extension of FocusWidget does not guarantee autmoatic focusability. The base element of the the FocusWidget (which users must pass in by calling the superclass constructor) must be a naturally focusable HTML element. In the case where the new widget does not have an obviously focusable component (such as an auto-complete widget with a text field, for example), a focusable element can be created via the FocusPanel.impl.createFocusable() static method. Look at CustomButton's implementation for an example of this.
+Keep in mind that if you decide to extend FocusWidget to create a new Widget, the extension of FocusWidget does not guarantee automatic focusability. The base element of the the FocusWidget (which users must pass in by calling the superclass constructor) must be a naturally focusable HTML element. In the case where the new widget does not have an obviously focusable component (such as an auto-complete widget with a text field, for example), a focusable element can be created via the FocusPanel.impl.createFocusable() static method. Look at CustomButton's implementation for an example of this.
 
 For widgets that don't extend the FocusWidget abstract class, it may be more difficult to ensure keyboard accessibility. Different browsers set focus in different ways, and support for setting keyboard focus on arbitrary elements is not consistent across browsers. In this regard, keyboard navigable widgets - menus, trees, and tab panels - can be complicated to develop. The FocusPanel, which is a panel that makes its contents focusable, can be used to enclose elements that need to receive keyboard focus; though again, setting focus in this manner does not work consistently across all browsers.
 
@@ -89,11 +89,13 @@ For an example of using property tabIndex, see the MenuBar widget. The root menu
 
 == Indicating Selection Changes to Screen Readers for Items That Are Not Naturally Focusable ==
 
-Some widgets, such as GWT's Tree and MenuBar widgets, consist of a container with a set of items. Typically, the container has a naturally focusable DOM element, but the items themselves do not. The focusable element receieves all keyboard input, and causes visual changes in the items themselves to indicate a change in item selection. For example, GWT's Tree widget contains GWT TreeItems, and both of these elements are made up of divs. However, the Tree also has a naturally focusable hidden element, which is the element that recieves all of the keyboard events. Whenever the user hits the arrow keys, this element recieves the event, and then causes the appropriate TreeItem to be highlighted.
+Some widgets, such as GWT's Tree and MenuBar widgets, consist of a container with a set of items. The container has a naturally focusable DOM element, but the items themselves do not. The focusable element receives all keyboard input, and causes visual changes in the items themselves to indicate a change in item selection. For example, GWT's Tree widget contains GWT TreeItems, and both of these elements are made up of divs. However, the Tree also has a naturally focusable hidden element, which is the element that receives all of the keyboard events. Whenever the user hits the arrow keys, this element handles the event and causes the appropriate TreeItem to be highlighted.
 
-While this technique holds up for sighted users, it plays havoc with screen readers. Since the TreeItems themselves never get natural focus when selected, there is no way for the screen reader to know that the item selection has changed. One possible way to remedy this would be to have each TreeItem be naturally focusable. Unfortuantely, TreeItems themselves can contain more than just text - they can actually contain other widgets, which themselves can be naturally focusable. There would be some complexity in getting the focus delegation to work properly. One important thing to note is that if one went this route, it would definitely not be a good idea to hook up keyboard event listeners for each item in the tree. This would become unweildy for Trees with many items. Instead, one should rely on the natural event bubbling of key events, and have an element at the root of the Tree widget be responsible for receiving events.
+While this technique holds up for sighted users, it plays havoc with screen readers. Since the TreeItems themselves never get natural focus when selected, there is no way for the screen reader to know that the item selection has changed. One possible way to remedy this would be to have each TreeItem be naturally focusable. Unfortunately, TreeItems themselves can contain more than just text - they can actually contain other widgets, which themselves can be naturally focusable. There would be some complexity in getting the focus delegation to work properly. One important thing to note is that if one went this route, it would definitely not be a good idea to hook up keyboard event listeners for each item in the tree. This would become unwieldy for Trees with many items. Instead, one should rely on the natural event bubbling of key events, and have an element at the root of the Tree widget be responsible for receiving events.
 
-Another way to remedy the situation is to use the ARIA aria-activedescendant state. This state is set on an element that is naturally focusable, and its value is the HTML id of the currently-selected item. Whenever the item changes, the aria-activedescendant value is updated to the id of the newly-selected item. The screen reader notices the change in the value, and proceeds to read the element corresponding to the id. Below is an example of how this technique is used on the GWT Tree and TreeItem widgets. First, the appropriate roles are set on the Tree's root element and its focusable element:
+Another way to remedy the situation is to use the ARIA `aria-activedescendant` state. This state is set on an element that is naturally focusable, and its value is the HTML id of the currently-selected item. Whenever the item changes, the `aria-activedescendant` value should be updated to the id of the newly-selected item. The screen reader will notice the change in the value and read the element corresponding to the id. Below is an example of how this technique is used on the GWT Tree and TreeItem widgets.
+
+First, the appropriate roles are set on the Tree's root element and its focusable element:
 
 {{{
   // Called from Tree(...) constructor
@@ -157,35 +159,34 @@ Whenever an item selection changes, the value of the aria-activedescendant state
   }
 }}}
 
-Though it is not shown in this code snippet, when TreeItems are created, their inner content element (a child div of the root TreeItem div) is assigned a unique DOM id, and a role of treeitem. We do not set these attributes on the root TreeItem div because it contains a child image, and this causes screen readers to have trouble interpreting the div as a treeitem.
+Though it is not shown in this code snippet, when TreeItems are created, they are constructed out of several divs, only one of which contains the content that we wish to be interpreted by the screen reader. This div is assigned a unique DOM id, and a role of treeitem. These attributes are not set on the root TreeItem div because it contains a child image, which we do not want to be read.
 
 === Caveats with this Approach ===
 
-The obvious problem with this approach is that unique DOM ids need to be assigned to all of the possible items that could be selected. While this is easy enough to implement, it seems that it is ugly to have to assign DOM ids to each item.
+The obvious problem with this approach is that unique DOM ids need to be assigned to all of the possible items that could be selected. While this is easy enough to implement, it seems unwieldy to assign DOM ids to each item.
 
-The more subtle problem has to do with the original intention of the aria-activedescendant state. Originally, the vanilla use-case for this state was the implementation of a listbox with divs. Whenever the aria-activedescendant value of the parent div (which was the one with natural focus) would change, the screen reader would read out the text of the div with the corresponding id. It would completely ignore any roles or states set on the selected div. This is normally fine for a listbox, as it is a simple widget, and the text of the selected item is enough for the user to understand which item is selected. However, with a widget such as a Tree, the text of the selected item is not enough for the user to understand which item is selected. For example, which level of the tree is the selected item on?
+Also, there is a subtle problem with using the aria-activedescendant state. Originally, the vanilla use-case for this state was the implementation of a listbox with divs. Whenever the aria-activedescendant value of the parent div (which was the one with natural focus) would change, the screen reader would read out the text of the list item with the corresponding id, ignoring any roles or states set on the selected item. This is normally fine for a listbox, as it is a simple widget, and the text of the selected item is enough for the user to understand which item is selected. However, in the case of a Tree, the text of the selected item is not enough for the user to understand which item is selected. For example, which level of the tree is the selected item on?
 
-Some screen readers have started to do more than just read the text of the selected item. They will interpret the item just as they would any other element that received keyboard focus. However, not all screen readers do this. Hopefully, all screen readers will decide to implement the aria-activedescendant state by fully interpreting the active element.
+Some screen readers have started to do more than just read the text of items selected with `aria-activedescendant`, interpreting the item just as they would any other element that received keyboard focus. However, not all screen readers do this yet.
 
 == Associating Meaningful Labels ==
 
-A web page will often include human-readable descriptive elements - such as Label or HTML widgets - that explain the purpose of a particular widget. Yet, the association between a widget and its description may not be obvious to a browser or a screen reader. ARIA defines the aria-labelledby state which can be used to explicitly associate a widget with one or more descriptive elements.
+A web page will often include human-readable descriptive elements - such as Label or HTML widgets - that explain the purpose of a particular widget. However, the association between a widget and its description may not be obvious to a browser or a screen reader. ARIA defines the `aria-labelledby` state which can be used to explicitly associate a widget with one or more descriptive elements.
 
-In order to associate a label with a widget, ensure that descriptive elements all have an id. GWT widgets can use the DOM.setElementProperty(Element, String, String) method to set the id property of a descriptive element to a particular value, which should be unique within the page. The assigned id value can later be used in a call to the Accessibility.setState(Element, String, String method to set the aria-labelledby state of a widget to refer to the id values of any descriptive elements. This associates those descriptive elements with the widget.
+In order to associate a label with a widget, ensure that descriptive elements all have an id. GWT widgets can use the `DOM.setElementProperty(Element, String, String)` method to set the id of a descriptive element, which should be unique within the page. The assigned id value can later be used in a call to the `Accessibility.setState(Element, String, String)` method to set the aria-labelledby state of a widget to refer to the id values of any descriptive elements. This associates those descriptive elements with the widget.
 
-It is important that the widget be keyboard accessible, which results in the following end-user behavior:
-
-    * Users can hit tab to move focus to the widget.
-    * Upon the widget receiving focus, Firefox uses the association - created by the property labelledby - between the widget receiving focus and the descriptive element to raise an appropriate accessibility event.
-    * As a consequence, a screenreader user hears the description of the widget that just received focus.
+Proper keyboard accessibility affords the following end-user behavior:
+    * Users can tab to move focus to the widget.
+    * Upon the widget receiving focus, Firefox uses the property `aria-labelledby` to associate the widget receiving focus with the descriptive element
+    * A screenreader will then read he descriptive element for the widget that just received focus.
 
 == Automatically Speaking Highlighted Content == 
 
-AJAX components often highlight an item of interest without moving keyboard focus to that item. This creates a good end-user experience when creating components such as autocomplete widgets; the user can continue to type and obtain further refinements to the available set of choices. Because screenreaders traditionally attempt to speak the item that has keyboard focus, screenreaders will not read highlighted items. The ARIA properties corresponding to live regions provide a means to retain the usability of widgets such as autocomplete while providing a usable experience for visually impaired users.
+AJAX components often highlight an item of interest without moving keyboard focus to that item. This creates a good end-user experience when creating components such as autocomplete widgets; the user can continue to type and obtain further refinements to the available set of choices. Because screenreaders traditionally attempt to speak the item that has keyboard focus, they will not read highlighted items. ARIA live regions help make widgets such as autocomplete boxes usable for visually impaired users.
 
 === How It Works ===
 
-The solution is based on the insight that in such cases, the adaptive technology needs help from the interaction component as to what is to be presented to the user. The ARIA role region is used to declare regions that hold such live content, i.e., content that updates dynamically without having keyboard focus. The ARIA state property live on such regions specify the priority of such updates; think of this as a politeness setting. Here is a code example that should provide the general idea of how to implement this technique for an auto-complete widget:
+The ARIA role `region` is used to declare areas that hold such live content, i.e., content that updates dynamically without having keyboard focus. The ARIA state property `aria-live` on such regions specifies the priority of such updates; think of this as a politeness setting. Here is a code example that should provide the general idea of how to implement this technique for an auto-complete widget:
 
 === Initialize Live Region ===
 
@@ -204,7 +205,7 @@ The ARIA property role = 'region' is added when instantiating the relevant DOM n
   }
 }}}
 
-Here, we have created a hidden div that holds the content to be spoken. We've declared it to have role = 'region' and live = 'rude'; the latter setting specifies that updates to this content have the highest priority. Next, we set up the needed associations so that the set of suggestions returned as the user types into the AutoCompleteWidget's text box are rendered to the user via the hidden div:
+Here, we have created a hidden div that holds the content to be spoken. We've declared it to have `role = 'region'` and `live = 'rude'`; the latter setting specifies that updates to this content have the highest priority. Next, we set up the needed associations so that the set of suggestions returned as the user types into the AutoCompleteWidget's text box are rendered to the user via a hidden div:
 
 {{{
     // This method is called via a keyboard event handler
@@ -230,7 +231,7 @@ Here, we have created a hidden div that holds the content to be spoken. We've de
 
 === Problems with this Approach ===
 
-The major downside of this technique is how free-form it is. The developer has complete control over the text that is spoken by the screen reader. While this seems like a good thing for the developer, it actually is not a good thing for users of screen readers. Taking this example, different developers of AutoComplete widgets may decide on different text that the screen reader should read. For example, another screen reader might prefix each suggestion with the "Suggestion x", where x is the index of the suggestion in the list. This leads to an inconsistent experience accross different applications for the same sort of widget. If both developers were able to make use of ARIA roles and states, then a more consistent experience would be delivered, as there is a specification indicating how screen readers should interpret the different ARIA roles and states.
+The major downside of this technique is how free-form it is. The developer has complete control over the text that is spoken by the screen reader. While this seems like a good thing for the developer, it's not great for users of screen readers. Taking this example, different developers of AutoComplete widgets may decide on different text that the screen reader should read. For example, another screen reader might prefix each suggestion with the "Suggestion x", where x is the index of the suggestion in the list. This leads to an inconsistent experience across different applications. If both developers were able to make use of ARIA roles and states, then a more consistent experience would be delivered, in accordance with the ARIA specification.
 
 A more direct problem with this approach is internationalization. Most developers would realize that the list of suggestions would need to be translated into different languages, because this list is directly displayed on the screen. However, the word 'Suggestions', which is the first word on the live region, could easily be missed, since it is never visually displayed to the user. These sorts of descriptive terms must also be translated.
 
