@@ -17,7 +17,7 @@ Screen readers listen for a standard set of events that are raised by platform-s
 Ajax applications are often written in ways that screen readers have difficulty interpreting correctly. A GWT developer writing a tree widget, for example, might use a list element that has been altered to behave like a tree control. But a screen reader would present the control as a list - an incorrect description that renders the tree unusable. Screen readers will also treat HTML span or div elements as regular static text elements, regardless of the presence of JavaScript event handlers for user interaction; you can easily imagine how this causes problems.
 
 == ARIA ==
-ARIA is a specification for making rich Internet applications accessible via a standard set of DOM properties. It is currently [[http://www.w3.org/WAI/intro/aria a work in progress at the W3C]]. More information can be found at the [[http://developer.mozilla.org/en/docs/Accessible_DHTML ARIA page at the Mozilla Developer Center]].
+ARIA is a specification for making rich Internet applications accessible via a standard set of DOM properties. It is currently [http://www.w3.org/WAI/intro/aria a work in progress at the W3C]. More information can be found at the [http://developer.mozilla.org/en/docs/Accessible_DHTML ARIA page at the Mozilla Developer Center].
 
 Adding accessibility support to GWT widgets involves adding the relevant properties to DOM elements that can be used by browsers to raise events during user interaction. Screen readers can react to these events to represent the function of GWT widgets. The DOM properties specified by ARIA are classified into Roles and States.
 
