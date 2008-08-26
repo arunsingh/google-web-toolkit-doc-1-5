@@ -102,6 +102,8 @@
       * [DevGuideSpecifyingLocale Specifying a Locale]
       * [DevGuidePropertiesFiles Localized Properties Files]
       * [DevGuideI18NAnnotations Annotations for use with Internationalization]
+    * [DevGuideAccessibility Accessibility]
+      * [DevGuideAccessibilityHOWTO Adding accessibility support to widgets]
     * [DevGuideInterop Interoperability]
       * [DevGuideJavaScriptNativeInterface JavaScript Native Interface (JSNI)]
         * [DevGuideJavaScriptFromJava Writing Native JavaScript Methods]
