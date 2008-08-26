@@ -29,6 +29,9 @@ Make calls to backend servers using [DevGuideRemoteProcedureCalls GWT RPC] or [D
 [DevGuideJUnitIntegration Unit Testing]
 Integration with JUnit lets you test your AJAX code almost as easily as any other Java code.
 
+[DevGuideAccessibility Accessibility]
+Making your GWT applications accessible for users with screen readers.
+
 [DevGuideInternationalization Internationalization]
 Easily support multiple locales with a single code base.
 
