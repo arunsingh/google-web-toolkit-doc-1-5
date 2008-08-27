@@ -1,10 +1,10 @@
 =GWT Features=
 
- * [DevGuideUserInterface Dynamic, reusable UI components] - Create [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Widget.html Widgets] by compositing other Widgets. Lay out Widgets automatically in [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Panel.html Panels]. Send your Widget to other developers in a JAR file.
+ * [DevGuideUserInterface Dynamic, reusable UI components] - Create [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Widget.html Widgets] by compositing other Widgets. Lay out Widgets automatically in [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Panel.html Panels]. Send your Widget to other developers in a JAR file.
    
  * [DevGuideRemoteProcedureCalls Really simple RPC] - To communicate from your web application to your web server, you just need to define serializable Java classes for your request and response. In production, GWT automatically serializes the request and deserializes the response from the server. GWT's RPC mechanism can even handle polymorphic class hierarchies, and you can throw exceptions across the wire.
 
- * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/History.html Browser history management] - No, AJAX applications _don't_ need to break the browser's back button. GWT lets you make your site more usable by easily adding state to the browser's back button history.
+ * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/History.html Browser history management] - No, AJAX applications _don't_ need to break the browser's back button. GWT lets you make your site more usable by easily adding state to the browser's back button history.
 
  * [DevGuideHostedMode Real debugging] - In production, your code is compiled to !JavaScript, but at development time it runs in the Java virtual machine. That means when your code performs an action like handling a mouse event, you get full-featured Java debugging, with exceptions and the advanced debugging features of IDEs like [http://www.eclipse.org/ Eclipse].
 

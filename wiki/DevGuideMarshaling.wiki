@@ -11,7 +11,7 @@ Parameters and return types in JSNI methods are declared as Java types. There ar
 ||   `boolean`  ||  !JavaScript boolean value, as in  `var b = true;`   ||  
 ||   `long`  ||  disallowed  (see notes)  ||
 ||   other numeric primitives  ||  !JavaScript numeric value, as in  `var x = 42;`   ||  
-||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JavaScriptObject.html JavaScriptObject] ||  `JavaScriptObject` that must have originated from !JavaScript code, typically as the return value of some other JSNI method  (see notes)  ||  
+||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JavaScriptObject.html JavaScriptObject] ||  `JavaScriptObject` that must have originated from !JavaScript code, typically as the return value of some other JSNI method  (see notes)  ||  
 ||   Java array  ||  opaque value that can only be passed back into Java code ||  
 ||   any other Java `Object`   ||  opaque value accessible through [DevGuideJavaFromJavaScript special syntax]  ||  
 
@@ -23,7 +23,7 @@ Parameters and return types in JSNI methods are declared as Java types. There ar
 ||   `boolean`  ||  !JavaScript boolean value, as in  `return false;`   ||  
 ||   `long`  ||  disallowed (see notes)  ||
 ||   Java numeric primitive  ||  !JavaScript numeric value, as in  `return 19;`   ||  
-||    [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JavaScriptObject.html JavaScriptObject] ||   native !JavaScript object, as in  `return document.createElement("div")`   (see notes)  ||  
+||    [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JavaScriptObject.html JavaScriptObject] ||   native !JavaScript object, as in  `return document.createElement("div")`   (see notes)  ||  
 ||   any other Java `Object` (including arrays)  ||  Java `Object` of the correct type that must have originated in Java code; Java objects cannot be constructed from "thin air" in !JavaScript ||  
 
 
@@ -37,7 +37,7 @@ Parameters and return types in JSNI methods are declared as Java types. There ar
 
   *  Violating any of these marshaling rules in [DevGuideHostedMode hosted mode] will generate a `com.google.gwt.dev.shell.DevGuideHostedModeException` detailing the problem. This exception is not [DevGuideClientSide translatable] and never thrown in [DevGuideWebMode web mode]. 
 
-  *  [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JavaScriptObject.html JavaScriptObject] gets special treatment from the GWT compiler and hosted browser. Its purpose is to provide an opaque representation of native !JavaScript objects to Java code.
+  *  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JavaScriptObject.html JavaScriptObject] gets special treatment from the GWT compiler and hosted browser. Its purpose is to provide an opaque representation of native !JavaScript objects to Java code.
 
   *  Java `null` and !JavaScript `null` are identical and always legal values for any non-primitive Java type. !JavaScript `undefined` is _not_ identical to `null`; never return `undefined` from a JSNI method or unpredictable behavior will occur. 
 

@@ -28,7 +28,7 @@ The XML element `<generate-with>` tells the compiler to use a `Generator` class.
 </module>
 }}} 
 
-These directives instruct the GWT compiler to invoke methods in a [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/ext/Generator.html Generator] subclass (`ServiceInterfaceProxyGenerator`) in order to generate special code when the deferred binding mechanism [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create()] is encountered while compiling.  In this case, if the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create()] call references an instance of `RemoteService` or one of its subclasses, the `ServiceInterfaceProxyGenerator`'s generate()` method will be invoked.
+These directives instruct the GWT compiler to invoke methods in a [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/ext/Generator.html Generator] subclass (`ServiceInterfaceProxyGenerator`) in order to generate special code when the deferred binding mechanism [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create()] is encountered while compiling.  In this case, if the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create()] call references an instance of `RemoteService` or one of its subclasses, the `ServiceInterfaceProxyGenerator`'s generate()` method will be invoked.
 
 ==Generator Implementation==
 

@@ -6,7 +6,7 @@ Your application is sent across a network to a user, where it runs as !JavaScrip
 
 ==Module !EntryPoint Class==
 
-To begin writing a GWT module, you must create a subclass of the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/EntryPoint.html EntryPoint] class.
+To begin writing a GWT module, you must create a subclass of the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/EntryPoint.html EntryPoint] class.
 
 {{{
 package com.example.foo.client;

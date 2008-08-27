@@ -4,7 +4,7 @@
 
 The process of making an RPC from the client always involves the same steps: 
 
-  # Instantiate the service interface using [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create()].
+  # Instantiate the service interface using [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create()].
   # Create an asynchronous callback object to be notified when the RPC has completed.
   # Make the call.
 
@@ -97,8 +97,8 @@ It is safe to cache the instantiated service proxy to avoid creating it for subs
 
 ===See Also===
 
-  * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/RemoteService.html RemoteService]
+  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/RemoteService.html RemoteService]
 
-  * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/ServiceDefTarget.html ServiceDefTarget]
+  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/ServiceDefTarget.html ServiceDefTarget]
 
-  * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create(Class)]
+  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create(Class)]

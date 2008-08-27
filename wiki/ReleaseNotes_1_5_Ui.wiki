@@ -3,7 +3,7 @@
 = User Interface =
 
 === Really nice DOM programming! ===
-An all-new [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/dom/client/package-summary.html DOM package] models the W3C HTML Specification for DOM Elements. These new classes allow you to do elegant DOM programming using per-element methods rather than the static DOM helper methods required in GWT 1.4. Best of all, there is no extra memory or speed overhead! The GWT compiler's new support for !JavaScriptObject is designed to allow comppletely cost-free JS interoperation.
+An all-new [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/dom/client/package-summary.html DOM package] models the W3C HTML Specification for DOM Elements. These new classes allow you to do elegant DOM programming using per-element methods rather than the static DOM helper methods required in GWT 1.4. Best of all, there is no extra memory or speed overhead! The GWT compiler's new support for !JavaScriptObject is designed to allow comppletely cost-free JS interoperation.
 
 Note that `com.google.gwt.dom.client.user.client.Element` now extends `dom.client.Element`. `dom.client.Element` is the preferred class to use for new code, and `user.client.Element` exists only for backwards compatibility. `UIObject` now generally uses the `dom.client.Element` instead of `user.client.Element`, although `setElement(user.client.Element)` and `getStyleElement()` have been preserved for backwards compatibility.
 

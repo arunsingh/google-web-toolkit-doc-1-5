@@ -13,7 +13,7 @@ Individual units of GWT configuration are XML files called _modules_. A module b
 Modules may appear in any package in your classpath, although it is strongly recommended that they appear in the root package of a [DevGuideProjectStructure standard project layout].  
 
 ==Entry-Point Classes==
-A module entry-point is any class that is assignable to [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/EntryPoint.html EntryPoint] and that can be constructed without parameters. When a module is loaded, every entry point class is instantiated and its [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/EntryPoint.html#onModuleLoad() EntryPoint.onModuleLoad()] method gets called.  
+A module entry-point is any class that is assignable to [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/EntryPoint.html EntryPoint] and that can be constructed without parameters. When a module is loaded, every entry point class is instantiated and its [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/EntryPoint.html#onModuleLoad() EntryPoint.onModuleLoad()] method gets called.  
 
 ==Source Path==
 Modules can specify which subpackages contain translatable _source_, causing the named package and its subpackages to be added to the _source path_. Only files found on the source path are candidates to be translated into !JavaScript, making it possible to mix [DevGuideClientSide client-side] and [DevGuideServerSide server-side] code together in the same classpath without conflict.  

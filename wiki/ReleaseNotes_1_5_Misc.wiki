@@ -10,7 +10,7 @@
   Java constructors can now be called directly from JSNI via the ::new method reference.
 
 === Access underlying JS object when catching a !JavaScriptException ===
-  The [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JavaScriptException.html JavaScriptException] class has been improved to provide access to the underlying JS object when catching the exception.
+  The [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JavaScriptException.html JavaScriptException] class has been improved to provide access to the underlying JS object when catching the exception.
 
 === Improvements or changes in usage to JRE classes ===
       * Use `Duration.currentTimeMillis()` instead of `System.currentTimeMillis()`, since long is now emulated.

@@ -8,16 +8,16 @@ GWT 1.5 supports and honors the Java 1.5 constructs like generics and annotation
 === Asynchronous interface improvements - access underlying HTTP request objects and RPC payloads === 
 There have been a couple of major improvements to the asynchronous interface component in GWT RPC.
 
-The first is that asynchronous interface methods can now return the underlying HTTP request object ([http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/Request.html http.client.Request]) so you can access and tweak it as necessary for your application needs before sending it off through RPC. Asynchronous interface methods can now also return void or [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestBuilder.html http.client.RequestBuilder] objects.
+The first is that asynchronous interface methods can now return the underlying HTTP request object ([http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/Request.html http.client.Request]) so you can access and tweak it as necessary for your application needs before sending it off through RPC. Asynchronous interface methods can now also return void or [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestBuilder.html http.client.RequestBuilder] objects.
 
-The second improvement is that the asynchronous interface proxy can now be cast to a [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/SerializationStreamFactory.html SerializationStreamFactory] so you can now process the RPC payload independently from the RPC transport system.
+The second improvement is that the asynchronous interface proxy can now be cast to a [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/SerializationStreamFactory.html SerializationStreamFactory] so you can now process the RPC payload independently from the RPC transport system.
 
 === Use annotations to set the service entry point ===
-The [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/RemoteServiceRelativePath.html RemoteServiceRelativePath] annotation can now be used to specify the default service entry point path; no need to call setServiceEntryPoint(String).
+The [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/RemoteServiceRelativePath.html RemoteServiceRelativePath] annotation can now be used to specify the default service entry point path; no need to call setServiceEntryPoint(String).
 
 === Failed RPC calls can now be detected ===
 RPC calls that do not receive a 200 OK response can now be detected by casting
-the onFailure() throwable to [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/StatusCodeException.html StatusCodeException].
+the onFailure() throwable to [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/StatusCodeException.html StatusCodeException].
 
 === Serializable objects may now have non-public, no-arg constructors ===
 
@@ -25,4 +25,4 @@ Previous to 1.5, GWT required that any Serializable objects expected to be trans
 
 === !SerializableException deprecated === 
 
-The [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/SerializableException.html SerializableException] class is deprecated since java.lang.Throwable now implements Serializable.
+The [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/SerializableException.html SerializableException] class is deprecated since java.lang.Throwable now implements Serializable.

@@ -31,11 +31,11 @@ The first type of deferred binding uses _replacement_.  Replacement means overri
 </module>
 }}}
 
-These directives tell the GWT compiler to swap out the `PoupImpl` class code with different class implementations according to the  the `user.agent` property.  The `Popup.gwt.xml` file specifies a default implementation for the `PopupImpl` class, an overide for the Mozilla browser (`PopupImplMozilla` is substituted for `PopupImpl`), and an override for Internet Explorer version 6 (`PopupImplIE6` is substituted for `PopupImpl`).  Note that `PopupImpl` class or its derived classes cannot be instantiated directly.  Instead, the `PopupPanel` class is used and the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create(Class)] technique is used under the hood to instruct the compiler to use deferred binding.
+These directives tell the GWT compiler to swap out the `PoupImpl` class code with different class implementations according to the  the `user.agent` property.  The `Popup.gwt.xml` file specifies a default implementation for the `PopupImpl` class, an overide for the Mozilla browser (`PopupImplMozilla` is substituted for `PopupImpl`), and an override for Internet Explorer version 6 (`PopupImplIE6` is substituted for `PopupImpl`).  Note that `PopupImpl` class or its derived classes cannot be instantiated directly.  Instead, the `PopupPanel` class is used and the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create(Class)] technique is used under the hood to instruct the compiler to use deferred binding.
 
 =Example Class Hierarchy using Replacement=
 
-To see how this is used when designing a widget, we will examine the case of the `PopupPanel` widget further.  The `PopupPanel` class implements the user visible API and contains logic that is common to all browsers.  It also instantiates the proper implementation specific logic using the  [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create(Class)] as follows:
+To see how this is used when designing a widget, we will examine the case of the `PopupPanel` widget further.  The `PopupPanel` class implements the user visible API and contains logic that is common to all browsers.  It also instantiates the proper implementation specific logic using the  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create(Class)] as follows:
 
 {{{
   private static final PopupImpl impl = GWT.create(PopupImpl.class);
@@ -44,7 +44,7 @@ To see how this is used when designing a widget, we will examine the case of the
  _Tip: On GWT versions prior to 1.5, a `(PopupImpl)` cast is needed for the return value from `GWT.create()`
  _
 
-The two classes [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/impl/PopupPanelImplMozilla.html PopupImplMozilla] and [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/impl/PopupPanelImplIE6.html PopupImplIE6] extend the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/impl/PopupPanelImplImpl.html PopupImpl] class and override some `PopupImpl`'s methods to implement browser specific behavior.
+The two classes [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/impl/PopupPanelImplMozilla.html PopupImplMozilla] and [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/impl/PopupPanelImplIE6.html PopupImplIE6] extend the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/impl/PopupPanelImplImpl.html PopupImpl] class and override some `PopupImpl`'s methods to implement browser specific behavior.
 
 Then, when the `PopupPanel` class needs to switch to some browser dependent code, it accesses a member function inside the `PopupImpl` class:
 

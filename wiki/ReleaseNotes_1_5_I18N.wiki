@@ -29,8 +29,8 @@ The system will automatically choose the correct plural form based on the count.
 
 === New !LocaleInfo class lets you access information about the client locale ===
 
-The new [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/LocaleInfo.html LocaleInfo] class has been introduced in GWT 1.5 that allows you to discover more information about the client locale your application is running in. The [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/LocaleInfo.html LocaleInfo] class can also return the list of locales available on the given client.
+The new [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/LocaleInfo.html LocaleInfo] class has been introduced in GWT 1.5 that allows you to discover more information about the client locale your application is running in. The [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/LocaleInfo.html LocaleInfo] class can also return the list of locales available on the given client.
 
 === Multiple Currency Support ===
 
-[http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/NumberFormat.html NumberFormat] now supports multiple currencies via getCurrencyFormat(String currencyCode), and adjusts the number of decimal places for the currency.
+[http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/NumberFormat.html NumberFormat] now supports multiple currencies via getCurrencyFormat(String currencyCode), and adjusts the number of decimal places for the currency.

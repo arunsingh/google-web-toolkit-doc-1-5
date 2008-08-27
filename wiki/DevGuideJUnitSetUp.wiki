@@ -4,12 +4,12 @@
 
 When using a test method in a JUnit [http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html TestCase], any objects your test creates and leaves a reference to will remain active.  This could interfere with future test methods.  In the GWT 1.5 release, you can override two new methods to prepare for and/or clean up after each test method.
 
- * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/junit/client/GWTTestCase.html#gwtSetUp() gwtSetUp()] runs before each test method in a test case.
- * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/junit/client/GWTTestCase.html#gwtTearDown() gwtTearDown()] runs after each test method in a test case.
+ * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/junit/client/GWTTestCase.html#gwtSetUp() gwtSetUp()] runs before each test method in a test case.
+ * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/junit/client/GWTTestCase.html#gwtTearDown() gwtTearDown()] runs after each test method in a test case.
 
 In GWT versions prior to GWT 1.5, you can override the standard JUnit [http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html#setUp() setUp()] and [http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html#tearDown() tearDown()] methods.  However, you are not allowed to use [DevGuideJavaScriptNativeInterface JSNI methods] or code that depends on [DevGuideDeferredBinding deferred binding] (which includes almost all of the UI library).
 
-The following example shows how to defensively cleanup the DOM before the next test run using [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/junit/client/GWTTestCase.html#gwtSetUp() gwtSetUp()].  It skips over `<iframe>` and `<script>` tags so that the GWT test infrastructure is not accidentally removed.
+The following example shows how to defensively cleanup the DOM before the next test run using [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/junit/client/GWTTestCase.html#gwtSetUp() gwtSetUp()].  It skips over `<iframe>` and `<script>` tags so that the GWT test infrastructure is not accidentally removed.
 
 {{{
   import com.google.gwt.junit.client.GWTTestCase;
