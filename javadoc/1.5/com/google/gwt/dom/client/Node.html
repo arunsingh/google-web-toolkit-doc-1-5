@@ -172,8 +172,17 @@ The Node interface is the primary datatype for the entire Document Object
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="../../../../../com/google/gwt/dom/client/Node.html" title="class in com.google.gwt.dom.client">Node</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/dom/client/Node.html#appendChild(com.google.gwt.dom.client.Node)">appendChild</A></B>(<A HREF="../../../../../com/google/gwt/dom/client/Node.html" title="class in com.google.gwt.dom.client">Node</A>&nbsp;newChild)</CODE>
+<CODE>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;T extends <A HREF="../../../../../com/google/gwt/dom/client/Node.html" title="class in com.google.gwt.dom.client">Node</A>&gt; 
+<BR>
+T</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/dom/client/Node.html#appendChild(T)">appendChild</A></B>(T&nbsp;newChild)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds the node newChild to the end of the list of children of this node.</TD>
@@ -405,10 +414,10 @@ protected <B>Node</B>()</PRE>
 </TR>
 </TABLE>
 
-<A NAME="appendChild(com.google.gwt.dom.client.Node)"><!-- --></A><H3>
+<A NAME="appendChild(com.google.gwt.dom.client.Node)"><!-- --></A><A NAME="appendChild(T)"><!-- --></A><H3>
 appendChild</H3>
 <PRE>
-public final <A HREF="../../../../../com/google/gwt/dom/client/Node.html" title="class in com.google.gwt.dom.client">Node</A> <B>appendChild</B>(<A HREF="../../../../../com/google/gwt/dom/client/Node.html" title="class in com.google.gwt.dom.client">Node</A>&nbsp;newChild)</PRE>
+public final &lt;T extends <A HREF="../../../../../com/google/gwt/dom/client/Node.html" title="class in com.google.gwt.dom.client">Node</A>&gt; T <B>appendChild</B>(T&nbsp;newChild)</PRE>
 <DL>
 <DD>Adds the node newChild to the end of the list of children of this node. If
  the newChild is already in the tree, it is first removed.

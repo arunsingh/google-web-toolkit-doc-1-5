@@ -87,7 +87,12 @@ com.google.gwt.user.client.rpc</FONT>
 <BR>
 Interface AsyncCallback&lt;T&gt;</H2>
 <DL>
-<DT><DT><B>Type Parameters:</B><DD><CODE>T</CODE> - </DL>
+<DT><DT><B>Type Parameters:</B><DD><CODE>T</CODE> - The type of the return value that was declared in the synchronous
+          version of the method. If the return type is a primitive, use the
+          boxed version of that primitive (for example, an <code>int</code>
+          return type becomes an <CODE>Integer</CODE> type argument, and a
+          <code>void</code> return type becomes a <CODE>Void</CODE> type
+          argument, which is always <code>null</code>).</DL>
 <HR>
 <DL>
 <DT><PRE>public interface <B>AsyncCallback&lt;T&gt;</B></DL>
@@ -105,7 +110,8 @@ The primary interface a caller must implement to receive a response from a
  <p>
  Each callable asynchronous method corresponds to a method in the correlated
  service interface. The asynchronous method always takes an
- <code>AsyncCallback</code> as its last parameter.
+ <code>AsyncCallback&lt;T&gt;</code> as its last parameter, where
+ <code>T</code> is the return type of the correlated synchronous method.
  </p>
  
  <p>
@@ -119,7 +125,7 @@ The primary interface a caller must implement to receive a response from a
  Its asynchronous counterpart method be declared as:
  
  <pre>
- void getShapes(String databaseName, AsyncCallback callback);
+ void getShapes(String databaseName, AsyncCallback&lt;Shape[]&gt; callback);
  </pre>
  
  Note that <code>throws</code> declaration is not repeated in the async
@@ -131,11 +137,10 @@ The primary interface a caller must implement to receive a response from a
  this:
  
  <pre class="code">
- service.getShapes(dbName, new AsyncCallback() {
-   public void onSuccess(Object result) {
+ service.getShapes(dbName, new AsyncCallback<Shape[]>() {
+   public void onSuccess(Shape[] result) {
      // It's always safe to downcast to the known return type. 
-     Shape[] shapes = (Shape[]) result;
-     controller.processShapes(shapes);
+     controller.processShapes(result);
    }
  
    public void onFailure(Throwable caught) {
@@ -231,15 +236,10 @@ onSuccess</H3>
 <PRE>
 void <B>onSuccess</B>(<A HREF="../../../../../../com/google/gwt/user/client/rpc/AsyncCallback.html" title="type parameter in AsyncCallback">T</A>&nbsp;result)</PRE>
 <DL>
-<DD>Called when an asynchronous call completes successfully. It is always safe
- to downcast the parameter (of type <code>Object</code>) to the return
- type of the original method for which this is a callback. Note that if the
- return type of the synchronous service interface method is a primitive then
- the parameter will be the boxed version of the primitive (for example, an
- <code>int</code> return type becomes an <CODE>Integer</CODE>.
+<DD>Called when an asynchronous call completes successfully.
 <P>
 <DD><DL>
-</DL>
+<DT><B>Parameters:</B><DD><CODE>result</CODE> - the return value of the remote produced call</DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->

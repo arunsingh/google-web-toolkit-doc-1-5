@@ -220,6 +220,15 @@ The servlet base class for your RPC service implementations that
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/server/rpc/RemoteServiceServlet.html#readContent(javax.servlet.http.HttpServletRequest)">readContent</A></B>(javax.servlet.http.HttpServletRequest&nbsp;request)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Override this method in order to control the parsing of the incoming
+ request.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>protected &nbsp;boolean</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/server/rpc/RemoteServiceServlet.html#shouldCompressResponse(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.lang.String)">shouldCompressResponse</A></B>(javax.servlet.http.HttpServletRequest&nbsp;request,
                        javax.servlet.http.HttpServletResponse&nbsp;response,
@@ -496,6 +505,32 @@ protected void <B>onBeforeRequestDeserialized</B>(java.lang.String&nbsp;serializ
 </DL>
 <HR>
 
+<A NAME="readContent(javax.servlet.http.HttpServletRequest)"><!-- --></A><H3>
+readContent</H3>
+<PRE>
+protected java.lang.String <B>readContent</B>(javax.servlet.http.HttpServletRequest&nbsp;request)
+                                throws javax.servlet.ServletException,
+                                       java.io.IOException</PRE>
+<DL>
+<DD>Override this method in order to control the parsing of the incoming
+ request. For example, you may want to bypass the check of the Content-Type
+ and character encoding headers in the request, as some proxies re-write the
+ request headers.  Note that bypassing these checks may expose the servlet to
+ some cross-site vulnerabilities.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>request</CODE> - the incoming request
+<DT><B>Returns:</B><DD>the content of the incoming request encoded as a string.
+<DT><B>Throws:</B>
+<DD><CODE>javax.servlet.ServletException</CODE>
+<DD><CODE>java.io.IOException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="shouldCompressResponse(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.lang.String)"><!-- --></A><H3>
 shouldCompressResponse</H3>
 <PRE>
@@ -505,7 +540,7 @@ protected boolean <B>shouldCompressResponse</B>(javax.servlet.http.HttpServletRe
 <DL>
 <DD>Determines whether the response to a given servlet request should or should
  not be GZIP compressed. This method is only called in cases where the
- requestor accepts GZIP encoding.
+ requester accepts GZIP encoding.
  <p>
  This implementation currently returns <code>true</code> if the response
  string's estimated byte length is longer than 256 bytes. Subclasses can
