@@ -2,7 +2,7 @@
 
 =Exceptions and JSNI=
 
-An exception can be thrown during the execution of either normal Java code or the !JavaScript code within a JSNI method.  When an exception generated within a JSNI method propagates up the call stack and is caught by a Java catch block, the thrown !JavaScript exception is wrapped as a [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JavaScriptException.html JavaScriptException] object at the time it is caught.  This wrapper object contains only the class name and description of the !JavaScript exception that occurred.  The recommended practice is to handle !JavaScript exceptions in !JavaScript code and Java exceptions in Java code. 
+An exception can be thrown during the execution of either normal Java code or the !JavaScript code within a JSNI method.  When an exception generated within a JSNI method propagates up the call stack and is caught by a Java catch block, the thrown !JavaScript exception is wrapped as a [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JavaScriptException.html JavaScriptException] object at the time it is caught.  This wrapper object contains only the class name and description of the !JavaScript exception that occurred.  The recommended practice is to handle !JavaScript exceptions in !JavaScript code and Java exceptions in Java code. 
 
 A Java exception can safely retain identity while propagating through a JSNI method.  
 

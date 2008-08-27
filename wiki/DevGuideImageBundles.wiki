@@ -7,7 +7,7 @@ An _image bundle_ is a construct used to improve application performance by redu
 
 ===See Also===
 
-  * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ImageBundle.html ImageBundle]
+  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ImageBundle.html ImageBundle]
 
 ==Specifics==
 

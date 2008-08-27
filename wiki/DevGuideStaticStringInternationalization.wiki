@@ -39,7 +39,7 @@ public interface MyConstants extends Constants {
  _
 
 
-Note that `MyConstants` is declared as an interface, so you can not instantiate it directly with `new`.  To use the internationalized constants, you create a Java instance of `MyConstants` using the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create(Class)] facility:  
+Note that `MyConstants` is declared as an interface, so you can not instantiate it directly with `new`.  To use the internationalized constants, you create a Java instance of `MyConstants` using the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create(Class)] facility:  
 
 {{{
 public void useMyConstants() {
@@ -56,7 +56,7 @@ You don't need to worry about the Java implementation of your static string clas
 
 ==Using the Messages Interface==
 
-The [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Messages.html Messages] interface allows you to subsitute parameters into messages and to even re-order those parameters for different locales as needed.    The format of the messages in the properties files follows the specification in Java [http://java.sun.com/j2se/1.5.0/docs/api/java/text/MessageFormat.html MessageFormat].  The interface you create will contain a java method with parameters matching those specified in the format string.
+The [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Messages.html Messages] interface allows you to subsitute parameters into messages and to even re-order those parameters for different locales as needed.    The format of the messages in the properties files follows the specification in Java [http://java.sun.com/j2se/1.5.0/docs/api/java/text/MessageFormat.html MessageFormat].  The interface you create will contain a java method with parameters matching those specified in the format string.
 
 Here is an example Messages property value:
 
@@ -104,11 +104,11 @@ An error is returned because the message template in the properties file expects
 
 Here are some guidelines to help choose the right interface for your application's needs:
 
- * Extend [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants] to create a collection of constant values of a variety of types that can be accessed by calling methods (called _constant accessors_) on an interface. Constant accessors may return a variety of types, including strings, numbers, booleans, and even maps. A compile-time check is done to ensure that the value in a properties file matches the return type declared by its corresponding constant accessor. In other words, if a constant accessor is declared to return an `int`, its associated property is guaranteed to be a valid `int` value -- avoiding a potential source of runtime errors. 
+ * Extend [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants] to create a collection of constant values of a variety of types that can be accessed by calling methods (called _constant accessors_) on an interface. Constant accessors may return a variety of types, including strings, numbers, booleans, and even maps. A compile-time check is done to ensure that the value in a properties file matches the return type declared by its corresponding constant accessor. In other words, if a constant accessor is declared to return an `int`, its associated property is guaranteed to be a valid `int` value -- avoiding a potential source of runtime errors. 
 
- * The [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/ConstantsWithLookup.html ConstantsWithLookup] interface is identical to `Constants` except that the interface also includes a method to look up strings by property name, which facilitates dynamic binding to constants by name at runtime. `ConstantsWithLookup` can sometimes be useful in highly data-driven applications. One caveat: `ConstantsWithLookup` is less efficient than `Constants` because the compiler cannot discard unused constant methods, resulting in larger applications. 
+ * The [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/ConstantsWithLookup.html ConstantsWithLookup] interface is identical to `Constants` except that the interface also includes a method to look up strings by property name, which facilitates dynamic binding to constants by name at runtime. `ConstantsWithLookup` can sometimes be useful in highly data-driven applications. One caveat: `ConstantsWithLookup` is less efficient than `Constants` because the compiler cannot discard unused constant methods, resulting in larger applications. 
 
- * Extend [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Messages.html Messages] to create a collection of formatted messages that can accept parameters. You might think of the `Messages` interface as a statically verifiable equivalent of the traditional Java combination of `Properties`, `ResourceBundle`, and `MessageFormat` rolled into a single mechanism. 
+ * Extend [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Messages.html Messages] to create a collection of formatted messages that can accept parameters. You might think of the `Messages` interface as a statically verifiable equivalent of the traditional Java combination of `Properties`, `ResourceBundle`, and `MessageFormat` rolled into a single mechanism. 
 
 
 ==Properties Files==
@@ -117,14 +117,14 @@ All of the types above use properties files based on the traditional [http://jav
 
 ===See Also===
 
-  * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants]
+  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants]
 
-  * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/ConstantsWithLookup.html ConstantsWithLookup]
+  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/ConstantsWithLookup.html ConstantsWithLookup]
 
-  * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Messages.html Messages]
+  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Messages.html Messages]
 
   * [DevGuidePropertiesFiles Localized Properties Files]
 
   * [DevGuideDynamicStringInternationalization Dynamic String Internationalization]
 
-  * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Dictionary.html Dictionary]
+  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Dictionary.html Dictionary]

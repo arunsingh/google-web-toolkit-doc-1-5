@@ -12,7 +12,7 @@ Script inclusion is a convenient way to automatically associate external !JavaSc
 <script src="_js-url_"/>
 }}}
 
-The script is loaded into the namespace of the [DevGuideHostPage host page] as if you had included it explicitly using the HTML `<script>` element. The script will be loaded before your [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/EntryPoint.html#onModuleLoad() onModuleLoad()] is called.  
+The script is loaded into the namespace of the [DevGuideHostPage host page] as if you had included it explicitly using the HTML `<script>` element. The script will be loaded before your [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/EntryPoint.html#onModuleLoad() onModuleLoad()] is called.  
 
  _Versions of GWT prior to 1.4 required a script-ready function to determine when an included script was loaded. This is no longer required; all included scripts will be loaded when your application starts, in the order in which they are declared._
 

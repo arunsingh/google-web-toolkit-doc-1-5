@@ -33,7 +33,7 @@ If you can use the !PagingScrollTable, then consider the [http://code.google.com
 
 == Try using the !BulkTableRenderer and !PreloadedTable classes==
 
-A [http://code.google.com/p/google-web-toolkit-incubator/wiki/BulkTableRenderers TableBulkRenderer] will render all rows in a table at once.   !BulkTableRenderer has derived types for different purposes.  As long as your table contents are not Widgets, you provide a table model and the !BulkRenderer creates the entire table rendered as a single HTML string and set with [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String) setInnerHtml()] which can be 2-10x faster.
+A [http://code.google.com/p/google-web-toolkit-incubator/wiki/BulkTableRenderers TableBulkRenderer] will render all rows in a table at once.   !BulkTableRenderer has derived types for different purposes.  As long as your table contents are not Widgets, you provide a table model and the !BulkRenderer creates the entire table rendered as a single HTML string and set with [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String) setInnerHtml()] which can be 2-10x faster.
 
 Note that after being loaded, widgets, cell spans, row spans etc. may be added to the table, but there will be no speed advantage for them.
 

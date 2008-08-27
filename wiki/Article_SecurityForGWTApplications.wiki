@@ -213,13 +213,13 @@ A common countermeasure for XSRF attacks involves duplicating a session cookie. 
 
 === Protecting Your Application ===
 
-If you are using the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestBuilder.html RequestBuilder] and [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestCallback.html RequestCallback] classes in GWT, you can implement XSRF protection by setting a custom header to contain the value of your cookie.  Here is some sample code:
+If you are using the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestBuilder.html RequestBuilder] and [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestCallback.html RequestCallback] classes in GWT, you can implement XSRF protection by setting a custom header to contain the value of your cookie.  Here is some sample code:
 {{{
 RequestBuilder rb = new RequestBuilder(RequestBuilder.POST, url);
 rb.setHeader("X-XSRF-Cookie", Cookies.getCookie("myCookieKey"));
 rb.sendRequest(null, myCallback);
 }}}
-If you are using GWT's RPC mechanism, the solution is unfortunately not quite as clean.  However, there are still several ways you can accomplish it.  For instance, you can add an argument to each method in your [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/RemoteService.html RemoteService] interface that contains a String.  That is, if you wanted this interface:
+If you are using GWT's RPC mechanism, the solution is unfortunately not quite as clean.  However, there are still several ways you can accomplish it.  For instance, you can add an argument to each method in your [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/RemoteService.html RemoteService] interface that contains a String.  That is, if you wanted this interface:
 {{{
 public interface MyInterface extends RemoteService {
   public boolean doSomething();

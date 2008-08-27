@@ -23,7 +23,7 @@ http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/HostedMode1.png
 
 ==Using GWT.log()==
 
-Debugging messages are displayed within the Development shell window.  Some of these messages are from the GWT toolkit, others can be generated using calls to `GWT.log()`.   For example, modifying the standard project to emit a debug message inside the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ClickListener.html ClickListener] results in a debug message displaying on the Development Shell window whenever the user clicks the button.
+Debugging messages are displayed within the Development shell window.  Some of these messages are from the GWT toolkit, others can be generated using calls to `GWT.log()`.   For example, modifying the standard project to emit a debug message inside the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ClickListener.html ClickListener] results in a debug message displaying on the Development Shell window whenever the user clicks the button.
 
 {{{
    import com.google.gwt.core.client.GWT;

@@ -86,7 +86,7 @@ public interface MailImageBundle_fr extends MailImageBundle {
 }
 }}}
 
-The next step is to create a mechanism for choosing the correct image bundle based on the user's locale. By extending [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Localizable.html Localizable], we can create a locale-sensitive factory that will instantiate `MailImageBundle` with deferred binding. 
+The next step is to create a mechanism for choosing the correct image bundle based on the user's locale. By extending [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Localizable.html Localizable], we can create a locale-sensitive factory that will instantiate `MailImageBundle` with deferred binding. 
 
 {{{
 public interface MailImageBundleFactory extends Localizable {
@@ -95,7 +95,7 @@ public interface MailImageBundleFactory extends Localizable {
 }
 }}}
 
-The factory methods are instantiating the `ImageBundle` superclass using deferred binding.  Invoking the  [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class GWT.create()] method will cause a generator to create Java code to implement the details for the image bundle class for each factory:
+The factory methods are instantiating the `ImageBundle` superclass using deferred binding.  Invoking the  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class GWT.create()] method will cause a generator to create Java code to implement the details for the image bundle class for each factory:
 
 {{{
 public class MailImageBundleFactory_en implements MailImageBundleFactory {
@@ -148,7 +148,7 @@ public void useLocalizedImageBundle() {
 }
 }}}
 
-Creating the factory class also takes advantage of GWT's [DevGuideDeferredBinding deferred binding] feature, this time based on the `Localizable` base class.  The [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create(Class)] method instructs the compiler to choose one of the several `locale` specific subclasses of `MailImageBundleFactory` available.
+Creating the factory class also takes advantage of GWT's [DevGuideDeferredBinding deferred binding] feature, this time based on the `Localizable` base class.  The [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create(Class)] method instructs the compiler to choose one of the several `locale` specific subclasses of `MailImageBundleFactory` available.
 
 ==Why did this Example use Deferred Binding Twice?==
 
@@ -158,8 +158,8 @@ The answer is rooted in the fact that you cannot extend more than one class in J
 
 ===See Also===
 
-  * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ImageBundle.html ImageBundle]
+  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ImageBundle.html ImageBundle]
 
-  * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Localizable.html Localizable]
+  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Localizable.html Localizable]
 
 

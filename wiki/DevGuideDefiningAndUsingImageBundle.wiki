@@ -2,10 +2,10 @@
 
 =Creating and Using an Image Bundle=
 
-To define an image bundle, the user needs to extend the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ImageBundle.html ImageBundle] interface. The !ImageBundle interface is a tag interface that can be extended to define new image bundles. The derived interface can have zero or more methods, where each method must have the following characteristics:
+To define an image bundle, the user needs to extend the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ImageBundle.html ImageBundle] interface. The !ImageBundle interface is a tag interface that can be extended to define new image bundles. The derived interface can have zero or more methods, where each method must have the following characteristics:
 
   * The method takes no parameters
-  * The method has a a return type of [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/AbstractImagePrototype.html AbstractImagePrototype]
+  * The method has a a return type of [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/AbstractImagePrototype.html AbstractImagePrototype]
   * The method may have an optional `gwt.resource` metadata tag which specifies the name of the image file in the module's classpath 
 
 
@@ -50,11 +50,11 @@ public interface WordProcessorImageBundle extends ImageBundle {
 }
 }}}
 
-Methods in an image bundle return [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/AbstractImagePrototype.html AbstractImagePrototype] objects rather than [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Image.html Image] objects, as you might have expected.  This is because `AbstractImagePrototype` objects provide additional lightweight representations of an image.  For example, the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/AbstractImagePrototype.html#getHTML() AbstractImagePrototype.getHTML()] method provides an HTML fragment representing an image without having to create an actual instance of the `Image` widget. In some cases, it can be more efficient to manage images using these HTML fragments. 
+Methods in an image bundle return [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/AbstractImagePrototype.html AbstractImagePrototype] objects rather than [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Image.html Image] objects, as you might have expected.  This is because `AbstractImagePrototype` objects provide additional lightweight representations of an image.  For example, the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/AbstractImagePrototype.html#getHTML() AbstractImagePrototype.getHTML()] method provides an HTML fragment representing an image without having to create an actual instance of the `Image` widget. In some cases, it can be more efficient to manage images using these HTML fragments. 
 
-Another use of `AbstractImagePrototype` is to use [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/AbstractImagePrototype.html#applyTo(com.google.gwt.user.client.ui.Image) AbstractImagePrototype.applyTo(Image)] to transform an existing `Image` into one that matches the prototype without having to instantiate another `Image` object. This can be useful if your application has an image that needs to be swapped depending on some user-initiated action. 
+Another use of `AbstractImagePrototype` is to use [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/AbstractImagePrototype.html#applyTo(com.google.gwt.user.client.ui.Image) AbstractImagePrototype.applyTo(Image)] to transform an existing `Image` into one that matches the prototype without having to instantiate another `Image` object. This can be useful if your application has an image that needs to be swapped depending on some user-initiated action. 
 
-Not all situations can be satisfied with a lightweight HTML fragment or by copying into an existing `Image`.  For example, you may need to access a member of your Image bundle and pass an `Image` object into a `setWidget()` method to display your image in a `TreeItem`.  In those cases, the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/AbstractImagePrototype.html#createImage() AbstractImagePrototype.createImage()] method can be used to generate new `Image` instances. 
+Not all situations can be satisfied with a lightweight HTML fragment or by copying into an existing `Image`.  For example, you may need to access a member of your Image bundle and pass an `Image` object into a `setWidget()` method to display your image in a `TreeItem`.  In those cases, the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/AbstractImagePrototype.html#createImage() AbstractImagePrototype.createImage()] method can be used to generate new `Image` instances. 
 
 The following example shows how to use the image bundle that we just defined in your application.  An `Image` object is needed in this case because the `HorizontalPanel` performs layout only on subclasses of `Widget`.
 
@@ -73,8 +73,8 @@ public void useImageBundle() {
 
 ===See Also===
 
-  * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ImageBundle.html ImageBundle]
+  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ImageBundle.html ImageBundle]
 
-  * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/AbstractImagePrototype.html AbstractImagePrototype]
+  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/AbstractImagePrototype.html AbstractImagePrototype]
 
 

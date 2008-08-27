@@ -1,6 +1,6 @@
 =Using GWT=
 
-You can use GWT's set of UI components (called [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Widget.html Widgets]) to construct the UI elements that make up your AJAX application. Like traditional UI frameworks, Widgets are combined in [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Panel.html Panels] that determine the layout of the widgets contained within them. This is a complete GWT application that displays a button with a click handler:
+You can use GWT's set of UI components (called [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Widget.html Widgets]) to construct the UI elements that make up your AJAX application. Like traditional UI frameworks, Widgets are combined in [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Panel.html Panels] that determine the layout of the widgets contained within them. This is a complete GWT application that displays a button with a click handler:
 
 {{{
 public class Hello implements EntryPoint {
@@ -15,7 +15,7 @@ public class Hello implements EntryPoint {
 }
 }}}
 
-GWT supports a variety of built-in Widgets that are useful for AJAX applications, including [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Tree.html hierarchical trees], [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/TabBar.html tab bars], [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/MenuBar.html menu bars], and [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/DisclosurePanel.html modal dialog boxes]. GWT also has built-in support for remote procedure calls and other more sophisticated web application features. See the [OverviewFeatures complete list of features] for more information.
+GWT supports a variety of built-in Widgets that are useful for AJAX applications, including [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Tree.html hierarchical trees], [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/TabBar.html tab bars], [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/MenuBar.html menu bars], and [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/DisclosurePanel.html modal dialog boxes]. GWT also has built-in support for remote procedure calls and other more sophisticated web application features. See the [OverviewFeatures complete list of features] for more information.
 
 ==Debugging and Deploying GWT Applications==
 
@@ -43,7 +43,7 @@ The components, from bottom to top, are:
    
  * *JRE emulation library* - GWT contains !JavaScript implementations of the most widely used classes in the Java standard class library, including most of the `java.lang` package classes and a subset of the `java.util` package classes. The rest of the Java standard library isn't supported natively within GWT. For example, packages like `java.io` don't apply to web applications since they access the network and local file system.
    
- * *GWT Web UI class library* - The GWT [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/package-summary.html web UI class library] is a set of custom interfaces and classes that let your create web browser "widgets," like buttons, text boxes, images, and text. This is the core user interface library used to create GWT applications.
+ * *GWT Web UI class library* - The GWT [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/package-summary.html web UI class library] is a set of custom interfaces and classes that let your create web browser "widgets," like buttons, text boxes, images, and text. This is the core user interface library used to create GWT applications.
 
 For a step-by-step installation and usage guide, please see the [GettingStarted Getting Started Guide].
 

@@ -2,36 +2,36 @@
 
 =Widgets Gallery=
 
-The following are [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Widget.html widgets] and [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Panel.html panels] available in the GWT user-interface library.   You can view a code example of each widget in the [http://code.google.com/webtoolkit/examples/Showcase.html Showcase] sample application.
+The following are [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Widget.html widgets] and [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Panel.html panels] available in the GWT user-interface library.   You can view a code example of each widget in the [http://code.google.com/webtoolkit/examples/Showcase.html Showcase] sample application.
 
-||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Button.html Button]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/RadioButton.html RadioButton]  ||  
+||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Button.html Button]  ||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/RadioButton.html RadioButton]  ||  
 ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/Button.png]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/RadioButton.png]  ||  
-||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/PushButton.html PushButton]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ToggleButton.html ToggleButton]  ||  
+||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/PushButton.html PushButton]  ||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ToggleButton.html ToggleButton]  ||  
 ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/PushButton.png]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/ToggleButton.png]  ||  
-||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/CheckBox.html CheckBox]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/TextBox.html TextBox]  ||  
+||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/CheckBox.html CheckBox]  ||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/TextBox.html TextBox]  ||  
 ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/CheckBox.png]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/TextBox.png]  ||  
-||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/PasswordTextBox.html PasswordTextBox]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/TextArea.html TextArea]  ||  
+||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/PasswordTextBox.html PasswordTextBox]  ||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/TextArea.html TextArea]  ||  
 ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/PasswordTextBox.png]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/TextArea.png]  ||  
-||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Hyperlink.html Hyperlink]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ListBox.html ListBox]  ||  
+||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Hyperlink.html Hyperlink]  ||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ListBox.html ListBox]  ||  
 ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/Hyperlink.png]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/ListBox.png]  ||  
-||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/MenuBar.html MenuBar]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Tree.html Tree]  ||  
+||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/MenuBar.html MenuBar]  ||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Tree.html Tree]  ||  
 ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/MenuBar.png]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/Tree.png]  ||  
-||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/RichTextArea.html RichTextArea]   ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/SuggestBox.html SuggestBox]  ||  
+||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/RichTextArea.html RichTextArea]   ||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/SuggestBox.html SuggestBox]  ||  
 ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/RichTextArea-clipped.png]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/SuggestBox.png]  ||  
-||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HTMLTable.html Table]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/TabBar.html TabBar]  ||  
+||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HTMLTable.html Table]  ||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/TabBar.html TabBar]  ||  
 ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/Table.png]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/TabBar.png]  ||  
-||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/DialogBox.html DialogBox]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/PopupPanel.html PopupPanel]  ||  
+||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/DialogBox.html DialogBox]  ||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/PopupPanel.html PopupPanel]  ||  
 ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/DialogBox.png]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/PopupPanel.png]  ||  
-||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/StackPanel.html StackPanel]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HorizontalPanel.html HorizontalPanel]  ||  
+||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/StackPanel.html StackPanel]  ||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HorizontalPanel.html HorizontalPanel]  ||  
 ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/StackPanel.png]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/HorizontalPanel.png]  ||  
-||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/VerticalPanel.html VerticalPanel]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/FlowPanel.html FlowPanel]  ||  
+||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/VerticalPanel.html VerticalPanel]  ||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/FlowPanel.html FlowPanel]  ||  
 ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/VerticalPanel.png]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/FlowPanel.png]  ||  
-||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/VerticalSplitPanel.html VerticalSplitPanel]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HorizontalSplitPanel.html HorizontalSplitPanel]  ||  
+||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/VerticalSplitPanel.html VerticalSplitPanel]  ||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HorizontalSplitPanel.html HorizontalSplitPanel]  ||  
 ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/VerticalSplitPanel.png]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/HorizontalSplitPanel.png]  ||  
-||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/DockPanel.html DockPanel]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/TabPanel.html TabPanel]  ||  
+||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/DockPanel.html DockPanel]  ||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/TabPanel.html TabPanel]  ||  
 ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/DockPanel.png]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/TabPanel.png]  ||  
 ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/DisclosurePanel.png]  ||  
-||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/DisclosurePanel.html DisclosurePanel]  ||  
+||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/DisclosurePanel.html DisclosurePanel]  ||  
 
 
 

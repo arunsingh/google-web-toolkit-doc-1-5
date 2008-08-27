@@ -77,7 +77,7 @@ The rest of this tutorial uses the standard GWT visual theme.  If you've already
 
 ==Adding static HTML==
 
-The first method of styling your GWT application is to add HTML to your [DevGuideHostPage host page].  Recall from our discussion of [GettingStartedUserInterface user interface design] that one common way to use GWT is to attach one or more [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/RootPanel.html RootPanel]'s to placeholder elements in the host page's body (!StockWatcher does this).  In addition to those placeholders, your host page can also contain any other HTML you want to include.
+The first method of styling your GWT application is to add HTML to your [DevGuideHostPage host page].  Recall from our discussion of [GettingStartedUserInterface user interface design] that one common way to use GWT is to attach one or more [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/RootPanel.html RootPanel]'s to placeholder elements in the host page's body (!StockWatcher does this).  In addition to those placeholders, your host page can also contain any other HTML you want to include.
 
 For our example, let's say that we want to add the Google Code logo to the top of the !StockWatcher application:
 
@@ -116,14 +116,14 @@ GWT widgets use [http://www.w3.org/Style/CSS/ cascading style sheets] (CSS) for 
 
 ===Default styles===
 
-Each type of widget has a default style name derived from the widget class name.  For example, the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Button.html Button] widget has the style name `gwt-Button`, so by default all Button widgets inherit the style of the CSS class `gwt-Button`.  So, if you wanted all of your application's buttons to use a larger font, you could add the following rule to your CSS file (we'll explain how to add a CSS file to your project in just a bit):
+Each type of widget has a default style name derived from the widget class name.  For example, the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Button.html Button] widget has the style name `gwt-Button`, so by default all Button widgets inherit the style of the CSS class `gwt-Button`.  So, if you wanted all of your application's buttons to use a larger font, you could add the following rule to your CSS file (we'll explain how to add a CSS file to your project in just a bit):
 
 {{{
 $PP_OFF
 .gwt-Button { font-size: 150%; }
 }}}
 
-You can override a widget's default style name by calling [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setStyleName(com.google.gwt.user.client.Element,%20java.lang.String) setStyleName(Element, String)].  This method will clear any existing styles (remember, a widget can be bound to more than one CSS class) and set the widget style to the CSS class you provide.
+You can override a widget's default style name by calling [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setStyleName(com.google.gwt.user.client.Element,%20java.lang.String) setStyleName(Element, String)].  This method will clear any existing styles (remember, a widget can be bound to more than one CSS class) and set the widget style to the CSS class you provide.
 
 Using setStyleName(Element, String) allows us to do some simple widget styling, but it's not the most flexible approach.
 
@@ -135,13 +135,13 @@ GWT also has methods for adding and removing styles so you can easily bind one w
 .invalidEntry { border-color: red; } 
 }}}
 
-Now in your application code, you can easily flag any input widget as invalid by adding  `invalidEntry` to the widget's list of styles.  You would do this by calling [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#addStyleName(java.lang.String) addStyleName(String)] as follows:
+Now in your application code, you can easily flag any input widget as invalid by adding  `invalidEntry` to the widget's list of styles.  You would do this by calling [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#addStyleName(java.lang.String) addStyleName(String)] as follows:
 
 {{{
 someWidget.addStyleName("invalidEntry");
 }}}
 
-What's really handy is that when the user fixes the invalid input, you can just as easily remove the red border by calling [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#removeStyleName(java.lang.String) removeStyleName(String)]:
+What's really handy is that when the user fixes the invalid input, you can just as easily remove the red border by calling [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#removeStyleName(java.lang.String) removeStyleName(String)]:
 
 {{{
 someWidget.removeStyleName("invalidEntry");
@@ -149,9 +149,9 @@ someWidget.removeStyleName("invalidEntry");
 
 When we add and remove style names using these methods, those styles are called _secondary styles_.  The reason is that they exist alongside the widget's _primary style_, which is the base style name for that widget.  By default, the primary style name of a widget will be the default style name for its widget class (e.g., `gwt-Button` for Button widgets).
 
-The final appearance of a widget is determined by the sum of all the secondary styles added to it, plus its primary style.  You set the primary style of a widget with the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setStylePrimaryName(java.lang.String) setStylePrimaryName(String)] method.
+The final appearance of a widget is determined by the sum of all the secondary styles added to it, plus its primary style.  You set the primary style of a widget with the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setStylePrimaryName(java.lang.String) setStylePrimaryName(String)] method.
 
-To illustrate, let's say we have a [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Label.html Label] widget.  In our CSS file, we have the following rules defined:
+To illustrate, let's say we have a [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Label.html Label] widget.  In our CSS file, we have the following rules defined:
 
 {{{
 $PP_OFF
@@ -190,9 +190,9 @@ Nothing too complicated going on here.  You may be wondering, though, why we nee
 
 ===Dependent styles===
 
-Dependent style names are dependent upon the primary style name.  When you add a dependent style name to a widget, GWT will prefix the new style name with the widget's primary style name, separated with a dash ('-').  You can add or remove dependent styles with the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#addStyleDependentName(java.lang.String) addStyleDependentName(String)] and [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#removeStyleDependentName(java.lang.String) removeStyleDependentName(String)] methods.
+Dependent style names are dependent upon the primary style name.  When you add a dependent style name to a widget, GWT will prefix the new style name with the widget's primary style name, separated with a dash ('-').  You can add or remove dependent styles with the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#addStyleDependentName(java.lang.String) addStyleDependentName(String)] and [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#removeStyleDependentName(java.lang.String) removeStyleDependentName(String)] methods.
 
-To see how this works we'll walk through a simple example.  Let's say you have a [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/TextBox.html TextBox] widget.  If we haven't called [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setStylePrimaryName(java.lang.String) setStylePrimaryName(String)] to change it, the primary style name is `gwt-TextBox`.  Now suppose we want to show that the input in the text box is invalid, using the same indicator as before (red border).  If we use the following code:
+To see how this works we'll walk through a simple example.  Let's say you have a [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/TextBox.html TextBox] widget.  If we haven't called [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setStylePrimaryName(java.lang.String) setStylePrimaryName(String)] to change it, the primary style name is `gwt-TextBox`.  Now suppose we want to show that the input in the text box is invalid, using the same indicator as before (red border).  If we use the following code:
 
 {{{
 someTextBox.addStyleDependentName("invalidEntry");
@@ -241,7 +241,7 @@ Now that you know all about the different kinds of styles and what they're good 
 
 To start, let's try to figure out what stylistic improvements we could make.
 
-The first thing that jumps out at us is the tired-looking default font we're using.  We'll replace that with a nice sans-serif font.  Next we turn our attention to the watch list [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/FlexTable.html FlexTable].  Since we're displaying numerical data in the middle two columns, we should really be right-aligning those values.  In the last column, the Remove buttons should be centered and will need to be widened a bit.  Finally, let's color the table's header row and add some whitespace around the text box and Add button at the bottom.
+The first thing that jumps out at us is the tired-looking default font we're using.  We'll replace that with a nice sans-serif font.  Next we turn our attention to the watch list [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/FlexTable.html FlexTable].  Since we're displaying numerical data in the middle two columns, we should really be right-aligning those values.  In the last column, the Remove buttons should be centered and will need to be widened a bit.  Finally, let's color the table's header row and add some whitespace around the text box and Add button at the bottom.
 
 Oh, and one more thing.  This one's actually an important usability enhancement.  Let's color the price change text for each stock to reflect the direction of the change.  Green for positive change, red for negative, and black for no change (or very small changes).  That way the user can tell at a glance the status of his watch list.
 
@@ -309,9 +309,9 @@ This is the standard way to load an external CSS file into an HTML document.  If
 
 ===Settings styles from code===
 
-We'll start in onModuleLoad().  Here we'll style the watch list !FlexTable and the panel containing the text box and Add button.  Notice that we can apply styles to an entire row of the !FlexTable with one call using the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HTMLTable.RowFormatter.html HTMLTable.RowFormatter] class.  There is also a corresponding [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HTMLTable.ColumnFormatter.html HTMLTable.ColumnFormatter] class.  However, we can't use it here because not all browsers support the `text-align` CSS property on table columns.  Instead, we use an [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HTMLTable.CellFormatter.html HTMLTable.CellFormatter] to add the styles directly to the header row cells
+We'll start in onModuleLoad().  Here we'll style the watch list !FlexTable and the panel containing the text box and Add button.  Notice that we can apply styles to an entire row of the !FlexTable with one call using the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HTMLTable.RowFormatter.html HTMLTable.RowFormatter] class.  There is also a corresponding [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HTMLTable.ColumnFormatter.html HTMLTable.ColumnFormatter] class.  However, we can't use it here because not all browsers support the `text-align` CSS property on table columns.  Instead, we use an [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HTMLTable.CellFormatter.html HTMLTable.CellFormatter] to add the styles directly to the header row cells
 
-Also notice the call to [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HTMLTable.html#setCellPadding(int) setCellPadding(int)].  This is to demonstrate that not all aspects of style are set via CSS.  As in the example, we can change a !FlexTable's cell padding or cell spacing via its built-in methods. 
+Also notice the call to [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HTMLTable.html#setCellPadding(int) setCellPadding(int)].  This is to demonstrate that not all aspects of style are set via CSS.  As in the example, we can change a !FlexTable's cell padding or cell spacing via its built-in methods. 
 
 {{{
 public void onModuleLoad() {
@@ -348,9 +348,9 @@ public void onModuleLoad() {
   addPanel.addStyleName("addPanel");
 }}}
 
-The next stop is the addStock() function.  When we add a new row to the !FlexTable, we again need to use an [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HTMLTable.CellFormatter.html HTMLTable.CellFormatter] to set the alignment properties for the last three columns.  For styling the Remove button, we add the dependent style name `remove`.  This means the button will get its style properties from CSS rules named `gwt-Button` (its primary style name) and `gwt-Button-remove` (its composite dependent style name).  In our `StockWatcher.css` file we only have a rule defined for the class `gwt-Button-remove`, so only those style properties will be applied). 
+The next stop is the addStock() function.  When we add a new row to the !FlexTable, we again need to use an [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HTMLTable.CellFormatter.html HTMLTable.CellFormatter] to set the alignment properties for the last three columns.  For styling the Remove button, we add the dependent style name `remove`.  This means the button will get its style properties from CSS rules named `gwt-Button` (its primary style name) and `gwt-Button-remove` (its composite dependent style name).  In our `StockWatcher.css` file we only have a rule defined for the class `gwt-Button-remove`, so only those style properties will be applied). 
 
-The final styling change we need to implement is the changing color of the price change.  This is the one style that we'll change dynamically as !StockWatcher runs.  One easy way to apply the new styles to the price change text without disturbing the alignment within the table cell (`text-align: right`) is to encapsulate the price change inside a nested Widget.  In our case, we'll use a simple [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Label.html Label].
+The final styling change we need to implement is the changing color of the price change.  This is the one style that we'll change dynamically as !StockWatcher runs.  One easy way to apply the new styles to the price change text without disturbing the alignment within the table cell (`text-align: right`) is to encapsulate the price change inside a nested Widget.  In our case, we'll use a simple [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Label.html Label].
 
 {{{
 private void addStock() {
@@ -402,15 +402,15 @@ private void addStock() {
 
 To really add some flash to !StockWatcher, we'll dynamically update the price change text to reflect the stock's movement.  For this we'll need to make some changes to the updateTable(!StockPrice) function.
 
-First, we'll need to get rid of this call to [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HTMLTable.html#setText(int,%20int,%20java.lang.String) setText(int,int,String)]:
+First, we'll need to get rid of this call to [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HTMLTable.html#setText(int,%20int,%20java.lang.String) setText(int,int,String)]:
 
 {{{
 stocksFlexTable.setText(row, 2, changeText + " (" + changePercentText + "%)");
 }}}
 
-In our new version, every cell in column 2 contains a [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Label.html Label] widget, so we'll have to get a reference to it and call _its_ [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Label.html#setText(java.lang.String) setText(String)] method instead.
+In our new version, every cell in column 2 contains a [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Label.html Label] widget, so we'll have to get a reference to it and call _its_ [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Label.html#setText(java.lang.String) setText(String)] method instead.
 
-The second change is to dynamically modify the Label's style name according the value returned from price.getChangePercent().  Note that when we update the style, we're using [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setStyleName(java.lang.String) setStyleName(String)] instead of [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#addStyleName(java.lang.String) addStyleName(String)].  This way we remove any existing styles from the Label before applying the new one.  Here's the new `updateTable(StockPrice)` function:
+The second change is to dynamically modify the Label's style name according the value returned from price.getChangePercent().  Note that when we update the style, we're using [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setStyleName(java.lang.String) setStyleName(String)] instead of [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#addStyleName(java.lang.String) addStyleName(String)].  This way we remove any existing styles from the Label before applying the new one.  Here's the new `updateTable(StockPrice)` function:
 
 {{{
 private void updateTable(StockPrice price) {

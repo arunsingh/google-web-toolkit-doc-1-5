@@ -25,7 +25,7 @@ A type is serializable and can be used in a service interface if one of the foll
 
 A user-defined class is serializable if all of the following apply:
 
-  # It is assignable to [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/IsSerializable.html IsSerializable] or [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/java/io/Serializable.html Serializable], either because it directly implements one of these interfaces or because it derives from a superclass that does
+  # It is assignable to [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/IsSerializable.html IsSerializable] or [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/java/io/Serializable.html Serializable], either because it directly implements one of these interfaces or because it derives from a superclass that does
   # All non-`final`, non-`transient` instance fields are themselves serializable, and
   # Prior to GWT 1.5, it must have a _public_ default (zero argument) constructor or no constructor at all.
   # As of GWT 1.5, it must have a default (zero argument) constructor (with any access modifier) or no constructor at all.

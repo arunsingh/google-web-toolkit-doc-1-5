@@ -20,15 +20,15 @@ There a few ways you can go about internationalizing a GWT application.  The sim
 
 Another method is [DevGuideDynamicStringInternationalization dynamic string internationalization].  This method is slower than static string internationalization, but is very flexible.  Applications using this technique look up localized strings in the module's [DevGuideHostPage host page] and do not need to be recompiled when you add a new locale.  This is a good option if you need to integrate a GWT application with an existing server-side localization system.
 
-The final (and most powerful) method is implementing the  [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Localizable.html Localizable] interface.  Implementing Localizable allows you to go beyond simple string substitution and create localized versions of custom types.  It's an advanced internationalization technique that you probably won't have to use very often.
+The final (and most powerful) method is implementing the  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Localizable.html Localizable] interface.  Implementing Localizable allows you to go beyond simple string substitution and create localized versions of custom types.  It's an advanced internationalization technique that you probably won't have to use very often.
 
 ==Internationalizing !StockWatcher==
 
-For !StockWatcher, static string internationalization looks like the best choice.  The first thing we need to do is create the `.properties` files to hold the localized strings.  We'll then create Java classes to reference these strings by name.  Our new classes will need to implement one of three tag interfaces: [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants], [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/ConstantsWithLookup.html ConstantsWithLookup], or [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Messages.html Messages].
+For !StockWatcher, static string internationalization looks like the best choice.  The first thing we need to do is create the `.properties` files to hold the localized strings.  We'll then create Java classes to reference these strings by name.  Our new classes will need to implement one of three tag interfaces: [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants], [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/ConstantsWithLookup.html ConstantsWithLookup], or [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Messages.html Messages].
 
 ===Constants===
 
-Use the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants] interface when you just need to store regular strings and can reference them statically at compile time.  Most of the strings in !StockWatcher fit this description.  As we look at the user interface, we can easily find the constant strings that need to be translated:
+Use the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants] interface when you just need to store regular strings and can reference them statically at compile time.  Most of the strings in !StockWatcher fit this description.  As we look at the user interface, we can easily find the constant strings that need to be translated:
 
  * The "Stock Watcher" title at the top
  * The four watch list column headings: "Symbol", "Price", "Change", and "Remove"
@@ -78,7 +78,7 @@ The Developer Guide has more information about GWT [DevGuidePropertiesFiles .pro
 
 ====Constants interface====
 
-Now that we have our `.properties` files in place, we need to create the Java class to access them.  This class will implement the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants] interface and will contain methods for each of the constants in our `.properties` files.  Create a new interface in !StockWatcher's `client` subpackage named `StockWatcherConstants` with the following definition:
+Now that we have our `.properties` files in place, we need to create the Java class to access them.  This class will implement the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants] interface and will contain methods for each of the constants in our `.properties` files.  Create a new interface in !StockWatcher's `client` subpackage named `StockWatcherConstants` with the following definition:
 
 {{{
 package com.google.gwt.sample.stockwatcher.client;
@@ -97,7 +97,7 @@ public interface StockWatcherConstants extends Constants {
 
 This interface will be bound to the `StockWatcherConstants*.properties` files automatically because of its name.  When we call one of !StockWatcherConstants' methods at runtime, the `String` that is returned will be the corresponding string from the `.properties` file that represents the selected locale (we'll talk about setting the locale at runtime later on).  For example, when we call the stockWatcher() method, it will return `Stock Watcher` if the locale is set to English, or `Aktie Watcher` if it's set to German.
 
-There is another interface, [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/ConstantsWithLookup.html ConstantsWithLookup] which is like [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants] except that it also contains methods for looking up a localized string dynamically by name at runtime.
+There is another interface, [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/ConstantsWithLookup.html ConstantsWithLookup] which is like [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants] except that it also contains methods for looking up a localized string dynamically by name at runtime.
 
 One more note: GWT includes the [DevGuideI18nCreator i18nCreator] utility which can automate the creation of Java interfaces to access strings in `.properties` files.  You should check it out if you plan to internationalize a real GWT application.
 
@@ -105,7 +105,7 @@ One more note: GWT includes the [DevGuideI18nCreator i18nCreator] utility which 
 
 Many of the strings used in GWT applications may be parameterized _messages_.  Messages are strings with placeholders that are filled with values at runtime.  Think of the familiar [http://java.sun.com/j2se/1.5.0/docs/api/java/io/PrintStream.html#format(java.lang.String,%20java.lang.Object...) PrintStream.format(String, Object...)] Java method for writing formatted strings.
 
-To create localized messages, we'll need to implement the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Messages.html Messages] interface.  We'll also need to create a set of `.properties` files just like last time.  Using the same procedure that we used before for constant strings, add the following two `.properties` files to the `client` subpackage:
+To create localized messages, we'll need to implement the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Messages.html Messages] interface.  We'll also need to create a set of `.properties` files just like last time.  Using the same procedure that we used before for constant strings, add the following two `.properties` files to the `client` subpackage:
 
 `StockWatcherMessages.properties`:
 
@@ -154,7 +154,7 @@ The next step in internationalizing !StockWatcher is to replace all hard-coded s
 <h1>Stock Watcher</h1>
 }}}
 
-The easiest way to be able to set this string at runtime is to add a GWT [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Label.html Label] widget and calls its [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Label.html#setText(java.lang.String) setText(String)] method.  This Label will need to reside within a [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Panel.html Panel].  You may remember from the Getting Started section on [GettingStartedUserInterface user interface design] that we can wrap a [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/RootPanel.html RootPanel] around an HTML element in our host page by giving it an `id` attribute.  So replace the existing `<h1>` tag with this one:
+The easiest way to be able to set this string at runtime is to add a GWT [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Label.html Label] widget and calls its [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Label.html#setText(java.lang.String) setText(String)] method.  This Label will need to reside within a [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Panel.html Panel].  You may remember from the Getting Started section on [GettingStartedUserInterface user interface design] that we can wrap a [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/RootPanel.html RootPanel] around an HTML element in our host page by giving it an `id` attribute.  So replace the existing `<h1>` tag with this one:
 
 {{{
 <h1 id="appTitle"></h1>
@@ -167,7 +167,7 @@ private StockWatcherConstants constants;
 private StockWatcherMessages messages;
 }}}
 
-Since these are interfaces, not classes, we can't instantiate them directly.  Instead, we'll use the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create(Class)] method.  Then we'll be able to use these interfaces' accessor methods to retrieve the appropriate strings.  Here's the updated onModuleLoad() with all hard-coded strings replaced with method calls:
+Since these are interfaces, not classes, we can't instantiate them directly.  Instead, we'll use the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create(Class)] method.  Then we'll be able to use these interfaces' accessor methods to retrieve the appropriate strings.  Here's the updated onModuleLoad() with all hard-coded strings replaced with method calls:
 
 {{{
 public void onModuleLoad() {
@@ -314,7 +314,7 @@ When the application reloads it should have a distinctly German flavor:
 
 http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/StockWatcherGerman.png
 
-Notice that besides the translation of the user interface elements, setting the locale to German also affects the display format of the stock prices and the last update timestamp.  This all happens automatically thanks to our use of the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/NumberFormat.html NumberFormat] and [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/DateTimeFormat.html DateTimeFormat] classes provided by GWT.
+Notice that besides the translation of the user interface elements, setting the locale to German also affects the display format of the stock prices and the last update timestamp.  This all happens automatically thanks to our use of the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/NumberFormat.html NumberFormat] and [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/DateTimeFormat.html DateTimeFormat] classes provided by GWT.
 
 ==More about internationalization==
 

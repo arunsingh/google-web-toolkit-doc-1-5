@@ -73,7 +73,7 @@ In this case, the outermost panel needs to be 100% width as well, so we change t
    [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/FAQ_UILayout3.png]
 
 
-This is closer to what we want, but it still isn't right.  Now we need to change the cell alignment in the  [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/DockPanel.html DockPanel] instance:
+This is closer to what we want, but it still isn't right.  Now we need to change the cell alignment in the  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/DockPanel.html DockPanel] instance:
 
 {{{
     Button rightButton = new Button("rightButton");

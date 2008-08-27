@@ -49,7 +49,7 @@ This section documents the most commonly used elements in the module XML file.
 
  * *<inherits name="_logical-module-name_" />* : Inherits all the settings from the specified module as if the contents of the inherited module's XML were copied verbatim. Any number of modules can be inherited in this manner. See the FAQ for [FAQ_GWTModuleInheritance commonly used modules]. 
 
- * *<entry-point class="_classname_" />* : Specifies an [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/EntryPoint.html entry point] class. Any number of entry-point classes can be added, including those from inherited modules.  Entry points are all compiled into a single codebase.  They are called sequentially in the order in which they appear in the module file.  So when the `onModuleLoad()` of your first entry point finishes, the next entry point is called immediately.
+ * *<entry-point class="_classname_" />* : Specifies an [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/EntryPoint.html entry point] class. Any number of entry-point classes can be added, including those from inherited modules.  Entry points are all compiled into a single codebase.  They are called sequentially in the order in which they appear in the module file.  So when the `onModuleLoad()` of your first entry point finishes, the next entry point is called immediately.
 
  * *<source path="_path_" //>* : Adds packages to the [DevGuideModules source path] by combining the package in which the module XML is found with the specified path to a subpackage. Any Java source file appearing in this subpackage or any of its subpackages is assumed to be translatable.  The `<source>` element supports [DevGuidePublicPackageFiltering pattern-based filtering] to allow fine-grained control over which resources get copied into the output directory during a GWT compile.
 
@@ -59,7 +59,7 @@ This section documents the most commonly used elements in the module XML file.
 
 If no `<public>` element is defined in a module XML file, the `public` subpackage is implicitly added to the public path as if `<public path="public">` had been found in the XML. This default helps keep module XML compact for standard project layouts. 
 
- * *<servlet path="_url-path_" class="_classname_"/>* : For convenient RPC testing, this element loads a servlet class mounted at the specified URL path. The URL path should be absolute and have the form of a directory (for example, `/spellcheck`). Your client code then specifies this URL mapping in a call to [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/ServiceDefTarget.html#setServiceEntryPoint(java.lang.String) ServiceDefTarget.setServiceEntryPoint(String)]. Any number of servlets may be loaded in this manner, including those from inherited modules.
+ * *<servlet path="_url-path_" class="_classname_"/>* : For convenient RPC testing, this element loads a servlet class mounted at the specified URL path. The URL path should be absolute and have the form of a directory (for example, `/spellcheck`). Your client code then specifies this URL mapping in a call to [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/ServiceDefTarget.html#setServiceEntryPoint(java.lang.String) ServiceDefTarget.setServiceEntryPoint(String)]. Any number of servlets may be loaded in this manner, including those from inherited modules.
 
 The `<servlet>` element applies only to GWT's embedded server server-side debugging feature.
 
@@ -95,7 +95,7 @@ The following elements are used for defining [DevGuideDeferredBinding deferred b
 
  * *<replace-with class="_replacement_class_name_">* : A directive to use [DevGuideDeferredBinding deferred binding] with replacement.
    
- * *<generate-with class="_generator_class_name_">* : A directive to use [DevGuideDeferredBinding deferred binding] using a [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/ext/Generator.html Generator]
+ * *<generate-with class="_generator_class_name_">* : A directive to use [DevGuideDeferredBinding deferred binding] using a [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/ext/Generator.html Generator]
 
  * *<define-property name="_property_name_" values="_property_values_">* : Define a property and allowable values (comma-separated identifiers).  This element is typically used to generate a value that will be evaluated by a rule using a `<when...>` element.
 

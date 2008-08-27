@@ -23,7 +23,7 @@ For example, a history token named "page1" would be encoded in a URL as follows:
 http://www.example.com/com.example.gwt.HistoryExample/HistoryExample.html#page1
 }}}
 
-When the application wants to push a placeholder onto the browser's history stack, it simply invokes [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/History.html#newItem(java.lang.String) History.newItem(token)].  When the user uses the back button, a callback will be passed to any object that was added as a listener to [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/History.html#addHistoryListener(com.google.gwt.user.client.HistoryListener) History.addHistoryListener()].  It is up to the application to restore the state according to the value of the token.
+When the application wants to push a placeholder onto the browser's history stack, it simply invokes [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/History.html#newItem(java.lang.String) History.newItem(token)].  When the user uses the back button, a callback will be passed to any object that was added as a listener to [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/History.html#addHistoryListener(com.google.gwt.user.client.HistoryListener) History.addHistoryListener()].  It is up to the application to restore the state according to the value of the token.
 
 == Example ==
 
@@ -38,9 +38,9 @@ To use GWT History support, you must first imbed an iframe into your [DevGuideHo
 Then, in your GWT application you must perform the following steps:
 
   * Add a history token to the history stack when you want to enable a history event.
-  * Create an object that implements the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/HistoryListener.html HistoryListener] interface, parses the returned token and changes the application state to match.
+  * Create an object that implements the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/HistoryListener.html HistoryListener] interface, parses the returned token and changes the application state to match.
 
-The following short example shows how to add a history event each time the user selects a new tab in a [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/TabPanel.html TabPanel].
+The following short example shows how to add a history event each time the user selects a new tab in a [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/TabPanel.html TabPanel].
 
 {{{
 import com.google.gwt.core.client.EntryPoint;
@@ -112,7 +112,7 @@ public class BrowserHistoryExample implements EntryPoint {
 
 == Hyperlink Widgets ==
 
-Hyperlinks are convenient to use to incorporate history support into an application.   Hyperlink widgets are GWT widgets that look like regular HTML anchors.  You can associate a history token with the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Hyperlink.html Hyperlink], and when it is clicked, the history token is automatically added to the browser's history stack.  The `History.newItem(token)` step is done automatically.
+Hyperlinks are convenient to use to incorporate history support into an application.   Hyperlink widgets are GWT widgets that look like regular HTML anchors.  You can associate a history token with the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Hyperlink.html Hyperlink], and when it is clicked, the history token is automatically added to the browser's history stack.  The `History.newItem(token)` step is done automatically.
 
 == Stateful applications == 
 
