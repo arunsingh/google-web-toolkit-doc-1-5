@@ -121,15 +121,12 @@ This class allows you to interact with the browser's history stack. Each
     Hyperlink link1 = new Hyperlink("link to bar", "bar");
     Hyperlink link2 = new Hyperlink("link to baz", "baz");
 
-    // If the application starts with no history token, start it off in the
+    // If the application starts with no history token, redirect to a new
     // 'baz' state.
     String initToken = History.getToken();
-    if (initToken.length() == 0)
-      initToken = "baz";
-
-    // onHistoryChanged() is not called when the application first runs. Call
-    // it now in order to reflect the initial state.
-    onHistoryChanged(initToken);
+    if (initToken.length() == 0) {
+      History.newItem("baz");
+    }
 
     // Add widgets to the root panel.
     VerticalPanel panel = new VerticalPanel();
@@ -141,6 +138,9 @@ This class allows you to interact with the browser's history stack. Each
 
     // Add history listener
     History.addHistoryListener(this);
+
+    // Now that we've setup our listener, fire the initial history state.
+    History.fireCurrentHistoryState();
   }
 
   public void onHistoryChanged(String historyToken) {
@@ -155,10 +155,10 @@ This class allows you to interact with the browser's history stack. Each
  <p>
  <h3>URL Encoding</h3>
  Any valid characters may be used in the history token and will survive
- round-trips through newItem to getToken()/onHistoryChanged(), but most will
- be encoded in the user-visible URL. The following US-ASCII characters are not
- encoded on any currently supported browser (but may be in the future due to
- future browser changes):
+ round-trips through <A HREF="../../../../../com/google/gwt/user/client/History.html#newItem(java.lang.String)"><CODE>newItem(String)</CODE></A> to <A HREF="../../../../../com/google/gwt/user/client/History.html#getToken()"><CODE>getToken()</CODE></A>/<A HREF="../../../../../com/google/gwt/user/client/HistoryListener.html#onHistoryChanged(java.lang.String)"><CODE>HistoryListener.onHistoryChanged(String)</CODE></A>,
+ but most will be encoded in the user-visible URL. The following US-ASCII
+ characters are not encoded on any currently supported browser (but may be in
+ the future due to future browser changes):
  <ul>
  <li>a-z
  <li>A-Z
@@ -216,6 +216,15 @@ This class allows you to interact with the browser's history stack. Each
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/user/client/History.html#fireCurrentHistoryState()">fireCurrentHistoryState</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fire <A HREF="../../../../../com/google/gwt/user/client/HistoryListener.html#onHistoryChanged(java.lang.String)"><CODE>HistoryListener.onHistoryChanged(String)</CODE></A> events with the
+ current history state.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/user/client/History.html#forward()">forward</A></B>()</CODE>
 
 <BR>
@@ -246,6 +255,14 @@ This class allows you to interact with the browser's history stack. Each
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a new browser history entry.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/user/client/History.html#onHistoryChanged(java.lang.String)">onHistoryChanged</A></B>(java.lang.String&nbsp;historyToken)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Use <A HREF="../../../../../com/google/gwt/user/client/History.html#fireCurrentHistoryState()"><CODE>fireCurrentHistoryState()</CODE></A> instead.</I></TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -323,6 +340,22 @@ public static void <B>back</B>()</PRE>
 </DL>
 <HR>
 
+<A NAME="fireCurrentHistoryState()"><!-- --></A><H3>
+fireCurrentHistoryState</H3>
+<PRE>
+public static void <B>fireCurrentHistoryState</B>()</PRE>
+<DL>
+<DD>Fire <A HREF="../../../../../com/google/gwt/user/client/HistoryListener.html#onHistoryChanged(java.lang.String)"><CODE>HistoryListener.onHistoryChanged(String)</CODE></A> events with the
+ current history state. This is most often called at the end of an
+ application's <A HREF="../../../../../com/google/gwt/core/client/EntryPoint.html#onModuleLoad()"><CODE>EntryPoint.onModuleLoad()</CODE></A>
+ to inform history listeners of the initial application state.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="forward()"><!-- --></A><H3>
 forward</H3>
 <PRE>
@@ -342,11 +375,11 @@ getToken</H3>
 <PRE>
 public static java.lang.String <B>getToken</B>()</PRE>
 <DL>
-<DD>Gets the current history token. The listener will not receive an
- onHistoryChanged() event for the initial token; requiring that an
- application request the token explicitly on startup gives it an opportunity
- to run different initialization code in the presence or absence of an
- initial token.
+<DD>Gets the current history token. The listener will not receive a
+ <A HREF="../../../../../com/google/gwt/user/client/HistoryListener.html#onHistoryChanged(java.lang.String)"><CODE>HistoryListener.onHistoryChanged(String)</CODE></A> event for the initial
+ token; requiring that an application request the token explicitly on
+ startup gives it an opportunity to run different initialization code in the
+ presence or absence of an initial token.
 <P>
 <DD><DL>
 
@@ -362,8 +395,8 @@ public static void <B>newItem</B>(java.lang.String&nbsp;historyToken)</PRE>
 <DL>
 <DD>Adds a new browser history entry. In hosted mode, the 'back' and 'forward'
  actions are accessible via the standard Alt-Left and Alt-Right keystrokes.
- Calling this method will cause <A HREF="../../../../../com/google/gwt/user/client/HistoryListener.html#onHistoryChanged(java.lang.String)"><CODE>HistoryListener.onHistoryChanged(java.lang.String)</CODE></A> to
- be called as well.
+ Calling this method will cause
+ <A HREF="../../../../../com/google/gwt/user/client/HistoryListener.html#onHistoryChanged(java.lang.String)"><CODE>HistoryListener.onHistoryChanged(String)</CODE></A> to be called as well.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>historyToken</CODE> - the token to associate with the new history item</DL>
@@ -379,11 +412,35 @@ public static void <B>newItem</B>(java.lang.String&nbsp;historyToken,
 <DL>
 <DD>Adds a new browser history entry. In hosted mode, the 'back' and 'forward'
  actions are accessible via the standard Alt-Left and Alt-Right keystrokes.
- Calling this method will cause <A HREF="../../../../../com/google/gwt/user/client/HistoryListener.html#onHistoryChanged(java.lang.String)"><CODE>HistoryListener.onHistoryChanged(java.lang.String)</CODE></A> to
- be called as well if and only if issueEvent is true.
+ Calling this method will cause
+ <A HREF="../../../../../com/google/gwt/user/client/HistoryListener.html#onHistoryChanged(java.lang.String)"><CODE>HistoryListener.onHistoryChanged(String)</CODE></A> to be called as well if
+ and only if issueEvent is true.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>historyToken</CODE> - the token to associate with the new history item<DD><CODE>issueEvent</CODE> - true if an onHistoryChanged event should be issued</DL>
+<DT><B>Parameters:</B><DD><CODE>historyToken</CODE> - the token to associate with the new history item<DD><CODE>issueEvent</CODE> - true if a
+          <A HREF="../../../../../com/google/gwt/user/client/HistoryListener.html#onHistoryChanged(java.lang.String)"><CODE>HistoryListener.onHistoryChanged(String)</CODE></A> event should be
+          issued</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="onHistoryChanged(java.lang.String)"><!-- --></A><H3>
+onHistoryChanged</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>public static void <B>onHistoryChanged</B>(java.lang.String&nbsp;historyToken)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Use <A HREF="../../../../../com/google/gwt/user/client/History.html#fireCurrentHistoryState()"><CODE>fireCurrentHistoryState()</CODE></A> instead.</I>
+<P>
+<DD>Call all history listeners with the specified token. Note that this does
+ not change the history system's idea of the current state and is only kept
+ for backward compatibility. To fire history events for the initial state of
+ the application, instead call <A HREF="../../../../../com/google/gwt/user/client/History.html#fireCurrentHistoryState()"><CODE>fireCurrentHistoryState()</CODE></A> from the
+ application <A HREF="../../../../../com/google/gwt/core/client/EntryPoint.html#onModuleLoad()"><CODE>EntryPoint.onModuleLoad()</CODE></A>
+ method.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>historyToken</CODE> - history token to fire events for</DL>
 </DD>
 </DL>
 <HR>
