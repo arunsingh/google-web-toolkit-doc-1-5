@@ -54,17 +54,16 @@ Here is a full example of a simple `Benchmark` subclass that compares the execut
 {{{
 package com.example.foo.client;
 
-import com.google.gwt.junit.client.Benchmark;
-import com.google.gwt.junit.client.GWTTestCase;
-import com.google.gwt.junit.client.IntRange;
-import com.google.gwt.junit.client.Operator;
+import com.google.gwt.benchmarks.client.Benchmark;
+import com.google.gwt.benchmarks.client.IntRange;
+import com.google.gwt.benchmarks.client.Operator;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
 /**
- * GWT JUnit tests must extend GWTTestCase.
+ * GWT benchmarks must extend Benchmark.
  */
 public class FooBenchmark extends Benchmark {
 
@@ -125,4 +124,4 @@ Now, run the script `FooBenchmark-hosted` that was created by `junitCreator` to 
    http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/BenchmarkReport2.png
 
 
-For more advanced usage, see the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/junit/client/Benchmark.html Benchmark] class documentation.
+For more advanced usage, see the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/benchmarks/client/Benchmark.html Benchmark] class documentation.
