@@ -4,7 +4,7 @@
 
 We'll start by covering the basics of GWT development, creating a project from scratch and then incrementally adding features until we have a fully-functional application ready to be deployed to a web server.
 
-At the end of this section, you can continue to the [GettingStartedMore next section] of the Getting Started guide and learn about more advanced topics like [GettingStartedRPC remote procedure calls] and [GettingStartedI18n internationalization].
+After completing these topics, you can continue to the [GettingStartedMore Add More Features] learn about topics like [GettingStartedRPC remote procedure calls] and [GettingStartedI18n internationalization].
   
  * [GettingStartedInstall Install GWT] Install the GWT package and Java SDK
 
@@ -23,3 +23,7 @@ At the end of this section, you can continue to the [GettingStartedMore next sec
  * [GettingStartedStyle Add CSS Styling] Adjust the look and feel of !StockWatcher using stylesheets.
 
  * [GettingStartedWebMode Deploy] Compile your client-side Java code into !JavaScript using the Java compile and run it in a web browser.
+
+==Next...==
+
+Continue to the next section [GettingStartedInstall Install GWT]
