@@ -27,7 +27,7 @@
       * [ReleaseNotes_1_5_Misc Miscellaneous]
     * [ReleaseNotes_1_5_BreakingChanges Breaking changes]
     * [ReleaseNotes_1_5_BugFixes Bug fixes]
-  * [DevGuideFundamentals Fundamentals]
+  * Fundamentals
     * [DevGuideJavaToJavaScriptCompiler GWT Compiler]
     * [DevGuideJavaCompatibility Java Language Compatibility]
     * [DevGuideClientSide Client-side Code]
