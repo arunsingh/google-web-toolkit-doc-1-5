@@ -41,3 +41,4 @@ You can find out more about [DevGuideJavaCompatibility Java runtime library supp
 ===Ensuring GWT compatibility===
 
 As you write your application, be sure to only use language features and library classes in your Java source code that are supported by GWT.  To help you find incompatibilities early in the development process, your code is verified against the JRE emulation library when you run in [DevGuideHostedMode hosted mode], thus catching most uses of unsupported Java functionality the first time you try to run your application.
+

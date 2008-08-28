@@ -5,3 +5,4 @@
 One of the most common problems when creating launch configurations for the first time in GWT is to omit the application _source_ code path from the Java classpath.  The [DevGuideJavaToJavaScriptCompiler GWT compiler] and [DevGuideHostedMode Hosted mode] shell rely on the module source code to build your application, and both use the Java classpath to find the _.java_ source files.
 
 If you are using Eclipse, Open the launch configuration, navigate to the _Classpath_ tab, and use the _Advanced_ button to add the `src` folders to the classpath.  If you are launching from the command line, add the `src` folders to the list of paths following the `-cp` argument to the `java` command line.
+

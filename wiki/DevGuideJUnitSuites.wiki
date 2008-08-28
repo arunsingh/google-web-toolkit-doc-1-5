@@ -26,3 +26,4 @@ The three test cases `MapTest`, `EventTest`, and `CopyTest` can now all run in t
 {{{
 java  -Xmx256M -cp "./src:./test:./bin:./junit.jar:/gwt/gwt-user.jar:/gwt/gwt-dev-linux.jar:/gwt/gwt-maps.jar" junit.textui.TestRunner com.example.MapsTestSuite
 }}}
+

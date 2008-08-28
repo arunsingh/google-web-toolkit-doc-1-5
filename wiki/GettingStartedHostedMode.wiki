@@ -127,3 +127,4 @@ http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/StockWatcherHostedMode
 Now, when you debug the `StockWatcher` project, the hosted mode browser will automatically point to the `.php` version of our host page.  You'll still be able to set breakpoints and step through the code just as before.
 
 For more details on using an alternate server in hosted mode, check out this [FAQ_HostedModeNoServer FAQ article].
+

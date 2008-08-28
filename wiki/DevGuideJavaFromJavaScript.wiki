@@ -119,3 +119,4 @@ public MyUtilityClass
 }}}
 
 On application initialization, call `MyUtilityClass.exportStaticMethod()` (e.g. from your GWT Entry Point). This will assign the function to a variable in the window object called `computeLoanInterest`.
+

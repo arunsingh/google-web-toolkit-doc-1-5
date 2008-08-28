@@ -29,3 +29,4 @@ GWT client code running in hosted mode always runs with assertions enabled now. 
 
 === Hosted mode works on OS X 10.4 and 10.5; requires Safari 3.0 ===
 The same GWT distribution for Mac OS X now works on Tiger (10.4) and Leopard (10.5). The new implementation relies on using the system's available install of Safari 3.0 or later rather than bundling its own version of !WebKit.
+
