@@ -12,3 +12,4 @@ The underlying issue is that the images needed for the background, border, or an
     Image.prefetch("images/corner-tl.png");
     Image.prefetch("images/corner-tr.png");
 }}}
+

@@ -47,3 +47,4 @@ If you look inside the script, you'll see that it wraps a call to the Java class
 ==Next steps==
 
 By now you should have a pretty good idea of how to develop a GWT application, from start to finish.  If you're interested in learning additional features of GWT you can  follow along in the [GettingStartedMore next section] of the Getting Started guide as we add remote procedure calls, internationalization, and unit tests to our !StockWatcher sample.
+

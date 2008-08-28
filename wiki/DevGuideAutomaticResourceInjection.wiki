@@ -33,3 +33,4 @@ Module inheritance makes resource inclusion particularly convenient. If you wish
 ===See Also===
 
   * [DevGuideModuleXml Module XML Format]
+
