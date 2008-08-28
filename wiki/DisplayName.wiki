@@ -1,2 +1,2 @@
 ﻿#summary display name for docreader
-Google Web Toolkit 1.5 Developer's Guide
+GWT 1.5 Developer's Guide
