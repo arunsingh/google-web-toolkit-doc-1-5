@@ -21,3 +21,4 @@
  * [http://code.google.com/p/google-web-toolkit/ Completely Open Source] - All of the code for GWT is available under the Apache 2.0 license. If you are interested in contributing, please visit [http://code.google.com/webtoolkit/makinggwtbetter.html Making GWT Better].
 
 For a step-by-step installation and usage guide, please see the [GettingStarted Getting Started Guide].
+

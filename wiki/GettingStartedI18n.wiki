@@ -319,3 +319,4 @@ Notice that besides the translation of the user interface elements, setting the 
 ==More about internationalization==
 
 The Developer Guide contains more details about [DevGuideInternationalization internationalizing GWT applications].  You may also want to check out the [http://www.w3.org/International/ W3C webpage] on internationalization for additional guidance.
+
