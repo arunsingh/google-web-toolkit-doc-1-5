@@ -177,3 +177,4 @@ Because there may be subtle [DevGuideJavaCompatibility differences] between the 
 ==More about testing==
 
 There's more to unit testing with GWT than we touched on here, including [DevGuideJUnitAsync asynchronous testing] and performance [DevGuideJUnitBenchmarking benchmarking].  For more details, see the Development Guide section on [DevGuideJUnitIntegration JUnit integration].
+

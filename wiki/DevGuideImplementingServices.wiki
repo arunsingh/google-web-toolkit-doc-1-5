@@ -38,3 +38,4 @@ Here are some commonly seen errors trying to get RPC running:
 ==Deploying Services Into Production==
 
 In production, you can use any servlet container that is appropriate for your application. You need only to ensure that the client code is configured to invoke the service using the URL to which your servlet is mapped by the `web.xml` configuration. See [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/ServiceDefTarget.html ServiceDefTarget] for how to set the target URL.  See the [DevGuideRPCDeployment example deployment to Tomcat] in this guide for an example of how to deploy to a servlet container.
+

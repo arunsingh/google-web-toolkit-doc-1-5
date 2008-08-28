@@ -51,3 +51,4 @@ export PATH
 }}}
 
 You will need to log out of your account and log back in before the PATH setting takes effect (Linux and Mac).
+

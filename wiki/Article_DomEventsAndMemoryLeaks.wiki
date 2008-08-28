@@ -73,3 +73,4 @@ What this means in practice is that, as long as you don't set up any reference c
 The downside, of course, is that you can't hook event listeners directly to elements that are children of a Widget's element. Rather, you have to receive the event on the Widget itself, and figure out which child element it came from.
 
 But that's better than leaking gobs of memory on your users' machines, right?
+

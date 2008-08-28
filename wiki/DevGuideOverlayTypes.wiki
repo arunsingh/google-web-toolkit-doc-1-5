@@ -128,3 +128,4 @@ For more information...
    * [http://sites.google.com/site/io/gwt-and-client-server-communication GWT and Client-Server Communication] - Also from Google I/O, Miguel Mendez explains various ways in which you can access data from the browser, including how to combine `RequestBuilder` and overlay types for really convenient JSON access.
    * [http://code.google.com/p/google-web-toolkit/wiki/OverlayTypes Design: Overlay Types] - Read at your own risk :-) These are the excruciating technical details. It's fairly interesting but not necessarily instructive.
 
+

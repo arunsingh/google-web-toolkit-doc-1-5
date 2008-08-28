@@ -164,3 +164,4 @@ See the [DevGuideWidgetGallery Widget Gallery] for screenshots or diagrams for t
 ==Sizes and Measures==
 
 It is possible to set the size of a widget explicitly using [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setWidth(java.lang.String) setWidth()], [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setHeight(java.lang.String) setHeight()], and [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setSize(java.lang.String,%20java.lang.String) setSize()]. The arguments to these methods are strings, rather than integers, because they accept any valid CSS measurements, such as pixels (128px), centimeters (3cm), and percentage (100%).
+

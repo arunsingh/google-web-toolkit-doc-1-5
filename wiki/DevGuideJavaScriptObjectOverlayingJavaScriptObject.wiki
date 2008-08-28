@@ -36,3 +36,4 @@ public class Account extends JavaScriptObject {
 }}}
 
 Suppose you wanted to use a JSO subclass to overlay a regular JavaScript array. A JavaScript array is nothing more than an array data structure that allows you to retrieve elements by index and a `length` property that maintains how many element are contained within the array. If we were to overlay a JavaScript array from the JS world, these are two properties that we'd want to be able to access from the JSO overlay object overlaying the JS array.
+
