@@ -96,7 +96,7 @@
     * [DevGuideI18NAnnotations Annotations for use with Internationalization]
   * [DevGuideAccessibility Accessibility]
     * [DevGuideAccessibilityHOWTO Adding accessibility support to widgets]
-      * [DevGuideDeferredBinding Deferred Binding]
+  * [DevGuideDeferredBinding Deferred Binding]
     * [DevGuideDeferredBindingConcepts Deferred Binding Benefits]
     * [DevGuideDeferredBindingUsing Defining Deferred Binding Rules]
     * [DevGuideDeferredBindingReplacement Deferred Binding using Replacement]
