@@ -147,3 +147,4 @@ Let's say, for example, that your existing website was built with [http://www.ph
 }}}
 
 By adding that one line, this PHP page has become a host page for GWT. You can add GWT widgets and client-side behaviors to it just as you can with static `.html` host pages. GWT does not need to explicitly _support_ PHP for this to work. In fact, since GWT runs on the client-side (unlike server-side  PHP scripts), it is not even _aware_ of the fact that the host page was dynamically generated with PHP. To GWT, it's just another host page. This means that GWT can seamlessly work with whatever server-side framework you happen to use, be it [http://www.php.net/ PHP], [http://www.rubyonrails.org/ Ruby on Rails], or even [http://www.asp.net/ ASP.NET].
+

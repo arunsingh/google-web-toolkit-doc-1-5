@@ -52,3 +52,4 @@ jsonCallbacks[requestNumber].
 }}}
 
 If the external feed doesn't support callback function names using array syntax, you can generate uniquely named bridge methods like jsonCallback1, jsonCallback2, etc. Also, don't forget to cleanup in the bridge function after it's been called, such as removing the SCRIPT node that's been added to the DOM, and deleting the bridge method, since they are no longer used once you have the result.
+

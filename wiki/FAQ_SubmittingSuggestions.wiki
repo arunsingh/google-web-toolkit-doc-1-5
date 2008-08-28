@@ -6,3 +6,4 @@ If you have an idea for an enhancement to GWT, please search through the [http:/
 
 You can submit requests for enhancements at the [http://code.google.com/p/google-web-toolkit/issues/list Google Web Toolkit Issue Tracker].
 When you save your report, it will be labeled as a "Defect" even though you want to submit an RFE (Request for Enhancement). Don't worry! We review each item submitted to our Issue Tracker, and will mark enhancement requests appropriately when we receive them.
+

@@ -48,3 +48,4 @@ trivial as it might seem at first. Modules play an important role letting you
 determine what exactly you're trying to build. You can have as many modules as you 
 want for different configurations for the same code base. You can imagine module 
 variations like "!MySuperBigModuleWithDebuggingAndLoggingTurnedOn.gwt.xml".
+

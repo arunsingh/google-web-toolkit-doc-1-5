@@ -11,3 +11,4 @@ Dynamic string localization allows you to look up localized strings defined in a
 This approach is typically slower and larger than the static string approach, but does not require application code to be recompiled when messages are altered or the set of locales changes. 
 
  _Tip: The `Dictionary` class is completely dynamic, so it provides no static type checking, and invalid keys cannot be checked by the compiler. This is another reason we recommend using [DevGuideStaticStringInternationalization static string internationalization] where possible._
+

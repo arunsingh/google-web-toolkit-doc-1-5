@@ -48,3 +48,4 @@ Specifics:
   * Tab indexes are properly set for all widgets that derive from `FocusWidget`.
   * A tabindex of -1 is set on the GWT history and script IFRAMES so that they are not part of the tab cycle.
   * Added `Document.createUniqueId()` as a general-purpose method for generating unique DOM ids. 
+

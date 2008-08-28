@@ -19,3 +19,4 @@ Define an image bundle and use it in your application.
 
 [DevGuideImageBundleWithLocalization Image Bundles and Localization]
 Create locale-sensitive image bundles by using GWT's localization capabilities.
+
