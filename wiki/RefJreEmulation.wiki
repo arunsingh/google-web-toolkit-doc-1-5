@@ -5,16 +5,16 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
 ==Package java.lang==
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/ArithmeticException.html ArithmeticException]
-  ArithmeticException(String), ArithmeticException()
+  !ArithmeticException(String), !ArithmeticException()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/ArrayIndexOutOfBoundsException.html ArrayIndexOutOfBoundsException]
-  ArrayIndexOutOfBoundsException(), ArrayIndexOutOfBoundsException(int), ArrayIndexOutOfBoundsException(String)
+  !ArrayIndexOutOfBoundsException(), !ArrayIndexOutOfBoundsException(int), !ArrayIndexOutOfBoundsException(String)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/ArrayStoreException.html ArrayStoreException]
-  ArrayStoreException(), ArrayStoreException(String)
+  !ArrayStoreException(), !ArrayStoreException(String)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/AssertionError.html AssertionError]
-  AssertionError(), AssertionError(boolean), AssertionError(char), AssertionError(double), AssertionError(float), AssertionError(int), AssertionError(long), AssertionError(Object)
+  !AssertionError(), !AssertionError(boolean), !AssertionError(char), !AssertionError(double), !AssertionError(float), !AssertionError(int), !AssertionError(long), !AssertionError(Object)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Boolean.html Boolean]
   Boolean(boolean), Boolean(String), parseBoolean(String), toString(boolean), valueOf(boolean), valueOf(String), booleanValue(), compareTo(Boolean), equals(Object), hashCode(), toString()
@@ -26,13 +26,13 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
   charAt(int), length(), subSequence(int, int), toString()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Character.html Character]
-  Character(char), charCount(int), codePointAt(char[], int), codePointAt(char[], int, int), codePointAt(CharSequence, int), codePointBefore(char[], int), codePointBefore(char[], int, int), codePointBefore(CharSequence, int), codePointCount(char[], int, int), codePointCount(CharSequence, int, int), digit(char, int), forDigit(int, int), hashCode(char), isDigit(char), isHighSurrogate(char), isLetter(char), isLetterOrDigit(char), isLowerCase(char), isLowSurrogate(char), isSpace(char), isSupplementaryCodePoint(int), isSurrogatePair(char, char), isUpperCase(char), isValidCodePoint(int), offsetByCodePoints(char[], int, int, int, int), offsetByCodePoints(CharSequence, int, int), toChars(int), toChars(int, char[], int), toCodePoint(char, char), toLowerCase(char), toString(char), toUpperCase(char), valueOf(char), charValue(), compareTo(Character), equals(Object), hashCode(), toString()
+  Character(char), charCount(int), codePointAt(char[], int), codePointAt(char[], int, int), codePointAt(!CharSequence, int), codePointBefore(char[], int), codePointBefore(char[], int, int), codePointBefore(!CharSequence, int), codePointCount(char[], int, int), codePointCount(!CharSequence, int, int), digit(char, int), forDigit(int, int), hashCode(char), isDigit(char), isHighSurrogate(char), isLetter(char), isLetterOrDigit(char), isLowerCase(char), isLowSurrogate(char), isSpace(char), isSupplementaryCodePoint(int), isSurrogatePair(char, char), isUpperCase(char), isValidCodePoint(int), offsetByCodePoints(char[], int, int, int, int), offsetByCodePoints(!CharSequence, int, int), toChars(int), toChars(int, char[], int), toCodePoint(char, char), toLowerCase(char), toString(char), toUpperCase(char), valueOf(char), charValue(), compareTo(Character), equals(Object), hashCode(), toString()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Class.html Class]
   desiredAssertionStatus(), getEnumConstants(), getName(), getSuperclass(), isArray(), isEnum(), isInterface(), isPrimitive(), toString()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/ClassCastException.html ClassCastException]
-  ClassCastException(), ClassCastException(String)
+  !ClassCastException(), !ClassCastException(String)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Cloneable.html Cloneable]
   
@@ -59,13 +59,13 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
   Float(double), Float(float), Float(String), compare(float, float), hashCode(float), isInfinite(float), isNaN(float), parseFloat(String), toString(float), valueOf(float), valueOf(String), byteValue(), compareTo(Float), doubleValue(), equals(Object), floatValue(), hashCode(), intValue(), isInfinite(), isNaN(), longValue(), shortValue(), toString()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/IllegalArgumentException.html IllegalArgumentException]
-  IllegalArgumentException(), IllegalArgumentException(String), IllegalArgumentException(String, Throwable), IllegalArgumentException(Throwable)
+  !IllegalArgumentException(), !IllegalArgumentException(String), !IllegalArgumentException(String, Throwable), !IllegalArgumentException(Throwable)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/IllegalStateException.html IllegalStateException]
-  IllegalStateException(), IllegalStateException(String), IllegalStateException(String, Throwable), IllegalStateException(Throwable)
+  !IllegalStateException(), !IllegalStateException(String), !IllegalStateException(String, Throwable), !IllegalStateException(Throwable)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/IndexOutOfBoundsException.html IndexOutOfBoundsException]
-  IndexOutOfBoundsException(), IndexOutOfBoundsException(String)
+  !IndexOutOfBoundsException(), !IndexOutOfBoundsException(String)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Integer.html Integer]
   Integer(int), Integer(String), bitCount(int), decode(String), hashCode(int), highestOneBit(int), lowestOneBit(int), numberOfLeadingZeros(int), numberOfTrailingZeros(int), parseInt(String), parseInt(String, int), reverse(int), reverseBytes(int), rotateLeft(int, int), rotateRight(int, int), signum(int), toBinaryString(int), toHexString(int), toOctalString(int), toString(int), toString(int, int), valueOf(int), valueOf(String), valueOf(String, int), byteValue(), compareTo(Integer), doubleValue(), equals(Object), floatValue(), hashCode(), intValue(), longValue(), shortValue(), toString()
@@ -80,16 +80,16 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
   Math(), abs(double), abs(float), abs(int), abs(long), acos(double), asin(double), atan(double), atan2(double, double), ceil(double), copySign(double, double), copySign(float, float), cos(double), cosh(double), exp(double), expm1(double), floor(double), hypot(double, double), log(double), log10(double), log1p(double), max(double, double), max(float, float), max(int, int), max(long, long), min(double, double), min(float, float), min(int, int), min(long, long), pow(double, double), random(), rint(double), round(double), round(float), scalb(double, int), scalb(float, int), signum(double), signum(float), sin(double), sinh(double), sqrt(double), tan(double), tanh(double), toDegrees(double), toRadians(double)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/NegativeArraySizeException.html NegativeArraySizeException]
-  NegativeArraySizeException(), NegativeArraySizeException(String)
+  !NegativeArraySizeException(), !NegativeArraySizeException(String)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/NullPointerException.html NullPointerException]
-  NullPointerException(), NullPointerException(String)
+  !NullPointerException(), !NullPointerException(String)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Number.html Number]
   Number(), byteValue(), doubleValue(), floatValue(), intValue(), longValue(), shortValue()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/NumberFormatException.html NumberFormatException]
-  NumberFormatException(), NumberFormatException(String)
+  !NumberFormatException(), !NumberFormatException(String)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html Object]
   Object(), equals(Object), getClass(), hashCode(), toString()
@@ -101,37 +101,37 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
   run()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/RuntimeException.html RuntimeException]
-  RuntimeException(), RuntimeException(String), RuntimeException(String, Throwable), RuntimeException(Throwable)
+  !RuntimeException(), !RuntimeException(String), !RuntimeException(String, Throwable), !RuntimeException(Throwable)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Short.html Short]
   Short(short), Short(String), decode(String), hashCode(short), parseShort(String), parseShort(String, int), reverseBytes(short), toString(short), valueOf(short), valueOf(String), valueOf(String, int), byteValue(), compareTo(Short), doubleValue(), equals(Object), floatValue(), hashCode(), intValue(), longValue(), shortValue(), toString()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/StackTraceElement.html StackTraceElement]
-  StackTraceElement(), getClassName(), getFileName(), getLineNumber(), getMethodName()
+  !StackTraceElement(), getClassName(), getFileName(), getLineNumber(), getMethodName()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html String]
-  String(), String(char[]), String(char[], int, int), String(int[], int, int), String(String), String(StringBuffer), String(StringBuilder), copyValueOf(char[]), copyValueOf(char[], int, int), valueOf(boolean), valueOf(char), valueOf(char[], int, int), valueOf(char[]), valueOf(double), valueOf(float), valueOf(int), valueOf(long), valueOf(Object), charAt(int), codePointAt(int), codePointBefore(int), codePointCount(int, int), compareTo(String), compareToIgnoreCase(String), concat(String), contains(CharSequence), contentEquals(CharSequence), contentEquals(StringBuffer), endsWith(String), equals(Object), equalsIgnoreCase(String), getChars(int, int, char[], int), hashCode(), indexOf(int), indexOf(int, int), indexOf(String), indexOf(String, int), intern(), isEmpty(), lastIndexOf(int), lastIndexOf(int, int), lastIndexOf(String), lastIndexOf(String, int), length(), matches(String), offsetByCodePoints(int, int), regionMatches(boolean, int, String, int, int), regionMatches(int, String, int, int), replace(char, char), replace(CharSequence, CharSequence), replaceAll(String, String), replaceFirst(String, String), split(String), split(String, int), startsWith(String), startsWith(String, int), subSequence(int, int), substring(int), substring(int, int), toCharArray(), toLowerCase(), toString(), toUpperCase(), trim()
+  String(), String(char[]), String(char[], int, int), String(int[], int, int), String(String), String(!StringBuffer), String(!StringBuilder), copyValueOf(char[]), copyValueOf(char[], int, int), valueOf(boolean), valueOf(char), valueOf(char[], int, int), valueOf(char[]), valueOf(double), valueOf(float), valueOf(int), valueOf(long), valueOf(Object), charAt(int), codePointAt(int), codePointBefore(int), codePointCount(int, int), compareTo(String), compareToIgnoreCase(String), concat(String), contains(!CharSequence), contentEquals(!CharSequence), contentEquals(!StringBuffer), endsWith(String), equals(Object), equalsIgnoreCase(String), getChars(int, int, char[], int), hashCode(), indexOf(int), indexOf(int, int), indexOf(String), indexOf(String, int), intern(), isEmpty(), lastIndexOf(int), lastIndexOf(int, int), lastIndexOf(String), lastIndexOf(String, int), length(), matches(String), offsetByCodePoints(int, int), regionMatches(boolean, int, String, int, int), regionMatches(int, String, int, int), replace(char, char), replace(!CharSequence, !CharSequence), replaceAll(String, String), replaceFirst(String, String), split(String), split(String, int), startsWith(String), startsWith(String, int), subSequence(int, int), substring(int), substring(int, int), toCharArray(), toLowerCase(), toString(), toUpperCase(), trim()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/StringBuffer.html StringBuffer]
-  StringBuffer(), StringBuffer(CharSequence), StringBuffer(int), StringBuffer(String), append(boolean), append(char), append(char[]), append(char[], int, int), append(CharSequence), append(CharSequence, int, int), append(double), append(float), append(int), append(long), append(Object), append(String), append(StringBuffer), capacity(), charAt(int), delete(int, int), deleteCharAt(int), ensureCapacity(int), getChars(int, int, char[], int), indexOf(String), indexOf(String, int), insert(int, boolean), insert(int, char), insert(int, char[]), insert(int, char[], int, int), insert(int, CharSequence), insert(int, CharSequence, int, int), insert(int, double), insert(int, float), insert(int, int), insert(int, long), insert(int, Object), insert(int, String), lastIndexOf(String), lastIndexOf(String, int), length(), replace(int, int, String), setCharAt(int, char), setLength(int), subSequence(int, int), substring(int), substring(int, int), toString(), trimToSize()
+  !StringBuffer(), !StringBuffer(!CharSequence), !StringBuffer(int), !StringBuffer(String), append(boolean), append(char), append(char[]), append(char[], int, int), append(!CharSequence), append(!CharSequence, int, int), append(double), append(float), append(int), append(long), append(Object), append(String), append(!StringBuffer), capacity(), charAt(int), delete(int, int), deleteCharAt(int), ensureCapacity(int), getChars(int, int, char[], int), indexOf(String), indexOf(String, int), insert(int, boolean), insert(int, char), insert(int, char[]), insert(int, char[], int, int), insert(int, !CharSequence), insert(int, !CharSequence, int, int), insert(int, double), insert(int, float), insert(int, int), insert(int, long), insert(int, Object), insert(int, String), lastIndexOf(String), lastIndexOf(String, int), length(), replace(int, int, String), setCharAt(int, char), setLength(int), subSequence(int, int), substring(int), substring(int, int), toString(), trimToSize()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/StringBuilder.html StringBuilder]
-  StringBuilder(), StringBuilder(CharSequence), StringBuilder(int), StringBuilder(String), append(boolean), append(char), append(char[]), append(char[], int, int), append(CharSequence), append(CharSequence, int, int), append(double), append(float), append(int), append(long), append(Object), append(String), append(StringBuffer), capacity(), charAt(int), delete(int, int), deleteCharAt(int), ensureCapacity(int), getChars(int, int, char[], int), indexOf(String), indexOf(String, int), insert(int, boolean), insert(int, char), insert(int, char[]), insert(int, char[], int, int), insert(int, CharSequence), insert(int, CharSequence, int, int), insert(int, double), insert(int, float), insert(int, int), insert(int, long), insert(int, Object), insert(int, String), lastIndexOf(String), lastIndexOf(String, int), length(), replace(int, int, String), setCharAt(int, char), setLength(int), subSequence(int, int), substring(int), substring(int, int), toString(), trimToSize()
+  !StringBuilder(), !StringBuilder(!CharSequence), !StringBuilder(int), !StringBuilder(String), append(boolean), append(char), append(char[]), append(char[], int, int), append(!CharSequence), append(!CharSequence, int, int), append(double), append(float), append(int), append(long), append(Object), append(String), append(!StringBuilder), capacity(), charAt(int), delete(int, int), deleteCharAt(int), ensureCapacity(int), getChars(int, int, char[], int), indexOf(String), indexOf(String, int), insert(int, boolean), insert(int, char), insert(int, char[]), insert(int, char[], int, int), insert(int, !CharSequence), insert(int, !CharSequence, int, int), insert(int, double), insert(int, float), insert(int, int), insert(int, long), insert(int, Object), insert(int, String), lastIndexOf(String), lastIndexOf(String, int), length(), replace(int, int, String), setCharAt(int, char), setLength(int), subSequence(int, int), substring(int), substring(int, int), toString(), trimToSize()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/StringIndexOutOfBoundsException.html StringIndexOutOfBoundsException]
-  StringIndexOutOfBoundsException(), StringIndexOutOfBoundsException(String), StringIndexOutOfBoundsException(int)
+  !StringIndexOutOfBoundsException(), !StringIndexOutOfBoundsException(String), !StringIndexOutOfBoundsException(int)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/SuppressWarnings.html SuppressWarnings]
   value()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/System.html System]
-  System(), arraycopy(Object, int, Object, int, int), currentTimeMillis(), gc(), identityHashCode(Object), setErr(PrintStream), setOut(PrintStream)
+  System(), arraycopy(Object, int, Object, int, int), currentTimeMillis(), gc(), identityHashCode(Object), setErr(!PrintStream), setOut(!PrintStream)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Throwable.html Throwable]
-  Throwable(), Throwable(String), Throwable(String, Throwable), Throwable(Throwable), fillInStackTrace(), getCause(), getLocalizedMessage(), getMessage(), getStackTrace(), initCause(Throwable), printStackTrace(), printStackTrace(PrintStream), setStackTrace(StackTraceElement[]), toString()
+  Throwable(), Throwable(String), Throwable(String, Throwable), Throwable(Throwable), fillInStackTrace(), getCause(), getLocalizedMessage(), getMessage(), getStackTrace(), initCause(Throwable), printStackTrace(), printStackTrace(!PrintStream), setStackTrace(!StackTraceElement[]), toString()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/UnsupportedOperationException.html UnsupportedOperationException]
-  UnsupportedOperationException(), UnsupportedOperationException(String), UnsupportedOperationException(String, Throwable), UnsupportedOperationException(Throwable)
+  !UnsupportedOperationException(), !UnsupportedOperationException(String), !UnsupportedOperationException(String, Throwable), !UnsupportedOperationException(Throwable)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Void.html Void]
   
@@ -142,10 +142,10 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
   annotationType(), equals(Object), hashCode(), toString()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/annotation/AnnotationFormatError.html AnnotationFormatError]
-  AnnotationFormatError()
+  !AnnotationFormatError()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/annotation/AnnotationTypeMismatchException.html AnnotationTypeMismatchException]
-  AnnotationTypeMismatchException()
+  !AnnotationTypeMismatchException()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/annotation/Documented.html Documented]
   
@@ -154,7 +154,7 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
   values(), valueOf(String)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/annotation/IncompleteAnnotationException.html IncompleteAnnotationException]
-  IncompleteAnnotationException(Class, String), annotationType(), elementName()
+  !IncompleteAnnotationException(Class, String), annotationType(), elementName()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/annotation/Inherited.html Inherited]
   
@@ -186,10 +186,10 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
   add(int, E), addAll(int, Collection), get(int), iterator(), listIterator(int), remove(int), set(int, E), size()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/AbstractSet.html AbstractSet]
-  AbstractSet(), equals(Object), hashCode(), removeAll(Collection)
+  !AbstractSet(), equals(Object), hashCode(), removeAll(Collection)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/ArrayList.html ArrayList]
-  ArrayList(), ArrayList(Collection), ArrayList(int), add(E), add(int, E), addAll(Collection), addAll(int, Collection), clear(), clone(), contains(Object), ensureCapacity(int), get(int), indexOf(Object), isEmpty(), lastIndexOf(Object), remove(int), remove(Object), set(int, E), size(), toArray(), toArray(T[]), trimToSize()
+  !ArrayList(), !ArrayList(Collection), !ArrayList(int), add(E), add(int, E), addAll(Collection), addAll(int, Collection), clear(), clone(), contains(Object), ensureCapacity(int), get(int), indexOf(Object), isEmpty(), lastIndexOf(Object), remove(int), remove(Object), set(int, E), size(), toArray(), toArray(T[]), trimToSize()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/Arrays.html Arrays]
   Arrays(), asList(T[]), binarySearch(byte[], byte), binarySearch(char[], char), binarySearch(double[], double), binarySearch(float[], float), binarySearch(int[], int), binarySearch(long[], long), binarySearch(Object[], Object), binarySearch(short[], short), binarySearch(T[], T, Comparator), deepEquals(Object[], Object[]), deepHashCode(Object[]), deepToString(Object[]), equals(boolean[], boolean[]), equals(byte[], byte[]), equals(char[], char[]), equals(double[], double[]), equals(float[], float[]), equals(int[], int[]), equals(long[], long[]), equals(Object[], Object[]), equals(short[], short[]), fill(boolean[], boolean), fill(boolean[], int, int, boolean), fill(byte[], byte), fill(byte[], int, int, byte), fill(char[], char), fill(char[], int, int, char), fill(double[], double), fill(double[], int, int, double), fill(float[], float), fill(float[], int, int, float), fill(int[], int), fill(int[], int, int, int), fill(long[], int, int, long), fill(long[], long), fill(Object[], int, int, Object), fill(Object[], Object), fill(short[], int, int, short), fill(short[], short), hashCode(boolean[]), hashCode(byte[]), hashCode(char[]), hashCode(double[]), hashCode(float[]), hashCode(int[]), hashCode(long[]), hashCode(Object[]), hashCode(short[]), sort(byte[]), sort(byte[], int, int), sort(char[]), sort(char[], int, int), sort(double[]), sort(double[], int, int), sort(float[]), sort(float[], int, int), sort(int[]), sort(int[], int, int), sort(long[]), sort(long[], int, int), sort(Object[]), sort(Object[], int, int), sort(short[]), sort(short[], int, int), sort(T[], Comparator), sort(T[], int, int, Comparator), toString(boolean[]), toString(byte[]), toString(char[]), toString(double[]), toString(float[]), toString(int[]), toString(long[]), toString(Object[]), toString(short[])
@@ -198,25 +198,25 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
   add(E), addAll(Collection), clear(), contains(Object), containsAll(Collection), equals(Object), hashCode(), isEmpty(), iterator(), remove(Object), removeAll(Collection), retainAll(Collection), size(), toArray(), toArray(T[])
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/Collections.html Collections]
-  Collections(), addAll(Collection, T[]), binarySearch(List, T), binarySearch(List, T, Comparator), copy(List, List), disjoint(Collection, Collection), emptyList(), emptyMap(), emptySet(), enumeration(Collection), fill(List, T), frequency(Collection, Object), list(Enumeration), max(Collection), max(Collection, Comparator), min(Collection), min(Collection, Comparator), nCopies(int, T), replaceAll(List, T, T), reverse(List), reverseOrder(), reverseOrder(Comparator), singleton(T), singletonList(T), singletonMap(K, V), sort(List), sort(List, Comparator), swap(List, int, int), unmodifiableCollection(Collection), unmodifiableList(List), unmodifiableMap(Map), unmodifiableSet(Set), unmodifiableSortedMap(SortedMap), unmodifiableSortedSet(SortedSet)
+  Collections(), addAll(Collection, T[]), binarySearch(List, T), binarySearch(List, T, Comparator), copy(List, List), disjoint(Collection, Collection), emptyList(), emptyMap(), emptySet(), enumeration(Collection), fill(List, T), frequency(Collection, Object), list(Enumeration), max(Collection), max(Collection, Comparator), min(Collection), min(Collection, Comparator), nCopies(int, T), replaceAll(List, T, T), reverse(List), reverseOrder(), reverseOrder(Comparator), singleton(T), singletonList(T), singletonMap(K, V), sort(List), sort(List, Comparator), swap(List, int, int), unmodifiableCollection(Collection), unmodifiableList(List), unmodifiableMap(Map), unmodifiableSet(Set), unmodifiableSortedMap(!SortedMap), unmodifiableSortedSet(!SortedSet)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/Comparator.html Comparator]
   compare(T, T), equals(Object)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/ConcurrentModificationException.html ConcurrentModificationException]
-  ConcurrentModificationException(), ConcurrentModificationException(String)
+  !ConcurrentModificationException(), !ConcurrentModificationException(String)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/Date.html Date]
-  Date(), Date(int, int, int), Date(int, int, int, int, int), Date(int, int, int, int, int, int), Date(long), Date(String), parse(String), UTC(int, int, int, int, int, int), after(Date), before(Date), clone(), compareTo(Date), equals(Object), getDate(), getDay(), getHours(), getMinutes(), getMonth(), getSeconds(), getTime(), getTimezoneOffset(), getYear(), hashCode(), setDate(int), setHours(int), setMinutes(int), setMonth(int), setSeconds(int), setTime(long), setYear(int), toGMTString(), toLocaleString(), toString()
+  Date(), Date(int, int, int), Date(int, int, int, int, int), Date(int, int, int, int, int, int), Date(long), Date(String), parse(String), !UTC(int, int, int, int, int, int), after(Date), before(Date), clone(), compareTo(Date), equals(Object), getDate(), getDay(), getHours(), getMinutes(), getMonth(), getSeconds(), getTime(), getTimezoneOffset(), getYear(), hashCode(), setDate(int), setHours(int), setMinutes(int), setMonth(int), setSeconds(int), setTime(long), setYear(int), toGMTString(), toLocaleString(), toString()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/EmptyStackException.html EmptyStackException]
-  EmptyStackException()
+  !EmptyStackException()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/EnumMap.html EnumMap]
-  EnumMap(Class), EnumMap(EnumMap), EnumMap(Map), clear(), clone(), containsKey(Object), containsValue(Object), entrySet(), get(Object), put(K, V), remove(Object), size()
+  !EnumMap(Class), !EnumMap(!EnumMap), !EnumMap(Map), clear(), clone(), containsKey(Object), containsValue(Object), entrySet(), get(Object), put(K, V), remove(Object), size()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/EnumSet.html EnumSet]
-  allOf(Class), complementOf(EnumSet), copyOf(Collection), copyOf(EnumSet), noneOf(Class), of(E), of(E, E[]), range(E, E), clone()
+  allOf(Class), complementOf(!EnumSet), copyOf(Collection), copyOf(!EnumSet), noneOf(Class), of(E), of(E, E[]), range(E, E), clone()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html Enumeration]
   hasMoreElements(), nextElement()
@@ -225,28 +225,28 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
   
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/EventObject.html EventObject]
-  EventObject(Object), getSource()
+  !EventObject(Object), getSource()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/HashMap.html HashMap]
-  HashMap(), HashMap(int), HashMap(int, float), HashMap(Map), clone()
+  !HashMap(), !HashMap(int), !HashMap(int, float), !HashMap(Map), clone()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/HashSet.html HashSet]
-  HashSet(), HashSet(Collection), HashSet(int), HashSet(int, float), add(E), clear(), clone(), contains(Object), isEmpty(), iterator(), remove(Object), size(), toString()
+  !HashSet(), !HashSet(Collection), !HashSet(int), !HashSet(int, float), add(E), clear(), clone(), contains(Object), isEmpty(), iterator(), remove(Object), size(), toString()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/IdentityHashMap.html IdentityHashMap]
-  IdentityHashMap(), IdentityHashMap(int), IdentityHashMap(Map), clone(), equals(Object), hashCode()
+  !IdentityHashMap(), !IdentityHashMap(int), !IdentityHashMap(Map), clone(), equals(Object), hashCode()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/Iterator.html Iterator]
   hasNext(), next(), remove()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/LinkedHashMap.html LinkedHashMap]
-  LinkedHashMap(), LinkedHashMap(int), LinkedHashMap(int, float), LinkedHashMap(int, float, boolean), LinkedHashMap(Map), clear(), containsKey(Object), containsValue(Object), entrySet(), get(Object), put(K, V), remove(Object), size()
+  !LinkedHashMap(), !LinkedHashMap(int), !LinkedHashMap(int, float), !LinkedHashMap(int, float, boolean), !LinkedHashMap(Map), clear(), containsKey(Object), containsValue(Object), entrySet(), get(Object), put(K, V), remove(Object), size()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/LinkedHashSet.html LinkedHashSet]
-  LinkedHashSet(), LinkedHashSet(Collection), LinkedHashSet(int), LinkedHashSet(int, float)
+  !LinkedHashSet(), !LinkedHashSet(Collection), !LinkedHashSet(int), !LinkedHashSet(int, float)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/LinkedList.html LinkedList]
-  LinkedList(), LinkedList(Collection), add(E), addFirst(E), addLast(E), clear(), element(), getFirst(), getLast(), listIterator(int), offer(E), peek(), poll(), remove(), removeFirst(), removeLast(), size()
+  !LinkedList(), !LinkedList(Collection), add(E), addFirst(E), addLast(E), clear(), element(), getFirst(), getLast(), listIterator(int), offer(E), peek(), poll(), remove(), removeFirst(), removeLast(), size()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html List]
   add(E), add(int, E), addAll(Collection), addAll(int, Collection), clear(), contains(Object), containsAll(Collection), equals(Object), get(int), hashCode(), indexOf(Object), isEmpty(), iterator(), lastIndexOf(Object), listIterator(), listIterator(int), remove(int), remove(Object), removeAll(Collection), retainAll(Collection), set(int, E), size(), toArray(), toArray(T[])
@@ -261,13 +261,13 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
   equals(Object), getKey(), getValue(), hashCode(), setValue(V)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/MissingResourceException.html MissingResourceException]
-  MissingResourceException(String, String, String), getClassName(), getKey()
+  !MissingResourceException(String, String, String), getClassName(), getKey()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/NoSuchElementException.html NoSuchElementException]
-  NoSuchElementException(), NoSuchElementException(String)
+  !NoSuchElementException(), !NoSuchElementException(String)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/PriorityQueue.html PriorityQueue]
-  PriorityQueue(), PriorityQueue(Collection), PriorityQueue(int), PriorityQueue(int, Comparator), PriorityQueue(PriorityQueue), PriorityQueue(SortedSet), addAll(Collection), clear(), comparator(), contains(Object), containsAll(Collection), isEmpty(), iterator(), offer(E), peek(), poll(), remove(Object), removeAll(Collection), retainAll(Collection), size(), toArray(), toArray(T[]), toString()
+  !PriorityQueue(), !PriorityQueue(Collection), !PriorityQueue(int), !PriorityQueue(int, Comparator), !PriorityQueue(!PriorityQueue), !PriorityQueue(!SortedSet), addAll(Collection), clear(), comparator(), contains(Object), containsAll(Collection), isEmpty(), iterator(), offer(E), peek(), poll(), remove(Object), removeAll(Collection), retainAll(Collection), size(), toArray(), toArray(T[]), toString()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/Queue.html Queue]
   element(), offer(E), peek(), poll(), remove()
@@ -288,13 +288,13 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
   Stack(), clone(), empty(), peek(), pop(), push(E), search(Object)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/TooManyListenersException.html TooManyListenersException]
-  TooManyListenersException(), TooManyListenersException(String)
+  !TooManyListenersException(), !TooManyListenersException(String)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/TreeMap.html TreeMap]
-  TreeMap(), TreeMap(Comparator), TreeMap(Map), TreeMap(SortedMap), clear(), comparator(), containsKey(Object), entrySet(), firstKey(), get(Object), headMap(K), lastKey(), put(K, V), remove(Object), size(), subMap(K, K), tailMap(K)
+  !TreeMap(), !TreeMap(Comparator), !TreeMap(Map), !TreeMap(!SortedMap), clear(), comparator(), containsKey(Object), entrySet(), firstKey(), get(Object), headMap(K), lastKey(), put(K, V), remove(Object), size(), subMap(K, K), tailMap(K)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/TreeSet.html TreeSet]
-  TreeSet(), TreeSet(Collection), TreeSet(Comparator), TreeSet(SortedSet), add(E), clear(), comparator(), contains(Object), first(), headSet(E), iterator(), last(), remove(Object), size(), subSet(E, E), tailSet(E)
+  !TreeSet(), !TreeSet(Collection), !TreeSet(Comparator), !TreeSet(!SortedSet), add(E), clear(), comparator(), contains(Object), first(), headSet(E), iterator(), last(), remove(Object), size(), subSet(E, E), tailSet(E)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html Vector]
   Vector(), Vector(Collection), Vector(int), Vector(int, int), add(E), add(int, E), addAll(Collection), addAll(int, Collection), addElement(E), capacity(), clear(), clone(), contains(Object), containsAll(Collection), copyInto(Object[]), elementAt(int), elements(), ensureCapacity(int), firstElement(), get(int), indexOf(Object), indexOf(Object, int), insertElementAt(E, int), isEmpty(), iterator(), lastElement(), lastIndexOf(Object), lastIndexOf(Object, int), remove(int), removeAll(Collection), removeAllElements(), removeElement(Object), removeElementAt(int), set(int, E), setElementAt(E, int), setSize(int), size(), toArray(), toArray(T[]), toString(), trimToSize()
@@ -302,13 +302,13 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
 ==Package java.io==
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/io/FilterOutputStream.html FilterOutputStream]
-  FilterOutputStream(OutputStream)
+  !FilterOutputStream(!OutputStream)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/io/OutputStream.html OutputStream]
-  OutputStream()
+  !OutputStream()
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/io/PrintStream.html PrintStream]
-  PrintStream(OutputStream), print(boolean), print(char), print(char[]), print(double), print(float), print(int), print(long), print(Object), print(String), println(), println(boolean), println(char), println(char[]), println(double), println(float), println(int), println(long), println(Object), println(String)
+  !PrintStream(!OutputStream), print(boolean), print(char), print(char[]), print(double), print(float), print(int), print(long), print(Object), print(String), println(), println(boolean), println(char), println(char[]), println(double), println(float), println(int), println(long), println(Object), println(String)
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/io/Serializable.html Serializable]
   
@@ -323,3 +323,4 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/sql/Timestamp.html Timestamp]
   Timestamp(int, int, int, int, int, int, int), Timestamp(long), valueOf(String), after(Timestamp), before(Timestamp), compareTo(Date), compareTo(Timestamp), equals(Object), equals(Timestamp), getNanos(), getTime(), hashCode(), setNanos(int), setTime(long), toString()
+
