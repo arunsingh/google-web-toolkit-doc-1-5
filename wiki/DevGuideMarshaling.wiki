@@ -44,3 +44,4 @@ Parameters and return types in JSNI methods are declared as Java types. There ar
  _Tip: When returning a possibly undefined value from a JSNI method, we suggest using the idiom _
     `return (value == null) ? null : value;` 
  _to avoid returning `undefined`._
+

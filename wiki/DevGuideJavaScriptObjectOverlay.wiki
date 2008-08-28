@@ -27,3 +27,4 @@ Promote reuse in your code base by introducing inheritance among your JSO subcla
 
 [DevGuideJavaScriptObjectOverlaySecurityImplications Using the JSO Overlay Technique Securely]
 Design and use your JSO subclasses with security in mind.
+

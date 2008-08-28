@@ -104,3 +104,4 @@ It is also possible to create a widget from scratch, although it is trickier sin
 ==Using !JavaScript==
 
 When implementing a custom widget that derives directly from the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Widget.html Widget] base class, you may also write some of the widget's methods using !JavaScript. This should generally only be done as a last resort, as it becomes necessary to consider the cross-browser implications of the native methods that you write, and also becomes more difficult to debug. For an example of this pattern in practice, see the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/TextBox.html TextBox] widget and the underlying !JavaScript implementation of some of its methods in the `TextBoxImpl` class.  You should use the [DevGuideDeferredBinding deferred binding] technique to isolate browser specific code.
+

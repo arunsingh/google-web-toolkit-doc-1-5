@@ -8,3 +8,4 @@ Google Web Toolkit is designed to run on systems that meet the following require
     * Hardware: ~100MB of free disk space, 512MB RAM
 
 If you have trouble running GWT, and your system meets the requirements above, let us know on the [http://groups.google.com/group/Google-Web-Toolkit GWT developer discussion group].
+

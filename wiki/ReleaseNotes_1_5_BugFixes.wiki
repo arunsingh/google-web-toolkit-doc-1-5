@@ -7,3 +7,4 @@ For a full list of bug fixes and enhancements that have went into GWT 1.5, check
   * [http://code.google.com/p/google-web-toolkit/issues/list?can=1&q="status:Fixed+OR+status:FixedNotReleased"+milestone:1_5_RC+type:enhancement&num=1000 Full list of enhancements implemented in GWT 1.5]
 
   * [http://code.google.com/p/google-web-toolkit/issues/list?can=1&q="status:Fixed+OR+status:FixedNotReleased"+milestone:1_5_RC+type:defect&num=1000 Full list of bug fixes included in GWT 1.5]
+

@@ -77,3 +77,4 @@ http://www.example.org/myapp.html?locale=fr_CA
 If you are embedding your module into an existing application, there may be another way of determining locale that does not lend itself to using the `<meta>` tag or specifying `locale=` as a query string.  In this case, you could write your own property provider.
 
 A property provider is specified in the [DevGuideModuleXml module XML file] as a !JavaScript fragment that will return the value for the named property at runtime.  In this case, you would want to define the locale property using a property provider.   To see examples of  `<property-provider>` definitions in action, see the files `I18N.gwt.xml` and `UserAgent.gwt.xml` in the GWT source code.
+

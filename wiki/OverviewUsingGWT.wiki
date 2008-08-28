@@ -48,3 +48,4 @@ The components, from bottom to top, are:
 For a step-by-step installation and usage guide, please see the [GettingStarted Getting Started Guide].
 
 If you're curious about the underlying source code, please feel free to [http://code.google.com/p/google-web-toolkit/ check it out]. The source code for all of GWT is available under the [http://code.google.com/webtoolkit/terms.html Apache 2.0 license]. 
+

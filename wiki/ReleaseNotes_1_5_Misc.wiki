@@ -40,3 +40,4 @@
 === Updated Locale-specific components for standards compliance ===
   * Upgraded !DateTimeConstants data to CLDR 1.51, and added the firstDayOfTheWeek and weekendRange formatting symbols.
   * Removed dependency on java.util.Locale in !LocalizableGenerator for BCP47 compatibility
+
