@@ -271,3 +271,4 @@ Web 2.0 can be a scary place. Hopefully we've given you some food for thought an
 As a final note, we'd like to stress one more time the importance of staying vigilant.  This article is not an exhaustive list of the security threats to your application.  This is just a primer, and someday it could become out of date.  There may also be other attacks which we're simply unaware of. While we hope you found this information useful, the most important thing you can do for your users' security is to keep learning, and stay as well-informed as you can about security threats.
 
 As always, if you have any feedback for us or would like to discuss this issue -- now or in the future -- [http://groups.google.com/group/Google-Web-Toolkit please visit our GWT Developer Forum].
+

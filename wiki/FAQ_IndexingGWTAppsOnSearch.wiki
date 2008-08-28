@@ -15,3 +15,4 @@ A note before going into the solution -- getting an Ajax application to be crawl
 Now that we know how tricky the problem is, it's fair to expect that the solution won't be pretty. Now, onto the solution.
 
 First, we want search engines to crawl and index application states that are safe.
+

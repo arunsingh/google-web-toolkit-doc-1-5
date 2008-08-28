@@ -10,3 +10,4 @@ Modules are XML files that contain settings related to your application or libra
 
 [DevGuideHostPage HTML Host Pages]
 A host page is an HTML document that includes a GWT module.
+

@@ -11,3 +11,4 @@ Every browser has idiosyncrasies, or "quirks".  These browser quirks extend to t
 The GWT API consolidates all DOM operations into the single DOM class, so that only that one class is affected by the Deferred Binding.  To use the W3C model, all of the related classes would need to have alternate browser-specific implementations. That would make the code harder to maintain and less efficient.
 
 For these reasons, GWT uses a single DOM object instead of a more W3C-standard API to minimize complexity and improve the quality of the software.
+

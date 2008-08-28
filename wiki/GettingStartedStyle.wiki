@@ -454,3 +454,4 @@ Here it is after our CSS transformation:
 http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/StockWatcherStyled.png
 
 Not bad, eh?  A little good design goes a long way, with GWT applications.  As developers, we tend to be more interested in elegant algorithms and clever optimizations but remember that the user's opinion of our application will be formed _almost entirely_ on the interface's appearance and how well it works.  Don't neglect it!  
+

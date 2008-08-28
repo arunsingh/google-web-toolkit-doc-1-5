@@ -84,3 +84,4 @@ public class ServiceInterfaceProxyGenerator extends Generator {
 }}}
 
 The `typeOracle` is an object that contains information about the Java code that has already been parsed that the generator may need to consult. In this case, the `generate()` method checks it arguments and the passes off the bulk of the work to another class (`ProxyCreator`). 
+

@@ -20,3 +20,4 @@ Eclipse:
 In your Run Configuration window, select the _Arguments_ tab and enter {{{-Djava.awt.headless=true}}} in the _VM arguments_ section.
 
 With this configuration, GWT will be running in headless mode and won't complain about an X11 window on your next GWT compilation. 
+

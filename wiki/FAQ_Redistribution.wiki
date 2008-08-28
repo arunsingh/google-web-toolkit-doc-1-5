@@ -3,3 +3,4 @@
 = Can I redistribute the GWT binaries with my product? =
 
 GWT has been released under the Apache 2.0 license, so you're allowed to distributed binaries as per the [http://code.google.com/webtoolkit/terms.html Apache 2.0 terms]. Please note that some libraries used in the Google Web Toolkit are under other licenses as referenced [http://code.google.com/webtoolkit/terms.html#licenses here], so you must comply with their terms as well.
+
