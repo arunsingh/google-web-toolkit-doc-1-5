@@ -48,3 +48,4 @@ Running `FooTest-hosted` tests the methods in `test/com/example/foo/client/FooTe
  * [DevGuideJUnitCreation Creating a JUnit Test Case]
 
  * [DevGuideJUnitBenchmarking Benchmarking]
+

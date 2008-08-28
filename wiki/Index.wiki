@@ -175,3 +175,4 @@
   * widgets
   * Widgets Gallery
   * Writing Native JavaScript Methods
+

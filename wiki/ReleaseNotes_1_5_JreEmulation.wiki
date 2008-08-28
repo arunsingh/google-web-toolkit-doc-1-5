@@ -24,3 +24,4 @@
 
 === GWT.getTypeName() is now deprecated ===
 Use `Object.getClass().getName()` instead.
+

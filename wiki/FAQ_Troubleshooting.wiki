@@ -16,3 +16,4 @@ Some commonly encountered technical issues
 * [FAQ_JUnitTestsFailOnMac JUnit Tests fail on Mac]
 
 * [FAQ_DisplayProblems Undefined DISPLAY errors compiling/testing in a console or headless environment.]
+

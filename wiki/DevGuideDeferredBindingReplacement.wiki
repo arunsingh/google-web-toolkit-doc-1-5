@@ -69,3 +69,4 @@ The default implementation of `PopupImpl.setVisible()` is empty, but `PopupImplI
 }}}
 
 After the GWT compiler runs, it prunes out any unused code.  If your application references the `PopupPanel` class, the compiler will create a separate !JavaScript output file for each browser, each containing only one of the implementations: `PopupImpl`, `PopupImplIE6` or `PopupImplMozilla`.  This means that each browser only downloads the implementation it needs, thus reducing the size of the output !JavaScript code and minimizing the time needed to download your application from the server.
+

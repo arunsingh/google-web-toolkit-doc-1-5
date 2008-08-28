@@ -7,3 +7,4 @@
   * [FAQ_UsingEJBInHostedMode How do I use EJBs in hosted mode?]
 
   * [FAQ_LanguageDifferenceBtwnWebHostedMode What are the language differences between web mode and hosted mode?]
+

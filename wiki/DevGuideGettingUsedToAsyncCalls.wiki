@@ -66,3 +66,4 @@ The hardest thing to get used to about asynchronous calls is that the calls are 
 }}}
 
 The important issue to understand is that that the code that follows the RPC call invocation will be executed while the actual round trip to the server is still in progress.  Although the code inside the `onSuccess()` method is defined inline with the call,  it will not be executed until both the calling code returns back to the !JavaScript main loop, and the result message from the server returns.
+

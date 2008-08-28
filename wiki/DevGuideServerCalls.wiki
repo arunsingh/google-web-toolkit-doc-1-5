@@ -11,3 +11,4 @@ An easy-to-use RPC mechanism for passing Java objects to and from a server over 
 
 [DevGuideHttp HTTP Calls]
 For more fine-grained control, [DevGuideHttpRequests make custom HTTP requests] and optionally process the responses using GWT's [DevGuideJSON JSON] and [DevGuideXML XML] client classes.
+
