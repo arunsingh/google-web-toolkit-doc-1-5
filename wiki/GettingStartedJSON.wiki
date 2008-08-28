@@ -574,3 +574,4 @@ http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/StockWatcherJson.png
 ==Security==
 
 Before you run off and implement mashups of your own, remember that downloading cross-site JSON is powerful, but can also be a security risk.  Make sure the servers you interact with are _absolutely trustworthy_, since they will have the ability to execute arbitrary !JavaScript code within your application.  Take a minute to read the [http://groups.google.com/group/Google-Web-Toolkit/web/security-for-gwt-applications Security for GWT Applications] article, which describes the potential threats to GWT applications and how you can combat them.
+

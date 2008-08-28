@@ -8,3 +8,4 @@ Often, you will need to integrate GWT with existing handwritten !JavaScript or w
 
 [DevGuideJavaScriptNativeInterface JavaScript Native Interface (JSNI)]
 Mix handwritten !JavaScript into your Java source code.
+

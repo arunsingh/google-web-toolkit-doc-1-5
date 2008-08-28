@@ -128,3 +128,4 @@ addPanel.add(addButton);
 }}}
 
 Our event listeners are now wired up and ready to go.  The next step will be to fill out our empty addStock() method to actually add the stock to our watch list when our handled events occur.
+

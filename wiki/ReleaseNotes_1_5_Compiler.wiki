@@ -31,3 +31,4 @@ The Java `long` type now works correctly, giving you the full proper range of a 
 === Introducing the new Linker subsystem ===
 
 Developers now have full control over the packaging and bootstrap sequence of a GWT module thanks to the new Linker subsystem. The Linker subsystem is designed to be an extensible subsystem to allow developers to generate content based on their specific application needs. GWT provides two linkers right out of the box for standard and cross-site output, generated in the "std" and "xs" directories respectively.
+
