@@ -17,3 +17,4 @@ RPC now generates a serialization policy file during GWT compilation. The serial
 Another important point to note is that none of the classes that implement `java.io.Serializable` in the full Java JRE implement `java.io.Serializable` in GWT's emulated JRE. What this means is that types that implement `java.io.Serializable` in the JRE like `Throwable`, or `StackTraceElement` won't be able to transfer across the wire through GWT RPC since the client won't be able to serialize/deserialize them. However, this isn't an issue for other types like `String`, `Number`, etc... that don't implement `java.io.Serializable` in the emulated JRE but have custom field serializers so that they can be properly serialized.
 
 These differences between types that implement `java.io.Serializable` in the real and emulated JREs may be reconciled in a future version of GWT, but for the time this is an important point to keep in mind if your application uses GWT RPC.
+

@@ -54,3 +54,4 @@ hosted.html
 In the above example, the module name is *Foo* and the filename you should point your application host HTML page is *Foo.html*. To run your application in web mode, simply point your browser to the `Foo.html` page.
 
 The full list of command-line options is the same as the [DevGuideModuleCompileScript <module>-compile script] options.
+

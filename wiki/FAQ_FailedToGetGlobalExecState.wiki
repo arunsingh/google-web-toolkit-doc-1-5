@@ -3,3 +3,4 @@
 = Starting hosted mode results in error: Failed to getGlobalExecState =
 
 This problem is related to the Google Gears enabler. If you have a file named `GearsEnabler.bundle` in `/Library/InputManagers` folder, removing it should fix the issue.
+

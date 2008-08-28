@@ -33,3 +33,4 @@ _If your application checks out on all of the above points and you're ready to r
   5. *Deploy the latest GWT application files* to your web server.
 
 Any problems while upgrading? As always, let us know on the [http://groups.google.com/group/Google-Web-Toolkit GWT Developer Forum] and our great community or GWT team members will get back to you to make sure the upgrade process detailed in this guide is accurate and works for our users.
+
