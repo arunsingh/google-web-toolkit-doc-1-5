@@ -8,9 +8,9 @@ The Benchmark class has changed in the GWT 1.5 release.  For documentation of ho
 
 ==Introduction==
 
-GWT's [http://www.junit.org JUnit] integration provides special support for creating and reporting on benchmarks. Specifically, GWT has introduced a new [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/junit/client/Benchmark.html Benchmark] class which provides built-in facilities for common benchmarking needs.  To take advantage of benchmarking support, take the following steps: 
-  # Review the documentation on [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/junit/client/Benchmark.html Benchmark]. Take a look at the example benchmark code.
-  # Create your own benchmark by subclassing [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/junit/client/Benchmark.html Benchmark]. Execute your benchmark like you would any normal JUnit test. By default, the test results are written to a report XML file in your working directory.
+GWT's [http://www.junit.org JUnit] integration provides special support for creating and reporting on benchmarks. Specifically, GWT has introduced a new [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/benchmarks/client/Benchmark.html Benchmark] class which provides built-in facilities for common benchmarking needs.  To take advantage of benchmarking support, take the following steps: 
+  # Review the documentation on [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/benchmarks/client/Benchmark.html Benchmark]. Take a look at the example benchmark code.
+  # Create your own benchmark by subclassing [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/benchmarks/client/Benchmark.html Benchmark]. Execute your benchmark like you would any normal JUnit test. By default, the test results are written to a report XML file in your working directory.
   # Run [DevGuideBenchmarkViewer benchmarkViewer] to browse visualizations (graphs/charts) of your report data. The `benchmarkViewer` is a GWT tool in the root of your GWT installation directory that displays benchmark reports.
 
 ==Example==
@@ -34,7 +34,7 @@ Now, edit `FooBenchmark.java`:
 
 A Benchmark class differs from a JUnit class in that the test methods will be called repeatedly taking different values each time.  The Benchmark class is very flexible in this regard - you can specify as many parameters as you like, whereas you must leave a method definition with no arguments to satisfy the JUnit specification.
 
-For each parameter, you will need to provide a single constant containing values to iterate over during the test.  GWT provides some built in classes to help define such ranges such as [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/junit/client/IntRange.html IntRange]. For example, this represents the values 512, 1024, 2048, 4096, ... :
+For each parameter, you will need to provide a single constant containing values to iterate over during the test.  GWT provides some built in classes to help define such ranges such as [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/benchmarks/client/IntRange.html IntRange]. For example, this represents the values 512, 1024, 2048, 4096, ... :
 
 {{{
      final IntRange baseRange = new IntRange(512, Integer.MAX_VALUE,
