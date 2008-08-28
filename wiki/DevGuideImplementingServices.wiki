@@ -20,7 +20,7 @@ For example, if you are creating a servlet for the interface you created for `co
 <servlet path="/myService" class="com.example.foo.server.MyServiceImpl" />
 }}}
 
-The *path* parameter must match the name you use to specify the URL when you instantiate the `MyService` class in your code by calling [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/ServiceDefTarget.html#setServiceEntryPoint(java.lang.string) ServiceDefTarget.setServiceEntryPoint()].
+The *path* parameter must match the name you use to specify the URL when you instantiate the `MyService` class in your code by calling [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/ServiceDefTarget.html#setServiceEntryPoint(java.lang.String) ServiceDefTarget.setServiceEntryPoint()].
 
 When testing out both the client and server side code in hosted mode, make sure to add the `gwt-servlet.jar` and server-side `.class` files to the hosted mode shell process classpath to make sure it can pick up your servlet implementations.
 
