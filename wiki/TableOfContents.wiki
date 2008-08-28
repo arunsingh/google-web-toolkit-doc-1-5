@@ -84,7 +84,7 @@
     * [DevGuideJUnitCreation Creating a JUnit Test Case]
     * [DevGuideJUnitAsync Asynchronous Testing]
     * [DevGuideJUnitSuites Using Test Suites]
-    * [DevGuideJUnitSetUp  Setup and teardown]
+    * [DevGuideJUnitSetUp  Setup and Teardown]
     * [DevGuideJUnitBenchmarking Benchmarking]
       * [DevGuideJUnitBenchmarking14 Benchmarking in GWT 1.4]
   * [DevGuideInternationalization Internationalization]
