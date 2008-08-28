@@ -79,7 +79,7 @@
       * [DevGuideJavaFromJavaScript Accessing Java Methods and Fields from JavaScript]
       * [DevGuideMarshaling Sharing objects between Java source and JavaScript]
       * [DevGuideJsniExceptions Exceptions and JSNI]
-    * [DevGuideJSOverlays JavaScript Overlays]
+    * [DevGuideOverlayTypes JavaScript Overlay Types]
   * [DevGuideJUnitIntegration Testing with JUnit]
     * [DevGuideJUnitCreation Creating a JUnit Test Case]
     * [DevGuideJUnitAsync Asynchronous Testing]
