@@ -59,3 +59,4 @@ For a complete example of using the HTTP client classes, see the [GettingStarted
 ==Processing the response==
 
 Once you receive the response from the server using [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/Response.html#getText() Response.getText()], it's up to you to process it.  If your response is encoded in JSON or XML, you can take advantage of GWT's built-in types to parse the data (see the topics [DevGuideJSON Working with JSON] and [DevGuideXML Working with XML], respectively). 
+

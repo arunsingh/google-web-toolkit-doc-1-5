@@ -19,3 +19,4 @@ How to prepare for and tearing down after JUnit test cases.
 
 [DevGuideJUnitBenchmarking Benchmarking]
 How to use GWT's JUnit support to create and report on benchmarks to help you identify performance hot spots and optimize your code.
+

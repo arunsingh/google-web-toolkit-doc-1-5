@@ -3,3 +3,4 @@
 = Does GWT cost anything? =
 
 No, Google Web Toolkit is completely free. In fact, all of [http://code.google.com/p/google-web-toolkit/ GWT's source code] is available under the [http://code.google.com/webtoolkit/terms.html Apache 2.0 open source license].
+

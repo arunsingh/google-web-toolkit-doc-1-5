@@ -18,3 +18,4 @@ Caused by: java.lang.OutOfMemoryError: Java heap space
 The underlying issue is that GWT 1.5 has introduced a number of compiler optimizations that require more memory and processing power, not to mention a larger library (in `gwt-user.jar`) that must be analyzed during the compilation phase.  This can cause the compiler to exceed the default JVM heap size.
 
 To solve this problem, increase the Java heap limit.  You can do this by adding the Java VM argument `-Xmx256M` to the Java command line to increase the limit to 256 megabytes.  Increase the number `256` to a higher value if your compilation still requires more RAM.
+

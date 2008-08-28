@@ -129,3 +129,4 @@ Usually applications will need additional content, such as images and CSS files,
 It's important to take care if your code refers to resources using `GWT.getModuleBaseURL()`.  This is an especially common concern for those using Java Servlets, since the Servlet mapping must be set appropriately in the `web.xml` file.
 
 Finally, note that while absolute remaps of the form `content="/foo=mypackage.Module"` using the GWT 1.3 bootstrap model are allowed, fully-qualified remaps of the form `content="http://host.domain.tld/foo=mypackage.Module"` are not allowed.  In some cases, it may work anyway by sheer luck, but this is not a supported syntax and may break in a future version.
+

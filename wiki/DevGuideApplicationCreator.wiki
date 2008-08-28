@@ -45,3 +45,4 @@ The generated files are used as follows:
   * [DevGuideApplicationCreator projectCreator]
 
   * [DevGuideProjectStructure Project Structure]
+

@@ -13,3 +13,4 @@ For example,
   # `fooImpl()` throws an exception
 
 The exception thrown from `fooImpl()` will propagate through `nativeFoo()` and can be caught in `doFoo()`.  The exception will retain its type and identity.
+
