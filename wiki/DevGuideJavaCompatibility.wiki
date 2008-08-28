@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Compatibility with the Java language and runtime libraries.
 
 = Compatibility with the Java language and libraries =
 
@@ -54,4 +54,3 @@ In some classes, the functionality of the class is too expensive to be emulated 
  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/NumberFormat.html com.google.gwt.i18n.client.NumberFormat] : Supports a subset of `java.util.NumberFormat`.  See examples in the [DevGuideDateAndNumberFormatting date and number format] section.
  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/IsSerializable.html com.google.gwt.user.client.rpc] : A marker class used similarly to `java.io.Serializable` for GWT-RPC
  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/Timer.html com.google.gwt.user.client.Timer] : A simplified, browser-safe timer class. This class serves the same purpose as `java.util.Timer`, but is simplified because of the single-threaded environment.
-
