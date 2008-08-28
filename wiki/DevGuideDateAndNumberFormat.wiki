@@ -102,4 +102,4 @@ Be cautious when straying from the default formats and defining your own pattern
 
    `12/04/07`
 
-In some countries this is understood to mean the date  December 4th, 2007 in others, it would be April 12th, 2007, in yet another locale, it might mean April 7th, 2012.  For displaying in a common format such as this, use the default formats and let the localization mechanism in the DateTimeFormat do the work for you.
+In some countries this is understood to mean the date  December 4th, 2007 in others, it would be April 12th, 2007, in yet another locale, it might mean April 7th, 2012.  For displaying in a common format such as this, use the default formats and let the localization mechanism in the !DateTimeFormat do the work for you.
