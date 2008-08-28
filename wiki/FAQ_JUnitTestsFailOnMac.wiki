@@ -7,3 +7,4 @@ The Safari/Webkit web browser optimizing some rendering operations when the brow
 To work around this problem, you can pass the `-notHeadless` argument in the `-Dgwt.args=` system property setting when running unit tests.  When using the ant build, this argument is enabled by default as of the GWT 1.5 release.
 
 When `-notHeadless` is specified for running unit tests, the log window and hosted mode browser will pop up on the screen while the test is running.  Dismissing or manipulating the elements in these windows may cause the unit tests to fail.
+

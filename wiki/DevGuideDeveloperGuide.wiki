@@ -40,3 +40,4 @@ Integrate your GWT applications with handwritten or third-party !JavaScript usin
 
 [DevGuideDeferredBinding Deferred Binding]
 Deferred binding reduces generated code size and improves run time performance.
+

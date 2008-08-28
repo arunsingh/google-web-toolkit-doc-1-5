@@ -14,3 +14,4 @@ not seem to work with sizes expressed as percentages.  The GWT widgets do not do
 }}}
 
 See also [FAQ_UIVerticalFillApp How do I create an app that fills the page vertically when the browser window resizes?]
+

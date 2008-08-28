@@ -93,3 +93,4 @@ public interface MyService extends RemoteService {
 }}}
 
 Note that parameter annotations must include the name of the parameter they are annotating in addition to the collection item type, while return type annotations do not. 
+

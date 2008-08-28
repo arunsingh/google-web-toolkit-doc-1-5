@@ -23,3 +23,4 @@ An RPC can also fail with an invocation exception if the call does reach the ser
 Another type of failure can be caused by an incompatibility between the client and the server. This most commonly occurs when a change to a [DevGuideImplementingServices service implementation] is deployed to a server but out-of-date clients are still active. For more details please see [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/IncompatibleRemoteServiceException.html IncompatibleRemoteServiceException]. 
 
 When the client code receives an [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/IncompatibleRemoteServiceException.html IncompatibleRemoteServiceException], it should ultimately attempt to refresh the browser in order to pick up the latest client. 
+

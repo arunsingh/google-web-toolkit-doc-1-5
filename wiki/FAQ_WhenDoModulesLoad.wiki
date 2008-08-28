@@ -52,3 +52,4 @@ be called. The most important things to remember are that
 If you have multiple !EntryPoints (the interface that defines `onModuleLoad()`) within a module, they will all be called in sequence as soon as that module (and the outer document) is ready.
 
 If you are loading multiple GWT modules within the same page, each module's !EntryPoints will be called as soon as both that module and the outer document is ready. Two modules' !EntryPoints are not guaranteed to be fired at the same time.
+
