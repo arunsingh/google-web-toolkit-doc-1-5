@@ -1,4 +1,4 @@
-#summary JRE Emulation Library
+#summary The JRE types and methods that GWT emulates.
 
 =JRE Emulation=
 Google Web Toolkit includes a library that emulates a subset of the Java runtime library. The list below shows the set of JRE types and methods that GWT can translate automatically. Note that in some cases, only a subset of methods is supported for a given type.
@@ -323,4 +323,3 @@ Google Web Toolkit includes a library that emulates a subset of the Java runtime
 
 [http://java.sun.com/j2se/1.5.0/docs/api/java/sql/Timestamp.html Timestamp]
   Timestamp(int, int, int, int, int, int, int), Timestamp(long), valueOf(String), after(Timestamp), before(Timestamp), compareTo(Date), compareTo(Timestamp), equals(Object), equals(Timestamp), getNanos(), getTime(), hashCode(), setNanos(int), setTime(long), toString()
-
