@@ -22,3 +22,4 @@ If you are attempting to use this functionality and are having problems, first c
 
   _ Note:  New users frequently notice the `com.google.gwt.user.client.HTTPRequest` class, and attempt to use it. However, that particular class is intended primarily for use by GWT's internal RPC implementation, and is not a very friendly interface for developers to use on their own.  In fact, the HTTPRequest class may go away in a future release of GWT.
  _
+

@@ -45,3 +45,4 @@ For a complete example of parsing JSON, see the [GettingStartedJSON JSON article
 
 If you're loading JSON-encoded data from your own server, you'll typically use the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestBuilder.html RequestBuilder] and related classes to [DevGuideHttpRequests make HTTP requests].  However, you can also retrieve JSON from remote servers in true mashup fashion using GWT's [http://code.google.com/p/google-web-toolkit-doc-1-5/wiki/DevGuideJavaScriptNativeInterface JavaScript Native Interface (JSNI)] functionality.  The techniques for cross-site JSON is explained more fully in [FAQ_JSONFeedsFromOtherDomain this FAQ article].  To see a working example, check out the [GettingStartedJSON JSON/HTTP] chapter in the [GettingStarted Getting Started guide].
 
+

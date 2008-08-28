@@ -3,3 +3,4 @@
 =Internationalization=
 
   * [FAQ_InternationalizedCharactersInLocalizedApplication Why don't international characters work in my localized application?]
+

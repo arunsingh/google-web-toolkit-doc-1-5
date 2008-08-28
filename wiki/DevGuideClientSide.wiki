@@ -76,3 +76,4 @@ Notice that in the `onModuleLoad()` entry point, the following actions were take
 Here is what the application looks like when run in hosted mode browser:
 
    http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/HelloWorld.png
+

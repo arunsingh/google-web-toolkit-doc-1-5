@@ -26,3 +26,4 @@ Previous to 1.5, GWT required that any Serializable objects expected to be trans
 === !SerializableException deprecated === 
 
 The [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/SerializableException.html SerializableException] class is deprecated since java.lang.Throwable now implements Serializable.
+

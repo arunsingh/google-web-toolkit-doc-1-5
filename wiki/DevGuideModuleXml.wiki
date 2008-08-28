@@ -198,3 +198,4 @@ Changing the desired linker in `MyModule.gwt.xml`:
   <add-linker name="xs" />
 </module>
 }}}
+

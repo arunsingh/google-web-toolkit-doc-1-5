@@ -7,3 +7,4 @@
   * [FAQ_ImageBundleImagesNotShowingUp Why aren't my ImageBundle images showing in IE?]
 
   * [FAQ_HistoryOnSafari2 GWT's History feature is broken on Safari 2.0!]
+

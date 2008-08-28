@@ -207,3 +207,4 @@ During this project, I learned two things, which I hope I've passed on to you. F
 The second thing I learned from this project is that !JavaScript can be very finicky. I'm not trying to say that it isn't a great language; I'm just pointing out that there are a lot of pitfalls for developers, and I walked straight into one. Unfortunately, a lot of the time these pitfalls can get in the way of just doing your work. Though you might argue that GWT itself set the stage for the particular problem I ran into, it is not difficult at all to imagine a pure-!JavaScript programmer running into a similar situation when dealing with multiple frames. _Caveat hax0r!_
 
 I hope you found this article useful; but more importantly, I hope you [http://code.google.com/webtoolkit/download.html enjoy using GWT]! Happy coding!
+
