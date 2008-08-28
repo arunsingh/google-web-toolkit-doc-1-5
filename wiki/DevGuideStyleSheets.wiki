@@ -127,3 +127,4 @@ Finally, copy the contents of the file `public/gwt/standard/standard.css` style 
 ==Documentation==
 
 It is standard practice to document the relevant CSS style names for each widget class as part of its documentation comment. For a simple example, see [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Button.html Button]. For a more complex example, see [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/MenuBar.html MenuBar]. 
+

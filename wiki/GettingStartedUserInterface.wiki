@@ -108,3 +108,4 @@ It's time to test our changes.  Save the edited files and launch !StockWatcher i
 http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/StockWatcher1.png
 
 As you can see, our current iteration of !StockWatcher isn't going to win any design awards.  That's ok.  We'll add some style later on with CSS.  What !StockWatcher is really lacking is interactivity: the interface doesn't actually do anything... yet.  Let's fix that by adding some [GettingStartedEvents event listeners].  
+

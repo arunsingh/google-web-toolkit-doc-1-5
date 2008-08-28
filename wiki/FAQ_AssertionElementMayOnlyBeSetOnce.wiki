@@ -14,3 +14,4 @@ After upgrading to GWT 1.5, you might see this exception in your applicaiton:
 This is a constraint that was re-added in GWT 1.5 -- some widget is calling setElement() more than once. This was allowed in 1.4 (it had previously been disallowed) for not-so-good reasons. The problem is that allowing it to be called twice makes it impossible for a widget to make any assumptions about the stability of its underlying element (i.e. if it can change at any old time, all kinds of things can go wrong).
 
 This is almost always happening by accident (e.g. extending a widget that calls setElement() in its constructor then calling it again from the subclass constructor) It's generally representative of an actual problem that was going unnoticed.
+
