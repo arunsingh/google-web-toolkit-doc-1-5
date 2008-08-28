@@ -3,7 +3,6 @@
     * [OverviewFeatures Features]
     * [OverviewWhyTranslate Why cross-compile?]
     * [OverviewHowWellDoesGWTWork Does GWT work well?]
-    * [OverviewUsingGWT Cool things to try]
   * [GettingStarted Getting Started Tutorial]
     * [GettingStartedBasics The Basics]
       * [GettingStartedInstall Install GWT]
