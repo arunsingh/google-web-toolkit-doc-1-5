@@ -3,3 +3,4 @@
 = How do I install GWT? =
 
 For step-by-step instructions, check out the [GettingStartedInstall GWT Getting Started Guide].
+

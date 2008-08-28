@@ -126,3 +126,4 @@ Now, run the script `FooBenchmark-hosted` that was created by `junitCreator` to 
 
 
 For more advanced usage, see the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.4/com/google/gwt/junit/client/Benchmark.html Benchmark] class documentation.
+

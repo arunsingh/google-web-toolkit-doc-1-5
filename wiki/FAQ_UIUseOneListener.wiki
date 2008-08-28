@@ -50,3 +50,4 @@ Each widget has its own click listener instance created by adding an anonymous i
    }
  }
 }}}
+

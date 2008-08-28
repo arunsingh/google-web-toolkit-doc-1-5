@@ -17,3 +17,4 @@ javax.servlet.ServletException: Content-Type must be 'text/plain' with 'charset=
 The likely reason for this problem is that the RPC content type was switched from `text/plain` in GWT 1.4 to `text/x-gwt-rpc` in GWT 1.5.  If your server is complaining that the content type is not `text/plain` then your server is still using a GWT 1.4
 `gwt-servlet.jar`.  Updating your server to use the GWT 1.5 `gwt-servlet.jar`
 will fix it. 
+

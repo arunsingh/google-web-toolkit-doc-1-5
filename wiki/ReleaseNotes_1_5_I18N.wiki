@@ -34,3 +34,4 @@ The new [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt
 === Multiple Currency Support ===
 
 [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/NumberFormat.html NumberFormat] now supports multiple currencies via getCurrencyFormat(String currencyCode), and adjusts the number of decimal places for the currency.
+

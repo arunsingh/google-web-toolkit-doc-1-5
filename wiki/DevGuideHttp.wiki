@@ -11,3 +11,4 @@ If your GWT application needs to communicate with a server, but you can't use [h
 [DevGuideJSON Working with JSON] Parse and create JSON encoded data using the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/json/client/package-summary.html JSON client types].
 
 [DevGuideXML Working with XML] Parse and create XML documents using GWT's [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/xml/client/package-summary.html XML processing types].
+

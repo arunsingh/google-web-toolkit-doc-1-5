@@ -7,3 +7,4 @@ Quirksmode has a writeup of the background behind [http://www.quirksmode.org/js/
 If you are building a widget, you may want to consider handling events in a different way, called Event Bubbling.  Essentially, this technique means you have one handler for the entire widget, and you have one handler callback that executes on behalf of all interior widgets.
 
 See the [http://google-web-toolkit.googlecode.com/svn/releases/1.5/user/src/com/google/gwt/user/client/ui/Tree.java implementation of the Tree] class for an example of using Event Bubbling in GWT.
+

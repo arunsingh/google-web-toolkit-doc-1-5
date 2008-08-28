@@ -19,3 +19,4 @@ For example, the following configuration invokes deferred binding for the  [http
  * [http://google-web-toolkit.googlecode.com/svn/trunk/user/src/com/google/gwt/user/Popup.gwt.xml com/google/gwt/user/Popup.gwt.xml] _*contains*_ `<replace-with>` elements to define deferred binding rules for the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/PopupPanel.html PopupPanel] class.
 
 Inside the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/PopupPanel.html PopupPanel] module XML file, there happens to be some rules defined for deferred binding. In this case, we're using the [DevGuideDeferredBindingReplacement Replacement] rule.
+

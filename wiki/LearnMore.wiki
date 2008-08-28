@@ -59,3 +59,4 @@ All of the code for GWT is available under the Apache 2.0 license. If you are in
 
 ===Next steps===
 Ready to get started? For a step-by-step installation guide and tutorial, please see the [GettingStarted Getting Started Guide]. 
+
