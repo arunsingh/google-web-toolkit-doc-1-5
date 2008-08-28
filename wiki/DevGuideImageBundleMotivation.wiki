@@ -1,4 +1,4 @@
-#summary An explanation of why ImageBundles are more efficient than using <IMG> HTML tags.
+﻿#summary An explanation of why ImageBundles are more efficient than using <IMG> HTML tags.
 
 =!ImageBundles Make Using Images More Efficient=
 
@@ -23,4 +23,4 @@ In addition to speeding up startup, image bundles prevent the 'bouncy' effect of
   *  Caching recommendations for image bundle files 
   *  Protecting image bundle files with web application security constraints 
   *  Using image bundles with the HTTPS protocol 
- _
+  _
