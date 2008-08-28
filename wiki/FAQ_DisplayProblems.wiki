@@ -15,3 +15,4 @@ export DISPLAY=:2
 # Run Xvfb (no access control on :2) for GWT compiles and tests, if not already started.
 ps -ef | grep Xvfb | grep -v grep >> /dev/null || Xvfb :2 -ac &
 }}}
+

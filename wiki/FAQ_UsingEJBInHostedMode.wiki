@@ -7,3 +7,4 @@ GWT provides the -noserver option to the hosted mode shell script for precisely 
 The -noserver option instructs hosted mode to not start the embedded Tomcat instance.  In its place, you would run the J2EE container of your choice and simply use that in place of the embedded Tomcat instance.
 
 For more information see [FAQ_HostedModeNoServer How do I use my own server in hosted mode instead of GWT's built-in Tomcat instance?]
+

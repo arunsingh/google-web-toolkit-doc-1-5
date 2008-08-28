@@ -24,3 +24,4 @@ This means that the servlet engine could not find the server-side definition of 
 
   * Make sure the compiled server classes are available to the hosted mode shell.  You may need to modify the classpath when launching the hosted mode shell (for example, by editing _<module>_`-shell`) if your server classes are in a separate jar file or directory tree.
  
+

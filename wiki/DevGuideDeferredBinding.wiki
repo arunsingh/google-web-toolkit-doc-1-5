@@ -17,3 +17,4 @@ Using the Deferred Binding Replacement mechanism.
 
 [DevGuideDeferredBindingGenerators Deferred Binding using Generators]
 Using Deferred Binding by defining Generator subclasses.
+

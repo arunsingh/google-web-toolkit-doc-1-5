@@ -25,3 +25,4 @@ Compile the Java code in the named module into !JavaScript.  This script is crea
 
 [DevGuideModuleHostedModeScript <modulename>-shell]
 Run the named module in [DevGuideHostedMode Hosted Mode].  This script is created by [DevGuideApplicationCreator applicationCreator].
+

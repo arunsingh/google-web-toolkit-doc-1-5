@@ -36,3 +36,4 @@ Many GWT widgets now have keyboard accessibility and ARIA properties. These incl
 
 == Making your GWT application accessible ==
 The next document, [DevGuideAccessibilityHOWTO Using GWT Accessibility Features], explains how to make your application and widgets work with screen readers.
+
