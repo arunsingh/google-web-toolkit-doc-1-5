@@ -16,6 +16,7 @@
   * * History changes *:
     * History listeners are now called synchronously on History.newItem(...) rather than asynchronously after a delay.
     * History.onHistoryChanged(...) is now deprecated, and has been replaced by History.fireCurrentHistoryState(...) for the usual case of triggering the initial history state in onModuleLoad.
+
   * * GWT Bootstrap File changes *:
     * In GWT 1.3, the bootstrap script that needed to be included in a host HTML page to load up your GWT application was the generated gwt.js file.  In GWT 1.4, a new bootstrapping sequence was introduced where a module.nocache.js was the new bootstrap file, and gwt.js, while generated, was deprecated. In GWT 1.5, the compiler no longer generates the gwt.js file and strictly supports the 1.4 bootstrap model.
     * The cross-site bootstrap (module-xs.nocache.js file) is no longer produced by default; this has been replaced with the "xs" linker. In order to generate cross-site output, you must add the <add linker name="xs" /> tag in your module XML file to invoke the xs linker.
