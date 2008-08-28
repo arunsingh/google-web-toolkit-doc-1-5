@@ -1,4 +1,4 @@
-﻿#summary table of contents for GWT documentation
+#summary table of contents for GWT documentation
   * [GettingStarted Tutorial]
     * [GettingStartedBasics The Basics]
       * [GettingStartedInstall Install GWT]
@@ -75,10 +75,10 @@
       * [DevGuideXML Working with XML]
   * [DevGuideInterop Integrating with JavaScript]
     * [DevGuideJavaScriptNativeInterface JavaScript Native Interface (JSNI)]
-      * [DevGuideJavaScriptFromJava Writing Native JavaScript Methods]
-      * [DevGuideJavaFromJavaScript Accessing Java Methods and Fields from JavaScript]
-      * [DevGuideMarshaling Sharing objects between Java source and JavaScript]
-      * [DevGuideJsniExceptions Exceptions and JSNI]
+    * [DevGuideJavaScriptFromJava Writing Native JavaScript Methods]
+    * [DevGuideJavaFromJavaScript Accessing Java Methods and Fields from JavaScript]
+    * [DevGuideMarshaling Sharing objects between Java source and JavaScript]
+    * [DevGuideJsniExceptions Exceptions and JSNI]
     * [DevGuideOverlayTypes JavaScript Overlay Types]
   * [DevGuideJUnitIntegration Testing with JUnit]
     * [DevGuideJUnitCreation Creating a JUnit Test Case]
