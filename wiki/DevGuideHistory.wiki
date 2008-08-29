@@ -27,7 +27,7 @@ When the application wants to push a placeholder onto the browser's history stac
 
 == Example ==
 
-To use GWT History support, you must first imbed an iframe into your [DevGuideHostPage host HTML page].
+To use GWT History support, you must first embed an iframe into your [DevGuideHostPage host HTML page].
 
 {{{
 	<iframe src="javascript:''" 
@@ -147,4 +147,3 @@ When the `onHistoryChanged()` method is invoked, your application must handle tw
  1 The application is already running and was passed a history token.
 
 In the first case, the application must properly initialize itself before handing the state token.   In the second case, some parts of the application may need to be re-initialized.
-
