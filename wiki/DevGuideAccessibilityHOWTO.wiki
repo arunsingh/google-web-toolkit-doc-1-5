@@ -6,7 +6,7 @@ This document describes how to add accessibility support to your GWT application
 
 == Class com.google.gwt.user.client.ui.Accessibility ==
 
-The Accessibility class implements the needed accessor and modifier methods for manipulating DOM attributes defined by the ARIA specifications. Currently, these methods are no-ops in all browsers except Firefox. It also defines some constants for the ARIA role and state names which are used by GWT widgets.
+The Accessibility class implements the needed accessor and modifier methods for manipulating DOM attributes defined by the ARIA specifications. It also defines constants for the ARIA role and state names which are used by GWT widgets.
 
 == Adding ARIA Roles ==
 
@@ -252,4 +252,3 @@ Make sure to test that a new widget is accessible! There are three basic steps i
     * DOM: since ARIA attributes are being added directly to the DOM, an easy way to check that the attributes are in the right location is to use a a DOM inspector like Firebug
     * Events: it is important to make sure that Firefox raises the appropriate events in response to ARIA attributes, changes in focus, and changes in the widget itself. A Microsoft tool called the Accessible Event Watcher, or !AccEvent, can allow you to check which events are being raised.
     * The screen reader: in the end, you can be most sure that your GWT widgets are accessible by using a screen reader. Some screen readers may not be listening for all of the events raised by Firefox, or they might expect the ARIA attributes to be added to the DOM in certain locations. The most widely used screen readers with some support for ARIA are JAWS and Window-Eyes. !FireVox, a free text-to-speech add-on for Firefox, also includes support for ARIA.
-
