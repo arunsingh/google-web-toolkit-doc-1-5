@@ -18,11 +18,11 @@ var jsonData = [
 ];
 }}}
 
-To superimpose a Java type onto the above structure, you start by subclassing `!JavaScriptObject`, a marker type that GWT uses to denote !JavaScript objects. Let's go ahead and add some getters, too.
+To superimpose a Java type onto the above structure, you start by subclassing `JavaScriptObject`, a marker type that GWT uses to denote !JavaScript objects. Let's go ahead and add some getters, too.
 
 {{{
 // An overlay type
-class Customer extends !JavaScriptObject {
+class Customer extends JavaScriptObject {
 
   // Overlay types always have protected, zero-arg ctors
   protected Customer() { } 
@@ -71,7 +71,7 @@ We glossed over something in the example above. The method `getFirstCustomer()` 
 
 {{{
 // w00t! Generics work just fine with overlay types
-class JsArray&lt;E extends !JavaScriptObject> extends !JavaScriptObject {
+class JsArray<E extends JavaScriptObject> extends JavaScriptObject {
   protected JsArray() { }
   public final native int length() /*-{ return this.length; }-*/;
   public final native E get(int i) /*-{ return this[i];     }-*/;
@@ -83,14 +83,14 @@ Now we can write more interesting code:
 {{{
 class MyModuleEntryPoint implements EntryPoint {
   public void onModuleLoad() {
-    JsArray&lt;Customer> cs = getCustomers();
-    for (int i = 0, n = cs.length(); i &lt; n; ++i) {
+    JsArray<Customer> cs = getCustomers();
+    for (int i = 0, n = cs.length(); i < n; ++i) {
       Window.alert("Hello, " + cs.get(i).getFullName());
     }
   }
 
   // Return the whole JSON array, as is
-  private final native JsArray&lt;Customer> getCustomers() /*-{
+  private final native JsArray<Customer> getCustomers() /*-{
     return $wnd.jsonData;
   }-*/;
 }
@@ -102,7 +102,7 @@ This is nice clean code, especially considering the flexibility of the plumbing 
 function $onModuleLoad(){
   var cs, i, n;
   cs = $wnd.jsonData;
-  for (i = 0, n = cs.length; i &lt; n; ++i) {
+  for (i = 0, n = cs.length; i < n; ++i) {
     $wnd.alert('Hello, ' + (cs[i].FirstName + ' ' + cs[i].LastName));
   }
 }
@@ -114,7 +114,7 @@ It's pretty fun to look back at the original Java source above and try to reason
 Of course, we can't resist showing you the corresponding obfuscated code:
 
 {{{
-function B(){var a,b,c;a=$wnd.jsonData;for(b=0,c=a.length;b&lt;c;++b){
+function B(){var a,b,c;a=$wnd.jsonData;for(b=0,c=a.length;b<c;++b){
   $wnd.alert(l+(a[b].FirstName+m+a[b].LastName))}}
 }}}
 
@@ -124,8 +124,6 @@ Notice in this version that the only bits that _aren't_ obfuscated are the ident
 Overlay types are a key new feature in GWT 1.5. At its simplest, the technique makes direct interop with !JavaScript libraries much easier. Hopefully after this post you could imagine how to almost directly port any !JavaScript library into GWT as a set of Java types, thus allowing the use of a Java IDE for productive development and debugging without impacting size or speed due to any sort of GWT overhead. At the same time, overlay types serve as a powerful abstraction tool for delivering more elegant low-level APIs such as the the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/dom/client/package-tree.html new GWT DOM package].
 
 For more information...
-   * [http://sites.google.com/site/io/surprisingly-rockin-JavaScript-and-dom-programming-in-gwt Surprisingly Rockin' !JavaScript and DOM Programming] - This video (or the associated slides) from Google I/O is the best place to get an end-to-end explanation of overlay types in context. The presentation demonstrates the new GWT DOM classes and explains how we used overlay types to implement everything. It also specifies more detail about constructing your own overlay types.
+   * [http://sites.google.com/site/io/surprisingly-rockin-JavaScript-and-dom-programming-in-gwt Surprisingly Rockin' JavaScript and DOM Programming] - This video (or the associated slides) from Google I/O is the best place to get an end-to-end explanation of overlay types in context. The presentation demonstrates the new GWT DOM classes and explains how we used overlay types to implement everything. It also specifies more detail about constructing your own overlay types.
    * [http://sites.google.com/site/io/gwt-and-client-server-communication GWT and Client-Server Communication] - Also from Google I/O, Miguel Mendez explains various ways in which you can access data from the browser, including how to combine `RequestBuilder` and overlay types for really convenient JSON access.
    * [http://code.google.com/p/google-web-toolkit/wiki/OverlayTypes Design: Overlay Types] - Read at your own risk :-) These are the excruciating technical details. It's fairly interesting but not necessarily instructive.
-
-
