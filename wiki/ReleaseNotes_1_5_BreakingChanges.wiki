@@ -4,7 +4,7 @@
 
   * * UI Library changes *:
     * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setElement(com.google.gwt.user.client.Element) UIObject.setElement] has been changed back to its pre-GWT 1.4 behavior - it is now callable only once. For those widgets that need to replace their DOM element once it has been set, the package-protected method replaceElement(elem) in [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html UIObject] can be used.
-    * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/dom/client/Element.html#getAttribute(java.lang.String) Element.getAttribute(name)] now return an empty string instead of null for attributes that do not exist.
+    * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/dom/client/Element.html#getAttribute(java.lang.String) Element.getAttribute(name)] now returns an empty string instead of null for attributes that do not exist.
     * Composite.getElement() has been removed.
     * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Composite.html#onBrowserEvent(com.google.gwt.user.client.Event) Composite.onBrowserEvent()] is now invoked properly when sinkEvents is called.
     * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/HTMLPanel.html#add(com.google.gwt.user.client.ui.Widget,%20java.lang.String) HTMLPanel.add(Widget, id)] is a much faster operation, because it now relies on calling the native document.getElementById(id) method.
