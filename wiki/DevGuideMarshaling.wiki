@@ -38,10 +38,11 @@ Parameters and return types in JSNI methods are declared as Java types. There ar
   *  Violating any of these marshaling rules in [DevGuideHostedMode hosted mode] will generate a `com.google.gwt.dev.shell.DevGuideHostedModeException` detailing the problem. This exception is not [DevGuideClientSide translatable] and never thrown in [DevGuideWebMode web mode]. 
 
   *  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JavaScriptObject.html JavaScriptObject] gets special treatment from the GWT compiler and hosted browser. Its purpose is to provide an opaque representation of native !JavaScript objects to Java code.
+ 
+  *  When passing arrays between !JavaScript and Java, the helper classes [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JsArray.html JsArray], [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JsBooleanArray.html JsBooleanArray], [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JsIntegerArray.html JsIntegerArray], [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JsNumberArray.html JsNumberArray], and [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JsStringArray.html JsStringArray] can be used to efficiently pass arrays when compiled into JavaScript.  When compiled, these classes turn into native !JavaScript arrays.
 
   *  Java `null` and !JavaScript `null` are identical and always legal values for any non-primitive Java type. !JavaScript `undefined` is _not_ identical to `null`; never return `undefined` from a JSNI method or unpredictable behavior will occur. 
 
  _Tip: When returning a possibly undefined value from a JSNI method, we suggest using the idiom _
     `return (value == null) ? null : value;` 
  _to avoid returning `undefined`._
-
