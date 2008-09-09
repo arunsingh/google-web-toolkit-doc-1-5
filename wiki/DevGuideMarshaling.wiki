@@ -41,8 +41,4 @@ Parameters and return types in JSNI methods are declared as Java types. There ar
  
   *  When passing arrays between !JavaScript and Java, the helper classes [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JsArray.html JsArray], [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JsArrayBoolean.html JsArrayBoolean], [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JsArrayInteger.html JsArrayInteger], [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JsArrayNumber.html JsArrayNumber], and [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/JsArrayString.html JsArrayString] can be used.  These classes are wrappers around a native !JavaScript array.  
 
-  *  Java `null` and !JavaScript `null` are identical and always legal values for any non-primitive Java type. !JavaScript `undefined` is _not_ identical to `null`; never return `undefined` from a JSNI method or unpredictable behavior will occur. 
-
- _Tip: When returning a possibly undefined value from a JSNI method, we suggest using the idiom _
-    `return (value == null) ? null : value;` 
- _to avoid returning `undefined`._
+  *  Java `null` and !JavaScript `null` are identical and always legal values for any non-primitive Java type. !JavaScript `undefined` is also considered equal to `null` when passed into Java code (the rules of !JavaScript dictate that in !JavaScript code, `null == undefined` is `true` but `null === undefined` is `false`).  In previous versions of GWT, `undefined` was not a legal value to pass into Java.
