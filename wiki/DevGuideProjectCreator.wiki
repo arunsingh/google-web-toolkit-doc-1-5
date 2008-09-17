@@ -2,7 +2,7 @@
 
 =projectCreator=
 
-A commmand line tool that generates an [http://ant.apache.org/ Ant] buildfile or [http://www.eclipse.org Eclipse] project.
+A command line tool that generates an [http://ant.apache.org/ Ant] buildfile or [http://www.eclipse.org Eclipse] project.
 
 `projectCreator [-ant projectName] [-eclipse projectName] [-out dir] [-overwrite] [-ignore] [-addToClassPath]`
 
@@ -49,4 +49,3 @@ C:\>C:\GWT\projectCreator -ant Foo -eclipse Foo -out Foo
   * [DevGuideApplicationCreator applicationCreator]
 
   * [DevGuideProjectStructure Project Structure]
-
