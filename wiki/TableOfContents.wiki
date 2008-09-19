@@ -45,7 +45,7 @@
     * [DevGuideHostPage HTML Host Pages]
   * [DevGuideUserInterface Building User Interfaces]
     * [DevGuideWidgetsAndPanels Widgets and Panels]
-    * [DevGuideWidgetGallery Widgets Gallery]
+    * [DevGuideWidgetGallery Widget Gallery]
     * [DevGuideEventsAndListeners Events and Listeners]
     * [DevGuideUnderstandingLayout Understanding Layout]
     * [DevGuideStyleSheets Style Sheets]
