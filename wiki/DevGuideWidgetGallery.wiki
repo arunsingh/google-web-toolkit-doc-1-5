@@ -1,6 +1,6 @@
 #summary A gallery of widgets and panels.
 
-=Widgets Gallery=
+=Widget Gallery=
 
 The following are [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Widget.html widgets] and [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Panel.html panels] available in the GWT user-interface library.   You can view a code example of each widget in the [http://gwt.google.com/samples/Showcase/Showcase.html Showcase] sample application.
 
@@ -32,5 +32,3 @@ The following are [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/
 ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/DockPanel.png]  ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/TabPanel.png]  ||  
 ||   [http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/DisclosurePanel.png]  ||  
 ||   [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/DisclosurePanel.html DisclosurePanel]  ||  
-
-
