@@ -67,8 +67,6 @@
   * GWT.create
   * gwt.js
   * Handling exceptions
-  * host HTML
-  * host HTML page
   * host page
   * hosted mode
   * HTML Host Pages
@@ -175,4 +173,3 @@
   * widgets
   * Widgets Gallery
   * Writing Native JavaScript Methods
-
