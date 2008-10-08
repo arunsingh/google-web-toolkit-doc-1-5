@@ -1,6 +1,0 @@
-#summary Does GWT send information about me back to Google's servers?
-
-= Does GWT send information about me back to Google's servers? =
-
-When you use the Google Web Toolkit's [DevGuideHostedMode hosted web browser], the application sends a request back to Google's servers to check to see if you are using the most recent version of the product. As a part of this request, Google will log usage data including a timestamp of the date and time you downloaded the Google Web Toolkit and the IP address for your computer. We won't log cookies or personal information about you, and we will use any data we log only in the aggregate to operate and improve the Google Web Toolkit and other Google Services. Please see the [http://www.google.com/privacy.html Google Privacy Policy] for more information.
-
