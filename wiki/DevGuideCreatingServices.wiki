@@ -2,7 +2,7 @@
 
 =Creating Services=
 
-In order to define your RPC interface, you need to perform the following tasks:
+In order to define your RPC interface, you need to:
 
   # Define an interface for your service that extends [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/RemoteService.html RemoteService] and lists all your RPC methods.
   # Define a class to implement the server-side code that extends [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/server/rpc/RemoteServiceServlet.html RemoteServiceServlet] and implements the interface you created above.
@@ -66,8 +66,3 @@ Note the use of the suffix `Async` and argument referencing the `AsyncCallback` 
  * Each method in the synchronous service interface must have a coresponding method in the asynchronous service interface with an extra [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/AsyncCallback.html AsyncCallback] parameter as the last argument.  
 
 See [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/AsyncCallback.html AsyncCallback] for additional details on how to implement an asynchronous callback.
-
-===See Also===
-
- * [GettingStartedRPC Getting Started Tutorial - RPC]
-
