@@ -365,7 +365,7 @@ import com.google.gwt.sample.stockwatcher.client.DelistedException;
 StockPrice[] getPrices(String[] symbols) throws DelistedException;
 }}}
 
-We also need to modify the actual service implementation in `StockPriceImpl.java`.  The first change is the `throws` on the getPrices(String[]) method.  The other addition is code to actually throw the `DelistedException`.  We'll just keep it simple and throw the exception whenever the stock symbol `ERR` added to the user's watch list.
+We also need to modify the actual service implementation in `StockPriceServiceImpl.java`.  The first change is the `throws` on the getPrices(String[]) method.  The other addition is code to actually throw the `DelistedException`.  We'll just keep it simple and throw the exception whenever the stock symbol `ERR` added to the user's watch list.
 
 {{{
 import com.google.gwt.sample.stockwatcher.client.DelistedException;
@@ -473,4 +473,3 @@ During testing, you can use [DevGuideHostedMode hosted mode's] built-in [http://
 ==More details==
 
 To learn more, read up on the [DevGuideRemoteProcedureCalls Remote Procedure Calls] section in the Developer Guide. 
-
