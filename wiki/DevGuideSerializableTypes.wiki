@@ -9,7 +9,7 @@ Serializable types must conform to certain restrictions.  GWT tries really hard 
  _Tip: Although the terminology is very similar, GWT's concept of "serializable" is different than serialization based on the standard Java interface [http://java.sun.com/j2se/1.5.0/docs/api/java/io/Serializable.html Serializable]. All references to serialization are referring to the GWT concept.  For more information see the FAQ topic, "[FAQ_RPCSerializationSupport Does the GWT RPC system support the use of java.io.Serializable?]"
  _
 
-A type is serializable and can be used in a service interface if one of the following are true:
+A type is serializable and can be used in a service interface if one of the following is true:
 
   * The type is primitive, such as `char`, `byte`, `short`, `int`, `long`, `boolean`, `float`, or `double`.
   * The type an instance of the `String`, `Date`, or a primitive wrapper such as `Character`, `Byte`, `Short`, `Integer`, `Long`, `Boolean`, `Float`, or `Double`.
