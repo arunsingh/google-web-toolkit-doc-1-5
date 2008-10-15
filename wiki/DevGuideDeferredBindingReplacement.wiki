@@ -44,7 +44,7 @@ To see how this is used when designing a widget, we will examine the case of the
  _Tip: On GWT versions prior to 1.5, a `(PopupImpl)` cast is needed for the return value from `GWT.create()`
  _
 
-The two classes !PopupImplMozilla and !PopupImplIE6 extend the !PopupImpl class and override some `PopupImpl`'s methods to implement browser specific behavior.
+The two classes !PopupImplMozilla and PopupImplIE6 extend the !PopupImpl class and override some `PopupImpl`'s methods to implement browser specific behavior.
 
 Then, when the `PopupPanel` class needs to switch to some browser dependent code, it accesses a member function inside the `PopupImpl` class:
 
