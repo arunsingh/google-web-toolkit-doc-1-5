@@ -2,7 +2,7 @@
 
 =!JavaScript Native Interface (JSNI)=
 
-The [DevGuideJavaToJavaScriptCompiler GWT compiler] translates Java source into !JavaScript. Sometimes it's very useful to mix handwritten !JavaScript into your Java source code. For example, the lowest-level functionality of certain core GWT classes are handwritten in !JavaScript. GWT borrows from the Java Native Interface (JNI) concept to implement !JavaScript Native Interface (JSNI).  Writing JSNI methods is a powerful technique, but should be used sparingly because writing bulletproof !JavaScript code is nortoriously tricky. JSNI code is potentially less portable across browsers, more likely to leak memory, less amenable to Java tools, and harder for the compiler to optimize. 
+The [DevGuideJavaToJavaScriptCompiler GWT compiler] translates Java source into !JavaScript. Sometimes it's very useful to mix handwritten !JavaScript into your Java source code. For example, the lowest-level functionality of certain core GWT classes are handwritten in !JavaScript. GWT borrows from the Java Native Interface (JNI) concept to implement !JavaScript Native Interface (JSNI).  Writing JSNI methods is a powerful technique, but should be used sparingly because writing bulletproof !JavaScript code is notoriously tricky. JSNI code is potentially less portable across browsers, more likely to leak memory, less amenable to Java tools, and harder for the compiler to optimize. 
 
 We think of JSNI as the web equivalent of inline assembly code. You can use it in many ways: 
 
@@ -26,4 +26,3 @@ How Java objects appear to !JavaScript code and vice-versa.
 
 [DevGuideJsniExceptions Exceptions and JSNI]
 How !JavaScript exceptions interact with Java exceptions and vice-versa.
-
