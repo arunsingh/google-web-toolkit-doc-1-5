@@ -14,7 +14,7 @@ We think of JSNI as the web equivalent of inline assembly code. You can use it i
   * Use hosted mode to debug both Java source (with a Java debugger) and !JavaScript (with a script debugger, only in Windows right now)
 
 
-==Specifics==
+==Topics==
 [DevGuideJavaScriptFromJava Writing Native JavaScript Methods]
 Declare a `native` method and write the body into a specially formatted comment.
 
@@ -26,3 +26,6 @@ How Java objects appear to !JavaScript code and vice-versa.
 
 [DevGuideJsniExceptions Exceptions and JSNI]
 How !JavaScript exceptions interact with Java exceptions and vice-versa.
+
+[DevGuideOverlayTypes JavaScript Overlay Types]
+How to easily integrate !JavaScript objects into your GWT project and interact directly with !JavaScript objects from your Java source code.
