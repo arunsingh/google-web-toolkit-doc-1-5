@@ -47,27 +47,27 @@ When `WorkingModule.gwt.xml` is compiled, the compiler will produce only an `ie6
 This section documents the most commonly used elements in the module XML file.
 
 
- * *<inherits name="_logical-module-name_" />* : Inherits all the settings from the specified module as if the contents of the inherited module's XML were copied verbatim. Any number of modules can be inherited in this manner. See the FAQ for [FAQ_GWTModuleInheritance commonly used modules]. 
+ * `<inherits name="_logical-module-name_" />` : Inherits all the settings from the specified module as if the contents of the inherited module's XML were copied verbatim. Any number of modules can be inherited in this manner. See the FAQ for [FAQ_GWTModuleInheritance commonly used modules]. 
 
- * *<entry-point class="_classname_" />* : Specifies an [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/EntryPoint.html entry point] class. Any number of entry-point classes can be added, including those from inherited modules.  Entry points are all compiled into a single codebase.  They are called sequentially in the order in which they appear in the module file.  So when the `onModuleLoad()` of your first entry point finishes, the next entry point is called immediately.
+ * `<entry-point class="_classname_" />` : Specifies an [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/EntryPoint.html entry point] class. Any number of entry-point classes can be added, including those from inherited modules.  Entry points are all compiled into a single codebase.  They are called sequentially in the order in which they appear in the module file.  So when the `onModuleLoad()` of your first entry point finishes, the next entry point is called immediately.
 
- * *<source path="_path_" />* : Each occurrence of the `source` tag adds a package to the [DevGuideModules source path] by combining the package in which the module XML is found with the specified path to a subpackage. Any Java source file appearing in this subpackage or any of its subpackages is assumed to be translatable.  The `<source>` element supports [DevGuidePublicPackageFiltering pattern-based filtering] to allow fine-grained control over which resources get copied into the output directory during a GWT compile.
+ * `<source path="_path_" />`: Each occurrence of the `source` tag adds a package to the [DevGuideModules source path] by combining the package in which the module XML is found with the specified path to a subpackage. Any Java source file appearing in this subpackage or any of its subpackages is assumed to be translatable.  The `<source>` element supports [DevGuidePublicPackageFiltering pattern-based filtering] to allow fine-grained control over which resources get copied into the output directory during a GWT compile.
 
  If no `<source>` element is defined in a module XML file, the `client` subpackage is implicitly added to the source path as if `<source path="client">` had been found in the XML. This default helps keep module XML compact for standard project layouts. 
 
- * *<public path="_path_"/>* : Adds packages to the [DevGuideModules public path] by combining the package in which the module XML is found with the specified path to identify the root of a public path entry. Any file appearing in this package or any of its subpackages will be treated as a publicly-accessible resource. The `<public>` element supports [DevGuidePublicPackageFiltering pattern-based filtering] to allow fine-grained control over which resources get copied into the output directory during a GWT compile.  
+ * `<public path="_path_"/>` : Adds packages to the [DevGuideModules public path] by combining the package in which the module XML is found with the specified path to identify the root of a public path entry. Any file appearing in this package or any of its subpackages will be treated as a publicly-accessible resource. The `<public>` element supports [DevGuidePublicPackageFiltering pattern-based filtering] to allow fine-grained control over which resources get copied into the output directory during a GWT compile.  
 
 If no `<public>` element is defined in a module XML file, the `public` subpackage is implicitly added to the public path as if `<public path="public">` had been found in the XML. This default helps keep module XML compact for standard project layouts. 
 
- * *<servlet path="_url-path_" class="_classname_"/>* : For convenient RPC testing, this element loads a servlet class mounted at the specified URL path. The URL path should be absolute and have the form of a directory (for example, `/spellcheck`). Your client code then specifies this URL mapping in a call to [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/ServiceDefTarget.html#setServiceEntryPoint(java.lang.String) ServiceDefTarget.setServiceEntryPoint(String)]. Any number of servlets may be loaded in this manner, including those from inherited modules.
+ * `<servlet path="_url-path_" class="_classname_"/>` : For convenient RPC testing, this element loads a servlet class mounted at the specified URL path. The URL path should be absolute and have the form of a directory (for example, `/spellcheck`). Your client code then specifies this URL mapping in a call to [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/ServiceDefTarget.html#setServiceEntryPoint(java.lang.String) ServiceDefTarget.setServiceEntryPoint(String)]. Any number of servlets may be loaded in this manner, including those from inherited modules.
 
 The `<servlet>` element applies only to GWT's embedded server server-side debugging feature.
 
- * *<script src="_js-url_"/>* : Automatically injects the external !JavaScript file located at the location specified by _src_. See [DevGuideAutomaticResourceInjection automatic resource inclusion] for details.
+ * `<script src="_js-url_"/>` : Automatically injects the external !JavaScript file located at the location specified by _src_. See [DevGuideAutomaticResourceInjection automatic resource inclusion] for details.
 
- * *<stylesheet src="_css-url_"/>* : Automatically injects the external CSS file located at the location specified by _src_. See [DevGuideAutomaticResourceInjection automatic resource inclusion] for details.
+ * `<stylesheet src="_css-url_"/>` : Automatically injects the external CSS file located at the location specified by _src_. See [DevGuideAutomaticResourceInjection automatic resource inclusion] for details.
 
- * *<extend-property name="_client-property-name_" values="_comma-separated-values_"/>* : Extends the set of values for an existing client property. Any number of values may be added in this manner, and client property values accumulate through inherited modules. You will likely only find this useful for [DevGuideSpecifyingLocale specifying locales in internationalization].
+ * `<extend-property name="_client-property-name_" values="_comma-separated-values_"/>` : Extends the set of values for an existing client property. Any number of values may be added in this manner, and client property values accumulate through inherited modules. You will likely only find this useful for [DevGuideSpecifyingLocale specifying locales in internationalization].
 
 ===Dividing code into Multiple Modules===
 
@@ -93,32 +93,32 @@ The first approach of compiling each module separately might seem like a compell
 
 The following elements are used for defining [DevGuideDeferredBinding deferred binding] rules.  Deferred binding is not commonly used in user projects.  
 
- * *<replace-with class="_replacement_class_name_">* : A directive to use [DevGuideDeferredBinding deferred binding] with replacement.
+ * `<replace-with class="_replacement_class_name_">` : A directive to use [DevGuideDeferredBinding deferred binding] with replacement.
    
- * *<generate-with class="_generator_class_name_">* : A directive to use [DevGuideDeferredBinding deferred binding] using a [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/ext/Generator.html Generator]
+ * `<generate-with class="_generator_class_name_">` : A directive to use [DevGuideDeferredBinding deferred binding] using a [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/ext/Generator.html Generator]
 
- * *<define-property name="_property_name_" values="_property_values_">* : Define a property and allowable values (comma-separated identifiers).  This element is typically used to generate a value that will be evaluated by a rule using a `<when...>` element.
+ * `<define-property name="_property_name_" values="_property_values_">` : Define a property and allowable values (comma-separated identifiers).  This element is typically used to generate a value that will be evaluated by a rule using a `<when...>` element.
 
- * *<set-property name="_property_name_" value="_property_value_">* : Set the value of a previously-defined property (see `<define property>` above).   This element is typically used to generate a value that will be evaluated by a rule using a `<when...>` element. Note that `set-property` and `property-provider` on the same value will overwrite each other.  The last definition encountered is the one that is used.
+ * `<set-property name="_property_name_" value="_property_value_">` : Set the value of a previously-defined property (see `<define property>` above).   This element is typically used to generate a value that will be evaluated by a rule using a `<when...>` element. Note that `set-property` and `property-provider` on the same value will overwrite each other.  The last definition encountered is the one that is used.
 
- * *<property-provider name="_property_name_">* : Define a !JavaScript fragment that will return the value for the named property at runtime.  This element is typically used to generate a value that will be evaluated in a `<when...>` element.  To see examples of  `<property-provider>` definitions in action, see the files `I18N.gwt.xml` and `UserAgent.gwt.xml` in the GWT source code.  Note that `set-property` and `property-provider` on the same value will overwrite each other.  The last definition encountered is the one that is used.
+ * `<property-provider name="_property_name_">` : Define a !JavaScript fragment that will return the value for the named property at runtime.  This element is typically used to generate a value that will be evaluated in a `<when...>` element.  To see examples of  `<property-provider>` definitions in action, see the files `I18N.gwt.xml` and `UserAgent.gwt.xml` in the GWT source code.  Note that `set-property` and `property-provider` on the same value will overwrite each other.  The last definition encountered is the one that is used.
 
 The `<replace-with-class>` and `<generate-with-class>` elements can take a `<when...>` child element that defines when this rule should be used, much like the `WHERE` predicate of an SQL query.  There are three different types of predicates are:
 
- * *<when-property-is name="_property_name_" value="_value_">* :  Deferred binding predicate that is true when a named property has a given value.
+ * `<when-property-is name="_property_name_" value="_value_">` :  Deferred binding predicate that is true when a named property has a given value.
 
- * *<when-type-assignable class="_class_name_">* : Deferred binding predicate that is true for types in the type system that are assignable to the specified type.
+ * `<when-type-assignable class="_class_name_">` : Deferred binding predicate that is true for types in the type system that are assignable to the specified type.
 
- * *<when-type-is class="_class_name_">* : Deferred binding predicate that is true for exactly one type in the type system.
+ * `<when-type-is class="_class_name_">` : Deferred binding predicate that is true for exactly one type in the type system.
 
 
 Several different predicates can be combinded into an expression.  Surround your `<when...>` elements using the following nesting elements begin/end tags:
 
- * *<all>* _when_expressions_ *</all>* : Predicate that ANDs all child conditions.  
+ * `<all>` _when_expressions_ `</all>` : Predicate that ANDs all child conditions.  
 
- * *<any>* _when_expressions_ *</any>* : Predicate that ORs all child conditions.
+ * `<any>` _when_expressions_ `</any>` : Predicate that ORs all child conditions.
 
- * *<none>* _when_expressions_ *</none>* : Predicate that NANDs all child conditions.
+ * `<none>` _when_expressions_ `</none>` : Predicate that NANDs all child conditions.
 
 
 As an example module XML file that makes use of [DevGuideDeferredBinding deferred binding] rules, here is a module XML file from the  GWT source code, `Focus.gwt.xml`:
@@ -153,7 +153,7 @@ As an example module XML file that makes use of [DevGuideDeferredBinding deferre
 </module>
 }}}
 
-== Using <super-source> to override one package implementation with another ==
+== Using `<super-source>` to override one package implementation with another ==
 
 The `<super-source>` tag instructs the compiler to "re-root" a source path.  This is useful for cases where you want to be re-use an existing Java API for a GWT project, but the original source is not available or not translatable.  A common reason for this is to emulate part of the JRE not implemented by GWT.
 
@@ -173,8 +173,8 @@ The `<super-source>` element supports [DevGuidePublicPackageFiltering pattern-ba
 
 The GWT compiler separates the act of compiling and packaging its output with the Linker subsystem.  It is responsible for the final packaging of the !JavaScript code and providing a pluggable bootstrap mechanism for any particular deployment scenario.
 
-  * *<define-linker name="_short_name_" class="_fully_qualified_class_name_" />* : Register a new Linker instance with the compiler.  The `name` attribute must be a valid Java identifier and is used to identify the Linker in `<add-linker>` tags.  It is permissible to redefine an already-defined Linker by declaring a new `<define-linker>` tag with the same name.  Linkers are divided into three categories, PRE, POST, and PRIMARY.  Exactly one primary linker is run for a compilation.  Pre-linkers are run in lexical order before the primary linker, and post-linkers are run in reverse lexical order after the primary linker.
-  * *<add-linker name="_linker_name_" />* : Specify a Linker to use when generating the output from the compiler.  The `name` property is a previously-defined Linker name.  This tag is additive for pre- and post-linkers; only the last primary linker will be run.
+  * `<define-linker name="_short_name_" class="_fully_qualified_class_name_" />` : Register a new Linker instance with the compiler.  The `name` attribute must be a valid Java identifier and is used to identify the Linker in `<add-linker>` tags.  It is permissible to redefine an already-defined Linker by declaring a new `<define-linker>` tag with the same name.  Linkers are divided into three categories, PRE, POST, and PRIMARY.  Exactly one primary linker is run for a compilation.  Pre-linkers are run in lexical order before the primary linker, and post-linkers are run in reverse lexical order after the primary linker.
+  * `<add-linker name="_linker_name_" />` : Specify a Linker to use when generating the output from the compiler.  The `name` property is a previously-defined Linker name.  This tag is additive for pre- and post-linkers; only the last primary linker will be run.
 
 Several linkers are provided by `Core.gwt.xml`, which is automatically inherited by `User.gwt.xml`.
   * *std* : The standard iframe-based bootstrap deployment model.
