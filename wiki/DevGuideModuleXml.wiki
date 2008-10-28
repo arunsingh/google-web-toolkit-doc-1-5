@@ -51,7 +51,7 @@ This section documents the most commonly used elements in the module XML file.
 
  * *<entry-point class="_classname_" />* : Specifies an [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/EntryPoint.html entry point] class. Any number of entry-point classes can be added, including those from inherited modules.  Entry points are all compiled into a single codebase.  They are called sequentially in the order in which they appear in the module file.  So when the `onModuleLoad()` of your first entry point finishes, the next entry point is called immediately.
 
- * *<source path="_path_" //>* : Adds packages to the [DevGuideModules source path] by combining the package in which the module XML is found with the specified path to a subpackage. Any Java source file appearing in this subpackage or any of its subpackages is assumed to be translatable.  The `<source>` element supports [DevGuidePublicPackageFiltering pattern-based filtering] to allow fine-grained control over which resources get copied into the output directory during a GWT compile.
+ * *<source path="_path_" />* : Each occurrence of the `source` tag adds a package to the [DevGuideModules source path] by combining the package in which the module XML is found with the specified path to a subpackage. Any Java source file appearing in this subpackage or any of its subpackages is assumed to be translatable.  The `<source>` element supports [DevGuidePublicPackageFiltering pattern-based filtering] to allow fine-grained control over which resources get copied into the output directory during a GWT compile.
 
  If no `<source>` element is defined in a module XML file, the `client` subpackage is implicitly added to the source path as if `<source path="client">` had been found in the XML. This default helps keep module XML compact for standard project layouts. 
 
@@ -198,4 +198,3 @@ Changing the desired linker in `MyModule.gwt.xml`:
   <add-linker name="xs" />
 </module>
 }}}
-
