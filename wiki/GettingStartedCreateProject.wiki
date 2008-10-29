@@ -2,7 +2,7 @@
 
 =Create a GWT project=
 
-Let's start by creating a directory to place our GWT project in. Create a new directory named `StockWatcher` under the main GWT directory (e.g., `gwt-windows-1.4.60`).  To actually create our project we'll use some command-line utilities that ship with GWT. These utilities take care of generating the project subdirectories and files we need to get started.
+Let's start by creating a directory to place our GWT project in. Create a new directory named `StockWatcher` under the main GWT directory (e.g., `gwt-windows-1.5.3`).  To actually create our project we'll use some command-line utilities that ship with GWT. These utilities take care of generating the project subdirectories and files we need to get started.
 
 ==Create an Eclipse project with projectCreator==
 
