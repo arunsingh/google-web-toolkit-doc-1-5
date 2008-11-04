@@ -57,7 +57,11 @@ The more interesting case is converting JSON text from the server into a live !J
 var jsonObject = eval('(' + jsonText + ')');
 }}}
 
-However, because `eval()` can execute _any_ !JavaScript code (not just JSON data) this approach has some serious security implications.  A much safer option is to use a dedicated JSON parser instead, which will _only_ parse JSON text and never executable !JavaScript code.  Fortunately, GWT happens to have just such a parser, which we'll use to add JSON support to our !StockWatcher sample application.  
+However, because `eval()` can execute _any_ !JavaScript code (not just JSON data) this approach has some serious security implications.  A much safer option is to use a dedicated JSON parser instead, which will _only_ parse JSON text and never executable !JavaScript code. This can be done by verifying the String to parse with the regular expression defined in [http://www.ietf.org/rfc/rfc4627.txt RFC 4627].
+
+GWT comes with its own JSON parser, but for the moment doesn't check for unsafe JSON because for performance reasons. [http://code.google.com/p/google-web-toolkit/issues/detail?id=1749 There may be some changes to the parser] to add an extra method which does check for unsafe JSON strings before actually parsing them, but for the time being you can easily check against unsafe JSON manually by using the regex defined in RFC 4627 when needed.
+
+For the purposes of JSON support for our !StockWatcher application, we'll use the GWT JSON parser and assume that the JSON we're going to parse is safe.
 
 ===GWT JSON types===
 
@@ -574,4 +578,3 @@ http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/StockWatcherJson.png
 ==Security==
 
 Before you run off and implement mashups of your own, remember that downloading cross-site JSON is powerful, but can also be a security risk.  Make sure the servers you interact with are _absolutely trustworthy_, since they will have the ability to execute arbitrary !JavaScript code within your application.  Take a minute to read the [http://groups.google.com/group/Google-Web-Toolkit/web/security-for-gwt-applications Security for GWT Applications] article, which describes the potential threats to GWT applications and how you can combat them.
-
