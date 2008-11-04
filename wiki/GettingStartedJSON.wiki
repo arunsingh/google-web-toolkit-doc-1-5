@@ -59,7 +59,7 @@ var jsonObject = eval('(' + jsonText + ')');
 
 However, because `eval()` can execute _any_ !JavaScript code (not just JSON data) this approach has some serious security implications.  A much safer option is to use a dedicated JSON parser instead, which will _only_ parse JSON text and never executable !JavaScript code. This can be done by verifying the String to parse with the regular expression defined in [http://www.ietf.org/rfc/rfc4627.txt RFC 4627].
 
-GWT comes with its own JSON parser, but for the moment doesn't check for unsafe JSON because for performance reasons. [http://code.google.com/p/google-web-toolkit/issues/detail?id=1749 There may be some changes to the parser] to add an extra method which does check for unsafe JSON strings before actually parsing them, but for the time being you can easily check against unsafe JSON manually by using the regex defined in RFC 4627 when needed.
+GWT comes with its own JSON parser, but for the moment doesn't check for unsafe JSON for performance reasons. [http://code.google.com/p/google-web-toolkit/issues/detail?id=1749 There may be some changes to the parser] to add an extra method which does check for unsafe JSON strings before actually parsing them, but for the time being you can easily check against unsafe JSON manually by using the regex defined in RFC 4627 when needed.
 
 For the purposes of JSON support for our !StockWatcher application, we'll use the GWT JSON parser and assume that the JSON we're going to parse is safe.
 
