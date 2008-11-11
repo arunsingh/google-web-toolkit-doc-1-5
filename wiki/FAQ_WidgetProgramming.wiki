@@ -1,6 +1,7 @@
 #summary Widget Programming
 
-Tips and tricks for Widget programming
+=Widget Programming=
+Tips and tricks for widget programming.
 
-* [FAQ_WidgetEventBubbling How can I most efficiently handle events from many interior Widgets?]
-Describes the technique of Event Bubbling as seen in the Tree widget.
+  * [FAQ_WidgetEventBubbling How can I most efficiently handle events from many interior widgets?]
+  Describes the technique of _event bubbling_ as seen in the Tree widget.
