@@ -14,8 +14,7 @@ Tips and tricks for User Interface programming.
 
   * [FAQ_UIImagePreload What can I do to make animations appear more smooth and borders load more quickly?]
 
-  * [FAQ_UIOnePxBackgroundInIE  Why do I see poor performance in Internet Explorer when using a one pixel 
-background image?]
+  * [FAQ_UIOnePxBackgroundInIE Why do I see poor performance in Internet Explorer when using a one pixel background image?]
 
   * [FAQ_UIUseOneListener As the application has grown, event listeners seem to be firing more
 
