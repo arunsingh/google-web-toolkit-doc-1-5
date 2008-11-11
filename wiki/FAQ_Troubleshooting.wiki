@@ -1,19 +1,17 @@
 #summary Troubleshooting
 = Troubleshooting =
+Some commonly encountered technical issues.
 
-Some commonly encountered technical issues 
+  * [FAQ_InstallationProblemPleaseReinstallGWT  Installation problem detected, please reinstall GWT]
 
-* [FAQ_InstallationProblemPleaseReinstallGWT  Installation problem detected, please reinstall GWT]
+  * [FAQ_UnableToFindModuleInHosted Unable to find type 'com.foo.client.MyApp' when running GWTShell]
 
-* [FAQ_UnableToFindModuleInHosted Unable to find type 'com.foo.client.MyApp' when running GWTShell]
+  * [FAQ_CompilerOutOfMemory The GWT compiler reports java.lang.OutOfMemoryError: Java heap space]
 
-* [FAQ_CompilerOutOfMemory The GWT compiler reports java.lang.OutOfMemoryError: Java heap space]
+  * [FAQ_FailedToGetGlobalExecState Error launching hosted mode: Failed to getGlobalExecState]
 
-* [FAQ_FailedToGetGlobalExecState Error launching hosted mode: Failed to getGlobalExecState]
+  * [FAQ_AssertionElementMayOnlyBeSetOnce AssertionError: Element may only be set once]
 
-* [FAQ_AssertionElementMayOnlyBeSetOnce AssertionError: Element may only be set once]
+  * [FAQ_JUnitTestsFailOnMac JUnit Tests fail on Mac]
 
-* [FAQ_JUnitTestsFailOnMac JUnit Tests fail on Mac]
-
-* [FAQ_DisplayProblems Undefined DISPLAY errors compiling/testing in a console or headless environment.]
-
+  * [FAQ_DisplayProblems Undefined DISPLAY errors compiling/testing in a console or headless environment.]
