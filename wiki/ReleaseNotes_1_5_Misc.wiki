@@ -41,3 +41,10 @@
   * Upgraded !DateTimeConstants data to CLDR 1.51, and added the firstDayOfTheWeek and weekendRange formatting symbols.
   * Removed dependency on java.util.Locale in !LocalizableGenerator for BCP47 compatibility
 
+=== Zero-config Lightweight Performance Metrics ===
+Design document can be found [http://code.google.com/p/google-web-toolkit/wiki/LightweightMetricsDesign here].
+ * Provides data about the bootstrap process and RPC subsystem in code paths where user code cannot be added.
+ * Supports multiple modules on the same page.
+ * Incurs negligible overhead when no statistics collector function is defined.
+ * Minimizes observer effects by allowing for data aggregation to be performed in post-processing.
+ * Extensible: Users can follow the pattern to instrument their own code with custom metric events.
