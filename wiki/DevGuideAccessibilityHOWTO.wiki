@@ -62,7 +62,7 @@ In the !CustomButton widget, the `aria-pressed` ARIA state is initialized as fol
 
 === Updating States During User Interaction ===
 
-The !CustomButton widget has support for multiple button faces, giving developers more stylistic control. Also, unlike the Button widget, a !CustomButton can be toggleable, as is the case with the !CustomButton subclass !ToggleButton. Event handlers attached to the underlying DOM element update the button faces when the button is pressed. At the same time, the `Accessibility.setState(Element, String, String)` method should be used to manipulate the DOM and update the value of the ARIA state aria-pressed:
+The !CustomButton widget has support for multiple button faces, giving developers more stylistic control. Also, unlike the Button widget, a !CustomButton can be toggleable, as is the case with the !CustomButton subclass !ToggleButton. Event handlers attached to the underlying DOM element update the button faces when the button is pressed. At the same time, the Accessibility.setState(Element, String, String) method should be used to manipulate the DOM and update the value of the ARIA state aria-pressed:
 
 {{{
   void toggleDown() {
@@ -86,9 +86,9 @@ Proper keyboard accessibility affords the following end-user behavior:
 
 By default, the only elements in the HTML DOM that can receive keyboard focus are anchor and form fields. However, setting the DOM property `tabIndex` (note that this corresponds to HTML attribute `tabindex`) to 0 will place such elements in the default tab sequence and thereby enable them to receive keyboard focus. Setting `tabIndex = -1`, while removing the element from the tab sequence, still allows the element to receive keyboard focus programmatically.
 
-In GWT, any widget that extends the !FocusWidget abstract class will be keyboard focusable by default. The !FocusWidget abstract class includes a `setFocus(boolean)` method that can be used to programmatically set the focus or remove focus on the widget. !FocusWidget also includes a `setTabIndex(int)` method that allows the user to set the DOM property `tabIndex` for the widget.
+In GWT, any widget that extends the !FocusWidget abstract class will be keyboard focusable by default. The !FocusWidget abstract class includes a setFocus(boolean) method that can be used to programmatically set the focus or remove focus on the widget. !FocusWidget also includes a setTabIndex(int) method that allows the user to set the DOM property `tabIndex` for the widget.
 
-Keep in mind that extending !FocusWidget does not guarantee focusability for your widget. The base element of the the !FocusWidget (passed to the superclass constructor) must be a naturally focusable HTML element. In the case where the new widget does not have an obviously focusable component, a focusable element can be created via the `FocusPanel.impl.createFocusable()` static method. Look at !CustomButton's implementation for an example of this.
+Keep in mind that extending !FocusWidget does not guarantee focusability for your widget. The base element of the the !FocusWidget (passed to the superclass constructor) must be a naturally focusable HTML element. In the case where the new widget does not have an obviously focusable component, a focusable element can be created via the !FocusPanel.impl.createFocusable() static method. Look at !CustomButton's implementation for an example of this.
 
 For widgets that don't extend the !FocusWidget abstract class, ensuring keyboard accessibility can be more difficult. Different browsers set focus in different ways, and focus on arbitrary elements is not supported everywhere. You can use !FocusPanel to enclose elements that need to receive keyboard focus; just be sure to test your widget on different browsers.
 
@@ -166,7 +166,7 @@ Whenever an item selection changes, the value of the aria-activedescendant state
   }
 }}}
 
-Though it is not shown in this code snippet, when !TreeItems are created, they are constructed out of several divs, only one of which contains the content that we wish to be interpreted by the screen reader. This div is assigned a unique DOM id (which is generated using the `DOM.createUniqueId()` method), and a role of `treeitem`. These attributes are not set on the root !TreeItem div because it contains a child image, which we do not want to be read.
+Though it is not shown in this code snippet, when !TreeItems are created, they are constructed out of several divs, only one of which contains the content that we wish to be interpreted by the screen reader. This div is assigned a unique DOM id (which is generated using the DOM.createUniqueId() method), and a role of `treeitem`. These attributes are not set on the root !TreeItem div because it contains a child image, which we do not want to be read.
 
 === Caveats with this Approach ===
 
@@ -246,10 +246,11 @@ First and foremost, use native HTML controls whenever possible. Native HTML cont
 
 If native HTML controls cannot be used and a custom widget has to be built, keep in mind that it is much easier to develop an accessible widget from the beginning than to go back and add accessibility support to an existing widget. While adding ARIA roles and states is relatively easy, ensuring that the appropriate elements receive keyboard focus during user interaction can be more complicated.
 
-Also, widgets that subclass other widgets should end up with the appropriate ARIA roles and states. Your superclass widget might already specify a certain ARIA role, and while the `Accessibility.setRole(Element, String)` method will overwrite a previous ARIA role in the same element, a complicated DOM configuration may result in different ARIA roles being placed in different elements.
+Also, widgets that subclass other widgets should end up with the appropriate ARIA roles and states. Your superclass widget might already specify a certain ARIA role, and while the Accessibility.setRole(Element, String) method will overwrite a previous ARIA role in the same element, a complicated DOM configuration may result in different ARIA roles being placed in different elements.
 
 Make sure to test that a new widget is accessible! There are three basic steps in the translation between the DOM and the screen reader:
 
-    * DOM: since ARIA attributes are being added directly to the DOM, an easy way to check that the attributes are in the right location is to use a a DOM inspector like Firebug
+    * DOM: since ARIA attributes are being added directly to the DOM, an easy way to check that the attributes are in the right location is to use a DOM inspector like Firebug
     * Events: it is important to make sure that Firefox raises the appropriate events in response to ARIA attributes, changes in focus, and changes in the widget itself. A Microsoft tool called the Accessible Event Watcher, or !AccEvent, can allow you to check which events are being raised.
     * The screen reader: in the end, you can be most sure that your GWT widgets are accessible by using a screen reader. Some screen readers may not be listening for all of the events raised by Firefox, or they might expect the ARIA attributes to be added to the DOM in certain locations. The most widely used screen readers with some support for ARIA are JAWS and Window-Eyes. !FireVox, a free text-to-speech add-on for Firefox, also includes support for ARIA.
+

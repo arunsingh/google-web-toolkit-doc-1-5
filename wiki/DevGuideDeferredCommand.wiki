@@ -1,4 +1,4 @@
-#summary How to use delayed execution into GWT.
+#summary How to use delayed execution in GWT.
 
 =Programming Delayed Logic=
 
@@ -14,7 +14,7 @@ GWT provides three classes that you can use to defer running code until a later 
 
 The [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/Timer.html Timer] class is used to schedule work to be done in the future. 
 
-To create a timer, create a new instance of the Timer class and then override tthe run() method entry point.
+To create a timer, create a new instance of the Timer class and then override the run() method entry point.
 
 {{{
    Timer timer = new Timer() {
@@ -27,7 +27,7 @@ To create a timer, create a new instance of the Timer class and then override tt
     timer.schedule(2000);
 }}}
 
-Note that the timer will not have a chance to run the `run()` method until after control returns to the !JavaScript event loop. 
+Notice that the timer will not have a chance to execute the run() method until after control returns to the !JavaScript event loop. 
 
 ===Creating Timeout Logic===
 

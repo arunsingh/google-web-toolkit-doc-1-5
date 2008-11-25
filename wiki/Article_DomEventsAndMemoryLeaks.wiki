@@ -61,13 +61,13 @@ When designing GWT, we decided that leaks were simply unacceptable. You wouldn't
 
 How do we enforce this? Each widget has a single "root" element. Whenever the widget becomes attached, we create exactly one "back reference" from the element to the widget (that is, `elem.__listener = widget`, performed in [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/DOM.html#setEventListener(com.google.gwt.user.client.Element,%20com.google.gwt.user.client.EventListener) DOM.setEventListener()]). This is set whenever the widget is attached, and cleared whenever it is detached.
 
-Which brings is back to that odd bitfield used in the sinkEvents() method. If you look at the implementation of [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/DOM.html#sinkEvents(com.google.gwt.user.client.Element,%20int)] DOM.sinkEvents()], you'll see that it does something like this:
+Which brings is back to that odd bitfield used in the sinkEvents() method. If you look at the implementation of [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/DOM.html#sinkEvents(com.google.gwt.user.client.Element,%20int) DOM.sinkEvents()], you'll see that it does something like this:
 
 {{{
   elem.onclick = (bits & 0x00001) ? $wnd.__dispatchEvent : null;
 }}}
 
-Each element's events point back to a central dispatch function, which looks for the target element's `__listener` expando, in order to call `onBrowserEvent()`. The beauty of this is that it allows us to set and clear a single expando to clean up any potential event leaks.
+Each element's events point back to a central dispatch function, which looks for the target element's `__listener` expando, in order to call onBrowserEvent(). The beauty of this is that it allows us to set and clear a single expando to clean up any potential event leaks.
 
 What this means in practice is that, as long as you don't set up any reference cycles on your own using JSNI, you can't write an application in GWT that will leak. We test carefully with every release to make sure we haven't done anything in the low-level code to introduce new leaks as well.
 
