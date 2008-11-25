@@ -1,35 +1,41 @@
-#summary GWT provides access to the browser's DOM
+#summary GWT provides access to the browser's Document Object Model (DOM).
 
 =Accessing the Browser's DOM=
 
-Browsers provide an interface to examine and manipulate the on-screen elements using [http://w3c.org/DOM/ DOM] (Document Object Model).  Traditionally, !JavaScript programmers use the DOM to program the user interface portion of their logic, and traditionally, they have had to account for the many differences in the implementation of DOM on different browsers.  GWT provides [DevGuideWidgetsAndPanels a set of classes] to implement user interfaces that wrap up this functionality so that in general, you don't have to worry about cross-browser support.  But sometimes developers need to access the DOM, such as the following:
+Browsers provide an interface to examine and manipulate the on-screen elements using the [http://w3c.org/DOM/ DOM] (Document Object Model).  Traditionally, !JavaScript programmers use the DOM to program the user interface portion of their logic, and traditionally, they have had to account for the many differences in the implementation of the DOM on different browsers.
+
+So that you don't have to worry (generally) about cross-browser support when implementing user interfaces, GWT provides a set of [DevGuideWidgetsAndPanels widget and panel] classes that wrap up this functionality. But sometimes you need to access the DOM. For example, if you want to:
  
- * There is a feature you want to provide in your user interface that GWT does not support
- * You want to write a new Widget class
- * You want to access an HTML element defined directly in the host page
- * You want to handle browser Events at a low level
- * You want to perform some filtering or other processing on an HTML document loaded into the browser
+ * provide a feature in your user interface that GWT does not support
+ * write a new Widget class
+ * access an HTML element defined directly in the host page
+ * handle browser Events at a low level
+ * perform some filtering or other processing on an HTML document loaded into the browser
 
-You could use [DevGuideJavaScriptNativeInterface JSNI] methods to access the browser's DOM, but GWT provides a convenience [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/DOM.html DOM] class.   The [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/DOM.html DOM] class is not meant to be instantiated, but instead used as a collection of static methods which provides a way to walk and query the tree, plus a number of convenience routines.  It  also provides a layer of cross-browser support.
+You could use [DevGuideJavaScriptNativeInterface JSNI] methods to access the browser's DOM, but GWT provides a convenience [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/DOM.html DOM] class.   The DOM class is not meant to be instantiated. Instead it is used as a collection of static methods that provides a way to walk and query the tree, plus a number of convenience routines. The DOM class also provides a layer of cross-browser support.
 
-==Using DOM to manipulate a Widget==
+==Using the DOM to manipulate a widget==
 
-Each Widget and Panel has an underlying DOM element that you can access with the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#getElement()  getElement()] method. You can use the `getElement()` to get the underlying element from the DOM and manipulate or apply attributes to it with the DOM class. A typical use is shown in the following example: 
+Each widget and panel has an underlying DOM element that you can access with the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#getElement()  getElement()] method. You can use the getElement() method to get the underlying element from the DOM and manipulate or apply attributes to it with the DOM class. 
+
+The following example shows how to set a style attribute to change a widget's background color. 
 
 {{{
-    private HTML htmlWidget;
+private HTML htmlWidget;
 
-    // Other code to instantiate the widget...
+// Other code to instantiate the widget...
 
-    // Change the description background color.
-    DOM.setStyleAttribute(htmlWidget.getElement(), "backgroundColor", "#fffe80");
+// Change the description background color.
+DOM.setStyleAttribute(htmlWidget.getElement(), "backgroundColor", "#fffe80");
 }}}
 
-Here, the `getElement()` method derived from the `Widget` superclass returns a DOM [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/Element.html Element] object representing a node in the DOM tree structure and adds a style attribute to it.  This is also an example where using the DOM wasn't absolutely necessary - an alternative is to use  [DevGuideStyleSheets stylesheets] and associating different style classes to the widget using the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setStylePrimaryName(java.lang.String) setStylePrimaryName()]  or [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setStyleName(java.lang.String) setStyleName()] method instead.
+Here, the getElement() method derived from the `Widget` superclass returns a DOM [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/Element.html Element] object representing a node in the DOM tree structure and adds a style attribute to it.
 
-==Finding an Element in the DOM==
+This is an example where using the DOM isn't absolutely necessary. An alternative approach is to use  [DevGuideStyleSheets style sheets] and associate different style classes to the widget using the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setStylePrimaryName(java.lang.String) setStylePrimaryName()]  or [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setStyleName(java.lang.String) setStyleName()] method instead.
 
-The following example shows how to combine a JSNI method with Java code to manipulate the DOM.  First, we have a JSNI routine that will retrieve all the child elements that are Anchor tags.  The element objects are assigned a unique ID for easy access from Java:
+==Finding an element in the DOM==
+
+The following example shows how to combine a JSNI method with Java code to manipulate the DOM.  First, is a JSNI routine that will retrieve all the child elements that are Anchor tags. The element objects are assigned a unique ID for easy access from Java:
 
 {{{
 /**
@@ -89,9 +95,11 @@ And what could you possibly do with a DOM element once you have found it?  This 
 
 The JSNI method set an ID on each element which we then used as an argument to [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/DOM.html#getElementById(java.lang.String) DOM.getElementById(id)] to fetch the opaque `Element` handle in Java.  Then the DOM static methods can be used to query and modify the properties of that element.
 
-==Using DOM to Capture a Browser Event==
+==Using the DOM to capture a browser event==
 
-GWT contains an [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/Event.html Event] class  as an opaque handle to a native DOM Event.  This object can be passed back and forth to !JavaScript through [DevGuideJavaScriptNativeInterface JSNI] methods.   It can also be manipulated by the GWT DOM class.   This example shows how to use the DOM methods to catch a keyboard event for particular elements and handle them before the [DevGuideEventsAndListeners event] gets dispatched:
+GWT contains an [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/Event.html Event] class  as an opaque handle to a native DOM Event. This object can be passed back and forth to !JavaScript through [DevGuideJavaScriptNativeInterface JSNI] methods. It can also be manipulated by the GWT DOM class.
+
+This example shows how to use the DOM methods to catch a keyboard event for particular elements and handle them before the [DevGuideEventsAndListeners event] gets dispatched:
 
 {{{
   private ArrayList keyboardEventReceivers = new ArrayList();

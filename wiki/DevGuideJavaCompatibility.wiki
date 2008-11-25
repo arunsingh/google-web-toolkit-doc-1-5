@@ -1,6 +1,6 @@
 #summary Compatibility with the Java language and runtime libraries.
 
-= Compatibility with the Java language and libraries =
+= Compatibility with the Java Language and Libraries =
 
 == Language support ==
 
@@ -30,7 +30,7 @@ It is important to remember that the target language of your GWT application is 
 
 == Runtime library support ==
 
-GWT supports only a small subset of the classes available in the Java 2 Standard and Enterprise Edition libraries, as these libraries are quite large and rely on functionality that is unavailable within web browsers. To find out exactly which classes and methods are supported for core Java runtime packages, see the API reference for [RefJreEmulation GWT's JRE emulation].
+GWT supports only a small subset of the classes available in the Java 2 Standard and Enterprise Edition libraries, as these libraries are quite large and rely on functionality that is unavailable within web browsers. To find out exactly which classes and methods are supported for core Java runtime packages, see the GWT [RefJreEmulation JRE Emulation Reference].
 
 
  _Tip: You will save yourself a lot of frustration if you make sure that you use only [DevGuideJavaToJavaScriptCompiler translatable] classes in your [DevGuideClientSide client-side code] from the very beginning. To help you identify problems early, your code is checked against the JRE emulation library whenever you run in [DevGuideHostedMode hosted mode]. As a result, most uses of unsupported libraries will be caught the first time you attempt to run your application. So, _run early and often_._
@@ -44,13 +44,13 @@ Some specific areas in which GWT emulation differs from the standard Java runtim
   *   * Serialization*:   Java serialization relies on a few mechanisms that are not available in compiled !JavaScript, such as dynamic class loading and reflection. As a result, GWT does not support standard Java serialization. Instead, GWT has an [DevGuideRemoteProcedureCalls RPC] facility that provides automatic object serialization to and from the server for the purpose of invoking remote methods.   
 
 
- _Note: For a list of JRE classes that GWT can translate out of the box, see the [RefJreEmulation documentation for the GWT JRE emulation library]._
+ _Note: For a list of JRE classes that GWT can translate out of the box, see the GWT [RefJreEmulation JRE Emulation Reference]. _
 
 ==Classes that provide similar functionality==
 
 In some classes, the functionality of the class is too expensive to be emulated entirely, so a similar routine in another package is provided instead.  Here are some commonly used routines that provide a subset of the native JRE  functionality:
 
- * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/DateTimeFormat.html com.google.gwt.i18n.client.DateTimeFormat] : Supports a subset of `java.util.DateTimeFormat`.  See examples in the [DevGuideDateAndNumberFormatting date and number formatting] section.
- * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/NumberFormat.html com.google.gwt.i18n.client.NumberFormat] : Supports a subset of `java.util.NumberFormat`.  See examples in the [DevGuideDateAndNumberFormatting date and number format] section.
- * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/IsSerializable.html com.google.gwt.user.client.rpc] : A marker class used similarly to `java.io.Serializable` for GWT-RPC
+ * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/DateTimeFormat.html com.google.gwt.i18n.client.DateTimeFormat] : Supports a subset of `java.util.DateTimeFormat`.  See examples in the [DevGuideDateAndNumberFormat date and number formatting] section.
+ * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/NumberFormat.html com.google.gwt.i18n.client.NumberFormat] : Supports a subset of `java.util.NumberFormat`.  See examples in the [DevGuideDateAndNumberFormat date and number format] section.
+ * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/IsSerializable.html com.google.gwt.user.client.rpc] : A marker class used similarly to `java.io.Serializable` for GWT RPC
  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/Timer.html com.google.gwt.user.client.Timer] : A simplified, browser-safe timer class. This class serves the same purpose as `java.util.Timer`, but is simplified because of the single-threaded environment.

@@ -1,22 +1,19 @@
 #summary Optimize the performance of your application by reducing the number of HTTP requests for images.
 
 =Image Bundles=
+An _image bundle_ is a construct used to improve application performance by reducing the number of round trip HTTP requests to the server to fetch images. GWT can package many image files into a single large file to be downloaded from the server and managed as a Java object.
 
-An _image bundle_ is a construct used to improve application performance by reducing the number of round trip HTTP requests to the server to fetch images.  GWT can package many image files into a single large file to be downloaded from the server and managed as a Java object.
-
-
-===See Also===
-
-  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ImageBundle.html ImageBundle]
-
-==Specifics==
-
-[DevGuideImageBundleMotivation ImageBundles Make Using Images More Efficient] 
-Explians why Image Bundles are more efficient than using <IMG> HTML tags
+==Topics==
+[DevGuideImageBundleMotivation ImageBundles Make Using Images More Efficient]
+  Explains why Image Bundles are more efficient than using HTML IMG tags.
 
 [DevGuideDefiningAndUsingImageBundle Creating and Using an Image Bundle]
-Define an image bundle and use it in your application.
+  Define an image bundle and use it in your application.
 
 [DevGuideImageBundleWithLocalization Image Bundles and Localization]
-Create locale-sensitive image bundles by using GWT's localization capabilities.
+  Create locale-sensitive image bundles by using GWT's localization capabilities.
+
+==See Also==
+See also, the GWT API Reference, the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ImageBundle.html ImageBundle] interface.
+
 
