@@ -1,8 +1,8 @@
-#summary HOWTO add accessibility support to your widgets and applications
+#summary How to add accessibility support to your widgets and applications.
 
 = Adding Accessibility Support to GWT Widgets: A Guide for Widget Developers =
 
-This document describes how to add accessibility support to your GWT application and widgets. A variety of different techniques are discussed; there is not yet a standard and generally-applicable approach for making Ajax applications accessible, but we provide some suggestions.
+This document describes how to add accessibility support to your GWT application and widgets. A variety of different techniques are discussed; there is not yet a standard and generally-applicable approach for making AJAX applications accessible, but we provide some suggestions.
 
 == Class com.google.gwt.user.client.ui.Accessibility ==
 
@@ -31,8 +31,9 @@ Note that some of the role names have already been defined as constants in the A
 
 == Adding ARIA States ==
 
-An ARIA state is an additional attribute that reflects the current state of a widget - for example, whether a checkbox is checked or unchecked. A state should be initialized at the time a widget is constructed and updated during user interaction. Note that:
+An ARIA state is an additional attribute that reflects the current state of a widget, for example, whether a checkbox is checked or unchecked. A state should be initialized at the time a widget is constructed and updated during user interaction.
 
+Note that:
     * A widget can have numerous state attributes, whereas a widget can only ever have one role attribute.
     * State attributes are dynamic and change during the widget's lifetime. A role once set does not change.
 
@@ -177,13 +178,13 @@ Some screen readers have started to do more than just read the text of items sel
 
 == Associating Meaningful Labels ==
 
-A web page will often include human-readable descriptive elements - such as Label or HTML widgets - that explain the purpose of a particular widget. However, the association between a widget and its description may not be obvious to a browser or a screen reader. ARIA defines the `aria-labelledby` state which can be used to explicitly associate a widget with one or more descriptive elements.
+A web page will often include human-readable descriptive elements (such as Label or HTML widgets) that explain the purpose of a particular widget. However, the association between a widget and its description may not be obvious to a browser or a screen reader. ARIA defines the `aria-labelledby` state which can be used to explicitly associate a widget with one or more descriptive elements.
 
 In order to associate a label with a widget, ensure that descriptive elements all have a unique id. The assigned id can later be used with to set the `aria-labelledby` state of a widget to refer to the id values of any descriptive elements, thereby associating those descriptive elements with the widget.
 
 == Automatically Speaking Highlighted Content == 
 
-Ajax components often highlight an item of interest without moving keyboard focus to that item. This creates a good end-user experience when using components such as autocomplete widgets; the user can continue to type and obtain further refinements to the available set of choices. Because screenreaders traditionally attempt to speak the item that has keyboard focus, they will not read highlighted items. ARIA live regions help make widgets such as autocomplete boxes usable for visually impaired users.
+AJAX components often highlight an item of interest without moving keyboard focus to that item. This creates a good end-user experience when using components such as autocomplete widgets; the user can continue to type and obtain further refinements to the available set of choices. Because screenreaders traditionally attempt to speak the item that has keyboard focus, they will not read highlighted items. ARIA live regions help make widgets such as autocomplete boxes usable for visually impaired users.
 
 === How It Works ===
 
@@ -206,7 +207,7 @@ The ARIA role `region` is added when instantiating the relevant DOM nodes in the
   }
 }}}
 
-Here, we have created a hidden div that holds the content to be spoken. We've declared it to have `role = 'region'` and `live = 'rude'`; the latter setting specifies that updates to this content have the highest priority. Next, we set up the needed associations so that the set of suggestions returned as the user types into the !AutoCompleteWidget's text box are put in hidden div:
+Here, we have created a hidden div element that holds the content to be spoken. We've declared it to have `role = 'region'` and `live = 'rude'`; the latter setting specifies that updates to this content have the highest priority. Next, we set up the needed associations so that the set of suggestions returned as the user types into the !AutoCompleteWidget's text box are put in hidden div:
 
 {{{
     // This method is called via a keyboard event handler

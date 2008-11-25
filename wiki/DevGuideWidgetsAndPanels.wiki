@@ -2,7 +2,7 @@
 
 =Widgets and Panels=
 
-GWT applications construct user interfaces using [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Widget.html widgets] that are contained within [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Panel.html panels].  `Widgets` allow you to interact with the user and `panels` control the placement user interface elements on the page.  Widgets and panels work the same way on all browsers; by using them, you eliminate the need to write specialized code for each browser.
+You construct user interfaces in GWT applications using [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Widget.html widgets] that are contained within [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Panel.html panels].  Widgets allow you to interact with the user. Panels control the placement of user interface elements on the page.  Widgets and panels work the same way on all browsers; by using them, you eliminate the need to write specialized code for each browser.
 
 == Widgets==
 
@@ -17,14 +17,13 @@ Widgets define your applications input and output with the user.  Examples of wi
  * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/RichTextArea.html RichTextArea ] A text editor that allows R
    http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/RichTextArea.png
 
-But you are not limited to the set of widgets provided by the toolkit. There are a number of ways to [DevGuideCreatingCustomWidgets create custom widgets]:
+You are not limited to the set of widgets provided by GWT. There are a number of ways to [DevGuideCreatingCustomWidgets create custom widgets]:
 
- * You can bundle together existing widgets and create a composite widget.
+ * You can bundle together existing widgets and create a _composite_ widget.
  * You can write GWT bindings to an existing !JavaScript widget.
  * You can create your own widget from scratch using either Java or !JavaScript.
 
 You can also use one or more of the many third party widget libraries written for GWT.
-
 
 ==Panels==
 
@@ -40,13 +39,13 @@ Panels contain widgets and other panels.  They are used to define the [DevGuideU
 
 ==Styles==
 
-Visual styles are applied to widgets using [DevGuideStyleSheets Cascading Style Sheets (CSS)].  Besides the default browser supplied definitions, each GWT Widget and Panel has pre-defined stylesheet class definitions documented in the class reference documentation. 
+Visual styles are applied to widgets using [DevGuideStyleSheets Cascading Style Sheets (CSS)].  Besides the default browser supplied definitions, each GWT widget and panel has pre-defined style sheet class definitions documented in the class reference documentation. 
 
 ===See Also===
 
- * [DevGuideWidgetGallery Widget Gallery] Diagrams and screen captures of the different GWT UI elements
+ * [DevGuideWidgetGallery Widget Gallery] Diagrams and screen captures of the different GWT UI elements.
 
  * [DevGuideCreatingCustomWidgets Creating Custom Widgets] Discussion of how to create your own widgets in GWT.
 
- * [DevGuideUnderstandingLayout Understanding Layout] Examples of how too use Panels
+ * [DevGuideUnderstandingLayout Understanding Layout] Examples of how to use panels.
 
