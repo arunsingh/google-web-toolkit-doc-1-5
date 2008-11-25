@@ -59,7 +59,7 @@ $PP_OFF
 In the above style sheet code, there are two style rules that apply to menu items. The first applies to all menu items (both selected and unselected), while the second (with the -selected suffix) applies only to selected menu items. A selected menu item's style name will be set to `"gwt-MenuItem gwt-MenuItem-selected"`, specifying that both style rules will be applied. The most common way of doing this is to use [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setStyleName(java.lang.String) setStyleName] to set the base style name, then [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#addStyleName(java.lang.String) addStyleName()] and [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#removeStyleName(java.lang.String) removeStyleName()] to add and remove the second style name. 
 
 
-==Accociating CSS Files==
+==Associating CSS Files==
 
 
 There are two approaches for associating CSS files with your module:
