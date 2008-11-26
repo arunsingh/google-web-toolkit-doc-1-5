@@ -1,16 +1,17 @@
-#summary Questions pertaining to server-side code.
+#summary Frequently asked questions about server-side code.
 
-=Communicating with a Server=
+==FAQ: Communicating with the Server==
+===Asynchronous Communication===
+  * [FAQ_SynchronousServerConnection Why doesn't GWT provide a synchronous server connection option?]
+    
+===Security===
+  * [FAQ_SOP What is the Same Origin Policy, and how does it affect GWT?]
 
-  * [FAQ_ServerCallWithoutRPC How do I make a call to the server if I am not using the GWT RPC?]
-  
-  * [FAQ_RPCSerializationSupport Does the GWT RPC system support the use of java.io.Serializable?]
-  
-  * [FAQ_SynchronousServerConnection Why doesn't GWT provide a synchronous server connection option?]    
-  
+===GWT RPC===
+  * [FAQ_ServerCallWithoutRPC How do I make a call to the server if I am not using GWT RPC?]
+  * [FAQ_RPCSerializationSupport Does GWT RPC support the use of java.io.Serializable?]
+
+===JSON===
   * [FAQ_JSONFeedsFromOtherDomain How can I dynamically fetch JSON feeds from other web domains?]
-  
-  * [FAQ_HostedModeRPCsResourceNotFound Why do I get a "Resource not found" error when executing an RPC in hosted mode?]
-
-  * [FAQ_RPCContentTypeTextPlain RPC Error: javax.servlet.ServletException: Content-Type must be 'text/plain' with 'charset=utf-8' (or unspecified charset) ]
+  * [FAQ_JSONJSOIntoGWTJSONObject How can I coerce a JSON JavaScriptObject into a GWT JSONObject?]
 
