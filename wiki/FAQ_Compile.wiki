@@ -1,0 +1,11 @@
+﻿#summary Compiling Java to JavaScript--Frequently Asked Questions.
+
+==FAQ: Compiling Java to !JavaScript==
+===Output===
+  * [FAQ_GWTApplicationFiles What's with all the cache/nocache stuff and weird filenames?]
+  * [FAQ_ChangeLocationGWTApplicationFiles How do I change the location of my cache/nocache HTML files?]
+  * [FAQ_JavaScriptGibberish Why is my GWT-generated JavaScript gibberish?]
+  * [FAQ_ProjectScriptBuildServlet Why don't the project scripts build my Servlets?]
+===Performance===
+  * [FAQ_CompileOnePermutation Can I speed up the GWT compiler?]
+ 
