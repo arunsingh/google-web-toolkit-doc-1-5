@@ -1,4 +1,5 @@
 #summary table of contents for GWT documentation
+  *[GettingStarted Getting Started]
   * What's New in GWT 1.5?
     * [ReleaseNotes_1_5_ImportantNotes Important Notes]
     * [ReleaseNotes_1_5_UpgradeGuide Upgrade Guide]
@@ -11,7 +12,7 @@
       * [ReleaseNotes_1_5_Misc Miscellaneous]
     * [ReleaseNotes_1_5_BreakingChanges Breaking Changes]
     * [ReleaseNotes_1_5_BugFixes Bug Fixes]
-  * [GettingStarted Tutorial]
+  * [GettingStartedTutorial Tutorial]
     * [GettingStartedBasics GWT Basics]
       * [GettingStartedInstall Install GWT]
       * [GettingStartedCreateProject Create a GWT Project]
