@@ -1,6 +1,0 @@
-#summary Deploying your application.
-
-=Deploying a GWT Application=
-
-  * [FAQ_PackageAppInWARFile How do I package a GWT application into a WAR file?]
-

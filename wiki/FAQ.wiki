@@ -1,0 +1,95 @@
+#summary Google Web Toolkit: Frequently Asked Questions.
+= Google Web Toolkit: Frequently Asked Questions =
+==Getting Started==
+ ===Product Overview===
+  * [FAQ_WhatIsTheGWT What is GWT?]
+  * [FAQ_HowGWTWorks How does GWT work?]
+  * [OverviewWhyTranslate Why code in Java and then translate it to JavaScript?]
+  * [OverviewHowWellDoesGWTWork How well does GWT work?]
+
+ ===Installation and Upgrades===
+  * [FAQ_GWTSysReqs What are the system requirements for GWT?]
+  * [FAQ_GWTInstall How do I install GWT?]
+  * [FAQ_GWTCountry Is GWT available in my country? Does it work for my language?]
+  * [FAQ_GWTCost Does GWT cost anything?]
+  * [FAQ_GWTFree Why is Google giving GWT away?]
+  * [FAQ_NewVersionsOfGWT Will I have to upgrade my application when a new version of GWT is released?]
+  * [FAQ_WontRunAfterUpgrade How do I get my project to run again after upgrading GWT?]
+
+ ===Licensing===
+  * [FAQ_CommercialAppsWithGWT Can I use GWT to develop commercial/enterprise applications?]
+  * [FAQ_Redistribution Can I redistribute the GWT binaries with my product?]
+
+ ===Support===
+  * [FAQ_GWTBlog Does GWT have a blog?]
+  * [FAQ_GWTContact Who do I contact if I have questions?]
+  * [FAQ_SubmittingBugReports Where should I report bugs?]
+  * [FAQ_SubmittingSuggestions Where should I submit suggestions to improve GWT?]
+  * [FAQ_SubmitPatch Where can I find the GWT source code? Can I submit a patch?]
+
+ ===Browsers and Servers===
+  * [FAQ_CurrentlySupportBrowsers What browsers does GWT support?]
+  * [FAQ_NewBrowserSupport Will my application break when a new browser comes out?]
+  * [FAQ_TomcatRequiredOnServerForGWT Do I need to run Tomcat on my server to use GWT?]
+  * [FAQ_GWTWithServerSideTemplatingTool Can I use GWT with my favorite server-side templating tool?]
+
+==Building the User Interface==
+ ===Layout===
+  * [FAQ_UILayoutDebug I'm having trouble with my layout. How do I tell where my panels are?]
+  * [FAQ_UIVerticalFillApp How do I create an application that fills the page vertically when the browser window resizes?]
+  * [FAQ_UISetHeightPercentage Why doesn't setting a widget's height as a percentage work?]
+  * [FAQ_StandardsModeSupport Does GWT support standards mode?]
+
+ ===Event Handling and Performance===
+  * [FAQ_UILargeTablePerformance How do I display a big list of items in a table with good performance?]
+  * [FAQ_UIImagePreload What can I do to make animations appear more smooth and borders load more quickly?]
+  * [FAQ_UIOnePxBackgroundInIE Why do I see poor performance in Internet Explorer when using a one pixel background image?]
+  * [FAQ_UIUseOneHandler As the application grows, event handlers seem to fire more slowly.]
+  * [FAQ_WidgetEventBubbling How can I most efficiently handle events from many interior widgets?]
+
+==Writing the Client-side Code in Java==
+ ===Project Architecture===
+  * [FAQ_GWTModuleDefinition What is a GWT module?]
+  * [FAQ_GWTModuleInheritance How do I know which GWT modules I need to inherit?]
+
+ ===Writing in Java===
+  * [FAQ_EnableAssertions How do I enable assertions?]
+
+ ===!JavaScript Native Interface===
+  * [FAQ_CallGWTMethodFromHandwrittenJS How do I call Java methods from handwritten JavaScript or third party libraries?]
+  * [FAQ_EvalJSNIMethod Help! I'm having problems with eval() in my JSNI method.]
+  * [FAQ_BridgeMethodNotWorkingOnclick Why doesn't the bridge call to my JSNI method work in <some_obj>.onclick?]
+  * [FAQ_PassGWTMethodAsCallbackFunction How do I pass a Java method as a callback function?]
+
+==Debugging in Hosted Mode==
+  * [FAQ_LanguageDifferenceBtwnWebHostedMode What are the language differences between web mode and hosted mode?]
+  * [FAQ_UsingEJBInHostedMode How do I use EJBs in hosted mode?]
+  * [FAQ_HostedModeNoServer How do I use my own server in hosted mode instead of GWT's built-in Tomcat instance?]
+
+==Compiling Java to !JavaScript==
+ ===Output===
+  * [FAQ_DeferredBindingDefinition What is deferred binding?]
+  * [FAQ_GWTApplicationFiles What's with all the cache/nocache stuff and weird filenames?]
+  * [FAQ_ChangeLocationGWTApplicationFiles How do I change the location of my cache/nocache HTML files?]
+  * [FAQ_JavaScriptGibberish Why is my GWT-generated JavaScript gibberish?]
+  * [FAQ_ProjectScriptBuildServlet Why don't the project scripts build my Servlets?]
+ ===Performance===
+  * [FAQ_CompileOnePermutation Can I speed up the GWT compiler?]
+
+==Communicating with the Server==
+ ===Asynchronous Communication===
+  * [FAQ_SynchronousServerConnection Why doesn't GWT provide a synchronous server connection option?]    
+ ===Security===
+  * [FAQ_SOP What is the Same Origin Policy, and how does it affect GWT?]
+
+ ===GWT RPC===
+  * [FAQ_ServerCallWithoutRPC How do I make a call to the server if I am not using GWT RPC?]
+  * [FAQ_RPCSerializationSupport Does GWT RPC support the use of java.io.Serializable?]
+
+ ===JSON===
+  * [FAQ_JSONFeedsFromOtherDomain How can I dynamically fetch JSON feeds from other web domains?]
+  * [FAQ_JSONJSOIntoGWTJSONObject How can I coerce a JSON JavaScriptObject into a GWT JSONObject?]
+
+==Deploying a GWT Application==
+  * [FAQ_PackageAppInWARFile How do I package a GWT application into a WAR file?]
+

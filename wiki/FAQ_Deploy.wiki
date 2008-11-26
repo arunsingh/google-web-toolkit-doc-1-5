@@ -1,0 +1,5 @@
+#summary Deploying a GWT application--Frequently Asked Questions
+
+==FAQ: Deploying a GWT Application===
+  * [FAQ_PackageAppInWARFile How do I package a GWT application into a WAR file?]
+
