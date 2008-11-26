@@ -1,0 +1,31 @@
+#summary If you are new to GWT, start here. Links to resources that will help you get started with Google Web Toolkit (GWT). * Downloads * Product Overview * Community and Resources * Blog *
+
+= Google Web Toolkit =
+  * [http://code.google.com/webtoolkit/ GWT Home]
+  * [http://googlewebtoolkit.blogspot.com/ Blog]
+
+== Getting Started ==
+  * [http://code.google.com/webtoolkit/overview.html Product Overview]
+    * How GWT works
+    * Development workflow
+    * Features
+  * [http://code.google.com/webtoolkit/download.html Download]
+  * [http://code.google.com/webtoolkit/gettingstarted.html Quick Start]
+    * Installing Google Web Toolkit
+    * Building a sample application
+    * Creating an application from scratch (with or without Eclipse)
+  * [http://code.google.com/webtoolkit/examples/ Examples]
+    * Showcase of GWT Features
+    * Mail Application
+    * Dynamic table
+      
+== Community and Resources ==
+  * [http://groups.google.com/group/Google-Web-Toolkit Developer's Forum]
+  * [http://code.google.com/webtoolkit/makinggwtbetter.html Contributor's Guide]
+  * [http://groups.google.com/group/Google-Web-Toolkit-Contributors Contributor's Forum]
+  * [http://code.google.com/p/google-web-toolkit/ Source Code Project]
+  * [http://code.google.com/p/google-web-toolkit/issues/list Issue Tracker]
+  * [http://code.google.com/webtoolkit/tools.html Tools and Libraries]
+  * [MoreResources Articles and Tutorials]
+  * [http://code.google.com/webtoolkit/books.html Books]
+
