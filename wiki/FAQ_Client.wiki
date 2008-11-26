@@ -1,12 +1,17 @@
-#summary The Java to !JavaScript interface.
+#summary Writing the Client-side code--Frequently Asked Questions.
 
-=!JavaScript Native Interface=
+==FAQ: Writing the Client-side Code in Java==
+===Project Architecture===
+  * [FAQ_GWTModuleDefinition What is a GWT Module?]
+  * [FAQ_GWTModuleInheritance How do I know which GWT modules I need to inherit?]
 
+===Writing in Java===
+  * [FAQ_EnableAssertions How do I enable assertions?]
+
+===!JavaScript Native Interface===
   * [FAQ_CallGWTMethodFromHandwrittenJS How do I call Java methods from handwritten JavaScript or third party libraries?]
-
-  * [FAQ_EvalJSNIMethod Help! I'm having problems with eval() in my JSNI method!]
-
+  * [FAQ_EvalJSNIMethod Help! I'm having problems with eval() in my JSNI method.]
   * [FAQ_BridgeMethodNotWorkingOnclick Why doesn't the bridge call to my JSNI method work in <some_obj>.onclick?]
-
   * [FAQ_PassGWTMethodAsCallbackFunction How do I pass a Java method as a callback function?]
+
 
