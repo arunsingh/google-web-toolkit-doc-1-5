@@ -10,7 +10,7 @@
 ===Event Handling and Performance===
   * [FAQ_UILargeTablePerformance How do I display a big list of items in a table with good performance?]
   * [FAQ_UIImagePreload What can I do to make animations appear more smooth and borders load more quickly?]
-  * [FAQ_UIOnePxBackgroundInIE Why do I see poor performance in Internet Explorer when using a one pixel background image?]
-  * [FAQ_UIUseOneListener As the application grows, event handlers seem to fire more slowly.]
+  * [FAQ_UIOnePxBackgroundInIE Why do I see poor performance when using a one pixel background image?]
+  * [FAQ_UIUseOneListener As the application grows, event listeners seem to fire more slowly.]
   * [FAQ_WidgetEventBubbling How can I most efficiently handle events from many interior widgets?]
 

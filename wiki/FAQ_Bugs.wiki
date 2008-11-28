@@ -1,5 +1,8 @@
 #summary How to submit and track issues.
-
+#labels Deprecated
+<wiki:comment>
+2008-11-27. Replaced by FAQ.wiki. Topics moved to FAQ_GettingStarted.
+</wiki:comment>
 =Bug and Issue Tracking=
 
   * [FAQ_SubmittingBugReports Where should I report bugs?]

@@ -1,4 +1,8 @@
 #summary Questions about overall GWT functionality.
+#labels Deprecated
+<wiki:comment>
+2008-11-27. Replaced by FAQ.wiki.
+</wiki:comment>
 
 =Fundamentals=
 

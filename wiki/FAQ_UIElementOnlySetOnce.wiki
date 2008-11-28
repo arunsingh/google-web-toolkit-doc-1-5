@@ -1,6 +1,6 @@
 #summary Why do I get the assertion, "Element may only be set once?"
 <wiki:comment>
-2008-11-27. Deprecated. Duplicate of FAQ_AssertionElementMayOnlyBeSetOnce. Combine content.
+2008-11-27. Deprecated. Duplicate of FAQ_AssertionElementMayOnlyBeSetOnce. Combined content.
 </wiki:comment>
 = Why do I get the assertion, "Element may only be set once?" =
 

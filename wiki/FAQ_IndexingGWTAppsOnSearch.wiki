@@ -1,4 +1,5 @@
 #summary How do I get my GWT application indexed on search engines?
+#label Phase-Requirements
 
 = How do I get my GWT application indexed on search engines? =
 
