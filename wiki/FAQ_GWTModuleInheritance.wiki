@@ -1,10 +1,9 @@
 #summary How do I know which GWT modules I need to inherit?
 
 = How do I know which GWT modules I need to inherit? =
+To minimize complexity and compilation times, GWT libraries are broken up into modules that contain various functionality.  For example, there is a module for JSON support, and a separate module for the HTTP [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestBuilder.html RequestBuilder] functionality.  If you want to use a given piece of functionality, you must include the appropriate module via an `<`inherits`>` tag in your project's module XML file.
 
-To minimize complexity and compilation times, GWT's libraries are broken up into modules that contain various functionality.  For example, there is a module for JSON support, and a separate module for the HTTP [http://google-web-toolkit.googlecode.com/svn/javadoc/1.4/com/google/gwt/http/client/RequestBuilder.html RequestBuilder] functionality.  If you want to use a given piece of functionality, you must include the appropriate module via an <inherits> tag in your project's XML file.
-
-Since it can be difficult to remember which module includes which functionality, the table below summarizes the available modules.
+The table below summarizes the available modules.
 
 || *Module Name* || *Contents* ||
 || com.google.gwt.user.User || Core GWT functionality; required for every project ||
@@ -13,3 +12,4 @@ Since it can be difficult to remember which module includes which functionality,
 || com.google.gwt.json.JSON ||	JSON creation and parsing ||
 || com.google.gwt.junit.JUnit || JUnit testing framework integration ||
 || com.google.gwt.xml.XML || XML document creation and parsing ||
+

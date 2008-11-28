@@ -1,18 +1,25 @@
-#summary Undefined DISPLAY errors compiling/testing in a console or headless environment
+#summary Undefined DISPLAY errors when compiling or testing in a console or headless environment.
 
-= Undefined DISPLAY errors compiling/testing in a console or headless environment =
+= Undefined DISPLAY errors =
+You might receive undefined DISPLAY errors when compiling or testing in a console or headless environment.
 
-On a UNIX environment, GWT tests, and in some cases the GWT compiler also, require an X display. If the continuous build is being run from a cron job, the running process may not have access to a "real" display.  You can use a program named `Xvfb` to provide a virtual display. (Xvfb stands for X11 Virtual !FrameBuffer.)
+In a UNIX environment, GWT tests (and in some cases the GWT compiler) require an X display. If the continuous build is being run from a cron job, the running process may not have access to a "real" display.  
 
-To use this, you will need to:
+=== Workaround ===
+You can provide a virtual display by using a program named Xvfb. (Xvfb stands for X11 Virtual !FrameBuffer.)
 
-  # Install `Xvfb`. 
-  # Start the `Xvfb` server and set the environment variable `DISPLAY` to use it:
+To provide a virtual display:
+ # Install Xvfb. 
+ # Start the Xvfb server and set the environment variable DISPLAY to use it.
 
 {{{
+$PP_OFF
 export DISPLAY=:2
 
-# Run Xvfb (no access control on :2) for GWT compiles and tests, if not already started.
+# Run Xvfb without access control on display :2  
+
+# This command will only start Xvfb if it is not already started.
+# Any GWT compiles and tests should set DISPLAY=:2 to use the virtual frame buffer.
 ps -ef | grep Xvfb | grep -v grep >> /dev/null || Xvfb :2 -ac &
 }}}
 

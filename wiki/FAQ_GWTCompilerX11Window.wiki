@@ -1,23 +1,33 @@
 #summary Does the GWT Compiler Need an X11 Window in Linux?
 
-= Does the GWT Compiler Need an X11 Window in Linux? =
+= !InternalError: Can't connect to X11 window =
+Does the GWT compiler need an X11 Window in Linux? No, the GWT compiler can run "headless" (that is, accessing the AWT library without needing to load a Graphics Environment Window).
 
-No, the GWT compiler can run "headless" (i.e. accessing the AWT library without needing to load a Graphics Environment Window).
+You might run into the problem in the first place because the [DevGuideImageBundles ImageBundle] feature triggers the GWT compiler to connect to an X11 Graphics Environment Window at compile time. If you don't have a DISPLAY environment variable set, it will issue the following error message:
 
-The reason why you might run into the problem in the first place is because the  [DevGuideImageBundles ImageBundle] feature triggers the GWT compiler to connect to an X11 Graphics Environment Window at compile time. If you don't have a DISPLAY environment variable set, it will complain about not being able to connect to an X11 window with the following error message `java.lang.InternalError: Can't connect to X11 window server using ':0.0' as the value of the DISPLAY variable.`
+{{{
+$PP_OFF
+java.lang.InternalError: Can't connect to X11 window server using ':0.0' as the value of the DISPLAY variable.
+}}}
 
-Although you may not be using the !ImageBundle explicitly in your client code, you may still encounter this error message. The reason why is because GWT uses the !ImageBundle internally for widgets like the Tree widget to further optimize the number of HTTP roundtrips for images and speed up your web application. This means if you're using any widgets that use !ImageBundle in their underlying implementations, the GWT compiler will search for the DISPLAY environment variable and try to connect to an X11 Graphics Window.
+Even if you are not using the !ImageBundle explicitly in your client code, you may still encounter this error message because GWT uses the !ImageBundle internally for widgets (like the Tree widget) to further optimize the number of HTTP roundtrips for images and speed up your web application. This means if you're using any widgets that use !ImageBundle in their underlying implementations, the GWT compiler will search for the DISPLAY environment variable and try to connect to an X11 Graphics Window.
+<wiki:comment>
+Do we have a list of all the widgets that use !ImageBundle in their underlying implementations somewhere?
+</wiki:comment>
 
-To avoid this error message, you will need to run the GWT compiler with the headless AWT option. The three most common methods for GWT compilation come in command-line, Eclipse Run Config, and Ant buildfile flavors, so I'll explain how to set the AWT headless option using these three compilation methods, but you can easily adapt it to your custom build process without any trouble.
+=== Workaround ===
+To avoid this error message, run the GWT compiler with the headless AWT option.
+{{{
+$PP_OFF
+-Djava.awt.headless=true
+}}}
 
-Command-line:
-Pass in the {{{-Djava.awt.headless=true argument}}}
+==== Examples ====
+*Ant.* To the GWT compilation build target, add the element: `<jvmarg value="-Djava.awt.headless=true"/>` 
 
-Ant:
-Add the {{{<jvmarg value="-Djava.awt.headless=true"/>}}} element to your GWT compilation build target.
+*Command-line.* Pass in the argument: `-Djava.awt.headless=true`
 
-Eclipse:
-In your Run Configuration window, select the _Arguments_ tab and enter {{{-Djava.awt.headless=true}}} in the _VM arguments_ section.
+*Eclipse.* In your Run Configuration window, select the Arguments tab and in the VM arguments section, enter: `-Djava.awt.headless=true`
 
-With this configuration, GWT will be running in headless mode and won't complain about an X11 window on your next GWT compilation. 
+If you use a custom build process, you can also set the AWT headless option there.
 
