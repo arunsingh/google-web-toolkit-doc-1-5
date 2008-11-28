@@ -1,5 +1,8 @@
 #summary Questions about the design and functionality of the GWT supplied APIs.
-
+#labels Deprecated
+<wiki:comment>
+2008-11-27. Replaced by Troubleshooting.wiki. FAQ_DOMNonW3CAPI deprecated as of GWT 1.5.
+</wiki:comment>
 =Using GWT Libraries=
 
   * [FAQ_DOMNonW3CAPI Why does the DOM object expose a non-W3C API?]

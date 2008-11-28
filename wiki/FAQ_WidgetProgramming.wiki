@@ -1,5 +1,8 @@
 #summary Widget Programming
-
+#labels Deprecated
+<wiki:comment>
+2008-11-27. Replaced by FAQ.wiki. Topics moved to FAQ_UI.
+</wiki:comment>
 =Widget Programming=
 Tips and tricks for widget programming.
 

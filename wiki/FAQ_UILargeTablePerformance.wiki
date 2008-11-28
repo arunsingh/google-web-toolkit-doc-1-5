@@ -7,9 +7,9 @@ Here are a few pointers for addressing the need to display lots of data through 
 == Fixed width tables ==
 
 Performance wise, you are better off using a fixed width table than one that dynamically resizes.
-
+<wiki:comment>
 TBD - Emily what did you mean here?  (CSS width in pixels or em, not %?)
-
+</wiki:comment>
 == RPC and other network transaction considerations ==
 
 Most applications are loading the data for their table over the network.  Try to reduce the number of round trips your application has to make to populate the table.  Two main strategies come to mind:

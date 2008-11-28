@@ -1,5 +1,8 @@
 #summary Issues with Internationalization and GWT
-
+#labels Deprecated
+<wiki:comment>
+2008-11-27. Replaced by Troubleshooting.wiki. Topic moved to Troubleshooting section.
+</wiki:comment>
 =Internationalization=
 
   * [FAQ_InternationalizedCharactersInLocalizedApplication Why don't international characters work in my localized application?]
