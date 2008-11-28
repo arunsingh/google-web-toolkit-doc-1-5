@@ -1,10 +1,9 @@
 #summary GWT compiler is unable to find module on classpath.
 
-= GWT compiler is unable to find module on classpath =
-
-You may have successfully compiled the project class files in an IDE, but when invoking the GWT compiler for the first time on a new project using one of the APIs provided with the GWT Google API, you may come across an error similar to the following:
-
+= Unable to find module on your classpath =
+Although you have successfully compiled the project class files in an IDE, when invoking the GWT compiler for the first time on a new project using one of the APIs provided with the GWT Google API, you come across an error similar to the following:
 {{{
+$PP_OFF
 Loading module 'com.example.gearsTest'
    Loading inherited module 'com.google.gwt.gears.Gears'
       [ERROR] Unable to find 'com/google/gwt/gears/Gears.gwt.xml' on your
@@ -15,8 +14,10 @@ com.google.gwt.core.ext.UnableToCompleteException: (see previous log entries)
 ...
 }}}
 
-The most common way to invoke the GWT compiler is through the _<module>_`-compile` script created by the `projectCreator` convenience script.   When using any third party API, you need to make sure that the GWT compiler can access the third party source code through the Java classpath.  In this case, the solution is to modify the _<module>_`-compile` script and add the `gwt-google-apis.jar` file to the `-cp` argument:
+=== Workaround ===
+When using any third party API, make sure that the GWT compiler can access the third party source code through the Java classpath.
 
+If you invoke the GWT compiler with the [DevGuideModuleCompileScript compile] script, then modify it by adding the `gwt-google-apis.jar` file to the `-cp` argument:
 {{{
 #!/bin/sh
 APPDIR=`dirname $0`;
