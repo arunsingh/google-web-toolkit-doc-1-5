@@ -1,29 +1,29 @@
 #summary Command-line script that compiles a GWT module's Java source into equivalent deployable JavaScript.
 
-==<module>-compile Script==
-
-The `<module>-compile` script is a command-line program that compiles a GWT module and creates !JavaScript to deploy an application in [DevGuideWebMode web mode].  This script is created by the [DevGuideApplicationCreator applicationCreator] tool used to generate a sample project in the standard layout.
+=Compile Script=
+The compile script is a command-line script that compiles a GWT module and creates !JavaScript to deploy an application in [DevGuideWebMode web mode]. If you use [DevGuideApplicationCreator applicationCreator] to generate a sample project in the standard layout, it generates an application-specific compile script prefixed with the module name: `<module>-compile`.
 
 The following is a full list of command-line arguments you can pass to the GWT compiler:
 
 {{{
 $PP_OFF
-GWTCompiler [-logLevel level] [-gen dir] [-out dir] [-treeLogger] [-style style] [-ea] [-validateOnly] module
+GWTCompiler [-logLevel level] [-gen dir] [-out dir] [-treeLogger] [-style style] [-ea] [-validateOnly] [module]
 }}}
 
-|| `-logLevel <level>` || The level of logging detail: ERROR, WARN, INFO, TRACE, DEBUG, SPAM, or ALL ||
-|| `-gen <directory>` || The directory into which generated files will be written for review ||
-|| `-out <directory>` || The directory to write output files into (defaults to current) ||
-|| `-treeLogger` || Logs output in a graphical tree view ||
-|| `-style` || Script output style: OBF`[`USCATED`]`, PRETTY, or DETAILED (defaults to OBF) || 
-|| `-ea` || Debugging: causes the compiled output to check assert statements. ||
-|| `-validateOnly` || Validate all source code, but do not compile. ||
+|| *Argument* || *Description* ||
+|| -logLevel `<`level`>` || Sets the level of logging detail: ERROR, WARN, INFO, TRACE, DEBUG, SPAM, or ALL. ||
+|| -gen `<`directory`>` || Specifies the directory into which generated files will be written for review. ||
+|| -out `<`directory`>` || Specifies the directory to write output files into. (Defaults to current.) ||
+|| -treeLogger || Logs output in a graphical tree view. ||
+|| -style || Sets the script output style: OBF`[`USCATED`]`, PRETTY, or DETAILED (defaults to OBF). || 
+|| -ea || Debugging: causes the compiled output to check assert statements. ||
+|| -validateOnly || Validate all source code, but do not compile. ||
+|| `<`module`>`  || Names of modules to compile. ||
 
-Any arguments at the end of the command-line are assumed to be names of modules (java class names with their full package names) to compile.
+Any arguments at the end of the command-line are assumed to be names of modules (Java class names with their full package names) to compile.
 
-===See Also===
-
- * [DevGuideApplicationCreator applicationCreator command-line tool]
-
- * [DevGuideWebMode Web Mode]
+==See Also==
+ * To generate an application-specific compile script, see [DevGuideApplicationCreator applicationCreator].
+ applicationCreator command-line tool]
+ * To learn more about deploying your application in web mode, see [DevGuideWebMode Deployment in Web Mode].
 

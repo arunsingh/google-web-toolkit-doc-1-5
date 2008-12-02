@@ -1,6 +1,5 @@
 #summary How do I install GWT?
 
 = How do I install GWT? =
-
-For step-by-step instructions, check out the [GettingStartedInstall GWT Getting Started Guide].
+For step-by-step instructions, see Getting Started: Quick Start  [http://code.google.com/webtoolkit/gettingstarted.html Installing Google Web Toolkit].
 
