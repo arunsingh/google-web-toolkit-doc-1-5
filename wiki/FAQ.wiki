@@ -1,5 +1,5 @@
 #summary Google Web Toolkit: Frequently Asked Questions.
-= Google Web Toolkit: Frequently Asked Questions =
+=Google Web Toolkit: Frequently Asked Questions=
 ==Getting Started==
  ===Product Overview===
   * [FAQ_WhatIsTheGWT What is GWT?]
@@ -50,7 +50,6 @@
 ==Writing the Client-side Code in Java==
  ===Project Architecture===
   * [FAQ_GWTModuleDefinition What is a GWT module?]
-  * [FAQ_GWTModuleInheritance How do I know which GWT modules I need to inherit?]
 
  ===Writing in Java===
   * [FAQ_EnableAssertions How do I enable assertions?]

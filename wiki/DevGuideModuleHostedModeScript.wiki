@@ -1,32 +1,32 @@
-#summary Command-line program that launches an application in Hosted Mode for debugging
+#summary Command-line script that launches an application in Hosted mode for debugging.
 
-==<module>-shell Script==
-
-The `<module>-shell` script is a command-line program that runs a GWT module in [DevGuideHostedMode Hosted Mode].  This script is created by the [DevGuideApplicationCreator applicationCreator] tool used to generate a sample project in the standard layout.
+=Hosted Mode Shell Script=
+The hosted mode shell script is a command-line script that runs a GWT module in [DevGuideHostedMode hosted mode]. If you use [DevGuideApplicationCreator applicationCreator] to generate a sample project in the standard layout, it generates an application-specific shell script prefixed with the module name: `<module>-shell`.
 
 The following is a full list of command-line arguments you can pass to the Development Shell:
 
 {{{
 $PP_OFF
-GWTShell [-port port-number | "auto"] [-noserver] [-whitelist whitelist-string] [-blacklist blacklist-string] [-logLevel level] [-gen dir] [-out dir] [-style style] [-ea]  [url]
+GWTShell [-port port-number | "auto"] [-noserver] [-whitelist whitelist-string] [-blacklist blacklist-string] 
+  [-logLevel level] [-gen dir] [-out dir] [-style style] [-ea] [url]
 }}}
 
-|| -out <directory> || The directory to write output files into (defaults to current) ||
-|| -port <port number> || Change the default port number of the embedded Tomcat server.  If `auto` is specified, a random unused port number will be used. ||
-|| -noserver || Prevents the embedded Tomcat server from running, even if a port is specified ||
-|| -whitelist <regex list>||  Allows the user to browse URLs that match the specified regexes (comma or space separated) ||
-|| -blacklist <regex list>||  Prohibits the user from browsing URLs that match the specified regexes (comma or space separated) ||
-|| -logLevel <level> || The level of logging detail: ERROR, WARN, INFO, TRACE, DEBUG, SPAM, or ALL ||
-|| -gen <directory> || The directory into which generated files will be written for review ||
-|| -style || Script output style: OBF`[`USCATED`]`, PRETTY, or DETAILED (defaults to OBF) || 
+|| *Argument* || *Description* ||
+|| -out `<`directory`>` || Specifies the directory to write output files into. (Defaults to current.) ||
+|| -port `<`port number`>` || Changes the default port number of the embedded Tomcat server.  If "auto" is specified, a random unused port number will be used. ||
+|| -noserver || Prevents the embedded Tomcat server from running, even if a port is specified. ||
+|| -whitelist `<`regex list`>`||  Allows the user to browse URLs that match the specified regexes (comma or space separated). ||
+|| -blacklist `<`regex list`>`||  Prohibits the user from browsing URLs that match the specified regexes (comma or space separated). ||
+|| -logLevel `<`level`>` || Sets the level of logging detail: ERROR, WARN, INFO, TRACE, DEBUG, SPAM, or ALL. ||
+|| -gen `<`directory`>` || Specifieds the directory into which generated files will be written for review. ||
+|| -style || Sets the script output style: OBF`[`USCATED`]`, PRETTY, or DETAILED (defaults to OBF). || 
 || -ea ||  Debugging: causes the compiled output to check assert statements. ||
-|| url || Automatically launches the specified URL ||
+|| `<`url`>` || Automatically launches the specified URL. ||
 
 Any arguments at the end of the command-line are assumed to be URLs used to launch the hosted browser.
 
-===See Also===
-
- * [DevGuideApplicationCreator applicationCreator command-line tool]
-
- * [DevGuideHostedMode Hosted Mode]
+==See Also==
+ * To generate an application-specific hosted mode shell script, see [DevGuideApplicationCreator applicationCreator].
+ * To learn more about using hosted mode during development, see [DevGuideHostedMode Debugging in Hosted Mode].
+ * If you don't want to use the embedded Tomcat server, see [FAQ_HostedModeNoServer How do I use my own server in hosted mode?]
 
