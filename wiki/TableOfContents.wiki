@@ -1,5 +1,5 @@
 #summary table of contents for GWT documentation
-  *[GettingStarted Getting Started]
+  * [GettingStarted Getting Started]
   * What's New in GWT 1.5?
     * [ReleaseNotes_1_5_ImportantNotes Important Notes]
     * [ReleaseNotes_1_5_UpgradeGuide Upgrade Guide]
@@ -198,5 +198,3 @@
     * [Article_DomEventsAndMemoryLeaks DOM Events, Memory Leaks, and You]
     * [Article_SecurityForGWTApplications Security for GWT Applications]
     * [Article_UsingGWTForJSONMashups Using GWT for JSON Mashups]
-
-
