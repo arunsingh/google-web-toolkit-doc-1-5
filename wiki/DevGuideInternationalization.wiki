@@ -10,41 +10,41 @@ GWT supports a variety of ways of internationalizing your code. Start by researc
 
  * *Are you writing code from scratch?* <br>If so, you will probably want to read up on GWT's [DevGuideStaticStringInternationalization static string internationalization] techniques. 
 
- * *Do you want to internationalize mostly settings or end-user messages?* <br>If you have mostly settings and interface labels with fixed text, consider [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Constants.html Constants], which uses the least runtime resources. If you have a lot a of end-user messages where you want to add arguments to each message, then [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Messages.html Messages] is probably what you want. 
+ * *Do you want to internationalize mostly settings or end-user messages?* <br>If you have mostly settings and interface labels with fixed text, consider [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants], which uses the least runtime resources. If you have a lot a of end-user messages where you want to add arguments to each message, then [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Messages.html Messages] is probably what you want. 
 
- * *Do you have existing localized properties files you'd like to reuse?*  <br>The [DevGuideI18nCreator i18nCreator tool] can automatically generate interfaces that extend either [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Constants.html Constants], [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/ConstantsWithLookup.html ConstantsWithLookup] or [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Messages.html Messages]. 
+ * *Do you have existing localized properties files you'd like to reuse?*  <br>The [DevGuideI18nCreator i18nCreator tool] can automatically generate interfaces that extend either [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants], [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/ConstantsWithLookup.html ConstantsWithLookup] or [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Messages.html Messages]. 
 
- * *Are you adding GWT functionality to an existing web application that already has a localization process defined?* <br>[http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Dictionary.html Dictionary] will help you interoperate with existing pages without requiring you to use [DevGuideSpecifyingLocale GWT's concept of locale]. 
+ * *Are you adding GWT functionality to an existing web application that already has a localization process defined?* <br>[http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Dictionary.html Dictionary] will help you interoperate with existing pages without requiring you to use [DevGuideSpecifyingLocale GWT's concept of locale]. 
 
- * *Do you really just want a simple way to get properties files down to the client regardless of localization?*  <br>You can do that, too. Try using [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Constants.html Constants] without [DevGuideSpecifyingLocale specifying a locale]. 
+ * *Do you really just want a simple way to get properties files down to the client regardless of localization?*  <br>You can do that, too. Try using [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants] without [DevGuideSpecifyingLocale specifying a locale]. 
 
 ==Internationalization Techniques==
 
 GWT offers multiple internationalization techniques to afford maximum flexibility to GWT developers and to make it possible to design for efficiency, maintainability, flexibility, and interoperability in whichever combinations are most useful. 
 
- * *[DevGuideStaticStringInternationalization Static string internationalization]* <br>A family of efficient and type-safe techniques that rely on strongly-typed Java interfaces, [DevGuidePropertiesFiles properties files], and code generation to provide locale-aware messages and configuration settings. These techniques depend on the interfaces [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Constants.html Constants],  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/ConstantsWithLookup.html ConstantsWithLookup] and [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Messages.html Messages]. 
+ * *[DevGuideStaticStringInternationalization Static string internationalization]* <br>A family of efficient and type-safe techniques that rely on strongly-typed Java interfaces, [DevGuidePropertiesFiles properties files], and code generation to provide locale-aware messages and configuration settings. These techniques depend on the interfaces [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants],  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/ConstantsWithLookup.html ConstantsWithLookup] and [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Messages.html Messages]. 
 
- * *[DevGuideDynamicStringInternationalization Dynamic string internationalization]* <br>A simple and flexible technique for looking up localized values defined in a module's [DevGuideHostPage host page] without needing to recompile your application. This technique is supported by the class [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Dictionary.html Dictionary]. 
+ * *[DevGuideDynamicStringInternationalization Dynamic string internationalization]* <br>A simple and flexible technique for looking up localized values defined in a module's [DevGuideHostPage host page] without needing to recompile your application. This technique is supported by the class [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Dictionary.html Dictionary]. 
 
- * *[http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Localizable.html Extending or implementing Localizable]* <br>Provides a method for internationalizing sets of algorithms using locale-sensitive type substitution. This is an advanced technique that you probably will not need to use directly, although it is useful for implementing complex internationalized libraries. For details on this technique, see the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Localizable.html Localizable] class documentation. 
+ * *[http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Localizable.html Extending or implementing Localizable]* <br>Provides a method for internationalizing sets of algorithms using locale-sensitive type substitution. This is an advanced technique that you probably will not need to use directly, although it is useful for implementing complex internationalized libraries. For details on this technique, see the [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Localizable.html Localizable] class documentation. 
 
 ==The I18N Module==
 
 Core types related to internationalization:  
 
-  *  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Constants.html Constants]  Useful for localizing typed constant values  
+  *  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants]  Useful for localizing typed constant values  
 
-  *  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Messages.html Messages]  Useful for localizing messages requiring arguments  
+  *  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Messages.html Messages]  Useful for localizing messages requiring arguments  
 
-  *  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/ConstantsWithLookup.html ConstantsWithLookup]  Like [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Constants.html Constants] but with extra lookup flexibility for highly data-driven applications  
+  *  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/ConstantsWithLookup.html ConstantsWithLookup]  Like [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants] but with extra lookup flexibility for highly data-driven applications  
 
-  *  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Dictionary.html Dictionary]  Useful when adding a GWT module to existing localized web pages  
+  *  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Dictionary.html Dictionary]  Useful when adding a GWT module to existing localized web pages  
 
-  *  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Localizable.html Localizable]  Useful for localizing algorithms encapsulated in a class  
+  *  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Localizable.html Localizable]  Useful for localizing algorithms encapsulated in a class  
   
-  *  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/DateTimeFormat.html DateTimeFormat]  Formatting dates as strings.  See the section on [DevGuideDateAndNumberFormat date and number formatting].
+  *  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/DateTimeFormat.html DateTimeFormat]  Formatting dates as strings.  See the section on [DevGuideDateAndNumberFormat date and number formatting].
 
-  *  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/NumberFormat.html NumberFormat]  Formatting numbers as strings.  See the section on [DevGuideDateAndNumberFormat date and number formatting].
+  *  [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/NumberFormat.html NumberFormat]  Formatting numbers as strings.  See the section on [DevGuideDateAndNumberFormat date and number formatting].
   
 The GWT internationalization types reside in the com.google.gwt.i18n package. To use any of these types, your module must inherit from the I18N module (com.google.gwt.i18n.I18N).
 
@@ -67,7 +67,7 @@ A flexible and simplistic method of internationalizing strings that easily integ
 How to add locales and specify the `locale` client property during deployment.
 
 [DevGuidePropertiesFiles Localized Properties Files]
-How to create localized properties files for use with [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Constants.html Constants] or [http://google-web-toolkit.googlecode.com/svn/javadoc/1.6/com/google/gwt/i18n/client/Messages.html Messages] 
+How to create localized properties files for use with [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Constants.html Constants] or [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Messages.html Messages] 
 
 [DevGuideI18NAnnotations Annotations for use with Internationalization]
 New to GWT 1.5 is the use of annotations to allow more sophisticated internationalization. support, such as plurals and descriptions.
