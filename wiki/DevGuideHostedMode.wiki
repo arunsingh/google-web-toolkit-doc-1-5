@@ -76,7 +76,7 @@ http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/DevelopmentShell4.png
 For a full list of command-line parameters, see [DevGuideModuleHostedModeScript Hosted Mode Shell script].
 
 ==Using an IDE in Hosted Mode==
-When using an IDE such as Eclipse, JBuilder, or IntelliJ, it is possible to use the IDE's built-in Java debugger to debug your module. Simply set a break point somewhere inside your code, (such as the `onModuleLoad()` entry point) where you want the debugger to stop and let you inspect the state of your program. 
+When using an IDE such as Eclipse, JBuilder, or IntelliJ, it is possible to use the IDE's built-in Java debugger to debug your module. Simply set a breakpoint somewhere inside your code, (such as the `onModuleLoad()` entry point) where you want the debugger to stop and let you inspect the state of your program. 
 
 For an example of debugging in hosted mode using the Eclipse IDE, see the GWT Basics tutorial,  [GettingStartedHostedMode Debug in hosted mode].
 
