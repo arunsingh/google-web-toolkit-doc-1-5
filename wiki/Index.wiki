@@ -31,7 +31,7 @@
   * compiler
   * compiling to JavaScript
   * component
-  * composites
+  * composite
   * constants
   * creating an image bundle
   * Creating and Using an Image Bundle
@@ -69,7 +69,7 @@
   * Handling exceptions
   * host page
   * hosted mode
-  * HTML Host Pages
+  * HTML host page
   * i18n
   * i18nCreator
   * iframe
@@ -116,6 +116,7 @@
   * native methods
   * numeric primitive
   * Opera
+  * overlay types
   * panel
   * param-signature
   * pattern-based filtering
@@ -148,6 +149,7 @@
   * servlet
   * Sharing objects between Java source and JavaScript
   * SOAP
+  * SOP
   * source path entries
   * special syntax
   * standard project layout
@@ -156,7 +158,7 @@
   * static string methods
   * style
   * style names
-  * stylesheet
+  * style sheet
   * SWT
   * synchronization
   * synchronous interfaces
@@ -169,7 +171,7 @@
   * unexpected exceptions
   * web mode
   * web.xml
+  * widget
   * Widget Gallery
-  * widgets
-  * Widgets Gallery
   * Writing Native JavaScript Methods
+  
