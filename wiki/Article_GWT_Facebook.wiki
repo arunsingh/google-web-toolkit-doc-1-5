@@ -10,10 +10,11 @@ In this article, I'll help you get your GWT app running as a Facebook app. Belie
 
 <ol><li>Create the Facebook App.
 Follow the instructions on Facebook's [http://developers.facebook.com/get_started.php Getting Started] page to create and name your Facebook app. Accept the default settings for now.</li>
-<li>Point your Facebook App at your GWT App.
-Adjust these Facebook App settings:
-|| Callback URL||Enter the URL of your GWT app's main HTML page. Tip: For a quick development cycle, run your server locally and use a _localhost_ URL. ||
-|| Canvas Page URL || Choose a path beneath apps.facebook.com for your Facebook app. Also select the *Use iframe* radio button. || </li></ol>
+
+<li>Point your Facebook App at your GWT App.</li></ol>
+    Adjust these Facebook App settings:
+    <table border="1"><tr><td>Callback URL</td><td>Enter the URL of your GWT app's main HTML page. Tip: For a quick development cycle, run your server locally and use a _localhost_ URL.</td></tr><tr><td>Canvas Page URL</td><td>Choose a path beneath apps.facebook.com for your Facebook app. Also select the *Use iframe* radio button.</td></tr></table>
+
 
 And you're done! Visit the Canvas Page URL that you chose, and you'll see your GWT app running in Facebook. The rest of this post will suggest a couple of ways to integrate more fully, to better leverage the Facebook platform.
 
@@ -41,9 +42,9 @@ If your GWT app is too tall, it'll be clipped and you'll see a vertical scrollba
 
 You should customize the arguments to `init()` and `setCanvasHeight()` based on your needs. Here's a description of what's going on in the snippet above:
 
-# The first script tag loads `FB_RequireFeatures`, the entry point to the Facebook JS Client Library.
-# The `FB_RequireFeatures` call loads the `CanvasUtil` feature (the `FB.CanvasClient` object).
-# Before using `FB.CanvasClient`, we must set up a [http://wiki.developers.facebook.com/index.php/Cross_Domain_Communication_Channel Cross Domain Communication Channel] between your app's canvas window and the containing Facebook window. This means a) hosting Facebook's `xd_receiver.html` file somewhere on your server, b) telling the Facebook JS Client Library where to find it (hence the `FB.XdComm.Server.init` call), and c) adding an `FB_HiddenContainer` div to the body of your main HTML page to serve as the container for channel iframes.
+<ol><li>The first script tag loads `FB_RequireFeatures`, the entry point to the Facebook JS Client Library.</li>
+<li>The `FB_RequireFeatures` call loads the `CanvasUtil` feature (the `FB.CanvasClient` object).</li>
+<li>Before using `FB.CanvasClient`, we must set up a [http://wiki.developers.facebook.com/index.php/Cross_Domain_Communication_Channel Cross Domain Communication Channel] between your app's canvas window and the containing Facebook window. This means a) hosting Facebook's `xd_receiver.html` file somewhere on your server, b) telling the Facebook JS Client Library where to find it (hence the `FB.XdComm.Server.init` call), and c) adding an `FB_HiddenContainer` div to the body of your main HTML page to serve as the container for channel iframes.</li></ol>
 
 If your app changes its height from time to time, you can ask the Facebook's JS library to check your canvas window's height at regular intervals and adjust the containing iframe's height to match. To do so, replace the `FB.CanvasClient.setCanvasHeight` call in the snippet above with:
 {{{
