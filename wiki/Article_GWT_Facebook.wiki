@@ -4,15 +4,16 @@
 
 _Jared Jacobs is the frontend lead at [http://www.kaching.com kaChing], a marketplace for investing talent. He had a chance to stop by and give us the lowdown on his team's successful port of their GWT application onto the Facebook platform. If you're looking to socialize your application on Facebook, read on for the steps to make it happen._
 
-As you may know, social networks like Facebook, LinkedIn, and MySpace can be an excellent place to grow a new business. Most of the kaChing community first discovered us through friends using our [http://www.facebook.com/apps/application.php?id=2339204748 Fantasy Stock Exchange] Facebook app.
+As you may know, social networks like Facebook, !LinkedIn, and !MySpace can be an excellent place to grow a new business. Most of the kaChing community first discovered us through friends using our [http://www.facebook.com/apps/application.php?id=2339204748 Fantasy Stock Exchange] Facebook app.
 
 In this article, I'll help you get your GWT app running as a Facebook app. Believe it or not, it can be done in just two easy steps.
 
 <ol><li>Create the Facebook App.
 Follow the instructions on Facebook's [http://developers.facebook.com/get_started.php Getting Started] page to create and name your Facebook app. Accept the default settings for now.</li>
 <li>Point your Facebook App at your GWT App.
-Adjust these Facebook App settings:||Callback URL||Enter the URL of your GWT app's main HTML page. Tip: For a quick development cycle, run your server locally and use a _localhost_ URL.||
-||Canvas Page URL|| Choose a path beneath apps.facebook.com for your Facebook app. Also select the *Use iframe* radio button.|| </li></ol>
+Adjust these Facebook App settings:
+|| Callback URL||Enter the URL of your GWT app's main HTML page. Tip: For a quick development cycle, run your server locally and use a _localhost_ URL. ||
+|| Canvas Page URL || Choose a path beneath apps.facebook.com for your Facebook app. Also select the *Use iframe* radio button. || </li></ol>
 
 And you're done! Visit the Canvas Page URL that you chose, and you'll see your GWT app running in Facebook. The rest of this post will suggest a couple of ways to integrate more fully, to better leverage the Facebook platform.
 
