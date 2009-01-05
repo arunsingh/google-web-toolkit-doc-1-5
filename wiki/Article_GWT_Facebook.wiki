@@ -1,4 +1,4 @@
-#summary How to get your GWT application running on Facebok
+#summary How to get your GWT application running on Facebook
 
 = Put Your GWT App on Facebook in 10 minutes =
 
@@ -58,7 +58,7 @@ For more info on the `CanvasUtil` feature, including how to make the containing 
 
 If a Facebook user is logged into Facebook when accessing your Facebook app, the app URL will include the user's Facebook ID in the query string as the `fb_sig_user` or `fb_sig_canvas_user` parameter, depending on whether the user has authorized your application. (See [http://wiki.developers.facebook.com/index.php/Authorizing_Applications Authorizing Applications] for more on the various request parameters.) You can use this Facebook ID, in conjunction with your app's ID and secret key, to request information about the user from Facebook using any of Facebook's various APIs. As a GWT app author, you are likely to be using a Java server, so consider using one of [http://wiki.developers.facebook.com/index.php/Java#Alternative_Java_clients these Java Facebook clients]. We use [http://code.google.com/p/facebook-java-api/ this open-source Facebook Java API].
 
-For a high-level overview of Facebook's various APIs and their relative merits, I'd recommend a [http://www.ccheever.com/blog/?p=10 recent blog post] by Facebook Platform engineer Charlie Cheever.
+For a high-level overview of Facebook's various APIs and their relative merits, I'd recommend a [http://www.ccheever.com/blog/?p=10 useful blog post] by Facebook Platform engineer Charlie Cheever.
 
 ==Get some Face time for your app==
 
