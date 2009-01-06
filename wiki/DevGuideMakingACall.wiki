@@ -13,6 +13,8 @@ The process of making an RPC from the client always involves the same steps:
 Suppose you want to call a method on a service interface defined as follows:  
 
 {{{
+// The RemoteServiceRelativePath annotation automatically calls setServiceEntryPoint()
+@RemoteServiceRelativePath("email")
 public interface MyEmailService extends RemoteService {
   void emptyMyInbox(String username, String password);
 }
@@ -35,10 +37,7 @@ public void menuCommandEmptyInbox() {
   // service interface proper, you cast the result to the asynchronous
   // version of the interface. The cast is always safe because the 
   // generated proxy implements the asynchronous interface automatically.
-  // The RemoteServiceRelativePath annotation automatically calls 
-  // setServiceEntryPoint()
   //
-  @RemoteServiceRelativePath("email")
   MyEmailServiceAsync emailService = (MyEmailServiceAsync) GWT.create(MyEmailService.class);
 
   // (2) Create an asynchronous callback to handle the result.
@@ -64,15 +63,9 @@ It is safe to cache the instantiated service proxy to avoid creating it for subs
 
 {{{
     public class Foo implements EntryPoint {
-      private MyEmailServiceAsync myEmailService;
+      private MyEmailServiceAsync myEmailService = (MyEmailServiceAsync) GWT.create(MyEmailService.class);
 
       public void onModuleLoad() {
-        
-        myEmailService = (MyEmailServiceAsync)GWT.create(MyEmailService.class);
-        ServiceDefTarget endpoint = (ServiceDefTarget) myEmailService;
-        String moduleRelativeURL = GWT.getModuleBaseURL() + "email";
-        endpoint.setServiceEntryPoint(moduleRelativeURL);
-
         // ... other initialization
       }
 
@@ -102,4 +95,3 @@ It is safe to cache the instantiated service proxy to avoid creating it for subs
   * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/rpc/ServiceDefTarget.html ServiceDefTarget]
 
   * [http://google-web-toolkit.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/GWT.html#create(java.lang.Class) GWT.create(Class)]
-
