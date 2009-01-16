@@ -1,6 +1,6 @@
 #summary How to get your GWT application running on Facebook
 
-= Put Your GWT App on Facebook in 10 minutes =
+= Put Your GWT App on Facebook=
 
 _Jared Jacobs is the frontend lead at [http://www.kaching.com kaChing], a marketplace for investing talent. He had a chance to stop by and give us the lowdown on his team's successful port of their GWT application onto the Facebook platform. If you're looking to socialize your application on Facebook, read on for the steps to make it happen._
 
