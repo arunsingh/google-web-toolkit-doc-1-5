@@ -5,7 +5,7 @@
 Below is a list of articles and tutorials that have been published about GWT development. If you're interested in contributing an article on a specific topic, [mailto:Google-Web-Toolkit+owner@googlegroups.com please drop us a line].
 
  * [Article_DomEventsAndMemoryLeaks DOM Events, Memory Leaks, and You]
-  An article describing how memory leaks can occur in Ajax applications, and what GWT does under the hood to prevent them. A good read if you've ever wondered at what lengths the GWT team strives to prevent memory leaks in application code.
+ An article describing how memory leaks can occur in Ajax applications, and what GWT does under the hood to prevent them. A good read if you've ever wondered at what lengths the GWT team strives to prevent memory leaks in application code.
 
 
   * [Article_SecurityForGWTApplications Security for GWT Applications]
