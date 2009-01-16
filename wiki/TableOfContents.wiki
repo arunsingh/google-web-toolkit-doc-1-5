@@ -198,4 +198,4 @@
     * [Article_DomEventsAndMemoryLeaks DOM Events, Memory Leaks, and You]
     * [Article_SecurityForGWTApplications Security for GWT Applications]
     * [Article_UsingGWTForJSONMashups Using GWT for JSON Mashups]
-    * [Article_GWT_Facebook Put Your GWT App on Facebook in 10 minutes]    
+    * [Article_GWT_Facebook Put Your GWT App on Facebook]    
