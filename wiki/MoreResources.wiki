@@ -2,22 +2,18 @@
 
 =Articles and Tutorials=
 
-Below is a sample of articles and tutorials that have been published on the web about GWT:
+Below is a list of articles and tutorials that have been published about GWT development. If you're interested in contributing an article on a specific topic, [mailto:Google-Web-Toolkit+owner@googlegroups.com please drop us a line].
 
- * [http://blogs.pathf.com/agileajax/2007/06/gwt_a_year_late.html GWT a Year Later] - 07 Jun 2007 - AgileAjax posted an interview with Dr. Adam Tacy and Robert Hanson, authors of [http://www.manning.com/hanson/ GWT in Action]. With the benefit of a full year's experience, they thoroughly answer some of the [http://ajaxian.com/archives/google-web-toolkit-the-correct-level-of-abstraction initial doubts about the GWT approach] expressed on Ajaxian soon after GWT's initial launch.
+ * DOM Events, Memory Leaks, and You
+   An article describing how memory leaks can occur in Ajax applications, and what GWT does under the hood to prevent them. A good read if you've ever wondered at what lengths the GWT team strives to prevent memory leaks in application code.
 
- * [http://devblog.glowday.com/2007/05/tech-review-google-web-toolkit.html Technical Review of GWT] - 08 May 2007 - This is a balanced technical assessment of the major aspects of GWT, written by a developer who has been using GWT for a couple of months at a startup.
+  * Security for GWT Applications
+    As much time you've spent building your application, someone else has spent even more figuring out how to break it. Security for your users is as important as your application itself. This article describes the different types of attacks that you can expect, and how you can defend your application against them by following secure coding practices.
 
- * Build an Ajax application using Google Web Toolkit, Apache Derby, and Eclipse - IBM DeveloperWorks hosts this very thorough tutorial written by Noel Rappin describing the end-to-end process of a building a full GWT application, explaining how to use remote procedure calls (RPC) to facilitate client/server communication.
-  * [http://www.ibm.com/developerworks/library/os-ad-gwt1/ Part 1: The fancy front end] - 05 Dec 2006
-  * [http://www-128.ibm.com/developerworks/library/os-ad-gwt2/ Part 2: The reliable back end] - 23 Jan 2007
-  * [http://www-128.ibm.com/developerworks/opensource/library/os-ad-gwt3/ Part 3: Communication] - 13 Feb 2007
-  * [http://www-128.ibm.com/developerworks/opensource/library/os-ad-gwt4/ Part 4: Deployment] - 27 Feb 2007
- 
- * [http://groups.google.com/group/Google-Web-Toolkit/web/security-for-gwt-applications Security for GWT Applications] - 06 Apr 2007 - Dan Morrill's very popular AJAX security article provides a great overview of various exploits and describes how GWT developers can help protect their code against such attacks.
+  * Using GWT for JSON Mashups
+    GWT has great libraries and techniques to easily interoperate with JSON data. However, interoperating with JSON data that comes from an external domain isn't as trivial, and has security implications. This article describes the different techniques you can use to build JSON mashups from JSON services across the web.
 
- * [http://timepedia.blogspot.com/2007/06/gwt-demystified.html GWT Demystified] - 02 Jun 2007 - This is an in-progress blog series talking about the nuts and bolts of GWT by Ray Cromwell, CTO of Timepedia. Timepedia recently released Chronoscope, a GWT charting and visualization platform. In his first post, Ray delves into some of the theory and practice of the GWT compiler, explaining many invisible-but-important details that don't typically get a lot of fanfare.
+  * Put you GWT Application on Facebook
+    Facebook has become a popular platform for hosting Facebook applications where users can interact with other friends. If you're looking to socialize your application on Facebook, this article shows you how to do it in a few easy steps.
 
-For additional resources related to GWT, you may be interested in browsing this set of [http://blogs.pathf.com/agileajax/2007/07/36-gwt-tutorial.html 36 GWT Tutorials].
-
-If you believe that a resource should be added or removed, please [mailto:gwt-third-party@google.com let us know].
+If you believe that a resource should be added or removed, please [mailto:Google-Web-Toolkit+owner@googlegroups.com let us know].
