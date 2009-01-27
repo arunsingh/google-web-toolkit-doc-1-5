@@ -16,7 +16,7 @@ Below is a list of articles and tutorials that have been published about GWT dev
   GWT has great libraries and techniques to easily interoperate with JSON data. However, interoperating with JSON data that comes from an external domain isn't as trivial, and has security implications. This article describes the different techniques you can use to build JSON mashups from JSON services across the web.
 
 
-  * [Article_GWT_Facebook Put you GWT Application on Facebook]
+  * [Article_GWT_Facebook Put Your GWT Application on Facebook]
   Facebook has become a popular platform for hosting Facebook applications where users can interact with other friends. If you're looking to socialize your application on Facebook, this article shows you how to do it in a few easy steps.
 
 If you believe that a resource should be added or removed, please [mailto:Google-Web-Toolkit+owner@googlegroups.com let us know].
