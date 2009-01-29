@@ -1,6 +1,6 @@
 #summary GWT projects are built from a recommended package layout.
 
-=Directories/Package conventions=
+=Directory/Package conventions=
 
 GWT projects are overlaid onto Java packages such that most of the configuration can be inferred from the classpath and your [DevGuideModules module definitions].  
 If you are starting a GWT project from scratch, you should use the standard GWT package layout, which makes it easy to differentiate [DevGuideClientSide client-side code] from [DevGuideServerSide server-side code]. 
@@ -41,4 +41,3 @@ Additionally the [DevGuideJunitCreator junitCreator] and [DevGuideI18nCreator i1
 ===See Also===
 
  * [DevGuideCommandLineTools Command Line Tools]
-
