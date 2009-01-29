@@ -4,9 +4,9 @@
 
 To archive and reuse a GWT module, follow the steps below:
 
-  # Create a new JAR file that contains the module you wish to archive, including all source code for the module (including Module XML file and public resources).
-  # Add the newly created JAR to the project classpath in which you would like to reuse the previous module code. Also add the new JAR to any -shell, -compile, or other run configurations classpaths related to the inheriting project.
-  # Add an `<inherits>` tag referencing the archived module XML in the inheriting project module XML file.
+  # *Create a new JAR file* that contains the module you wish to archive, including all source code for the module (including Module XML file and public resources).
+  # *Add the newly created JAR to the project classpath* in which you would like to reuse the previous module code. Also add the new JAR to any -shell, -compile, or other run configurations classpaths related to the inheriting project.
+  # *Add an `<inherits>` tag* referencing the archived module XML in the inheriting project module XML file.
 
 You might notice a few differences between archiving and reusing a GWT module versus archiving and reusing an standard Java project. These differences exist for good reason, and merit an explanation.
 
