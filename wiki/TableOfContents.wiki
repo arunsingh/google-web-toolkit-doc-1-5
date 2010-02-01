@@ -200,5 +200,8 @@
     * [Article_UsingGWTForJSONMashups Using GWT for JSON Mashups]
     * [Article_GWT_Facebook Put Your GWT App on Facebook]
  
+<table><tr><td>
 This is not the latest version.<br>
-To see the latest version, go to <a href="http://code.google.com/webtoolkit/doc/latest/DevGuide.html">GWT Developer's Guide (latest)</a>
+To see the latest version, <br>
+go to <a href="http://code.google.com/webtoolkit/doc/latest/DevGuide.html">GWT Developer's Guide (latest)</a>
+</td></tr></table>
